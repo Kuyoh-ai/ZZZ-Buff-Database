@@ -3,19 +3,30 @@
   "buffs": [
     {
       "id": "alice_core_anomaly_buildup",
-      "name": "コアスキル: 物理異常蓄積効率アップ",
+      "name": "コアパッシブ: 物理異常蓄積効率アップ(双虹の剣心)",
       "stat": "anomaly_buildup_pct",
       "target": "self",
       "values": {
         "base": 25
       },
       "duration": "30s",
-      "note": "極性強撃発動時に自身に付与される物理属性の状態異常蓄積効率アップ。コアスキルレベル強化で12.5%→25%に上昇(最大値を記載)。属性の限定は効果側の性質であり受け手条件ではないためconditionは付けない",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A2%E3%83%AA%E3%82%B9"
+      "note": "「強撃」発動時に自身に付与される物理属性の状態異常蓄積効率アップ(コアスキルLv最大時の値、Lv1で12.5%)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838"
+    },
+    {
+      "id": "alice_core_disorder_dmg_self",
+      "name": "コアパッシブ: 混沌ダメージ倍率アップ(双虹の剣心)",
+      "stat": "disorder_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 180
+      },
+      "note": "物理属性状態異常の敵に対し「混沌」効果を発動させた時、状態異常の残り時間1秒につき混沌ダメージ倍率+18%(上限+180%=残り10秒以上)。ここでは上限値を記載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838"
     },
     {
       "id": "alice_m1_def_down",
-      "name": "心象映画1: 対象防御力ダウン",
+      "name": "心象映画1: 対象防御力ダウン(掌で咲くコエンドロ)",
       "stat": "enemy_def_down_pct",
       "target": "enemy",
       "values": {
@@ -23,24 +34,24 @@
         "m1": 20
       },
       "duration": "30s",
-      "note": "「強撃」発動時に対象へ付与(gamewith原文は『強撃』)",
-      "sourceUrl": "https://gamewith.jp/zenless/502052"
+      "note": "「強撃」発動時に対象へ付与",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838"
     },
     {
       "id": "alice_m2_disorder_dmg",
-      "name": "心象映画2: 物理異常敵への混沌ダメージアップ",
+      "name": "心象映画2: 物理異常敵への混沌ダメージアップ(剣先のセージ)",
       "stat": "disorder_dmg_pct",
       "target": "self",
       "values": {
         "base": 0,
         "m2": 15
       },
-      "note": "物理属性異常状態の敵に対する混沌(disorder)ダメージ。",
-      "sourceUrl": "https://gamewith.jp/zenless/502052"
+      "note": "物理属性状態異常の敵に対する混沌(disorder)ダメージ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838"
     },
     {
       "id": "alice_m4_res_ignore",
-      "name": "心象映画4: 物理耐性無視",
+      "name": "心象映画4: 物理耐性無視(唇に残るローズマリー)",
       "stat": "enemy_res_down_pct",
       "element": "physical",
       "target": "self",
@@ -48,12 +59,12 @@
         "base": 0,
         "m4": 10
       },
-      "note": "アリス自身の攻撃がターゲットの物理属性ダメージ耐性を10%無視する(アリスの攻撃にのみ適用のためtarget=self)",
-      "sourceUrl": "https://gamewith.jp/zenless/502052"
+      "note": "アリス自身の攻撃がターゲットの物理属性ダメージ耐性を10%無視する(自身の攻撃にのみ適用のためtarget=self)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838"
     },
     {
       "id": "alice_wengine_anomaly_mastery",
-      "name": "音動機(十面百錬の星): 異常マスタリーアップ",
+      "name": "音動機「十面百錬の星」: 異常マスタリーアップ",
       "stat": "anomaly_mastery",
       "target": "self",
       "values": {
@@ -66,12 +77,11 @@
         "p4": 87,
         "p5": 96
       },
-      "note": "「星屑を君に」効果。中間精錬値(p2-p4)は線形補間による推定。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/alice-thymefield/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/903"
     },
     {
       "id": "alice_wengine_physical_dmg",
-      "name": "音動機(十面百錬の星): 物理ダメージアップ",
+      "name": "音動機「十面百錬の星」: 物理ダメージアップ",
       "stat": "dmg_pct_element",
       "element": "physical",
       "target": "self",
@@ -87,8 +97,8 @@
       },
       "maxStacks": 2,
       "duration": "20s",
-      "note": "「強撃」発動時に1重獲得、最大2重。接敵状態突入時は即座に2重獲得。中間精錬値(p2-p4)は線形補間による推定。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/alice-thymefield/"
+      "note": "「強撃」発動時に1重獲得、最大2重。接敵状態突入時は即座に2重獲得。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/903"
     }
   ]
 }

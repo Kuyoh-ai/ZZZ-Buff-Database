@@ -9,8 +9,8 @@
       "values": {
         "base": 120
       },
-      "note": "コアスキルLv最大時の値。ランクにより60〜120の間で変動(要検証)",
-      "sourceUrl": "https://game8.jp/zenless/758209"
+      "note": "南宮羽の異常マスタリー+60/70/80/90/100/110/120Pt(コアスキルレベル依存、最大値を記載)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
     },
     {
       "id": "nangong_yu_core_team_dmg",
@@ -22,8 +22,34 @@
       },
       "maxStacks": 1,
       "duration": "30s",
-      "note": "通常攻撃3段目または強化特殊スキル命中時に発動。継続30秒",
-      "sourceUrl": "https://game8.jp/zenless/758209"
+      "note": "『通常攻撃:プリティーマインアタック』または『強化特殊スキル:とびっきり重いラブ』命中時に発動、チーム全体の与ダメージ+13/15/17/19/21/23/25%(コアスキルレベル依存、最大値を記載)。継続30秒、再発動で更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
+    },
+    {
+      "id": "nangong_yu_core_anomaly_buildup",
+      "name": "コアスキル: 天才アイドル(状態異常蓄積効率アップ)",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": {
+        "base": 35
+      },
+      "maxStacks": 1,
+      "duration": "30s",
+      "note": "『通常攻撃:プリティーマインアタック』または『強化特殊スキル:とびっきり重いラブ』命中時、自身の状態異常蓄積効率+17/20/23/26/29/32/35%(コアスキルレベル依存、最大値を記載)。継続30秒、再発動で更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
+    },
+    {
+      "id": "nangong_yu_core_daze",
+      "name": "コアスキル: 天才アイドル(自身ブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 20
+      },
+      "maxStacks": 1,
+      "duration": "30s",
+      "note": "『通常攻撃:プリティーマインアタック』または『強化特殊スキル:とびっきり重いラブ』命中時、与えるブレイク値+11/12.5/14/15.5/17/18.5/20%(コアスキルレベル依存、最大値を記載)。継続30秒、再発動で更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
     },
     {
       "id": "nangong_yu_additional_stun_dmg_mult",
@@ -32,10 +58,10 @@
       "target": "enemy",
       "values": {
         "base": 30,
-        "m2": 60
+        "m2": 40
       },
-      "note": "「よろめき」効果で敵のブレイク弱体倍率+30%(M2でさらに+30%、計60%)",
-      "sourceUrl": "https://wiki.bittopup.com/zzz/Agents/1038"
+      "note": "チームに異常タイプまたは自身と同じ陣営のメンバーがいる時に発動。『通常攻撃:プリティーマインアタック』3段目、または『終結スキル:流星ハンマー雨あられ』が命中した敵に「よろめき」を付与し、ブレイク弱体倍率+30%(M2でさらに+10%、計40%)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
     },
     {
       "id": "nangong_yu_m1_enemy_res_down",
@@ -47,8 +73,8 @@
         "m1": 18
       },
       "duration": "40s",
-      "note": "EX特殊スキルまたは通常攻撃命中時、敵の全属性ダメージ耐性-18%(40秒継続)",
-      "sourceUrl": "https://wiki.bittopup.com/zzz/Agents/1038"
+      "note": "『強化特殊スキル:とびっきり重いラブ』または『通常攻撃:プリティーマインアタック』命中時、敵の全属性ダメージ耐性-18%(40秒継続、再発動で更新)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
     },
     {
       "id": "nangong_yu_m4_anomaly_proficiency",
@@ -59,7 +85,7 @@
         "base": 0,
         "m4": 40
       },
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%8D%97%E5%AE%AE%E7%BE%BD"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
     },
     {
       "id": "nangong_yu_m6_daze",
@@ -70,7 +96,7 @@
         "base": 0,
         "m6": 50
       },
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%8D%97%E5%AE%AE%E7%BE%BD"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
     },
     {
       "id": "nangong_yu_wengine_anomaly_proficiency",
@@ -88,7 +114,7 @@
         "p5": 145
       },
       "note": "装備者の異常マスタリーが固定値で上昇(基礎効果)",
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/586514"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1067"
     },
     {
       "id": "nangong_yu_wengine_anomaly_proficiency_2stack",
@@ -105,7 +131,7 @@
         "p4": 87,
         "p5": 96
       },
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/586514",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1067",
       "note": "上記スタックが2重になった時に追加で加算"
     },
     {
@@ -126,7 +152,7 @@
       "maxStacks": 2,
       "duration": "40s",
       "note": "装備者が強化特殊スキルまたは通常攻撃でエーテル属性ダメージを与えた時、チーム全体の与ダメージがアップ(1重あたりの値、最大2重)",
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/586514"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1067"
     }
   ]
 }

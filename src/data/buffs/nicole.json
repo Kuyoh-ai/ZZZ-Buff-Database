@@ -9,7 +9,7 @@
       "values": { "base": 40 },
       "duration": "3.5s",
       "note": "強化特殊スキル・連携スキル・終結スキルによる力場が敵に命中した時、対象の防御力がダウン。コアスキル最大レベル(Lv.7)の値40%を記載(Lv.1は20%)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     },
     {
       "id": "nicole_additional_team_ether_dmg",
@@ -20,7 +20,7 @@
       "values": { "base": 25 },
       "duration": "3.5s",
       "note": "『からくり箱』で防御力ダウンを付与した時、チーム全体のエーテル属性ダメージがアップ。発動条件はニコと同属性(エーテル)または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     },
     {
       "id": "nicole_m1_ex_dmg_self",
@@ -28,7 +28,7 @@
       "stat": "ex_dmg_pct",
       "target": "self",
       "values": { "base": 0, "m1": 16 },
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     },
     {
       "id": "nicole_m1_anomaly_buildup_self",
@@ -36,7 +36,16 @@
       "stat": "anomaly_buildup_pct",
       "target": "self",
       "values": { "base": 0, "m1": 16 },
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
+    },
+    {
+      "id": "nicole_m2_energy_self",
+      "name": "心象映画2: エネルギー収集装置(自身エネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": { "base": 0, "m2": 5 },
+      "note": "『コアパッシブ: からくり箱』のデバフ効果が発動した時、エネルギーを追加回復(15秒に1回のみ)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     },
     {
       "id": "nicole_m6_team_crit_rate",
@@ -47,7 +56,7 @@
       "maxStacks": 10,
       "duration": "12s",
       "note": "ニコの力場が敵にダメージを与えた時、該当ターゲットに対する全ユニットの会心率がアップ(1.5%刻み、最大10重で15%)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     }
   ]
 }

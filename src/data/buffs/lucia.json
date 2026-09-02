@@ -3,74 +3,15 @@
   "buffs": [
     {
       "id": "lucia_core_dream_lullaby_dmg",
-      "name": "夢巡りの童謡(全体与ダメージ上昇)",
+      "name": "コアパッシブ: 夢巡りの童謡(全体与ダメージ上昇)",
       "stat": "dmg_pct",
       "target": "team",
       "values": {
         "base": 20
       },
-      "maxStacks": 1,
       "duration": "12s",
-      "note": "コアパッシブ「迷える夜の歌」でメンバー全員に付与される「夢巡りの童謡」状態の与ダメージアップ。数値はコアスキル最大Lv時(gamewithはLv1相当の10%表記)",
-      "sourceUrl": "https://gamewith.jp/zenless/514875"
-    },
-    {
-      "id": "lucia_m1_res_ignore",
-      "name": "M1: 全属性耐性無視",
-      "stat": "enemy_res_ignore_all_pct",
-      "target": "enemy",
-      "values": {
-        "base": 0,
-        "m1": 18
-      },
-      "maxStacks": 1,
-      "note": "M1「秘密の友達」。「夢巡りの童謡」状態中、敵の全属性ダメージ耐性を18%無視",
-      "sourceUrl": "https://gamewith.jp/zenless/514875"
-    },
-    {
-      "id": "lucia_m1_decibel_gain",
-      "name": "M1: デシベル値獲得効率上昇",
-      "stat": "decibel_gain",
-      "target": "self",
-      "values": {
-        "base": 0,
-        "m1": 5
-      },
-      "maxStacks": 1,
-      "note": "M1「秘密の友達」で追加。リュシア自身のデシベル値獲得効率+5%。",
-      "sourceUrl": "https://gamewith.jp/zenless/514875"
-    },
-    {
-      "id": "lucia_additional_critdmg",
-      "name": "追加能力: 会心ダメージ上昇",
-      "stat": "crit_dmg",
-      "target": "team",
-      "values": {
-        "base": 30
-      },
-      "maxStacks": 1,
-      "note": "追加能力「長夜の詩篇」。「破暗」状態付与時に会心ダメージ+30%。発動条件としてチームに命破または撃破特性のメンバーが必要(編成条件のためconditionではなくnoteに記載)",
-      "sourceUrl": "https://game8.jp/zenless/712532"
-    },
-    {
-      "id": "lucia_wengine_dmg",
-      "name": "専用音動機: エーテルベール発動時ダメージ上昇",
-      "stat": "dmg_pct",
-      "target": "team",
-      "values": {
-        "base": 0
-      },
-      "wengine": {
-        "p1": 25,
-        "p2": 28.75,
-        "p3": 32.5,
-        "p4": 36.25,
-        "p5": 40
-      },
-      "maxStacks": 1,
-      "duration": "45s",
-      "note": "専用音動機「炉で歌い上げられる夢」固有効果。装備者が「エーテルベール」を発動/延長した時、メンバー全員の与ダメージ+25%(P1)〜40%(P5)。音動機由来の効果のためvalues.baseは0。P2〜P4はP1/P5からの等差補間(未確認)。エネルギー自動回復とHP上限上昇は対応statキーがないため未収録",
-      "sourceUrl": "https://gamewith.jp/zenless/522493"
+      "note": "コアパッシブ「迷える夜の歌」。リュシアがスキルグレードアップまたは追加攻撃を発動するとメンバー全員に「夢巡りの童謡」状態付与。コアスキルLv最大時の値(Lv1で10%)。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
     },
     {
       "id": "lucia_core_team_hp_pct",
@@ -80,40 +21,120 @@
       "values": {
         "base": 5
       },
-      "maxStacks": 1,
       "duration": "40s",
-      "note": "フィールド入場時、「エーテルベール・湧泉」発動中にメンバー全員の最大HP+5%。",
-      "sourceUrl": "https://game8.jp/zenless/712532"
+      "note": "フィールド入場時「夢境値」100Pt到達で「夢境」状態に入り「エーテルベール・湧泉」が発動。発動中メンバー全員の最大HPアップ。重複発動で継続時間延長(最大300秒)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
     },
     {
       "id": "lucia_ex_sheer_force",
-      "name": "強化特殊スキル: 開幕最大HP依存の透徹力上昇",
+      "name": "強化特殊スキル: 破暗状態の透徹力上昇",
       "stat": "sheer_force_flat",
+      "target": "team",
+      "values": {
+        "base": 1008
+      },
+      "duration": "20s",
+      "note": "強化特殊スキル『合唱』発動時、メンバー全員に「破暗」状態を付与。「破暗」状態は透徹力+12Pt、さらにリュシアの開幕最大HP200Ptにつき透徹力+最大8.2Pt(上限996Pt、開幕最大HP24000Pt到達で最大)。ここでは合計上限1008を記載。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
+    },
+    {
+      "id": "lucia_additional_critdmg",
+      "name": "追加能力: 会心ダメージ上昇(長夜の詩篇)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": {
+        "base": 30
+      },
+      "note": "チームに命破または撃破メンバーがいる時に発動。「破暗」状態(命破ロール向け)を付与する時、追加で会心ダメージ+30%",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
+    },
+    {
+      "id": "lucia_m1_res_ignore",
+      "name": "心象映画1: 全属性耐性無視",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 18
+      },
+      "note": "「秘密の友達」。「夢巡りの童謡」状態中、敵の全属性ダメージ耐性を無視",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
+    },
+    {
+      "id": "lucia_m1_decibel_gain",
+      "name": "心象映画1: デシベル値獲得効率上昇",
+      "stat": "decibel_gain",
       "target": "self",
       "values": {
-        "base": 888
+        "base": 0,
+        "m1": 5
       },
-      "note": "開幕最大HP200Ptにつき透徹力+7.4Pt、開幕最大HP24000Pt到達で最大値(理論上限888を記載)。",
-      "sourceUrl": "https://game8.jp/zenless/712532"
+      "note": "「秘密の友達」。「夢巡りの童謡」状態中、リュシア自身のデシベル値獲得効率アップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
     },
     {
       "id": "lucia_m2_sheer_dmg",
-      "name": "心象映画M2: 破暗状態メンバーの透徹ダメージ上昇",
+      "name": "心象映画2: 破暗状態メンバーの透徹ダメージ上昇",
       "stat": "sheer_dmg_pct",
       "target": "team",
       "condition": {
-        "roles": ["rupture"]
+        "roles": [
+          "rupture"
+        ]
       },
       "values": {
         "base": 0,
         "m2": 15
       },
-      "note": "M2「マジシャンみたいだね」。「破暗」状態(命破特性)のメンバーがリュシアの「エーテルベール・湧泉」効果を受けている時、透徹ダメージ+15%。",
-      "sourceUrl": "https://gamewith.jp/zenless/514875"
+      "note": "「マジシャンみたいだね」。「破暗」状態(命破ロール)のメンバーがリュシアの「エーテルベール・湧泉」効果を受けている時、透徹ダメージアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
+    },
+    {
+      "id": "lucia_m4_decibel_gain_team",
+      "name": "心象映画4: デシベル値獲得",
+      "stat": "decibel_gain",
+      "target": "team",
+      "values": {
+        "base": 0,
+        "m4": 100
+      },
+      "note": "「時は深夜」。フィールド上で「エーテルベール」が発動または延長された時、メンバー全員がデシベル値を獲得(15秒に1回のみ)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
+    },
+    {
+      "id": "lucia_m6_crit_dmg",
+      "name": "心象映画6: 会心ダメージアップ",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 30
+      },
+      "note": "「旅はけして終わらない」。『合唱』を発動すると必ず会心が発生し、その会心発生時に会心ダメージアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
+    },
+    {
+      "id": "lucia_wengine_dmg",
+      "name": "音動機「炉で歌い上げられる夢」: エーテルベール発動時ダメージ上昇",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 25,
+        "p2": 28.8,
+        "p3": 32.5,
+        "p4": 36.3,
+        "p5": 40
+      },
+      "duration": "45s",
+      "note": "装備者が「エーテルベール」を発動/延長した時、メンバー全員の与ダメージアップ。重複時継続時間更新、チーム内で1つのみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/935"
     },
     {
       "id": "lucia_wengine_hp_pct",
-      "name": "専用音動機: エーテルベール発動時HP上限上昇",
+      "name": "音動機「炉で歌い上げられる夢」: エーテルベール発動時HP上限上昇",
       "stat": "hp_pct",
       "target": "team",
       "values": {
@@ -121,15 +142,14 @@
       },
       "wengine": {
         "p1": 15,
-        "p2": 17.25,
+        "p2": 17.3,
         "p3": 19.5,
-        "p4": 21.75,
+        "p4": 21.8,
         "p5": 24
       },
-      "maxStacks": 1,
       "duration": "45s",
-      "note": "専用音動機「炉で歌い上げられる夢」固有効果。装備者が「エーテルベール」を発動/延長した時、メンバー全員のHP上限+15%(P1)〜24%(P5)。P2〜P4はP1/P5からの等差補間(未確認)。",
-      "sourceUrl": "https://gamewith.jp/zenless/522493"
+      "note": "装備者が「エーテルベール」を発動/延長した時、メンバー全員のHP上限アップ。重複時継続時間更新、チーム内で1つのみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/935"
     }
   ]
 }

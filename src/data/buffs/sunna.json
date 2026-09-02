@@ -10,8 +10,42 @@
         "base": 50
       },
       "duration": "40s",
-      "note": "「エーテルベール・妄想協奏曲」展開時。",
-      "sourceUrl": "https://game8.jp/zenless/754094"
+      "note": "「エーテルベール・妄想協奏曲」展開時。重複展開時は既存の効果を解除して更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
+    },
+    {
+      "id": "sunna_core_angel_harmony_atk",
+      "name": "コアパッシブ: カワイイは正義(エンジェルハーモニー中の攻撃力)",
+      "stat": "atk_flat",
+      "target": "team",
+      "values": {
+        "base": 1050
+      },
+      "note": "「エンジェルハーモニー」状態にあるメンバーの攻撃力が千夏の開幕攻撃力30%分アップ(千夏の開幕攻撃力1750/2050/2350/2650/2950/3250/3500Ptで上限の+525/615/705/795/885/975/1050Ptに到達、コアスキルレベル依存)。上限値を記載、実際は千夏の攻撃力依存で変動。「エンジェルハーモニー」状態になるメンバーの条件は編成やスキル発動状況に依存。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
+    },
+    {
+      "id": "sunna_additional_enemy_stun_dmg",
+      "name": "追加能力: 白昼夢の対位法(敵ブレイク弱体倍率)",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 30
+      },
+      "duration": "40s",
+      "note": "チームに強攻タイプまたは千夏と同じ陣営のメンバーがいる時に発動。「エーテルベール・妄想協奏曲」の効果を受けているメンバーの攻撃が敵に命中した時、対象のブレイク弱体倍率+30%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
+    },
+    {
+      "id": "sunna_additional_energy_gain",
+      "name": "追加能力: 白昼夢の対位法(入場時エネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": {
+        "base": 15
+      },
+      "note": "チームに強攻タイプまたは千夏と同じ陣営のメンバーがいる時に発動。千夏がフィールドに入場した時、エネルギーを15Pt回復(探査モードでは180秒に1回のみ)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
     },
     {
       "id": "sunna_m1_def_down",
@@ -24,7 +58,7 @@
       },
       "duration": "40s",
       "maxStacks": 3,
-      "sourceUrl": "https://game8.jp/zenless/754094"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
     },
     {
       "id": "sunna_m2_team_atk",
@@ -35,8 +69,8 @@
         "base": 0,
         "m2": 10
       },
-      "note": "「エーテルベール・妄想協奏曲」効果下。",
-      "sourceUrl": "https://game8.jp/zenless/754094"
+      "note": "千夏がいずれかの「エーテルベール」の効果を受けている時、メンバー全員の攻撃力+10%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
     },
     {
       "id": "sunna_m4_team_dmg",
@@ -48,7 +82,7 @@
         "m4": 18
       },
       "duration": "60s",
-      "sourceUrl": "https://game8.jp/zenless/754094"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
     },
     {
       "id": "sunna_wengine_team_dmg",
@@ -60,14 +94,14 @@
       },
       "duration": "40s",
       "maxStacks": 2,
-      "note": "強化特殊スキルで物理属性ダメージを与えた時。精錬2〜5の数値は未確認。 音動機効果(確認できた段階のみ): {'p1': 12.5} 精錬2〜5未確認のため全段にP1値を使用",
-      "sourceUrl": "https://game8.jp/zenless/759480",
+      "note": "装備者が『強化特殊スキル』を発動して物理属性ダメージを与えた時、メンバー全員の与ダメージ上昇(1重ごとに独立してカウント、最大2重、同種効果はチーム内でひとつのみ)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1015",
       "wengine": {
         "p1": 12.5,
-        "p2": 12.5,
-        "p3": 12.5,
-        "p4": 12.5,
-        "p5": 12.5
+        "p2": 14.3,
+        "p3": 16.1,
+        "p4": 17.9,
+        "p5": 20
       }
     },
     {
@@ -78,14 +112,32 @@
       "values": {
         "base": 0
       },
-      "note": "上記の与ダメージバフが2重積み時に追加される攻撃力バフ。精錬2〜5の数値は未確認。 音動機効果(確認できた段階のみ): {'p1': 10} 精錬2〜5未確認のため全段にP1値を使用",
-      "sourceUrl": "https://game8.jp/zenless/759480",
+      "note": "上記の与ダメージ上昇効果を2重所持している時、メンバーの攻撃力に追加加算。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1015",
       "wengine": {
         "p1": 10,
-        "p2": 10,
-        "p3": 10,
-        "p4": 10,
-        "p5": 10
+        "p2": 11.5,
+        "p3": 13,
+        "p4": 14.5,
+        "p5": 16
+      }
+    },
+    {
+      "id": "sunna_wengine_energy_regen",
+      "name": "音動機 想いが織りなす歌: エネルギー自動回復",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "note": "装備者が操作中のメンバーでない時(控え中)、エネルギー自動回復上昇。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1015",
+      "wengine": {
+        "p1": 0.6,
+        "p2": 0.69,
+        "p3": 0.78,
+        "p4": 0.87,
+        "p5": 0.96
       }
     }
   ]

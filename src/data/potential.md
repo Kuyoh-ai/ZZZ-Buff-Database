@@ -1,3 +1,9 @@
+# ポテンシャル解放システム(HoYoWiki 日本語データ準拠、2026-09-02)
+
+**注意**: 以下の初期調査は攻略サイト要約に基づくもので、HoYoWiki の本文で「ポテンシャル解放」の記載が確認できたのは grace, burnice, ellen, lycaon, harumasa, soldier_11, soldier_0_anby の7体のみ。猫又・ジェーン・リナは HoYoWiki に記載が無いため対象から外した(データは各キャラの JSON の `potential` フィールドに HoYoWiki 準拠で収録済み)。
+
+---
+
 # ポテンシャル解放システム調査(2026-09-02時点)
 
 ## 概要

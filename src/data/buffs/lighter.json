@@ -2,130 +2,102 @@
   "characterId": "lighter",
   "buffs": [
     {
-      "id": "lighter_accelerant_res_down_fire",
-      "name": "コアパッシブ: 炎耐性ダウン",
+      "id": "lighter_core_impact_self",
+      "name": "コアパッシブ: アクセレラント(自身の衝撃力アップ)",
+      "stat": "impact_pct",
+      "target": "self",
+      "values": { "base": 20 },
+      "duration": "6s",
+      "note": "コアスキル最大レベル時。「士気奮発」状態で強化された『通常攻撃』5段目が命中し「士気」を消費すると、10Ptにつき衝撃力+2%、最大+20%",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
+    },
+    {
+      "id": "lighter_core_res_down_fire",
+      "name": "コアパッシブ: アクセレラント(炎属性耐性ダウン)",
       "stat": "enemy_res_down_pct",
       "element": "fire",
       "target": "enemy",
-      "values": {
-        "base": 15,
-        "m1": 25
-      },
+      "values": { "base": 15, "m1": 25 },
       "duration": "30s",
-      "note": "士気奮発状態の通常攻撃5段目命中時に付与。氷耐性ダウンとセットで発生",
-      "sourceUrl": "https://game8.jp/zenless/640274"
+      "note": "「士気奮発」状態で開幕ジャブまたはストレートラッシュが命中した敵に付与。氷耐性ダウンとセットで発生",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
     },
     {
-      "id": "lighter_accelerant_res_down_ice",
-      "name": "コアパッシブ: 氷耐性ダウン",
+      "id": "lighter_core_res_down_ice",
+      "name": "コアパッシブ: アクセレラント(氷属性耐性ダウン)",
       "stat": "enemy_res_down_pct",
       "element": "ice",
       "target": "enemy",
-      "values": {
-        "base": 15,
-        "m1": 25
-      },
+      "values": { "base": 15, "m1": 25 },
       "duration": "30s",
-      "note": "士気奮発状態の通常攻撃5段目命中時に付与。炎耐性ダウンとセットで発生",
-      "sourceUrl": "https://game8.jp/zenless/640274"
-    },
-    {
-      "id": "lighter_elation_dmg_fire",
-      "name": "追加能力: 高揚(炎ダメージ)",
-      "stat": "dmg_pct_element",
-      "element": "fire",
-      "target": "team",
-      "values": {
-        "base": 1.25,
-        "m2": 1.5
-      },
-      "maxStacks": 20,
-      "duration": "30s",
-      "note": "チームに[強攻]または同陣営メンバーがいる時発動。1重あたりの効果量。衝撃力170超過時の追加増加分(最大75%まで)は算出式が不確定なため未収録(最大値未確認)",
-      "sourceUrl": "https://game8.jp/zenless/640274"
-    },
-    {
-      "id": "lighter_elation_dmg_ice",
-      "name": "追加能力: 高揚(氷ダメージ)",
-      "stat": "dmg_pct_element",
-      "element": "ice",
-      "target": "team",
-      "values": {
-        "base": 1.25,
-        "m2": 1.5
-      },
-      "maxStacks": 20,
-      "duration": "30s",
-      "note": "チームに[強攻]または同陣営メンバーがいる時発動。1重あたりの効果量",
-      "sourceUrl": "https://game8.jp/zenless/640274"
+      "note": "「士気奮発」状態で開幕ジャブまたはストレートラッシュが命中した敵に付与。炎耐性ダウンとセットで発生",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
     },
     {
       "id": "lighter_m2_enemy_stun_multiplier",
-      "name": "2凸: ブレイク弱体倍率アップ",
+      "name": "心象映画2: 赤いマフラー(ブレイク弱体倍率アップ)",
       "stat": "enemy_stun_dmg_multiplier",
       "target": "enemy",
-      "values": {
-        "base": 0,
-        "m2": 25
-      },
-      "note": "コアパッシブで衰耗(Collapse)付与時に発動",
-      "sourceUrl": "https://game8.jp/zenless/640274"
+      "values": { "base": 0, "m2": 25 },
+      "note": "『コアパッシブ:アクセレラント』で「壊滅」効果を付与した時に発動",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
+    },
+    {
+      "id": "lighter_elation_dmg_fire",
+      "name": "追加能力: 燃える闘志(「高揚」による炎ダメージアップ)",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "team",
+      "values": { "base": 1.25, "m2": 1.5 },
+      "maxStacks": 20,
+      "duration": "30s",
+      "note": "チームに[強攻]特性メンバーまたは自身と同じ陣営(カリュドーンの子)のメンバーがいる時発動。「士気奮発」状態で『通常攻撃』5段目命中時に「高揚」を1重付与(最大20重)。1重あたりの効果量(衝撃力170超過分による追加増加、上限合計75%は算出式不確定のため上限値のみの反映は行わず基礎値を収録)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
+    },
+    {
+      "id": "lighter_elation_dmg_ice",
+      "name": "追加能力: 燃える闘志(「高揚」による氷ダメージアップ)",
+      "stat": "dmg_pct_element",
+      "element": "ice",
+      "target": "team",
+      "values": { "base": 1.25, "m2": 1.5 },
+      "maxStacks": 20,
+      "duration": "30s",
+      "note": "チームに[強攻]特性メンバーまたは自身と同じ陣営のメンバーがいる時発動。1重あたりの効果量",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
     },
     {
       "id": "lighter_m4_energy_regen",
-      "name": "4凸: エネルギー自動回復アップ",
+      "name": "心象映画4: グラサン(出場メンバーのエネルギー自動回復アップ)",
       "stat": "energy_regen",
-      "target": "self",
-      "values": {
-        "base": 0,
-        "m4": 10
-      },
-      "note": "控え時のエネルギー自動回復効率+10%",
-      "sourceUrl": "https://game8.jp/zenless/640274"
+      "target": "team",
+      "condition": { "excludeSelf": true },
+      "values": { "base": 0, "m4": 10 },
+      "note": "ライトが控えにいる時、出場中のメンバーのエネルギー自動回復効率+10%",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
     },
     {
       "id": "lighter_wengine_impact",
-      "name": "音動機: 炎心の桂冠(衝撃力アップ)",
+      "name": "専用音動機「炎心の桂冠」: 衝撃力アップ",
       "stat": "impact_pct",
       "target": "self",
-      "values": {
-        "base": 0
-      },
+      "values": { "base": 0 },
       "duration": "8s",
-      "note": "クイック支援または極限支援発動時。精錬(音動機Lv)による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
-      "sourceUrl": "https://game8.jp/zenless/654942",
-      "wengine": {
-        "p1": 25,
-        "p2": 25,
-        "p3": 25,
-        "p4": 25,
-        "p5": 25
-      }
+      "wengine": { "p1": 25, "p2": 28.75, "p3": 32.5, "p4": 36.25, "p5": 40 },
+      "note": "『クイック支援』または『極限支援』発動時に発動",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/534"
     },
     {
       "id": "lighter_wengine_crit_dmg",
-      "name": "音動機: 炎心の桂冠(会心ダメージアップ)",
+      "name": "専用音動機「炎心の桂冠」: 会心ダメージアップ",
       "stat": "crit_dmg",
       "target": "team",
-      "condition": {
-        "elements": [
-          "fire",
-          "ice"
-        ]
-      },
-      "values": {
-        "base": 0
-      },
+      "condition": { "elements": ["fire", "ice"] },
+      "values": { "base": 0 },
       "maxStacks": 20,
-      "note": "装備者の通常攻撃命中で敵に「衰耗」付与(最大20重)。任意メンバー攻撃時、衰耗1重につき氷炎属性攻撃の会心ダメージ+1.5%。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
-      "sourceUrl": "https://game8.jp/zenless/654942",
-      "wengine": {
-        "p1": 1.5,
-        "p2": 1.5,
-        "p3": 1.5,
-        "p4": 1.5,
-        "p5": 1.5
-      }
+      "note": "装備者の『通常攻撃』命中で敵に「衰耗」を付与(最大20重、30秒)。任意メンバー攻撃時、「衰耗」1重につき氷炎属性攻撃の会心ダメージ+1.5%(精錬1、1重あたりの値)。チーム内で1つのみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/534",
+      "wengine": { "p1": 1.5, "p2": 1.72, "p3": 1.95, "p4": 2.17, "p5": 2.4 }
     }
   ]
 }

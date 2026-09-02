@@ -7,10 +7,10 @@
       "stat": "anomaly_buildup_pct",
       "target": "self",
       "values": {
-        "base": 65
+        "base": 130
       },
-      "note": "『電力』を最大8重獲得後に特殊スキルを発動すると、電気属性の状態異常蓄積値が65%アップ",
-      "sourceUrl": "https://game8.jp/zenless/607801"
+      "note": "『電力』を最大8重獲得後に特殊/強化特殊スキルを発動し全消費すると、電気属性の状態異常蓄積値がアップ。コアスキル最大レベル(Lv.7)の値130%を記載(Lv.1は65%)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
     },
     {
       "id": "grace_additional_enemy_shock_taken",
@@ -22,7 +22,7 @@
       },
       "maxStacks": 2,
       "note": "強化特殊スキルが敵に命中すると、ターゲットの次の感電ダメージが18%アップ(最大2重)。発動条件は同属性または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
-      "sourceUrl": "https://game8.jp/zenless/607801"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
     },
     {
       "id": "grace_m1_team_energy",
@@ -34,7 +34,7 @@
         "m1": 2
       },
       "note": "通常攻撃4段目でチーム全体がエネルギーを最大2Pt回復",
-      "sourceUrl": "https://game8.jp/zenless/607801"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
     },
     {
       "id": "grace_m2_enemy_res_down",
@@ -47,8 +47,54 @@
         "m2": 8.5
       },
       "duration": "8s",
-      "note": "手榴弾命中時、電気ダメージ耐性が8.5%ダウン(異常蓄積耐性ダウン8.5%も付与されるが対応するstatが無いため未収録)",
-      "sourceUrl": "https://game8.jp/zenless/607801"
+      "note": "『通常攻撃』『特殊スキル』『強化特殊スキル』などで投げた手榴弾が敵に命中した時、電気属性ダメージ耐性がダウン",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
+    },
+    {
+      "id": "grace_m2_enemy_anomaly_buildup_res_down",
+      "name": "心象映画2: 絶縁破壊(敵電気異常蓄積耐性ダウン)",
+      "stat": "enemy_anomaly_buildup_res_down_pct",
+      "element": "electric",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m2": 8.5
+      },
+      "duration": "8s",
+      "note": "手榴弾命中時、電気属性の状態異常蓄積耐性がダウン",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
+    },
+    {
+      "id": "grace_m4_energy_regen_self",
+      "name": "心象映画4: 電爆キャパシタ(エネルギー獲得効率アップ)",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 20
+      },
+      "note": "『強化特殊スキル』でパワーを最大6重獲得。『通常攻撃:高圧ネイルガン』または『ダッシュ攻撃:抜き打ち検査』が敵に命中した時、パワーを1重消費してその攻撃のエネルギー獲得効率がアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
+    },
+    {
+      "id": "grace_pt_dmg_element",
+      "name": "ポテンシャル覚醒: オーバークロックエンジン(電気属性ダメージアップ)",
+      "stat": "dmg_pct_element",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 10,
+        "t3": 15,
+        "t4": 20,
+        "t5": 25,
+        "t6": 30
+      },
+      "duration": "25s",
+      "note": "ポテンシャルT2で解放。「電力」を消費した時、「電力強化」状態を獲得し与える電気属性ダメージがアップ。重複発動で継続時間更新。T1は解放条件未達につき効果なし",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
     },
     {
       "id": "grace_wengine_fusion_compiler_atk",
@@ -65,7 +111,7 @@
         "p4": 21,
         "p5": 24
       },
-      "sourceUrl": "https://www.korometa.com/zenless-zone-zero/w-engines/fusion-compiler/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/84"
     },
     {
       "id": "grace_wengine_fusion_compiler_anomaly_proficiency",
@@ -85,7 +131,7 @@
       "maxStacks": 3,
       "duration": "8s",
       "note": "特殊スキルまたは強化特殊スキル発動ごとに異常マスタリーが上昇、最大3重",
-      "sourceUrl": "https://www.korometa.com/zenless-zone-zero/w-engines/fusion-compiler/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/84"
     }
   ]
 }

@@ -10,8 +10,8 @@
         "base": 20
       },
       "duration": "30s",
-      "note": "コアスキルLv最大時の値(Lv1で10%)。開幕攻撃力2800以上で100Ptごとに追加+5%(最大+30%、別枠でスキルレベル非依存)",
-      "sourceUrl": "https://gamewith.jp/zenless/493825"
+      "note": "コアスキルLv最大時の値(Lv1で10%)。開幕攻撃力2800以上で100Ptごとに追加+5%(最大+30%、別枠でスキルレベル非依存)。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     },
     {
       "id": "ju_fufu_chain_dmg_team",
@@ -23,7 +23,7 @@
       },
       "duration": "30s",
       "note": "コアスキルLv最大時の値(Lv1で10%)",
-      "sourceUrl": "https://gamewith.jp/zenless/493825"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     },
     {
       "id": "ju_fufu_ult_dmg_team",
@@ -35,7 +35,19 @@
       },
       "duration": "30s",
       "note": "コアスキルLv最大時の値(Lv1で20%)",
-      "sourceUrl": "https://gamewith.jp/zenless/493825"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
+    },
+    {
+      "id": "ju_fufu_core_impact",
+      "name": "コアパッシブ: 虎の咆哮(衝撃力)",
+      "stat": "impact_flat",
+      "target": "self",
+      "values": {
+        "base": 50
+      },
+      "duration": "30s",
+      "note": "自身が「虎の咆哮」状態にある時。コアスキルLv最大時の値(Lv1で25Pt)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     },
     {
       "id": "ju_fufu_crit_rate_self_m1",
@@ -46,7 +58,8 @@
         "base": 0,
         "m1": 12
       },
-      "sourceUrl": "https://gamewith.jp/zenless/493825"
+      "note": "フィールド入場時に獲得(同時に「威風」100Ptも獲得)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     },
     {
       "id": "ju_fufu_crit_dmg_team_m2",
@@ -58,7 +71,7 @@
         "m2": 22
       },
       "note": "「虎の咆哮」状態のメンバーに追加で加算",
-      "sourceUrl": "https://gamewith.jp/zenless/493825"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     },
     {
       "id": "ju_fufu_crit_dmg_self_m4",
@@ -70,18 +83,19 @@
         "m4": 35
       },
       "note": "自身が「虎の咆哮」状態の時のみ",
-      "sourceUrl": "https://gamewith.jp/zenless/493825"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     },
     {
       "id": "ju_fufu_chain_dmg_team_m6",
       "name": "心象映画M6: 連携スキルダメージ追加",
       "stat": "chain_dmg_pct",
-      "target": "team",
+      "target": "self",
       "values": {
         "base": 0,
         "m6": 30
       },
-      "sourceUrl": "https://gamewith.jp/zenless/493825"
+      "note": "橘福福自身の連携スキル与ダメージに追加(メンバー全員ではなく自身のみ)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     },
     {
       "id": "ju_fufu_enemy_stun_dmg_mult",
@@ -93,12 +107,12 @@
         "m1": 35
       },
       "duration": "30s",
-      "note": "心象映画1「どえらく怖い、虎の子」。連携スキル発動時、ターゲットがブレイク状態の場合に付与(コアパッシブではなくM1効果)",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ju-fufu/"
+      "note": "心象映画1「どえらく怖い、虎の子」。連携スキル発動時、ターゲットがブレイク状態の場合に付与。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     },
     {
       "id": "ju_fufu_wengine_daze",
-      "name": "音動機: 招福の虎炉/みなぎる虎の熱意(与ブレイク値)",
+      "name": "音動機「招福の虎炉」: 与ブレイク値",
       "stat": "daze_pct",
       "target": "self",
       "values": {
@@ -111,12 +125,12 @@
         "p4": 40.6,
         "p5": 44.8
       },
-      "note": "特殊/連携/強化特殊/終結スキル使用時",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ju-fufu/"
+      "note": "強化特殊/連携/終結スキル使用時",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/851"
     },
     {
       "id": "ju_fufu_wengine_fire_dmg_team",
-      "name": "音動機: 招福の虎炉/みなぎる虎の熱意(チーム与ダメージ)",
+      "name": "音動機「招福の虎炉」: チーム与ダメージ",
       "stat": "dmg_pct",
       "target": "team",
       "values": {
@@ -131,8 +145,8 @@
       },
       "maxStacks": 2,
       "duration": "30s",
-      "note": "連携スキルまたは終結スキルで炎属性ダメージを与えた時、メンバー全員の与ダメージアップ(最大2重)。属性限定の効果ではない",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ju-fufu/"
+      "note": "連携スキルまたは終結スキルで炎属性ダメージを与えた時、メンバー全員の与ダメージアップ(最大2重、1重ごとに独立してカウント)。1回のスキルにつき1回のみ発動、チーム内で1つのみ有効。属性限定の効果ではない",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/851"
     }
   ]
 }

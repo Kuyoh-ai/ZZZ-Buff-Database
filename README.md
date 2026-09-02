@@ -81,7 +81,9 @@ npm run check-anim     # CSSアニメーションが0.5s以内か検証(ロー�
 2. `npm run validate-data` でスキーマ検証
 3. 陣営を追加する場合は `src/data/labels.ts` の `FACTION_LABEL` にIDと日本語名を追加
 
-参照元の優先順位: HoYoWiki → wikiwiki.jp/zenless → Game8。gamewith は精度が低いため参照元にしない(既存データの一部は gamewith 由来のため順次置き換え)。
+参照元の優先順位: HoYoWiki → wikiwiki.jp/zenless → Game8。gamewith は精度が低いため参照元にしない。
+
+HoYoWiki はブラウザ描画が必要でそのままでは読めませんが、公開 API から JSON を取得できます。`python scripts/fetch-hoyowiki.py <出力先> ja-jp` でエージェント/音動機の全エントリ(スキル・心象映画・ポテンシャル解放・精錬効果)をテキスト化して保存でき、データ突合の一次情報として使います。
 
 受け手の役割による有効判定: 命破(rupture)には攻撃力/貫通率/貫通値のバフが乗らず、命破以外には透徹力/透徹ダメージが乗らない扱い(アタッカー指定時の強調に反映)。
 

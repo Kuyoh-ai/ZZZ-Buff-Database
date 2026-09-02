@@ -14,7 +14,7 @@
         "m1": 39
       },
       "note": "ドリシラまたはアナステラに攻撃指示を出すと、他メンバーの貫通率が「リナ自身の貫通率×25% + 固定値(コアLv7で12%)」アップ、上限30%。最大値(上限)を記載。M1で効果が130%になり上限39%。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/リナ"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/30"
     },
     {
       "id": "rina_additional_electric_dmg_shock_present",
@@ -27,7 +27,7 @@
       },
       "duration": "感電状態継続中",
       "note": "フィールドに感電状態の敵がいる場合、チーム全体の電気属性与ダメージ+10%。発動条件はチームに同属性(電気)または同陣営(ヴィクトリア家政)のメンバーがいること(OR条件のためcondition省略)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%AA%E3%83%8A"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/30"
     },
     {
       "id": "rina_m6_electric_dmg_on_skill_hit",
@@ -41,7 +41,7 @@
       },
       "duration": "8s",
       "note": "強化特殊/連携/終結スキル命中時、チーム全体の電気属性与ダメージ+15%",
-      "sourceUrl": "https://game8.jp/zenless/607799"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/30"
     },
     {
       "id": "rina_m2_self_dmg",
@@ -54,7 +54,7 @@
       },
       "duration": "12s",
       "note": "18秒に1回のみ発動",
-      "sourceUrl": "https://game8.jp/zenless/607799"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/30"
     },
     {
       "id": "rina_m4_energy_regen",
@@ -66,7 +66,7 @@
         "m4": 0.5
       },
       "note": "ドリシラとアナステラの両方が本体から離れている間、エネルギー自動回復+0.5Pt/秒",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%AA%E3%83%8A"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/30"
     },
     {
       "id": "rina_wengine_weeping_cradle_team_dmg",
@@ -77,15 +77,15 @@
         "base": 0
       },
       "wengine": {
-        "p1": 10,
-        "p2": 12.5,
+        "p1": 10.2,
+        "p2": 12,
         "p3": 15,
-        "p4": 17.5,
-        "p5": 20
+        "p4": 18,
+        "p5": 19.8
       },
       "duration": "3s",
-      "note": "装備者の攻撃が敵に命中した時に発動。効果継続中0.5秒ごとに追加上昇し、最大値はP1:10.2%/P2:12%/P3:15%/P4:18%/P5:19.8%(初期値のみ収録)",
-      "sourceUrl": "https://game8.jp/zenless/613934"
+      "note": "装備者の攻撃が敵に命中した時、全ユニットのターゲットへの与ダメージがアップ(初期値P1:10/P2:12.5/P3:15/P4:17.5/P5:20%、継続中0.5秒毎に加算され上限に達する)。重複発動では継続時間のみ更新されダメージ効果は更新されない。上限値を記載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/86"
     },
     {
       "id": "rina_wengine_weeping_cradle_energy_regen",
@@ -103,7 +103,7 @@
         "p5": 1.2
       },
       "note": "装備者が控えにいる間のエネルギー自動回復アップ",
-      "sourceUrl": "https://game8.jp/zenless/613934"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/86"
     }
   ]
 }

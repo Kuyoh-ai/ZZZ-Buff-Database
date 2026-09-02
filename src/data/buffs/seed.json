@@ -3,30 +3,66 @@
   "buffs": [
     {
       "id": "seed_core_atk_flat",
-      "name": "コアスキル: 攻撃力アップ",
+      "name": "コアパッシブ: 攻撃力アップ(強襲)",
       "stat": "atk_flat",
       "target": "self",
       "values": { "base": 1000 },
-      "note": "コアスキル強化Lv.7時点の値。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%80%8C%E3%82%B7%E3%83%BC%E3%83%89%E3%80%8D"
+      "duration": "40s",
+      "note": "「正規兵」(シードを除く開幕攻撃力最高の強攻メンバー)が強化特殊スキルを発動すると自身が「強襲」状態獲得。コアスキルLv最大時の値(Lv1で100Pt)。操作中メンバーの時のみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     },
     {
       "id": "seed_core_crit_dmg",
-      "name": "コアスキル: 会心ダメージアップ",
+      "name": "コアパッシブ: 会心ダメージアップ(強襲)",
       "stat": "crit_dmg",
       "target": "self",
       "values": { "base": 30 },
-      "note": "コアスキル強化Lv.7時点の値。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%80%8C%E3%82%B7%E3%83%BC%E3%83%89%E3%80%8D"
+      "duration": "40s",
+      "note": "「強襲」状態。コアスキルLv最大時の値(Lv1で15%)。操作中メンバーの時のみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
+    },
+    {
+      "id": "seed_core_atk_flat_ally",
+      "name": "コアパッシブ: 攻撃力アップ(対攻・正規兵)",
+      "stat": "atk_flat",
+      "target": "team",
+      "condition": { "roles": ["attack"] },
+      "values": { "base": 1000 },
+      "duration": "40s",
+      "note": "シードが強化特殊スキルを発動すると「正規兵」(シードを除く開幕攻撃力最高の強攻メンバー、1名のみ)が「対攻」状態を獲得。conditionは強攻ロールで近似(実際は最高ATKの1名限定)。コアスキルLv最大時の値。操作中メンバーの時のみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
+    },
+    {
+      "id": "seed_core_crit_dmg_ally",
+      "name": "コアパッシブ: 会心ダメージアップ(対攻・正規兵)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "condition": { "roles": ["attack"] },
+      "values": { "base": 30 },
+      "duration": "40s",
+      "note": "「対攻」状態(正規兵のみ)。conditionは強攻ロールで近似(実際は最高ATKの1名限定)。コアスキルLv最大時の値。操作中メンバーの時のみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     },
     {
       "id": "seed_core_dmg_pct",
-      "name": "コアスキル: 与ダメージアップ(包囲状態)",
+      "name": "コアパッシブ: 与ダメージアップ(包囲状態)",
       "stat": "dmg_pct",
-      "target": "self",
+      "target": "team",
+      "condition": { "roles": ["attack"] },
       "values": { "base": 25 },
-      "note": "「包囲」状態時。コアスキル強化Lv.7時点の値。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%80%8C%E3%82%B7%E3%83%BC%E3%83%89%E3%80%8D"
+      "duration": "40s",
+      "note": "「対攻」と「強襲」が同時に存在する時、シードと正規兵が同時に「包囲」状態を獲得。conditionは強攻ロールで近似(実際はシード+正規兵1名のみ)。コアスキルLv最大時の値(Lv1で12.5%)。操作中メンバーの時のみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
+    },
+    {
+      "id": "seed_additional_electric_res_down",
+      "name": "追加能力: 電気耐性ダウン(思いがけない援軍)",
+      "stat": "enemy_res_down_pct",
+      "element": "electric",
+      "target": "enemy",
+      "values": { "base": 25 },
+      "note": "チームに他の強攻メンバーがいる時発動。シードの通常攻撃『落花・殲滅』『落花・崩墜』および終結スキル『機巧ガーデン・開花！』が敵の電気属性ダメージ耐性を無視",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     },
     {
       "id": "seed_m1_critdmg_special",
@@ -34,17 +70,18 @@
       "stat": "crit_dmg",
       "target": "self",
       "values": { "base": 0, "m1": 30 },
-      "note": "「落花・崩墜」攻撃時のみ。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%80%8C%E3%82%B7%E3%83%BC%E3%83%89%E3%80%8D"
+      "note": "「落花・崩墜」攻撃時のみ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     },
     {
       "id": "seed_m2_pen_ignore",
       "name": "心象映画2: 防御力無視(包囲状態)",
       "stat": "pen_ratio",
-      "target": "self",
+      "target": "team",
+      "condition": { "roles": ["attack"] },
       "values": { "base": 0, "m2": 20 },
-      "note": "「包囲」状態時、与ダメージが敵防御力を無視。",
-      "sourceUrl": "https://gamewith.jp/zenless/511371"
+      "note": "「包囲」状態にあるエージェント(シードまたは正規兵)の与ダメージが敵防御力を無視。conditionは強攻ロールで近似",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     },
     {
       "id": "seed_m4_decibel_gain",
@@ -52,8 +89,8 @@
       "stat": "decibel_gain",
       "target": "self",
       "values": { "base": 0, "m4": 10 },
-      "note": "「包囲」状態時。",
-      "sourceUrl": "https://gamewith.jp/zenless/511371"
+      "note": "自身が「包囲」状態時",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     },
     {
       "id": "seed_m4_ult_dmg",
@@ -61,7 +98,8 @@
       "stat": "ult_dmg_pct",
       "target": "self",
       "values": { "base": 0, "m4": 20 },
-      "sourceUrl": "https://gamewith.jp/zenless/511371"
+      "note": "自身が「包囲」状態時",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     },
     {
       "id": "seed_m6_critdmg",
@@ -69,41 +107,40 @@
       "stat": "crit_dmg",
       "target": "self",
       "values": { "base": 0, "m6": 50 },
-      "note": "無条件で常時付与。",
-      "sourceUrl": "https://gamewith.jp/zenless/511371"
+      "note": "無条件で常時付与",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     },
     {
       "id": "seed_wengine_crit_rate",
-      "name": "音動機(駆動する種): 会心率アップ",
+      "name": "音動機「駆動する種」: 会心率アップ",
       "stat": "crit_rate",
       "target": "self",
       "values": { "base": 0 },
       "wengine": { "p1": 15, "p2": 17, "p3": 19, "p4": 21, "p5": 23 },
-      "note": "中間精錬値(p2-p4)は線形補間による推定。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E9%9F%B3%E5%8B%95%E6%A9%9F/%E5%BC%B7%E6%94%BB"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/910"
     },
     {
       "id": "seed_wengine_electric_dmg",
-      "name": "音動機(駆動する種): 電気ダメージアップ",
+      "name": "音動機「駆動する種」: 電気ダメージアップ",
       "stat": "dmg_pct_element",
       "element": "electric",
       "target": "self",
       "values": { "base": 0 },
-      "wengine": { "p1": 12.5, "p2": 14.375, "p3": 16.25, "p4": 18.125, "p5": 20 },
+      "wengine": { "p1": 12.5, "p2": 14.5, "p3": 16.5, "p4": 18.5, "p5": 20 },
       "maxStacks": 2,
       "duration": "40s",
-      "note": "通常攻撃/強化特殊スキルでダメージを与えた時に1重獲得(最大2重、各重複は個別に持続時間カウント)。中間精錬値(p2-p4)は線形補間による推定。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E9%9F%B3%E5%8B%95%E6%A9%9F/%E5%BC%B7%E6%94%BB"
+      "note": "通常攻撃/強化特殊スキルでダメージを与えた時に1重獲得(最大2重、各重複は個別に持続時間カウント)。1回のスキルにつき1回のみ発動",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/910"
     },
     {
       "id": "seed_wengine_pen_ratio",
-      "name": "音動機(駆動する種): 防御力無視(2重時)",
+      "name": "音動機「駆動する種」: 防御力無視(2重時)",
       "stat": "pen_ratio",
       "target": "self",
       "values": { "base": 0 },
       "wengine": { "p1": 20, "p2": 23, "p3": 26, "p4": 29, "p5": 32 },
-      "note": "電気ダメージアップ効果を2重所持している時、通常攻撃と終結スキルが敵防御力を無視。中間精錬値(p2-p4)は線形補間による推定。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E9%9F%B3%E5%8B%95%E6%A9%9F/%E5%BC%B7%E6%94%BB"
+      "note": "電気ダメージアップ効果を2重所持している時、通常攻撃と終結スキルが敵防御力を無視",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/910"
     }
   ]
 }

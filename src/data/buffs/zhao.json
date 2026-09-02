@@ -10,8 +10,20 @@
         "base": 1000
       },
       "duration": "50s",
-      "note": "「エーテルベール・湧泉」展開時。再展開で継続時間更新。",
-      "sourceUrl": "https://www.icy-veins.com/zenless-zone-zero/zhao-profile-skills-mindscapes"
+      "note": "照が「エーテルベール・湧泉」を展開した時、メンバー全員の攻撃力+100/250/400/550/700/850/1000Pt(コアスキルレベル依存、最大値を記載)、継続時間50秒。再展開で継続時間更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
+    },
+    {
+      "id": "zhao_core_team_hp_pct",
+      "name": "コアパッシブ: 最高の同僚(チーム最大HP)",
+      "stat": "hp_pct",
+      "target": "team",
+      "values": {
+        "base": 5
+      },
+      "duration": "40s",
+      "note": "「エーテルベール・湧泉」の効果を受けている時、メンバー全員の最大HP+5%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
     },
     {
       "id": "zhao_extra_team_dmg",
@@ -21,8 +33,8 @@
       "values": {
         "base": 40
       },
-      "note": "チームに強攻/異常/支援のいずれかが存在し、照がエーテルベール効果を受けている時。基礎+10%に加え、照の開幕最大HPが15000Ptを超えると400Ptごとに+1%加算(開幕最大HP27000Ptで上限の+40%に到達)。ここでは上限値を記載。",
-      "sourceUrl": "https://gamewith.jp/zenless/525762"
+      "note": "チームに強攻/異常/支援のいずれかが存在し、照が任意の「エーテルベール」効果を受けている時、メンバー全員の与ダメージ+10%。照の開幕最大HPが15000Ptを超えると400Ptごとに+1%加算(開幕最大HP27000Ptで上限の+40%に到達)。ここでは上限値を記載。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
     },
     {
       "id": "zhao_m1_res_down",
@@ -34,8 +46,8 @@
         "m1": 15
       },
       "duration": "50s",
-      "note": "全属性耐性無視。",
-      "sourceUrl": "https://gamewith.jp/zenless/525762"
+      "note": "照が交代で操作中メンバーでなくなった(控えに回った)時、メンバー全員の与ダメージが対象の全属性ダメージ耐性を15%無視する。継続時間50秒、再発動で更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
     },
     {
       "id": "zhao_m2_self_atk",
@@ -47,7 +59,8 @@
         "m2": 20
       },
       "duration": "50s",
-      "sourceUrl": "https://gamewith.jp/zenless/525762"
+      "note": "照のHPが回復した時、照自身の攻撃力+20%。継続時間50秒、再発動で更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
     },
     {
       "id": "zhao_m2_team_atk",
@@ -62,7 +75,8 @@
         "m2": 15
       },
       "duration": "50s",
-      "sourceUrl": "https://gamewith.jp/zenless/525762"
+      "note": "照のHPが回復した時、他のメンバーの攻撃力+15%。継続時間50秒、再発動で更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
     },
     {
       "id": "zhao_m4_crit_dmg",
@@ -73,8 +87,20 @@
         "base": 0,
         "m4": 40
       },
-      "note": "発動条件の詳細未確認。確信度低め。",
-      "sourceUrl": "https://gamewith.jp/zenless/525762"
+      "note": "『終結スキル』、『連携スキル』、『通常攻撃:最終裁決』の会心ダメージ+40%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
+    },
+    {
+      "id": "zhao_m4_decibel_gain",
+      "name": "心象映画4: トコトコ(デシベル獲得)",
+      "stat": "decibel_gain",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 250
+      },
+      "note": "照が「エーテルベール」を展開した時、デシベル値を250Pt獲得する。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
     },
     {
       "id": "zhao_wengine_team_atk",
@@ -86,13 +112,49 @@
       },
       "wengine": {
         "p1": 10,
-        "p5": 16,
         "p2": 11.5,
         "p3": 13.0,
-        "p4": 14.5
+        "p4": 14.5,
+        "p5": 16
       },
-      "note": "チームに1回のみ適用。精錬2〜4の数値は未確認。 音動機P2〜P4は P1/P5 からの等差補間(未確認)",
-      "sourceUrl": "https://gamewith.jp/zenless/537079"
+      "note": "メンバー全員の攻撃力上昇(常時)。同種の効果はチーム内でひとつしか有効にならない。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/983"
+    },
+    {
+      "id": "zhao_wengine_team_hp_pct",
+      "name": "音動機 甘さ控えめ雪うさぎ: チーム最大HP",
+      "stat": "hp_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p2": 11.5,
+        "p3": 13.0,
+        "p4": 14.5,
+        "p5": 16
+      },
+      "note": "メンバー全員の最大HP上昇(常時)。同種の効果はチーム内でひとつしか有効にならない。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/983"
+    },
+    {
+      "id": "zhao_wengine_energy_regen",
+      "name": "音動機 甘さ控えめ雪うさぎ: エネルギー自動回復",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 0.46,
+        "p2": 0.53,
+        "p3": 0.6,
+        "p4": 0.67,
+        "p5": 0.74
+      },
+      "note": "装備者のエネルギー自動回復上昇(常時)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/983"
     },
     {
       "id": "zhao_wengine_team_critdmg",
@@ -104,14 +166,14 @@
       },
       "wengine": {
         "p1": 30,
-        "p5": 48,
         "p2": 34.5,
         "p3": 39.0,
-        "p4": 43.5
+        "p4": 43.5,
+        "p5": 48
       },
       "duration": "60s",
-      "note": "装備者が「エーテルベール」を発動/更新した時。精錬2〜4の数値は未確認。 音動機P2〜P4は P1/P5 からの等差補間(未確認)",
-      "sourceUrl": "https://gamewith.jp/zenless/537079"
+      "note": "装備者が「エーテルベール」を発動/更新した時、メンバー全員の会心ダメージ上昇。継続時間60秒、再発動で更新。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/983"
     }
   ]
 }

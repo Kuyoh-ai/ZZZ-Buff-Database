@@ -12,8 +12,8 @@
       },
       "maxStacks": 1,
       "duration": "30s(毒素消費後も継続)",
-      "note": "電気属性ダメージに対してのみ有効。「毒素」所持時に発動。初期エネルギー自動回復が1.4を超えると0.12ごとに+1%され、最大25%まで上昇(M1では倍率140%となり最大35%相当)。最大値を記載(式: 6% + 超過分×1/0.12、M1は140%倍)。",
-      "sourceUrl": "https://www.icy-veins.com/zenless-zone-zero/cissia-guide-best-builds"
+      "note": "チーム全体が敵に与える電気属性ダメージについて、ターゲットの防御力を無視。「毒素」所持時(尽きてから30秒間は継続)のみ有効。基礎3〜6%(コアスキルLv依存)+開幕エネルギー自動回復1.4超過分による加算、最大25%。M1で倍率140%となり最大35%。上限値を記載。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039"
     },
     {
       "id": "cissia_core_crit_dmg_team",
@@ -26,7 +26,7 @@
       "maxStacks": 1,
       "duration": "30s(毒素消費後も継続)",
       "note": "編成内に撃破特性または電気属性のメンバーがいる場合に発動、「毒素」所持中有効。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/cissia/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039"
     },
     {
       "id": "cissia_core_crit_dmg_self",
@@ -39,21 +39,21 @@
       "maxStacks": 1,
       "duration": "30s(毒素消費後も継続)",
       "note": "上記チーム全員+40%に加えて、シーシィア自身のみさらに+10%(合計+50%)。発動条件は同上。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/cissia/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039"
     },
     {
       "id": "cissia_m1_electric_res_ignore",
       "name": "心象映画M1:電気属性耐性無視",
       "stat": "enemy_res_down_pct",
       "element": "electric",
-      "target": "self",
+      "target": "team",
       "values": {
         "base": 0,
         "m1": 5
       },
       "maxStacks": 1,
-      "note": "M1習得で追加。敵の電気属性耐性を5%無視する。 (自身の攻撃にのみ適用)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B7%E3%83%BC%E3%82%B7%E3%82%A3%E3%82%A2"
+      "note": "メンバー全員の与えるダメージが、敵の電気属性耐性を5%無視する。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039"
     },
     {
       "id": "cissia_wengine_crit_rate",
@@ -72,7 +72,7 @@
       },
       "maxStacks": 1,
       "note": "音動機装備の基礎効果(常時)。数値は精錬(重ね)Lv1〜5。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/serpentine-seeker/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1078"
     },
     {
       "id": "cissia_wengine_def_ignore",
@@ -92,7 +92,7 @@
       "maxStacks": 1,
       "duration": "3s(重複時最大30秒まで延長、接敵時10秒)",
       "note": "装備者が一度に20ptエネルギーを消費するごとに発動、電気属性ダメージに対して防御力無視。数値は精錬Lv1〜5。 (自身の攻撃にのみ適用)",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/serpentine-seeker/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1078"
     }
   ]
 }

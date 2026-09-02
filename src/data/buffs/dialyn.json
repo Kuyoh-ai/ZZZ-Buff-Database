@@ -12,8 +12,8 @@
       },
       "maxStacks": 1,
       "duration": "常時",
-      "note": "開幕(戦闘開始時)会心率が50%を超えている場合、超えた分1%につき衝撃力+1.4Pt、最大+100Pt。数値はPt加算(百分率換算した衝撃力ステータス上昇)であり実際の効果は会心率依存で変動するため、valuesは最大値のみ記載。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "note": "開幕(戦闘開始時)会心率が50%を超えている場合、超えた分1%につき衝撃力+1.4/1.5/1.6/1.7/1.8/1.9/2Pt(コアスキルレベル依存)、最大+100Pt。上限が明記されているため上限値を記載。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_core_stun_dmg_multiplier",
@@ -26,8 +26,8 @@
       },
       "maxStacks": 1,
       "duration": "ブレイク中(付与から発動まで)",
-      "note": "強化特殊スキル『パー！』が敵に命中すると「悪質クレーム」を付与。対象がブレイクした場合、ブレイク時間+2秒、ブレイク弱体倍率+15~30%(数値は資料により15%/30%で差異あり。wikiwiki.jp・game8.jpは15~30%表記、game8.co英語版は15%表記のためbaseは資料内で最も高い値30%を採用し30%固定ではなく幅がある点に注意)。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "note": "強化特殊スキル『パー！』が敵に命中すると「悪質クレーム」を付与。対象がブレイクした場合、ブレイク時間+2秒、ブレイク弱体倍率+15/17.5/20/22.5/25/27.5/30%(コアスキルレベル依存、最大値を記載)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_additional_ex_crit_dmg",
@@ -40,7 +40,7 @@
       "maxStacks": 1,
       "duration": "常時",
       "note": "チームに強攻(Attack)または命破(Rupture)タイプのメンバーがいる場合、ダイアリンの強化特殊スキルダメージの会心ダメージ+50%。対象はEX特殊攻撃(強化特殊スキル)ダメージのみ。",
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/557173"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_additional_team_dmg",
@@ -54,7 +54,7 @@
       "maxStacks": 1,
       "duration": "15s",
       "note": "強化特殊スキルまたは終結スキルを発動した時、チーム全員に「好評の嵐」を付与、与ダメージ+40%、継続時間15秒。M4によりダイアリン自身が好評の嵐状態の時、攻撃力+500(atk_flat)を追加(別エントリdialyn_m4_atk参照)。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_m1_positive_review_gain",
@@ -69,13 +69,13 @@
       "maxStacks": 1,
       "duration": "常時",
       "note": "高評価(専用リソース)獲得量+16%。ゲーム内の「高評価」はディシベル/エネルギーゲージに近い専用ポイントのため暫定的にdecibel_gainを使用。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_m1_res_ignore",
       "name": "心象映画1:好評の嵐中の敵耐性無視",
       "stat": "enemy_res_ignore_all_pct",
-      "target": "self",
+      "target": "team",
       "condition": {},
       "values": {
         "base": 0,
@@ -83,8 +83,8 @@
       },
       "maxStacks": 1,
       "duration": "好評の嵐継続中",
-      "note": "「好評の嵐」効果中、ダイアリン自身の攻撃が敵の全属性ダメージ耐性を15%無視。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "note": "「好評の嵐」状態のメンバーは、敵の全属性ダメージ耐性を15%無視する(好評の嵐はダイアリンの強化特殊/終結スキル発動でチーム全員が獲得)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_m2_stun_dmg_multiplier",
@@ -99,7 +99,7 @@
       "maxStacks": 1,
       "duration": "ブレイク中",
       "note": "「悪質クレーム」付与対象がブレイクした際、ブレイク弱体倍率がさらに+20%(コアスキル分に加算)。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_m2_dmg_taken",
@@ -114,7 +114,7 @@
       "maxStacks": 1,
       "duration": "ブレイク中",
       "note": "「悪質クレーム」付与対象がブレイクした際、チーム全員の該当敵への与ダメージ+15%。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_m4_energy",
@@ -129,7 +129,7 @@
       "maxStacks": 1,
       "duration": "戦闘参加時1回(180秒に1回)",
       "note": "フィールドに入場した時エネルギー+20Pt獲得(探査モードでは180秒に1回)。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_m4_atk",
@@ -144,7 +144,7 @@
       "maxStacks": 1,
       "duration": "好評の嵐継続中",
       "note": "「好評の嵐」効果を得ている間、ダイアリン自身の攻撃力+500。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     },
     {
       "id": "dialyn_wengine_daze",
@@ -169,7 +169,7 @@
       "maxStacks": 3,
       "duration": "10s",
       "note": "物理属性ダメージを与える強化特殊スキル(EX特殊攻撃)がヒットした時、与えるブレイク値+9%(最大3重、継続10秒)。",
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/565530"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/964"
     },
     {
       "id": "dialyn_wengine_crit_dmg",
@@ -190,7 +190,7 @@
       "maxStacks": 1,
       "duration": "40s",
       "note": "ブレイク値上昇効果が3重になった時、チーム全員の会心ダメージ+30%(継続40秒、再発動で継続時間更新、同一チームで1つのみ有効)。",
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/565530"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/964"
     },
     {
       "id": "dialyn_wengine_energy_regen",
@@ -211,7 +211,7 @@
       "maxStacks": 1,
       "duration": "控え中常時",
       "note": "装備者が控え(オフフィールド)時、エネルギー自動回復+1.5/秒。",
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/565530"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/964"
     }
   ]
 }

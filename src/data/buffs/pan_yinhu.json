@@ -8,8 +8,8 @@
       "target": "next_swap_in",
       "values": { "base": 540, "m6": 720 },
       "duration": "25s",
-      "note": "クイック支援または連携スキルで入場したメンバーに、潘引壺の開幕攻撃力の18%(6凸で24%)分の貫通力を付与(上限は開幕攻撃力3000時の値)。ここでは上限値を記載",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/pan-yinhu/"
+      "note": "クイック支援または連携スキルで入場したメンバーに、潘引壺の開幕攻撃力の18%(M6で24%)分の透徹力を付与(上限は開幕攻撃力3000時の値)。ここでは上限値を記載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/751"
     },
     {
       "id": "pan_yinhu_enemy_dmg_taken",
@@ -18,8 +18,8 @@
       "target": "enemy",
       "values": { "base": 20, "m1": 30 },
       "duration": "10s",
-      "note": "「絶気」状態の敵への与ダメージ増加。チームに[命破]特性または同陣営メンバーが存在する場合に発動。M2で継続時間12秒に延長",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/pan-yinhu/"
+      "note": "「絶気」状態の敵への与ダメージ増加。チームに命破特性または同陣営メンバーが存在する場合に発動。M2で継続時間12秒に延長",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/751"
     }
   ]
 }

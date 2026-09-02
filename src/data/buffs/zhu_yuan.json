@@ -10,7 +10,7 @@
         "base": 40
       },
       "note": "コアスキル最大レベル時。「制圧モード」で「強化散弾」を使って攻撃する時、自身の与ダメージ+40%。ブレイク状態の敵を攻撃する際はさらに+40%(合計80%)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E6%9C%B1%E9%B3%B6"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
     },
     {
       "id": "zhu_yuan_core_crit_dmg",
@@ -21,7 +21,7 @@
         "base": 28.8
       },
       "note": "コアスキル最大レベル時。コアスキルLv2/4/6で各+9.6%(合計28.8%)。「強化散弾」使用時の効果",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E6%9C%B1%E9%B3%B6"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
     },
     {
       "id": "zhu_yuan_core_atk_flat",
@@ -32,7 +32,7 @@
         "base": 75
       },
       "note": "コアスキル最大レベル時。コアスキルLv3/5/7で各+25Pt(合計75Pt)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E6%9C%B1%E9%B3%B6"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
     },
     {
       "id": "zhu_yuan_ex_crit_rate",
@@ -44,7 +44,52 @@
       },
       "duration": "10s",
       "note": "チームに[支援]のメンバーまたは同陣営のメンバーがいる時に発動(OR条件のためcondition省略)。『強化特殊スキル』『連携スキル』『終結スキル』発動時に付与",
-      "sourceUrl": "https://game8.jp/zenless/609201"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
+    },
+    {
+      "id": "zhu_yuan_m2_ether_dmg_self",
+      "name": "心象映画2: エーテルの余燼(エーテル属性ダメージアップ)",
+      "stat": "dmg_pct_element",
+      "element": "ether",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 10
+      },
+      "maxStacks": 5,
+      "duration": "5s",
+      "note": "「制圧モード」中、「強化散弾」を消費した攻撃が敵に命中した時、『通常攻撃:抵抗はやめなさい』と『ダッシュ攻撃:火力制圧』のエーテル属性ダメージがアップ(1発ごとに最大1重、最大5重)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
+    },
+    {
+      "id": "zhu_yuan_m4_ether_res_ignore_self",
+      "name": "心象映画4: エーテル浸透(エーテル属性耐性無視)",
+      "stat": "enemy_res_down_pct",
+      "element": "ether",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 25
+      },
+      "note": "「強化散弾」を消費した攻撃が敵に命中した時、『通常攻撃:抵抗はやめなさい』と『ダッシュ攻撃:火力制圧』がターゲットのエーテル属性ダメージ耐性を無視(自身の攻撃にのみ適用のためtarget: self)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
+    },
+    {
+      "id": "zhu_yuan_wengine_suppressor_crit_rate",
+      "name": "音動機 サプレッサーⅥ型: 会心率アップ",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 15,
+        "p2": 18.8,
+        "p3": 22.6,
+        "p4": 26.4,
+        "p5": 30
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/87"
     },
     {
       "id": "zhu_yuan_wengine_suppressor_dmg",
@@ -54,13 +99,13 @@
       "values": {
         "base": 0
       },
-      "note": "『強化特殊スキル』発動時にパワーを8重獲得、『通常攻撃』でエーテル属性ダメージを与える時にパワー1重消費し、その攻撃の与ダメージアップ。P1:35%、P5:70%(P2~P4は未確認のため中間値を記載しない) P2〜P4はP1/P5からの等差補間",
-      "sourceUrl": "https://game8.jp/zenless/613911",
+      "note": "『強化特殊スキル』発動時にパワーを8重獲得(最大8重)、『通常攻撃』または『ダッシュ攻撃』でエーテル属性ダメージを与える時にパワー1重消費し、その攻撃の与ダメージアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/87",
       "wengine": {
         "p1": 35.0,
-        "p2": 43.75,
-        "p3": 52.5,
-        "p4": 61.25,
+        "p2": 43.5,
+        "p3": 52.0,
+        "p4": 60.5,
         "p5": 70.0
       }
     }

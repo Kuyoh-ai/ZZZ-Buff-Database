@@ -3,48 +3,48 @@
   "buffs": [
     {
       "id": "orphie_core_crit_rate",
-      "name": "コアスキル: 会心率アップ",
+      "name": "コアパッシブ: 会心率アップ(風と炎を御して)",
       "stat": "crit_rate",
       "target": "self",
       "values": {
         "base": 25
       },
-      "note": "コアスキル強化最大値(Lv.F時)。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AA%E3%83%AB%E3%83%9A%E3%82%A6%E3%82%B9%EF%BC%86%E3%80%8C%E9%AC%BC%E7%81%AB%E3%80%8D"
+      "note": "コアスキルLv最大時の値(Lv1で12.5%)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
       "id": "orphie_core_assist_dmg",
-      "name": "コアスキル: 追加攻撃ダメージアップ",
+      "name": "コアパッシブ: 追加攻撃ダメージアップ(風と炎を御して)",
       "stat": "assist_dmg_pct",
       "target": "self",
       "values": {
         "base": 85
       },
-      "note": "コアスキル強化最大値(Lv.F時)。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AA%E3%83%AB%E3%83%9A%E3%82%A6%E3%82%B9%EF%BC%86%E3%80%8C%E9%AC%BC%E7%81%AB%E3%80%8D"
+      "note": "コアスキルLv最大時の値(Lv1で42.5%)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
       "id": "orphie_core_focus_atk",
-      "name": "コアスキル: フォーカス状態の攻撃力アップ",
+      "name": "コアパッシブ: フォーカス状態の攻撃力アップ",
       "stat": "atk_flat",
-      "target": "self",
+      "target": "team",
       "values": {
         "base": 700
       },
       "duration": "12s",
-      "note": "蓄熱チャージ発動時に付与(フォーカスバフ)。基本値+280、EN自動回復3.7以上で最大+700(コアスキル強化最大値)。追加攻撃で持続時間+4秒(最大20秒)。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AA%E3%83%AB%E3%83%9A%E3%82%A6%E3%82%B9%EF%BC%86%E3%80%8C%E9%AC%BC%E7%81%AB%E3%80%8D"
+      "note": "強化特殊スキル『蓄熱チャージ』のビームが敵に命中した時、メンバー全員が「フォーカス」効果を獲得。「フォーカス」を所持するメンバーの攻撃力アップ(基本値+280〜開幕エネルギー自動回復が1.6超過分で加算、コアスキルLv最大時の合計上限700Pt、Lv1で340Pt)。フォーカス保持者が追加攻撃発動で継続時間+4秒(最大20秒)、重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
-      "id": "orphie_core_pen_ratio",
-      "name": "追加能力: フォーカス状態の防御力無視",
+      "id": "orphie_additional_pen_ratio",
+      "name": "追加能力: フォーカス状態の防御力無視(溶炉鍛心)",
       "stat": "pen_ratio",
-      "target": "self",
+      "target": "team",
       "values": {
         "base": 25
       },
-      "note": "フォーカス状態のメンバーが追加攻撃を行う時、その追加攻撃が敵防御力を無視。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AA%E3%83%AB%E3%83%9A%E3%82%A6%E3%82%B9%EF%BC%86%E3%80%8C%E9%AC%BC%E7%81%AB%E3%80%8D"
+      "note": "チームに撃破または支援メンバーがいる時に発動。「フォーカス」を所持しているメンバーが追加攻撃を行う時、その追加攻撃が敵防御力を無視",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
       "id": "orphie_m1_res_ignore",
@@ -56,20 +56,20 @@
         "base": 0,
         "m1": 15
       },
-      "note": "特殊スキル・蓄熱チャージ・烈炎噴射使用時。 (自身の攻撃にのみ適用)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AA%E3%83%AB%E3%83%9A%E3%82%A6%E3%82%B9%EF%BC%86%E3%80%8C%E9%AC%BC%E7%81%AB%E3%80%8D"
+      "note": "特殊スキル/強化特殊スキル『蓄炎の渦』『蓄熱チャージ』『烈炎噴射』使用時(自身の攻撃にのみ適用)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
       "id": "orphie_m1_focus_dmg",
       "name": "心象映画1: フォーカス状態の与ダメージアップ",
       "stat": "dmg_pct",
-      "target": "self",
+      "target": "team",
       "values": {
         "base": 0,
         "m1": 20
       },
-      "note": "「フォーカス」状態時。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AA%E3%83%AB%E3%83%9A%E3%82%A6%E3%82%B9%EF%BC%86%E3%80%8C%E9%AC%BC%E7%81%AB%E3%80%8D"
+      "note": "「フォーカス」状態にあるメンバーの与ダメージアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
       "id": "orphie_m2_atk_pct",
@@ -81,12 +81,12 @@
         "m2": 20
       },
       "duration": "45s",
-      "note": "終結スキル発動後に付与。",
-      "sourceUrl": "https://gamewith.jp/zenless/511491"
+      "note": "終結スキル発動後に自身に付与",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
       "id": "orphie_wengine_crit_rate",
-      "name": "音動機(憤怒の銃騒): 会心率アップ",
+      "name": "音動機「憤怒の銃騒」: 会心率アップ",
       "stat": "crit_rate",
       "target": "self",
       "values": {
@@ -99,12 +99,11 @@
         "p4": 29,
         "p5": 32
       },
-      "note": "中間精錬値(p2-p4)は線形補間による推定。",
-      "sourceUrl": "https://mintparm.jp/zenlesszonezero/bellicose-blaze/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/929"
     },
     {
       "id": "orphie_wengine_pen_ratio",
-      "name": "音動機(憤怒の銃騒): 防御力無視",
+      "name": "音動機「憤怒の銃騒」: 防御力無視",
       "stat": "pen_ratio",
       "target": "self",
       "values": {
@@ -112,15 +111,15 @@
       },
       "wengine": {
         "p1": 15,
-        "p2": 17.25,
+        "p2": 17.2,
         "p3": 19.5,
-        "p4": 21.75,
+        "p4": 21.7,
         "p5": 24
       },
       "maxStacks": 2,
       "duration": "8s",
-      "note": "追加攻撃で炎属性ダメージを与えた時に1重獲得(3秒に1重、最大2重)。中間精錬値(p2-p4)は線形補間による推定。",
-      "sourceUrl": "https://mintparm.jp/zenlesszonezero/bellicose-blaze/"
+      "note": "追加攻撃で炎属性ダメージを与えた時に1重獲得(3秒に1重、最大2重)。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/929"
     }
   ]
 }

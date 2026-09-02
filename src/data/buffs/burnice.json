@@ -2,83 +2,114 @@
   "characterId": "burnice",
   "buffs": [
     {
-      "id": "burnice_additional_anomaly_buildup_self",
-      "name": "追加能力: 燃え広がる小火(自身の炎属性状態異常蓄積効率アップ)",
-      "stat": "anomaly_buildup_pct",
-      "target": "self",
-      "values": {
-        "base": 65
-      },
-      "note": "『通常攻撃:フレイム・ブレンド』長押し・『強化特殊スキル:ヒートシェイキング・メソッド』・「エンバー」効果による炎属性状態異常蓄積値がアップ。発動条件は[異常]特性メンバーまたは同陣営メンバーがチームにいること",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
-    },
-    {
-      "id": "burnice_passive_anomaly_mastery_self",
-      "name": "熱狂パーティー: 異常掌握アップ",
-      "stat": "anomaly_mastery",
-      "target": "self",
-      "values": {
-        "base": 25
-      },
-      "note": "開幕エネルギー自動回復が1.8Pt以上の場合に発動。超過分0.1Ptにつき+1Pt(最大+25Pt)。値は上限値",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
-    },
-    {
-      "id": "burnice_passive_dmg_self",
-      "name": "熱狂パーティー: 与ダメージアップ",
+      "id": "burnice_core_ex_dmg_from_mastery",
+      "name": "コアパッシブ: スペシャルフューエル(異常マスタリーによる「エンバー」与ダメージ上昇)",
       "stat": "dmg_pct",
       "target": "self",
-      "values": {
-        "base": 20
-      },
-      "note": "開幕エネルギー自動回復が1.8Pt以上の場合に発動。超過分0.1Ptにつき+1%(最大+20%)。値は上限値。同時にエンバー発動間隔が1.5秒→1.35秒に短縮",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
+      "values": { "base": 30 },
+      "note": "「エンバー」効果のみに適用。異常マスタリー10Ptごとに与ダメージ+1%、上限+30%(上限値を収録。異常マスタリー300Pt相当)。「エンバー」効果は支援攻撃扱い",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
+    },
+    {
+      "id": "burnice_additional_anomaly_buildup_self",
+      "name": "追加能力: 燃え広がる小火(自身の炎属性状態異常蓄積値アップ)",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 65 },
+      "note": "チームに他の[異常]特性メンバーまたは自身と同じ陣営(カリュドーンの子)のメンバーがいる時に発動。『通常攻撃:フレイム・ブレンド』『強化特殊スキル:ヒートシェイキング・メソッド/ダブル』が命中、または「エンバー」効果発動時に付与",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
+    },
+    {
+      "id": "burnice_m1_anomaly_buildup",
+      "name": "心象映画1: 一心同火(「エンバー」状態異常蓄積値アップ)",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 0, "m1": 25 },
+      "note": "「エンバー」効果による炎属性の状態異常蓄積値+25%(このエントリはburnice_additional_anomaly_buildup_selfとは別枠)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
     },
     {
       "id": "burnice_m2_team_pen_ratio",
-      "name": "心象映画2: 貫く熱意(味方の貫通率アップ)",
+      "name": "心象映画2: お値段そのまま増量フェア(味方の貫通率アップ)",
       "stat": "pen_ratio",
       "target": "team",
-      "values": {
-        "base": 0,
-        "m2": 4
-      },
+      "values": { "base": 0, "m2": 4 },
       "maxStacks": 5,
       "duration": "6s",
-      "note": "バーニスの攻撃を受けた敵に「貫く熱意」が付与され、そのターゲットへの味方全体の攻撃の貫通率が1重につき+4%(最大5重)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
+      "note": "「エンバー」効果発動時に敵へ「貫く熱意」を付与(最大5重)。そのターゲットへの味方攻撃の貫通率が1重につき+4%(最大+20%)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
     },
     {
       "id": "burnice_m4_ex_assist_crit_rate_self",
       "name": "心象映画4: 燃料マシマシ(強化特殊/支援攻撃の会心率アップ)",
       "stat": "crit_rate",
       "target": "self",
-      "values": {
-        "base": 0,
-        "m4": 30
-      },
-      "note": "『強化特殊スキル』および『支援攻撃』の会心率がアップ",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
+      "values": { "base": 0, "m4": 30 },
+      "note": "『強化特殊スキル』または『支援攻撃』が敵に命中した時、そのスキルの会心率+30%",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
+    },
+    {
+      "id": "burnice_m6_res_down_fire_self",
+      "name": "心象映画6: 火遊びのお誘い(炎属性耐性無視)",
+      "stat": "enemy_res_down_pct",
+      "element": "fire",
+      "target": "self",
+      "values": { "base": 0, "m6": 25 },
+      "note": "自身の『強化特殊スキル:ヒートシェイキング・メソッド・ダブル』『特殊な「エンバー」効果』『「熱傷」ダメージ』がターゲットの炎属性ダメージ耐性を25%無視(バーニス自身の攻撃にのみ適用のためtarget:self)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
+    },
+    {
+      "id": "burnice_potential_anomaly_mastery_self",
+      "name": "ポテンシャル覚醒: 熱狂パーティー(異常掌握アップ)",
+      "stat": "anomaly_mastery",
+      "target": "self",
+      "values": { "base": 0 },
+      "potential": { "t2": 10, "t3": 13, "t4": 16, "t5": 20, "t6": 25 },
+      "note": "ポテンシャルT2で解放。開幕エネルギー自動回復が1.8Pt以上の場合、超過0.1Ptにつき異常掌握+1/1.3/1.6/2/2.5Pt(T2〜T6)。最大+25Pt(T6時点の上限)。各段階の上限は本文に明記が無く、T6上限からの比例値で推定(要検証)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
+    },
+    {
+      "id": "burnice_potential_dmg_self",
+      "name": "ポテンシャル覚醒: 熱狂パーティー(与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 0 },
+      "potential": { "t2": 8, "t3": 10.4, "t4": 12.8, "t5": 16, "t6": 20 },
+      "note": "ポテンシャルT2で解放。開幕エネルギー自動回復が1.8Pt以上の場合、超過0.1Ptにつき与ダメージ+1/1.25/1.5/1.75/2%(T2〜T6)。最大+20%(T6時点の上限)。各段階の上限は本文に明記が無く、T6上限からの比例値で推定(要検証)。同時に「エンバー」発動間隔が1.35秒に短縮",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
     },
     {
       "id": "burnice_wengine_dmg_self",
-      "name": "モチーフ音動機: バーニング・シェイカー(与ダメージアップ)",
+      "name": "専用音動機「バーニング・シェイカー」: 与ダメージアップ",
       "stat": "dmg_pct",
       "target": "self",
-      "values": {
-        "base": 0
-      },
+      "values": { "base": 0 },
       "maxStacks": 10,
       "duration": "6s",
-      "note": "音動機装備時のみ。『強化特殊スキル』または『支援攻撃』が敵に命中すると与ダメージ+3.5%(精錬1、最大10重、0.3秒に1回のみ発動)。控え時はエネルギー自動回復+0.6Pt/秒(精錬1)。精錬2〜5の中間値は未確認のためwengine値は省略 精錬2〜5未確認のため全段にP1値を使用",
-      "sourceUrl": "https://gamewith.jp/zenless/468287",
-      "wengine": {
-        "p1": 3.5,
-        "p2": 3.5,
-        "p3": 3.5,
-        "p4": 3.5,
-        "p5": 3.5
-      }
+      "wengine": { "p1": 3.5, "p2": 4.4, "p3": 5.2, "p4": 6.1, "p5": 7 },
+      "note": "『強化特殊スキル』または『支援攻撃』が敵に命中すると発動(最大10重、0.3秒に1回のみ)。控え時は重ね掛け効率2倍",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/525"
+    },
+    {
+      "id": "burnice_wengine_energy_regen_offfield",
+      "name": "専用音動機「バーニング・シェイカー」: 控え時エネルギー自動回復",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 0.6, "p2": 0.75, "p3": 0.9, "p4": 1.05, "p5": 1.2 },
+      "note": "控え(場外)にいる時のみ加算",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/525"
+    },
+    {
+      "id": "burnice_wengine_anomaly_mastery_self",
+      "name": "専用音動機「バーニング・シェイカー」: 異常マスタリーアップ",
+      "stat": "anomaly_mastery",
+      "target": "self",
+      "values": { "base": 0 },
+      "duration": "6s",
+      "wengine": { "p1": 50, "p2": 62, "p3": 75, "p4": 87, "p5": 100 },
+      "note": "与ダメージアップ効果獲得時、所持している重数が5重以上の場合に追加発動。重ね掛け不可",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/525"
     }
   ]
 }

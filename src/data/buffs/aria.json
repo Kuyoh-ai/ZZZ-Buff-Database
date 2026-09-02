@@ -9,7 +9,44 @@
       "values": {
         "base": 90
       },
-      "sourceUrl": "https://game8.jp/zenless/754122"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
+    },
+    {
+      "id": "aria_m1_enemy_anomaly_buildup_res_down",
+      "name": "心象映画1: 狂咲(敵エーテル状態異常蓄積耐性無視)",
+      "stat": "enemy_anomaly_buildup_res_down_pct",
+      "element": "ether",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 10
+      },
+      "note": "アリアが『通常攻撃』、『特殊スキル』、『強化特殊スキル』で敵にダメージを与えた時、ターゲットのエーテル属性状態異常蓄積耐性を10%無視。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
+    },
+    {
+      "id": "aria_m4_energy_gain",
+      "name": "心象映画4: 機械仕掛けの天使(エネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 4
+      },
+      "note": "アリアが「狂咲」を発動した時、自身のエネルギーが4Pt回復(10秒に1回のみ)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
+    },
+    {
+      "id": "aria_m4_decibel_gain",
+      "name": "心象映画4: 機械仕掛けの天使(デシベル獲得)",
+      "stat": "decibel_gain",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 70
+      },
+      "note": "アリアが「狂咲」を発動した時、デシベル値が70Pt回復(10秒に1回のみ)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
     },
     {
       "id": "aria_m1_crit_rate",
@@ -20,8 +57,8 @@
         "base": 0,
         "m1": 25
       },
-      "note": "「狂咲」発動時の初期値。異常掌握100超過分による追加加算は数値化困難のため未収録。",
-      "sourceUrl": "https://game8.jp/zenless/754122"
+      "note": "「狂咲」発動時の初期値。異常掌握100超過分による追加加算(1Ptにつき+0.5%、上限なし)は未収録。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
     },
     {
       "id": "aria_m1_crit_dmg",
@@ -33,7 +70,7 @@
         "m1": 25
       },
       "note": "「狂咲」発動時の初期値。",
-      "sourceUrl": "https://game8.jp/zenless/754122"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
     },
     {
       "id": "aria_m2_pen",
@@ -44,7 +81,8 @@
         "base": 0,
         "m2": 16
       },
-      "sourceUrl": "https://game8.jp/zenless/754122"
+      "note": "アリアは攻撃時、または「狂咲」を発動した時、ターゲットの防御力を16%無視。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
     },
     {
       "id": "aria_m2_pen_extra",
@@ -56,7 +94,7 @@
         "m2": 8
       },
       "note": "「モーソータイム」中にさらに追加される分。M2の16%とは別枠。",
-      "sourceUrl": "https://game8.jp/zenless/754122"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
     },
     {
       "id": "aria_m6_ether_dmg",
@@ -68,25 +106,50 @@
         "base": 0,
         "m6": 40
       },
-      "sourceUrl": "https://game8.jp/zenless/754122"
+      "note": "強化された『通常攻撃:絶対音感』と『終結スキル』によるエーテル属性ダメージ+40%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
+    },
+    {
+      "id": "aria_wengine_anomaly_mastery",
+      "name": "音動機 殻の中の魂: 異常マスタリー",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "condition": {
+        "elements": ["ether"]
+      },
+      "values": {
+        "base": 0
+      },
+      "note": "装備者の異常マスタリー上昇(常時)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1047",
+      "wengine": {
+        "p1": 90,
+        "p2": 103,
+        "p3": 117,
+        "p4": 130,
+        "p5": 144
+      }
     },
     {
       "id": "aria_wengine_anomaly_dmg",
-      "name": "音動機 殻の中の魂: 異常ダメージ",
+      "name": "音動機 殻の中の魂: 異常/混沌ダメージ",
       "stat": "anomaly_dmg_pct",
       "target": "self",
+      "condition": {
+        "elements": ["ether"]
+      },
       "values": {
         "base": 0
       },
       "duration": "15s",
-      "note": "入場または特殊/強化特殊スキル発動時。精錬2〜5の数値は未確認。 音動機効果(確認できた段階のみ): {'p1': 10} 精錬2〜5未確認のため全段にP1値を使用",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/angel-in-the-shell/",
+      "note": "エーテル属性の装備者が入場、または『特殊スキル』『強化特殊スキル』を発動した時、発動する全ての状態異常ダメージと「混沌」ダメージ上昇(継続15秒、再発動で更新、控えに交代されると解除)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1047",
       "wengine": {
         "p1": 10,
-        "p2": 10,
-        "p3": 10,
-        "p4": 10,
-        "p5": 10
+        "p2": 11.5,
+        "p3": 13,
+        "p4": 14.5,
+        "p5": 16
       }
     }
   ]

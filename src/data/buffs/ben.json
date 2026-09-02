@@ -8,7 +8,16 @@
       "target": "team",
       "values": { "base": 16 },
       "note": "ベンの『コアパッシブ:守護』によるシールド継続中、チームの会心率が16%アップ。発動条件はベンと同属性または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
-      "sourceUrl": "https://game8.jp/zenless/607796"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/25"
+    },
+    {
+      "id": "ben_m4_dmg_self",
+      "name": "心象映画4: 臨機応変(反撃ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 0, "m4": 30 },
+      "note": "『特殊スキル』または『強化特殊スキル』の最中に、無敵効果で敵の攻撃を防いだ場合、その後の反撃の与ダメージがアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/25"
     },
     {
       "id": "ben_m6_daze_self",
@@ -18,7 +27,7 @@
       "values": { "base": 0, "m6": 20 },
       "duration": "12s",
       "note": "『強化特殊スキル』中に攻撃または強力な追加打撃を行うと、その後の『通常攻撃』『ダッシュ攻撃』『回避反撃』の与ブレイク値が20%アップ",
-      "sourceUrl": "https://game8.jp/zenless/607796"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/25"
     }
   ]
 }

@@ -2,13 +2,32 @@
   "characterId": "remielle",
   "buffs": [
     {
-      "id": "remielle_additional_atk_pct",
-      "name": "追加能力:異常メンバー数に応じた攻撃力上昇",
-      "stat": "atk_pct",
-      "target": "self",
-      "values": { "base": 40 },
-      "note": "追加能力「芳しき花々の誘い」。チーム内の異常メンバー数1/2/3人で開幕時の攻撃力の6%/12%/40%を攻撃力に加算(上限1600Pt)。3人時の値を記載。",
-      "sourceUrl": "https://game8.jp/zenless/774128"
+      "id": "remielle_additional_team_atk",
+      "name": "追加能力:異常メンバー数に応じたチーム攻撃力上昇",
+      "stat": "atk_flat",
+      "target": "team",
+      "values": { "base": 1600 },
+      "note": "チームに他の異常メンバー、または自身と同じ陣営のメンバーがいる時に発動。フィールド入場時、チーム内の異常メンバーが1/2/3名の場合、メンバー全員の攻撃力がレミエールの開幕攻撃力6%/12%/40%分アップ、最大1600Ptまで。3人編成時の上限値を記載。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1112"
+    },
+    {
+      "id": "remielle_m1_enemy_res_ignore",
+      "name": "M1:耀変ダメージの全属性耐性無視",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "enemy",
+      "values": { "base": 0, "m1": 50 },
+      "note": "M1「無垢なる誓い」。レミエールが「耀変」効果を発動して敵にダメージを与えた時、ターゲットの全属性ダメージ耐性を50%無視する。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1112"
+    },
+    {
+      "id": "remielle_m2_anomaly_member_def_down",
+      "name": "M2:幻色状態の敵への異常メンバー防御無視",
+      "stat": "enemy_def_down_pct",
+      "target": "team",
+      "condition": { "roles": ["anomaly"] },
+      "values": { "base": 0, "m2": 15 },
+      "note": "M2「喧噪に傾倒」。チーム内の異常メンバーが「幻色」効果を持つ敵に状態異常ダメージを与えた時、ターゲットの防御力を15%無視する(効果解除後も8秒間継続)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1112"
     },
     {
       "id": "remielle_additional_daze",
@@ -17,7 +36,7 @@
       "target": "self",
       "values": { "base": 35 },
       "note": "追加能力「芳しき花々の誘い」。相転時流状態中、異常メンバー数1/2/3人でブレイク値+6%/+12%/+35%。3人時の値を記載。",
-      "sourceUrl": "https://game8.jp/zenless/774128"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1112"
     },
     {
       "id": "remielle_additional_team_anomaly_buildup",
@@ -26,7 +45,7 @@
       "target": "team",
       "values": { "base": 15 },
       "note": "追加能力「芳しき花々の誘い」。敵に「幻色」効果が付与されている間、メンバー全員の状態異常蓄積効率+15%(解除後さらに8秒継続)。",
-      "sourceUrl": "https://game8.jp/zenless/774128"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1112"
     },
     {
       "id": "remielle_ex_team_dmg_pct",
@@ -36,7 +55,7 @@
       "values": { "base": 18 },
       "duration": "60s",
       "note": "「黎明のオード・転輝」で相転時流状態に移行した時、メンバー全員の与ダメージ+18%。重複発動で継続時間更新。",
-      "sourceUrl": "https://gamewith.jp/zenless/550725"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1174"
     },
     {
       "id": "remielle_m1_team_anomaly_dmg",
@@ -46,7 +65,7 @@
       "condition": { "excludeSelf": true },
       "values": { "base": 0, "m1": 10 },
       "note": "M1「青臭い誓言」。相転時流状態中、レミエール以外のメンバーの状態異常ダメージ+10%。",
-      "sourceUrl": "https://gamewith.jp/zenless/550725"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1174"
     },
     {
       "id": "remielle_m1_decibel",
@@ -55,7 +74,7 @@
       "target": "self",
       "values": { "base": 0, "m1": 200 },
       "note": "M1。支援スキル発動時にデシベル+200Pt(18秒に1回)。",
-      "sourceUrl": "https://gamewith.jp/zenless/550725"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1174"
     },
     {
       "id": "remielle_wengine_anomaly_proficiency",
@@ -63,9 +82,9 @@
       "stat": "anomaly_proficiency",
       "target": "self",
       "values": { "base": 0 },
-      "wengine": { "p1": 96, "p2": 105.75, "p3": 115.5, "p4": 125.25, "p5": 135 },
-      "note": "専用音動機「目覚めし翼の聖歌」の常時効果。p1=96、p5=135を確認、中間は等差で補間。",
-      "sourceUrl": "https://gamewith.jp/zenless/550725"
+      "wengine": { "p1": 96, "p2": 105, "p3": 115, "p4": 125, "p5": 135 },
+      "note": "専用音動機「目覚めし翼の聖歌」の常時効果。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1174"
     },
     {
       "id": "remielle_wengine_anomaly_dmg",
@@ -75,8 +94,8 @@
       "values": { "base": 0 },
       "wengine": { "p1": 20, "p2": 23, "p3": 26, "p4": 29, "p5": 32 },
       "duration": "30s",
-      "note": "専用音動機「目覚めし翼の聖歌」。装備者が「昇華」反応を発動した時、自身の状態異常ダメージ上昇。p1=20、p5=32を確認、中間は等差で補間。",
-      "sourceUrl": "https://gamewith.jp/zenless/550725"
+      "note": "専用音動機「目覚めし翼の聖歌」。装備者が「昇華」反応を発動した時、自身の状態異常ダメージ上昇(継続30秒、再発動で更新)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1174"
     },
     {
       "id": "remielle_wengine_team_dmg_pct",
@@ -86,8 +105,8 @@
       "values": { "base": 0 },
       "wengine": { "p1": 30, "p2": 34.5, "p3": 39, "p4": 43.5, "p5": 48 },
       "duration": "30s",
-      "note": "専用音動機「目覚めし翼の聖歌」。装備者が「昇華」反応を発動した時、メンバー全員の与ダメージ上昇(重複で継続時間更新)。p1=30、p5=48を確認、中間は等差で補間。",
-      "sourceUrl": "https://gamewith.jp/zenless/550725"
+      "note": "専用音動機「目覚めし翼の聖歌」。装備者が「昇華」反応を発動した時、メンバー全員の与ダメージ上昇(継続30秒、再発動で更新)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1174"
     }
   ]
 }

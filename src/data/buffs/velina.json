@@ -8,7 +8,7 @@
       "target": "self",
       "values": { "base": 35 },
       "note": "エネルギー自動回復が1.2を超える場合、超過0.01Ptごとに与ダメージ+0.21%(最大+35%)。最大値を記載。",
-      "sourceUrl": "https://game8.jp/zenless/760640"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
     },
     {
       "id": "velina_core_anomaly_mastery",
@@ -17,7 +17,7 @@
       "target": "self",
       "values": { "base": 84 },
       "note": "エネルギー自動回復が1.2を超える場合、超過0.01Ptごとに異常掌握+0.5Pt(最大+84Pt)。最大値を記載。",
-      "sourceUrl": "https://game8.jp/zenless/760640"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
     },
     {
       "id": "velina_core_tornado_daze",
@@ -26,7 +26,7 @@
       "target": "self",
       "values": { "base": 30, "m1": 50 },
       "note": "追加能力「お茶会の礼節」(異常または同属性キャラ2名編成)で竜巻のブレイク値+30%。M1で竜巻ブレイク値さらに+20%。竜巻攻撃にのみ適用。",
-      "sourceUrl": "https://game8.jp/zenless/760640"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
     },
     {
       "id": "velina_core_tornado_buildup",
@@ -35,7 +35,54 @@
       "target": "self",
       "values": { "base": 15 },
       "note": "追加能力「お茶会の礼節」発動時、竜巻の状態異常蓄積値+15%。竜巻攻撃にのみ適用。",
-      "sourceUrl": "https://game8.jp/zenless/760640"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
+    },
+    {
+      "id": "velina_extra_anomaly_dmg",
+      "name": "追加能力:風化/乱流ダメージ上昇",
+      "stat": "anomaly_dmg_pct",
+      "target": "self",
+      "values": { "base": 10, "m2": 25 },
+      "note": "チームに他の異常メンバー、または自身と同じ属性(風)のメンバーがいる時に発動。ヴェリナが与える「風化」と「乱流」のダメージ+10%。M2でさらに+15%(計25%)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
+    },
+    {
+      "id": "velina_m1_enemy_res_ignore",
+      "name": "心象映画1:乱流発動時の全属性耐性無視",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "enemy",
+      "values": { "base": 0, "m1": 20 },
+      "note": "ヴェリナが「乱流」を発動させた時、ターゲットの全属性ダメージ耐性を20%無視する。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
+    },
+    {
+      "id": "velina_m1_team_wind_res_down",
+      "name": "心象映画1:チーム風化ダメージの風属性耐性ダウン",
+      "stat": "enemy_res_down_pct",
+      "element": "wind",
+      "target": "team",
+      "values": { "base": 0, "m1": 20 },
+      "note": "チーム全体が「風化」ダメージを与える時、ターゲットの風属性ダメージ耐性を20%無視する。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
+    },
+    {
+      "id": "velina_m6_wind_erosion_dmg",
+      "name": "心象映画6:風化再付与時のダメージ上昇",
+      "stat": "anomaly_dmg_pct",
+      "target": "self",
+      "values": { "base": 0, "m6": 40 },
+      "note": "「風化」状態の敵に再度「風化」を付与した時、前回の残り継続時間1秒につき「風化」ダメージ+2.5%、最大+40%。上限値を記載。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
+    },
+    {
+      "id": "velina_core_tornado_anomaly_buildup_res_down",
+      "name": "追加能力:竜巻の敵状態異常蓄積耐性ダウン",
+      "stat": "enemy_anomaly_buildup_res_down_pct",
+      "target": "enemy",
+      "values": { "base": 14 },
+      "duration": "35s",
+      "note": "「竜巻」の攻撃が敵に命中した時、敵の風属性状態異常蓄積耐性-7%(継続35秒、再発動で更新、コアパッシブの基礎効果)。追加能力「お茶会の礼節」(異常または同属性キャラ2名編成)発動時、倍率がさらに+7%(合計14%、この値を記載)。「竜巻」が「彩色」状態の場合は対応する属性の蓄積耐性も同時に-7%(未収録)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
     },
     {
       "id": "velina_m4_atk_pct",
@@ -45,7 +92,7 @@
       "values": { "base": 0, "m4": 15 },
       "duration": "40s",
       "note": "M4「審判する茶会」。強化特殊スキル発動時に攻撃力+15%。",
-      "sourceUrl": "https://game8.jp/zenless/760640"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
     },
     {
       "id": "velina_m6_wind_anomaly_buildup",
@@ -54,7 +101,7 @@
       "target": "self",
       "values": { "base": 0, "m6": 20 },
       "note": "M6。風属性の状態異常が付与されている敵に対して状態異常蓄積値+20%。",
-      "sourceUrl": "https://gamewith.jp/zenless/550723"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
     },
     {
       "id": "velina_wengine_anomaly_proficiency",
@@ -63,8 +110,20 @@
       "target": "self",
       "values": { "base": 0 },
       "wengine": { "p1": 70, "p2": 80, "p3": 90, "p4": 100, "p5": 110 },
-      "note": "専用音動機「金襴の心」の常時効果。p1=70、p5=110を確認、中間は等差で補間。",
-      "sourceUrl": "https://gamewith.jp/zenless/550723"
+      "note": "専用音動機「金襴の心」の常時効果。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1104"
+    },
+    {
+      "id": "velina_wengine_anomaly_dmg_stack",
+      "name": "音動機:乱流/風化ダメージ上昇",
+      "stat": "anomaly_dmg_pct",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 7, "p2": 8, "p3": 9, "p4": 10, "p5": 11 },
+      "maxStacks": 2,
+      "duration": "40s",
+      "note": "装備者が『強化特殊スキル』で風属性ダメージを与えた時、自身が与える「乱流」と「風化」のダメージ上昇(1重あたり、最大2重、1スキルにつき1回のみ発動、再発動で継続時間更新)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1104"
     },
     {
       "id": "velina_wengine_team_anomaly_proficiency",
@@ -74,8 +133,8 @@
       "values": { "base": 0 },
       "wengine": { "p1": 60, "p2": 69, "p3": 78, "p4": 87, "p5": 96 },
       "duration": "40s",
-      "note": "専用音動機「金襴の心」。装備者が乱流・風化ダメージ上昇効果を2重所持している間、メンバー全員の異常マスタリー上昇。p1=60、p5=96を確認、中間は等差で補間。",
-      "sourceUrl": "https://gamewith.jp/zenless/550723"
+      "note": "専用音動機「金襴の心」。装備者が乱流・風化ダメージ上昇効果を2重所持している間、メンバー全員の異常マスタリー上昇。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1104"
     }
   ]
 }

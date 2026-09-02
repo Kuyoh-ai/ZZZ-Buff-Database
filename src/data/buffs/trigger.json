@@ -11,7 +11,18 @@
       },
       "duration": "5s",
       "note": "「追加攻撃」が敵に命中した時、ターゲットのブレイク弱体倍率アップ(ブレイク状態でない敵にも有効)。コアスキル最大レベルの値35%を記載(Lv.1は20%)",
-      "sourceUrl": "https://game8.jp/zenless/665774"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/620"
+    },
+    {
+      "id": "trigger_additional_impact",
+      "name": "追加能力: ブレイク値アップ(銀灯の霊眼)",
+      "stat": "impact_pct",
+      "target": "self",
+      "values": {
+        "base": 75
+      },
+      "note": "チームに強攻メンバーまたは自身と同属性のメンバーがいる時に発動。自身の会心率が40%を上回る場合、1%上回るごとに『追加攻撃』のブレイク値+1.5%(上限75%=会心率90%相当)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/620"
     },
     {
       "id": "trigger_m1_stun_multiplier",
@@ -24,21 +35,21 @@
       },
       "duration": "5s",
       "note": "コアパッシブのブレイク弱体倍率上昇にさらに加算",
-      "sourceUrl": "https://game8.jp/zenless/665774"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/620"
     },
     {
       "id": "trigger_m2_crit_dmg",
-      "name": "心象映画2: 会心ダメージアップ(狩人の眼)",
+      "name": "心象映画2: 会心ダメージアップ(エーテル・サイト)",
       "stat": "crit_dmg",
-      "target": "self",
+      "target": "team",
       "values": {
         "base": 0,
         "m2": 6
       },
       "maxStacks": 4,
       "duration": "10s",
-      "note": "「狩人の眼」1重につき会心ダメージ+6%、最大4重(合計24%)",
-      "sourceUrl": "https://game8.jp/zenless/665774"
+      "note": "「狩人の眼」1重につきメンバー全員の会心ダメージ+6%、最大4重(合計24%)。追加攻撃発動で1重、狙撃態勢でのとどめの一撃で2重獲得、重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/620"
     },
     {
       "id": "trigger_wengine_def_down",
@@ -49,14 +60,14 @@
         "base": 0
       },
       "duration": "5s",
-      "note": "装備者の「追加攻撃」が命中し電気属性ダメージを与えた時、ターゲットの防御力ダウン。重ね掛け不可。精錬ランクによる数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
-      "sourceUrl": "https://gamewith.jp/zenless/491872",
+      "note": "装備者の「追加攻撃」が命中し電気属性ダメージを与えた時、ターゲットの防御力ダウン。重ね掛け不可",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/701",
       "wengine": {
         "p1": 25,
-        "p2": 25,
-        "p3": 25,
-        "p4": 25,
-        "p5": 25
+        "p2": 28.75,
+        "p3": 32.5,
+        "p4": 36.25,
+        "p5": 40
       }
     },
     {
@@ -64,19 +75,19 @@
       "name": "音動機「奪魂の瞑目」: 衝撃力アップ(魂の鎖)",
       "stat": "impact_pct",
       "target": "self",
+      "maxStacks": 3,
       "values": {
         "base": 0
       },
-      "maxStacks": 3,
       "duration": "12s",
-      "note": "装備者が控えの時、「魂の鎖」を1重につき衝撃力+4%(最大3重、各重の継続時間は独立)。精錬ランクによる数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
-      "sourceUrl": "https://gamewith.jp/zenless/491872",
+      "note": "装備者が操作中のメンバーでない時に上記の防御力ダウン効果が発動すると「魂の鎖」を1重獲得(最大3重、各重の継続時間は独立)。1重につき衝撃力アップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/701",
       "wengine": {
         "p1": 4,
-        "p2": 4,
-        "p3": 4,
-        "p4": 4,
-        "p5": 4
+        "p2": 4.6,
+        "p3": 5.2,
+        "p4": 5.8,
+        "p5": 6.4
       }
     },
     {
@@ -88,14 +99,14 @@
         "base": 0
       },
       "duration": "12s",
-      "note": "「魂の鎖」が最大重数に達している時、衝撃力がさらに追加でアップ 精錬段階別の数値は未確認のため全段階にP1値を使用",
-      "sourceUrl": "https://gamewith.jp/zenless/491872",
+      "note": "「魂の鎖」が最大重数(3重)に達している時、衝撃力がさらに追加でアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/701",
       "wengine": {
         "p1": 8,
-        "p2": 8,
-        "p3": 8,
-        "p4": 8,
-        "p5": 8
+        "p2": 9.2,
+        "p3": 10.4,
+        "p4": 11.6,
+        "p5": 12.8
       }
     }
   ]

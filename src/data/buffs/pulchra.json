@@ -8,8 +8,8 @@
       "target": "team",
       "values": { "base": 30 },
       "duration": "15s",
-      "note": "チームに強攻・命破または同陣営メンバーがいる場合発動(OR条件のためcondition省略)。敵に「囚縛」付与し、味方全員の追加攻撃与ダメージがアップ。完凸(6凸)で対象スキルが追加攻撃以外にも拡大",
-      "sourceUrl": "https://gamewith.jp/zenless/482935"
+      "note": "チームに強攻・命破または同陣営メンバーがいる場合発動(OR条件のためcondition省略)。特殊スキル/強化特殊スキル/支援突撃/連携スキル/終結スキルの命中で敵に「囚縛」付与し、味方全員の追加攻撃与ダメージがアップ。M6で「囚縛」効果が追加攻撃以外のスキルダメージにも適用に拡大(完凸ではなく心象映画6凸)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619"
     },
     {
       "id": "pulchra_m1_crit_rate",
@@ -17,8 +17,8 @@
       "stat": "crit_rate",
       "target": "self",
       "values": { "base": 0, "m1": 10 },
-      "note": "「囚縛」中の敵へのダメージ時、自身の会心率アップ",
-      "sourceUrl": "https://gamewith.jp/zenless/482935"
+      "note": "「囚縛」効果を付与された敵へダメージを与えた時、自身の会心率アップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619"
     },
     {
       "id": "pulchra_m2_atk_self",
@@ -26,17 +26,8 @@
       "stat": "atk_pct",
       "target": "self",
       "values": { "base": 0, "m2": 10 },
-      "note": "「猟歩」状態時、自身の攻撃力アップ",
-      "sourceUrl": "https://gamewith.jp/zenless/482935"
-    },
-    {
-      "id": "pulchra_m6_assist_dmg_bonus",
-      "name": "心象映画6: 与ダメージアップ追加(マスクの下には)",
-      "stat": "assist_dmg_pct",
-      "target": "team",
-      "values": { "base": 0, "m6": 15 },
-      "note": "「囚縛」効果を利用したスキルの与ダメージがさらにアップ",
-      "sourceUrl": "https://gamewith.jp/zenless/482935"
+      "note": "コアパッシブ「捕食者の本能」による「猟歩」状態時、自身の攻撃力アップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619"
     }
   ]
 }

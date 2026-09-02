@@ -4,13 +4,13 @@
     {
       "id": "promeia_core_anomaly_mastery_self",
       "name": "コアパッシブ: 異常掌握超過による異常マスタリー上昇",
-      "stat": "anomaly_mastery",
+      "stat": "anomaly_proficiency",
       "target": "self",
       "values": {
         "base": 1.5
       },
-      "note": "開幕時の異常掌握が150Ptを超える場合、超過1Ptごとに自身の異常マスタリー+1.5Pt(スケーリング値。異常掌握超過分×1.5が実際の上昇量)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%97%E3%83%AD%E3%83%A1%E3%82%A4%E3%82%A2"
+      "note": "開幕時の異常掌握が150Ptを超える場合、超過1Ptごとに自身の異常マスタリー+1.5Pt(スケーリング値、上限なし。超過分×1.5が実際の上昇量)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     },
     {
       "id": "promeia_core_team_abloom_dmg",
@@ -20,8 +20,8 @@
       "values": {
         "base": 0.35
       },
-      "note": "開幕時の異常掌握が150Ptを超える場合、超過1Ptごとにチーム全体の「狂咲」(Abloom)ダメージ+0.35%(スケーリング値。超過分×0.35%が実際の上昇量)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%97%E3%83%AD%E3%83%A1%E3%82%A4%E3%82%A2"
+      "note": "開幕時の異常掌握が150Ptを超える場合、超過1Ptごとにチーム全体の「狂咲」(Abloom)ダメージ+0.35%(スケーリング値、上限なし。超過分×0.35%が実際の上昇量)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     },
     {
       "id": "promeia_extra_ice_anomaly_buildup",
@@ -37,8 +37,8 @@
         "base": 30
       },
       "duration": "30s",
-      "note": "強化特殊スキル発動時(異常または支援メンバーがいる場合)、自身の氷属性状態異常蓄積効率+30%",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%97%E3%83%AD%E3%83%A1%E3%82%A4%E3%82%A2"
+      "note": "チームに他の異常または支援メンバーがいる時に発動。強化特殊スキル発動時、自身の氷属性状態異常蓄積効率+30%(継続30秒、再発動で更新)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     },
     {
       "id": "promeia_extra_enemy_def_down",
@@ -49,20 +49,20 @@
         "base": 40,
         "m1": 60
       },
-      "note": "敵が「咎は凍てつく」状態でメンバー全員が「狂咲」発動時、敵の防御力を40%無視(M1でさらに+20%、合計60%無視)",
-      "sourceUrl": "https://gamewith.jp/zenless/551847"
+      "note": "チームに他の異常または支援メンバーがいる時に発動。敵が「咎は凍てつく」状態でメンバー全員が「狂咲」発動時、敵の防御力を40%無視(M1でさらに+20%、合計60%無視)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     },
     {
       "id": "promeia_m2_anomaly_mastery",
       "name": "心象映画2: 異常マスタリー上昇",
-      "stat": "anomaly_mastery",
+      "stat": "anomaly_proficiency",
       "target": "self",
       "values": {
         "base": 0,
         "m2": 40
       },
       "note": "M2「信念は不確」で自身の異常マスタリー+40Pt",
-      "sourceUrl": "https://game8.jp/zenless/760627"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     },
     {
       "id": "promeia_m6_enemy_res_down",
@@ -73,8 +73,8 @@
         "base": 0,
         "m6": 15
       },
-      "note": "M6「物語は続く」で「氷刑」消費した「狂咲」発動時、状態異常ダメージと「混沌」ダメージについて敵の全属性ダメージ耐性15%無視(15秒に1回)",
-      "sourceUrl": "https://game8.jp/zenless/760627"
+      "note": "M6「物語は続く」でプロメイアが与える状態異常ダメージと「混沌」ダメージについて、敵の全属性ダメージ耐性15%無視。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     },
     {
       "id": "promeia_wengine_frost_crescent_ice_dmg",
@@ -95,7 +95,7 @@
       "maxStacks": 2,
       "duration": "40s",
       "note": "氷属性装備者が特殊スキル/強化特殊スキル発動時、自身の氷属性ダメージ上昇(1重あたり)。最大2重。1回のスキルにつき1回のみ発動",
-      "sourceUrl": "https://gabbutz.com/promeia/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1087"
     },
     {
       "id": "promeia_wengine_frost_crescent_abloom_dmg",
@@ -113,7 +113,7 @@
         "p5": 50
       },
       "note": "2重所持時、自身の「狂咲」(Abloom)ダメージが追加で上昇",
-      "sourceUrl": "https://gabbutz.com/promeia/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1087"
     }
   ]
 }

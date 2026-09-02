@@ -10,7 +10,7 @@
         "base": 85
       },
       "note": "開幕会心率が50%を超える場合、超過1%につき会心ダメージ+1.7%(最大+85%、会心率100%到達時)。valuesは理論最大値。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/norma/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_core_daze_pct",
@@ -21,7 +21,7 @@
         "base": 40
       },
       "note": "開幕会心率が50%を超える場合、超過1%につき強化特殊スキル等命中時のブレイク値+0.8%(最大+40%、会心率100%到達時)。valuesは理論最大値。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/norma/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_core_atk_pen_ratio",
@@ -32,7 +32,7 @@
         "base": 1200
       },
       "note": "貫通率(透徹力)1Ptにつき攻撃力+1.25Pt、最大+1200Pt。valuesは理論最大値。",
-      "sourceUrl": "https://game8.jp/zenless/760639"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_advantage_stun_mult",
@@ -45,7 +45,7 @@
       },
       "maxStacks": 10,
       "note": "チームに強攻/命破特性または同陣営メンバーがいる時に発動。ノルムーの攻撃命中で「技術格差」1重付与(0.5秒に1重、最大10重)。1重につきブレイク弱体倍率+3%(M2で+6%)。表示は最大10重時の合計(30% / M2 60%)。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/norma/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_nannana_self_atk",
@@ -56,7 +56,7 @@
         "base": 870
       },
       "note": "追加能力「数的優位性」。「ンナンナ弾幕」状態中、ノルムー自身の攻撃力+44Pt(コアスキルLv1)、Lv上昇ごとに+14Pt、コアスキル最大Lvで+870Pt。valuesはコアスキル最大レベル時の値。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/norma/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_nannana_team_dmg",
@@ -67,7 +67,7 @@
         "base": 20
       },
       "note": "追加能力「数的優位性」。強化特殊スキル「ンナンナ弾幕」発動中、チーム全員の与ダメージ+20%。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8E%E3%83%AB%E3%83%A0%E3%83%BC"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_m1_res_down_all",
@@ -79,8 +79,8 @@
         "m1": 15
       },
       "duration": "15s",
-      "note": "M1「先見的過激主義」。貫通/炸裂ミサイル命中時、敵の全属性ダメージ耐性-15%(15秒間)。実際は全属性(炎/氷/電気/エーテル/物理/玄墨)に適用されるため、対象属性ごとに個別エントリを用意。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/norma/"
+      "note": "M1「先見的過激主義」。任意のスキルの「貫通ミサイル」または「炸裂ミサイル」が敵に命中した時、敵の全属性ダメージ耐性-15%(継続15秒)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_m2_energy_regen",
@@ -92,7 +92,7 @@
         "m2": 25
       },
       "note": "M2「普遍的統合の公理」。ハットトリック(連携スキル)発動時、エネルギー25Pt回復(20秒に1回まで)。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/norma/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_m4_decibel_gain",
@@ -104,12 +104,12 @@
         "m4": 200
       },
       "note": "M4「優勢ボンプ学説」。プレヒートを消費して連携スキルを発動した際、ノルムーおよび対象メンバーのデシベル値+200Pt。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/norma/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_wengine_impact",
       "name": "音動機「エースのオトモ」衝撃力上昇",
-      "stat": "impact_pct",
+      "stat": "impact_flat",
       "target": "self",
       "values": {
         "base": 0
@@ -121,8 +121,8 @@
         "p4": 39,
         "p5": 42
       },
-      "note": "撃破特性装備時に発動。衝撃力+30/33/36/39/42Pt(精錬1~5)。数値はPt(実数値)であり%表記ではないが、schema制約上impact_pctキーで記録。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/chief-sidekick/"
+      "note": "撃破特性装備時に発動。衝撃力(固定値)+30/33/36/39/42Pt(精錬1~5)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1134"
     },
     {
       "id": "norma_wengine_enemy_fire_res_ignore",
@@ -141,7 +141,7 @@
         "p5": 24
       },
       "note": "撃破特性装備時に発動。与えるダメージが対象の炎属性ダメージ耐性を15/17.2/19.5/21.7/24%無視(精錬1~5)。 (自身の攻撃にのみ適用)",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/chief-sidekick/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1134"
     },
     {
       "id": "norma_wengine_offfield_energy_regen",
@@ -159,7 +159,7 @@
         "p5": 0.64
       },
       "note": "撃破特性装備時に発動。装備者が控えメンバーの間、エネルギー自動回復+0.4/0.46/0.52/0.58/0.64Pt/秒(精錬1~5)。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/chief-sidekick/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1134"
     },
     {
       "id": "norma_wengine_team_dmg",
@@ -179,7 +179,7 @@
       "maxStacks": 2,
       "duration": "30s",
       "note": "撃破特性装備時に発動。装備者が強化特殊スキルで炎属性ダメージを与えた時、チーム全員の与ダメージ+12.5/14.4/16.3/18.1/20%(精錬1~5、30秒間、最大2重)。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/chief-sidekick/"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1134"
     }
   ]
 }

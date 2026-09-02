@@ -3,95 +3,54 @@
   "buffs": [
     {
       "id": "astra_core_atk_swap",
-      "name": "コアパッシブ: 攻撃力アップ(アンダンテ・カンタービレ)",
+      "name": "コアパッシブ: アンダンテ・カンタービレ(攻撃力アップ)",
       "stat": "atk_flat",
       "target": "team",
-      "values": {
-        "base": 1200
-      },
+      "values": { "base": 1200 },
       "duration": "20s",
-      "note": "「アイドリック・カデンツァ」状態中、他メンバーがクイック支援等で出場しアストラがエネルギー消費して追加攻撃した際、アストラと出場メンバーの攻撃力がアップ。アップ量はアストラの開幕攻撃力の35%相当(コアスキル最大レベルLv.7、Lv.1では22%)だが、いずれも上限1200Ptでキャップされるためbaseは変更なし(最大値を記載)。重複で継続時間延長(最大30秒)。厳密には自身+出場した1名が対象だが、簡易的にteamとして収録",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A2%E3%82%B9%E3%83%88%E3%83%A9"
-    },
-    {
-      "id": "astra_special_team_dmg",
-      "name": "特殊スキル: チーム与ダメージアップ(アイドリック・カデンツァ)",
-      "stat": "dmg_pct",
-      "target": "team",
-      "values": {
-        "base": 20
-      },
-      "note": "「アイドリック・カデンツァ」状態突入時、チーム全体の与ダメージアップ。特殊スキル最大レベル(Lv.12)の値20%を記載(Lv.1は9%)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A2%E3%82%B9%E3%83%88%E3%83%A9"
-    },
-    {
-      "id": "astra_special_team_crit_dmg",
-      "name": "特殊スキル: チーム会心ダメージアップ(アイドリック・カデンツァ)",
-      "stat": "crit_dmg",
-      "target": "team",
-      "values": {
-        "base": 25
-      },
-      "note": "「アイドリック・カデンツァ」状態突入時、チーム全体の会心ダメージアップ。特殊スキル最大レベル(Lv.12)の値25%を記載(Lv.1は8.5%)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A2%E3%82%B9%E3%83%88%E3%83%A9"
+      "note": "「アイドリック・カデンツァ」状態中、他メンバーがクイック支援等で出場しアストラがエネルギー消費して追加で「ビブラート」を放った時、アストラ自身と出場メンバーの攻撃力がアップ。アップ量はアストラの開幕攻撃力35%相当(コアスキル最大レベル時)、上限1200Pt(上限値を収録)。重複で継続時間延長(最大30秒)。厳密には自身+出場した1名が対象だが、簡易的にteamとして収録。心象映画2で上限が1600Ptに拡大",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/588"
     },
     {
       "id": "astra_m1_enemy_res_down",
-      "name": "心象映画1: 全属性耐性ダウン",
+      "name": "心象映画1: 十二平均律(全属性耐性ダウン)",
       "stat": "enemy_res_ignore_all_pct",
       "target": "enemy",
-      "values": {
-        "base": 0,
-        "m1": 6
-      },
+      "values": { "base": 0, "m1": 6 },
       "maxStacks": 3,
       "duration": "30s",
       "note": "アストラの攻撃命中時、敵の全属性ダメージ耐性ダウン(最大3重)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A2%E3%82%B9%E3%83%88%E3%83%A9"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/588"
     },
     {
       "id": "astra_m2_atk_swap_bonus",
-      "name": "心象映画2: 攻撃力アップ量追加(欲張りの芸術)",
+      "name": "心象映画2: 欲張りの芸術(攻撃力アップ量追加)",
       "stat": "atk_flat",
       "target": "team",
-      "values": {
-        "base": 0,
-        "m2": 400
-      },
-      "note": "コアパッシブの攻撃力アップが追加で19%相当分アップし、上限が1200Pt→1600Ptに引き上げられる(差分400Ptを収録)",
-      "sourceUrl": "https://gamewith.jp/zenless/478723"
+      "values": { "base": 0, "m2": 400 },
+      "note": "コアパッシブの攻撃力アップが追加で開幕攻撃力19%相当分アップし、上限が1200Pt→1600Ptに引き上げられる(差分400Ptを収録)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/588"
     },
     {
       "id": "astra_m6_crit_rate",
-      "name": "心象映画6: 会心率アップ(私たちが世界)",
+      "name": "心象映画6: 私たちが世界(会心率アップ)",
       "stat": "crit_rate",
       "target": "self",
-      "values": {
-        "base": 0,
-        "m6": 80
-      },
-      "note": "「ビブラート」「トーンクラスター」および精密支援時に追加発動する『通常攻撃:カプリチオ』3段目にのみ適用される会心率アップ。チームバフではないためtarget=self",
-      "sourceUrl": "https://gamewith.jp/zenless/478723"
+      "values": { "base": 0, "m6": 80 },
+      "note": "「アイドリック・カデンツァ」状態の「ビブラート」「トーンクラスター」、および精密支援時に追加発動する『通常攻撃:カプリチオ』3段目にのみ適用される会心率アップ。チームバフではないためtarget=self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/588"
     },
     {
       "id": "astra_wengine_team_dmg",
-      "name": "音動機「優美のヴァニティ」: チーム与ダメージアップ",
+      "name": "専用音動機「優美のヴァニティ」: チーム与ダメージアップ",
       "stat": "dmg_pct",
       "target": "team",
-      "values": {
-        "base": 0
-      },
-      "wengine": {
-        "p1": 10,
-        "p2": 10,
-        "p3": 10,
-        "p4": 10,
-        "p5": 10
-      },
+      "values": { "base": 0 },
       "maxStacks": 2,
       "duration": "20s",
-      "note": "エネルギー25Pt以上消費時、チーム全体の与ダメージアップ(最大2重)。精錬ランクによる数値変化は未確認のため全ランク同値と仮定",
-      "sourceUrl": "https://game8.jp/zenless/658087"
+      "note": "装備者がエネルギーを25Pt以上消費した時に発動(最大2重)。チーム内で1つのみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/590",
+      "wengine": { "p1": 10, "p2": 11.5, "p3": 13, "p4": 14.5, "p5": 16 }
     }
   ]
 }

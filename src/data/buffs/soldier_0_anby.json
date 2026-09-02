@@ -9,8 +9,26 @@
       "values": {
         "base": 10
       },
-      "note": "チームに撃破または支援メンバーがいる時に発動",
-      "sourceUrl": "https://game8.jp/zenless/665676"
+      "note": "チームに撃破または支援メンバーがいる時に発動(誘電分極)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/618"
+    },
+    {
+      "id": "soldier_0_anby_aftershock_dmg_silver_star",
+      "name": "追加能力: 追加攻撃ダメージアップ(銀星対象)",
+      "stat": "aftershock_dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 25
+      },
+      "potential": {
+        "t2": 34,
+        "t3": 38,
+        "t4": 42,
+        "t5": 46,
+        "t6": 50
+      },
+      "note": "チームに撃破/支援メンバーがいる時、0号・アンビー操作中に「銀星」の印を持つ敵へメンバー全員の追加攻撃ダメージアップ(誘電分極)。ポテンシャルT1は数値変更なし",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/618"
     },
     {
       "id": "soldier_0_anby_m2_crit_rate",
@@ -21,8 +39,8 @@
         "base": 0,
         "m2": 12
       },
-      "note": "終結スキル発動時に獲得する追加効果",
-      "sourceUrl": "https://game8.jp/zenless/665676"
+      "note": "フェイルセーフ・プロトコル",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/618"
     },
     {
       "id": "soldier_0_anby_m4_electric_res_down",
@@ -34,8 +52,64 @@
         "base": 0,
         "m4": 12
       },
-      "note": "「銀星」の印を持つ敵に対し、自身の与ダメージ時に電気属性耐性を12%無視",
-      "sourceUrl": "https://wikiwiki.jp/zenless/0%E5%8F%B7%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%93%E3%83%BC"
+      "note": "銀白の残響。「銀星」の印を持つ敵に対し、自身の与ダメージ時に電気属性耐性を12%無視",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/618"
+    },
+    {
+      "id": "soldier_0_anby_wengine_crit_dmg",
+      "name": "音動機: 会心ダメージアップ",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 30,
+        "p2": 34.5,
+        "p3": 39,
+        "p4": 43.5,
+        "p5": 48
+      },
+      "note": "「純然たる犠牲」装備時。精錬別の基礎会心ダメージ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/621"
+    },
+    {
+      "id": "soldier_0_anby_wengine_crit_dmg_stack",
+      "name": "音動機: 会心ダメージアップ(重複)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "maxStacks": 3,
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p2": 11.5,
+        "p3": 13,
+        "p4": 14.5,
+        "p5": 16
+      },
+      "note": "「純然たる犠牲」装備時。通常攻撃/特殊スキル/追加攻撃が敵に命中でバフ1重獲得、最大3重(継続60秒、重複ごとに独立してカウント)。1回のスキルにつき1回のみ発動",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/621"
+    },
+    {
+      "id": "soldier_0_anby_wengine_electric_dmg",
+      "name": "音動機: 電気属性ダメージアップ(3重時)",
+      "stat": "dmg_pct_element",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 20,
+        "p2": 23,
+        "p3": 26,
+        "p4": 29,
+        "p5": 32
+      },
+      "note": "「純然たる犠牲」装備時。会心ダメージバフを3重所持している場合のみ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/621"
     }
   ]
 }

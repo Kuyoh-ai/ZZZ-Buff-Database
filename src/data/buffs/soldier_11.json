@@ -10,7 +10,7 @@
         "base": 70
       },
       "note": "コアスキル最大レベル時。『通常攻撃』または『ダッシュ攻撃』を行った時に『火力鎮圧』を発動した場合、スキルの与ダメージ+70%",
-      "sourceUrl": "https://gamewith.jp/zenless/455328"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
     },
     {
       "id": "soldier_11_ex_fire_dmg",
@@ -22,7 +22,7 @@
         "base": 10
       },
       "note": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動(OR条件のためcondition省略)。ブレイク状態の敵を攻撃する時はさらに+22.5%(合計32.5%)",
-      "sourceUrl": "https://game8.jp/zenless/607804"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
     },
     {
       "id": "soldier_11_core_potential_crit_dmg",
@@ -30,10 +30,17 @@
       "stat": "crit_dmg",
       "target": "self",
       "values": {
-        "base": 48
+        "base": 0
       },
-      "note": "追加能力『燎原』の効果が発動している間、自身の会心ダメージ+48%",
-      "sourceUrl": "https://gamewith.jp/zenless/455328"
+      "potential": {
+        "t2": 16,
+        "t3": 24,
+        "t4": 32,
+        "t5": 40,
+        "t6": 48
+      },
+      "note": "ポテンシャルT2で解放。追加能力『燎原』の効果が発動している間、自身の会心ダメージがアップ。T1は解放条件未達につき効果なし",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
     },
     {
       "id": "soldier_11_m2_dmg",
@@ -45,8 +52,18 @@
         "m2": 3
       },
       "maxStacks": 12,
-      "note": "1スタックあたり+3%、最大12重(最大36%)",
-      "sourceUrl": "https://game8.jp/zenless/607804"
+      "note": "『火力鎮圧』発動時に付与。1スタックあたり+3%、最大12重(最大36%)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
+    },
+    {
+      "id": "soldier_11_m6_fire_res_ignore_self",
+      "name": "心象映画6: 灼熱のゾーン(炎属性耐性無視)",
+      "stat": "enemy_res_down_pct",
+      "element": "fire",
+      "target": "self",
+      "values": { "base": 0, "m6": 25 },
+      "note": "『強化特殊/連携/終結スキル』発動でパワーを最大8重獲得。『火力鎮圧』発動時にパワーを1重消費してその攻撃の炎属性ダメージ耐性を無視(自身の攻撃にのみ適用のためtarget: self)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
     },
     {
       "id": "soldier_11_wengine_brimstone_atk",
@@ -57,13 +74,13 @@
         "base": 0
       },
       "maxStacks": 8,
-      "note": "『通常攻撃』『ダッシュ攻撃』または『回避反撃』が敵に命中すると、装備者の攻撃力アップ、最大8重。P1:3.5%/スタック、P5:7%/スタック(P2~P4は未確認のため中間値を記載しない) P2〜P4はP1/P5からの等差補間",
-      "sourceUrl": "https://game8.jp/zenless/613915",
+      "note": "『通常攻撃』『ダッシュ攻撃』または『回避反撃』が敵に命中すると、装備者の攻撃力アップ、最大8重(0.5秒に1回のみ発動)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/81",
       "wengine": {
         "p1": 3.5,
-        "p2": 4.375,
-        "p3": 5.25,
-        "p4": 6.125,
+        "p2": 4.4,
+        "p3": 5.2,
+        "p4": 6.0,
         "p5": 7.0
       }
     }

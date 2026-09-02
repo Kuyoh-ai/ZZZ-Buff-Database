@@ -10,7 +10,7 @@
         "base": 80
       },
       "note": "コアスキル最大レベル時。『通常攻撃』チャージ完了、または『回避反撃』『ダッシュ攻撃』発動時、与えるブレイク値+80%",
-      "sourceUrl": "https://gamewith.jp/zenless/455326"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
     },
     {
       "id": "lycaon_core_ice_res_down",
@@ -23,7 +23,7 @@
       },
       "duration": "30s",
       "note": "強化特殊スキル『人狼の刻』または支援突撃『復讐の反攻』が敵に命中した時に付与",
-      "sourceUrl": "https://gamewith.jp/zenless/455326"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
     },
     {
       "id": "lycaon_core_other_element_dmg_taken",
@@ -31,11 +31,14 @@
       "stat": "enemy_dmg_taken_pct",
       "target": "enemy",
       "values": {
-        "base": 30
+        "base": 0
+      },
+      "potential": {
+        "t1": 30
       },
       "duration": "30s",
-      "note": "強化特殊スキル『人狼の刻』または支援突撃『復讐の反攻』が敵に命中した時、氷属性以外の与ダメージ+30%(氷属性耐性ダウンと同時付与)",
-      "sourceUrl": "https://gamewith.jp/zenless/455326"
+      "note": "ポテンシャル解放後に追加される効果(通常装備では付与されない)。強化特殊スキル『人狼の刻』または支援突撃『復讐の反攻/復讐の反攻・氷のワルツ』が敵に命中した時、氷属性以外の被ダメージ+30%(氷属性耐性ダウンと同時付与)。解放段階の対応は本文から判別できないためT1扱いとして記載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
     },
     {
       "id": "lycaon_ex_stun_dmg_multiplier",
@@ -45,8 +48,24 @@
       "values": {
         "base": 35
       },
-      "note": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動。ライカンがブレイク状態の敵を攻撃する時、ブレイク弱体倍率+35%(150%→185%)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%B3"
+      "note": "編成条件: チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動(ポテンシャル解放後は[異常]役割も追加)。ライカンがブレイク状態の敵を攻撃する時、ブレイク弱体倍率+35%(150%→185%)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
+    },
+    {
+      "id": "lycaon_pt_impact_self",
+      "name": "ポテンシャル覚醒: 氷迅(衝撃力アップ)",
+      "stat": "impact_pct",
+      "target": "self",
+      "values": { "base": 0 },
+      "potential": {
+        "t2": 5,
+        "t3": 7.5,
+        "t4": 10,
+        "t5": 12.5,
+        "t6": 15
+      },
+      "note": "ポテンシャルT2で解放。「挟撃」状態中、ライカンが操作中のメンバーでない時に『通常攻撃』『ダッシュ攻撃』『回避反撃』を発動すると衝撃力がアップ。T1は解放条件未達につき効果なし",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
     },
     {
       "id": "lycaon_m1_daze",
@@ -58,7 +77,7 @@
         "m1": 22
       },
       "note": "強化特殊スキルが敵に命中するとブレイク値+12%、チャージ完了時はさらに+10%(合計22%)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
     },
     {
       "id": "lycaon_m2_energy",
@@ -70,7 +89,7 @@
         "m2": 5
       },
       "note": "敵をブレイク状態にするか連携スキル発動時にエネルギー回復",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
     },
     {
       "id": "lycaon_m6_self_dmg",
@@ -84,7 +103,7 @@
       "maxStacks": 5,
       "duration": "12s",
       "note": "チャージ攻撃が敵に命中した時、対象への与ダメージ+10%、最大5重(最大50%)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%B3"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
     },
     {
       "id": "lycaon_wengine_restrained_dmg",
@@ -95,8 +114,8 @@
         "base": 0
       },
       "maxStacks": 5,
-      "note": "攻撃が敵に命中した時、『通常攻撃』の与ダメージアップ。P1:6%、P5:12%(P2~P4は未確認のため中間値を記載しない) P2〜P4はP1/P5からの等差補間",
-      "sourceUrl": "https://game8.jp/zenless/613926",
+      "note": "攻撃が敵に命中した時、『通常攻撃』の与ダメージアップ(1回の攻撃で1回のみ発動、最大5重)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/83",
       "wengine": {
         "p1": 6.0,
         "p2": 7.5,
@@ -114,8 +133,8 @@
         "base": 0
       },
       "maxStacks": 5,
-      "note": "攻撃が敵に命中した時、『通常攻撃』の与えるブレイク値アップ。P1:6%、P5:12%(P2~P4は未確認のため中間値を記載しない) P2〜P4はP1/P5からの等差補間",
-      "sourceUrl": "https://game8.jp/zenless/613926",
+      "note": "攻撃が敵に命中した時、『通常攻撃』の与えるブレイク値アップ(1回の攻撃で1回のみ発動、最大5重)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/83",
       "wengine": {
         "p1": 6.0,
         "p2": 7.5,

@@ -6,10 +6,10 @@
       "name": "コアパッシブ: 刃旗激励(自身攻撃力アップ)",
       "stat": "atk_flat",
       "target": "self",
-      "values": { "base": 500 },
+      "values": { "base": 1000 },
       "duration": "22s",
-      "note": "「旗挙げ」発動時、自身の攻撃力が自身ATKの10%アップ(最大500Pt)。「渦潮」を消費して「旗挙げ」発動した場合は効果2倍で最大1000Ptまで上昇。出場メンバー交代時も次のメンバーに効果を引き継ぎ、継続時間がリセットされる",
-      "sourceUrl": "https://game8.jp/zenless/607795"
+      "note": "「旗挙げ」発動時、自身の攻撃力が開幕攻撃力の20%(最大レベル)アップ、最大500Ptまで。「旗挙げ」発動とともに「渦潮」を消費した場合は効果2倍で最大1000Ptまで(上限値を収録)。出場メンバー交代時も次のメンバーに効果を引き継ぎ継続時間リセット。心象映画1で継続時間+8s(30s)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
     },
     {
       "id": "soukaku_ex_team_ice_dmg",
@@ -19,8 +19,8 @@
       "target": "team",
       "values": { "base": 20 },
       "duration": "22s",
-      "note": "蒼角が「渦潮」を消費して「旗挙げ」を発動した時に発動。発動条件はチームに同属性(氷)または同陣営(対ホロウ特別行動部第六課)のメンバーがいること(OR条件のためcondition省略)",
-      "sourceUrl": "https://game8.jp/zenless/607795"
+      "note": "蒼角が「渦潮」を消費して「旗挙げ」を発動した時に発動。発動条件はチームに同属性(氷)または同陣営(対ホロウ特別行動部第六課)のメンバーがいること(OR条件のためcondition省略)。心象映画1で継続時間+8s(30s)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
     },
     {
       "id": "soukaku_m4_ice_res_down",
@@ -31,7 +31,7 @@
       "values": { "base": 0, "m4": 10 },
       "duration": "8s",
       "note": "「旗挙げ」の攻撃が敵に命中した時に付与",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E8%92%BC%E8%A7%92"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
     }
   ]
 }

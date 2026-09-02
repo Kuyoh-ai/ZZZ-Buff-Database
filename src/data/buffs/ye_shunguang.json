@@ -10,7 +10,7 @@
         "base": 30
       },
       "note": "フィールド入場時「合一」効果。コアスキルLv最大時の値。",
-      "sourceUrl": "https://game8.jp/zenless/682698"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
     },
     {
       "id": "ye_shunguang_core_dmg",
@@ -21,7 +21,7 @@
         "base": 25
       },
       "note": "フィールド入場時「合一」効果。コアスキルLv最大時の値。",
-      "sourceUrl": "https://game8.jp/zenless/682698"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
     },
     {
       "id": "ye_shunguang_m1_dmg",
@@ -32,7 +32,7 @@
         "base": 0,
         "m1": 10
       },
-      "sourceUrl": "https://game8.jp/zenless/682698"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
     },
     {
       "id": "ye_shunguang_m1_pen",
@@ -43,7 +43,7 @@
         "base": 0,
         "m1": 20
       },
-      "sourceUrl": "https://game8.jp/zenless/682698"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
     },
     {
       "id": "ye_shunguang_m2_pen",
@@ -54,8 +54,8 @@
         "base": 0,
         "m2": 40
       },
-      "note": "強化特殊スキル/終結スキル使用時のみ。M1の防御力無視とは別枠の可能性。",
-      "sourceUrl": "https://game8.jp/zenless/682698"
+      "note": "『強化特殊スキル:澄心境・飛光』と『終結スキル:慧剣よ天を開け』の与ダメージのみターゲットの防御力を40%無視(M1の防御無視とは別枠)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
     },
     {
       "id": "ye_shunguang_wengine_res_down",
@@ -74,7 +74,7 @@
         "p5": 28
       },
       "note": "装備者の与ダメージに対する敵の物理耐性を無視 (自身の攻撃にのみ適用)",
-      "sourceUrl": "https://game8.jp/zenless/682698"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/982"
     },
     {
       "id": "ye_shunguang_wengine_dmg",
@@ -92,7 +92,7 @@
         "p5": 40
       },
       "duration": "40s",
-      "sourceUrl": "https://game8.jp/zenless/682698"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/982"
     },
     {
       "id": "ye_shunguang_wengine_critdmg",
@@ -110,7 +110,7 @@
         "p5": 40
       },
       "duration": "40s",
-      "sourceUrl": "https://game8.jp/zenless/682698"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/982"
     }
   ]
 }

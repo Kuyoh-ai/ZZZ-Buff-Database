@@ -8,7 +8,7 @@
       "target": "self",
       "values": { "base": 0, "m1": 5 },
       "note": "『ドリル攻撃』発動時にエネルギーを最大5Pt回復",
-      "sourceUrl": "https://game8.jp/zenless/607797"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
     },
     {
       "id": "anton_m4_team_crit_rate",
@@ -17,7 +17,7 @@
       "target": "team",
       "values": { "base": 0, "m4": 10 },
       "duration": "12s",
-      "sourceUrl": "https://game8.jp/zenless/607797"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
     },
     {
       "id": "anton_m6_crit_dmg_stack",
@@ -27,7 +27,7 @@
       "values": { "base": 0, "m6": 4 },
       "maxStacks": 6,
       "note": "会心発生時に自身の与ダメージが4%アップ、最大6重まで重ね掛け",
-      "sourceUrl": "https://game8.jp/zenless/607797"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
     }
   ]
 }

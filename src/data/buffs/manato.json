@@ -10,7 +10,7 @@
         "base": 10
       },
       "note": "「焔刃」状態時。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8B%9B%E9%87%8E%E7%9C%9F%E6%96%97"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
     },
     {
       "id": "manato_core_fire_dmg",
@@ -22,7 +22,7 @@
         "base": 20
       },
       "note": "「焔刃」状態時。コアスキル強化最大値。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8B%9B%E9%87%8E%E7%9C%9F%E6%96%97"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
     },
     {
       "id": "manato_core_critdmg",
@@ -33,7 +33,7 @@
         "base": 50
       },
       "note": "通常攻撃・支援突撃がHPを消費して発動した時のみ。コアスキル強化最大値。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8B%9B%E9%87%8E%E7%9C%9F%E6%96%97"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
     },
     {
       "id": "manato_m1_fire_dmg",
@@ -46,7 +46,7 @@
         "m1": 20
       },
       "note": "支援突撃と通常攻撃の炎属性ダメージ。最大HPの1%喪失ごとに+0.4%、最大+20%。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8B%9B%E9%87%8E%E7%9C%9F%E6%96%97"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
     },
     {
       "id": "manato_m2_res_ignore",
@@ -59,7 +59,7 @@
         "m2": 8
       },
       "note": "「焔刃」状態中。 (自身の攻撃にのみ適用)",
-      "sourceUrl": "https://gamewith.jp/zenless/514876"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
     },
     {
       "id": "manato_m6_fire_dmg",
@@ -74,7 +74,7 @@
       "maxStacks": 5,
       "duration": "8s",
       "note": "支援突撃命中時+3%、最大5重(合計15%)。1重あたりの値。",
-      "sourceUrl": "https://gamewith.jp/zenless/514876"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
     },
     {
       "id": "manato_m4_hp_pct",
@@ -86,7 +86,7 @@
         "m4": 8
       },
       "note": "M4「幼き日の誓い」。真斗の最大HP+8%。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8B%9B%E9%87%8E%E7%9C%9F%E6%96%97"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
     }
   ]
 }

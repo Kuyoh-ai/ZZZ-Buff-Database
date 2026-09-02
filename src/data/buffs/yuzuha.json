@@ -3,63 +3,63 @@
   "buffs": [
     {
       "id": "yuzuha_core_team_dmg",
-      "name": "コアスキル(狸の願い): 与ダメージアップ",
+      "name": "コアパッシブ(ビビッド・カラフル): 与ダメージアップ",
       "stat": "dmg_pct",
       "target": "team",
       "values": {
         "base": 15
       },
       "duration": "40s",
-      "note": "コアパッシブ「狸の願い」の一部として付与。与ダメージ+15%はコアパッシブ側の効果であり、追加能力を130%にするM1の対象外",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ukinami-yuzuha/"
+      "note": "強化特殊スキル/終結スキルが敵に命中した時「狸の願い」をメンバー全員に付与。与ダメージ+15%はコアパッシブ側の効果であり、追加能力を130%にするM1の対象外。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_core_atk_flat",
-      "name": "コアスキル(狸の願い): 攻撃力アップ",
+      "name": "コアパッシブ(ビビッド・カラフル): 攻撃力アップ",
       "stat": "atk_flat",
       "target": "team",
       "values": {
         "base": 1200
       },
       "duration": "40s",
-      "note": "柚葉の開幕攻撃力の40%相当を「狸の願い」保持メンバーに付与。上限1200(実際の値は柚葉の攻撃力に依存する変動値)。",
-      "sourceUrl": "https://gamewith.jp/zenless/502024"
+      "note": "柚葉の開幕攻撃力の40%相当を「狸の願い」保持メンバーに付与。上限1200(柚葉の開幕攻撃力3000で最大)。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_core_anomaly_buildup",
-      "name": "追加能力: 状態異常蓄積効率アップ",
+      "name": "追加能力: 状態異常蓄積効率アップ(みんなで大騒ぎ！)",
       "stat": "anomaly_buildup_pct",
       "target": "team",
       "values": {
         "base": 20,
         "m1": 26
       },
-      "note": "異常掌握が100Pt超過時、1Ptごとに+0.2%(最大+20%、異常掌握200Ptで最大)。M1で追加能力効果が130%になり最大26%。発動条件としてチームに異常特性メンバーまたは同陣営メンバーの編成が必要",
-      "sourceUrl": "https://gamewith.jp/zenless/507537"
+      "note": "「狸の願い」を所持しているメンバーのみ対象。柚葉の異常掌握が100Pt超過時、1Ptごとに+0.2%(上限20%、異常掌握200Ptで最大)。M1で追加能力効果が130%になり最大26%。チームに異常特性メンバーまたは同陣営メンバーがいる時発動",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_core_anomaly_dmg",
-      "name": "追加能力: 属性異常ダメージアップ",
+      "name": "追加能力: 属性異常ダメージアップ(みんなで大騒ぎ！)",
       "stat": "anomaly_dmg_pct",
       "target": "team",
       "values": {
         "base": 20,
         "m1": 26
       },
-      "note": "異常掌握が100Pt超過時、1Ptごとに+0.2%(最大+20%、異常掌握200Ptで最大)。M1で追加能力効果が130%になり最大26%。発動条件としてチームに異常特性メンバーまたは同陣営メンバーの編成が必要",
-      "sourceUrl": "https://gamewith.jp/zenless/507537"
+      "note": "「狸の願い」を所持しているメンバーのみ対象。柚葉の異常掌握が100Pt超過時、1Ptごとに+0.2%(上限20%、異常掌握200Ptで最大)。M1で追加能力効果が130%になり最大26%。チームに異常特性メンバーまたは同陣営メンバーがいる時発動",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_core_disorder_dmg",
-      "name": "追加能力: 混沌ダメージアップ",
+      "name": "追加能力: 混沌ダメージアップ(みんなで大騒ぎ！)",
       "stat": "disorder_dmg_pct",
       "target": "team",
       "values": {
         "base": 20,
         "m1": 26
       },
-      "note": "異常掌握が100Pt超過時、1Ptごとに+0.2%(最大+20%、異常掌握200Ptで最大)。M1で追加能力効果が130%になり最大26%。発動条件としてチームに異常特性メンバーまたは同陣営メンバーの編成が必要",
-      "sourceUrl": "https://gamewith.jp/zenless/507537"
+      "note": "「狸の願い」を所持しているメンバーのみ対象。柚葉の異常掌握が100Pt超過時、1Ptごとに+0.2%(上限20%、異常掌握200Ptで最大)。M1で追加能力効果が130%になり最大26%。チームに異常特性メンバーまたは同陣営メンバーがいる時発動",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_m1_energy_gain",
@@ -70,8 +70,20 @@
         "base": 0,
         "m1": 30
       },
-      "note": "フィールド入場時に獲得。",
-      "sourceUrl": "https://gamewith.jp/zenless/502024"
+      "note": "フィールド入場時に獲得(探査モードでは180秒に1回のみ)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
+    },
+    {
+      "id": "yuzuha_m1_res_ignore",
+      "name": "心象映画1: 全属性耐性ダウン",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 10
+      },
+      "note": "「スイートパニック」状態の敵が対象",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_m2_team_dmg",
@@ -83,8 +95,8 @@
         "m2": 15
       },
       "duration": "40s",
-      "note": "強化特殊スキル命中時に発動。",
-      "sourceUrl": "https://gamewith.jp/zenless/502024"
+      "note": "強化特殊スキル/終結スキル命中時に発動。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_m2_anomaly_buildup",
@@ -96,8 +108,8 @@
         "m2": 15
       },
       "duration": "40s",
-      "note": "強化特殊スキル命中時に発動。",
-      "sourceUrl": "https://gamewith.jp/zenless/502024"
+      "note": "強化特殊スキル/終結スキル命中時に発動。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_m4_assist_dmg",
@@ -108,8 +120,8 @@
         "base": 0,
         "m4": 30
       },
-      "note": "支援突撃(クイック支援)発動時。",
-      "sourceUrl": "https://gamewith.jp/zenless/502024"
+      "note": "支援突撃発動時",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_m4_anomaly_buildup",
@@ -120,25 +132,26 @@
         "base": 0,
         "m4": 20
       },
-      "note": "支援突撃発動時。",
-      "sourceUrl": "https://gamewith.jp/zenless/502024"
+      "note": "支援突撃発動時",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_m6_disorder_dmg",
-      "name": "心象映画6: 混沌ダメージ倍率アップ",
+      "name": "心象映画6: 混沌ダメージアップ",
       "stat": "disorder_dmg_pct",
-      "target": "self",
+      "target": "team",
       "values": {
         "base": 0,
         "m6": 105
       },
-      "maxStacks": 1,
-      "note": "パリィ等で獲得する糖度ポイント関連の効果。最大3重。出典により「混沌ダメージ+105%」(mintparm)と「混沌ダメージ倍率+105%」(gamewith)で解釈が割れており未確認 105%は合計値として1スタック扱いで記載(3重分の内訳は未確認)",
-      "sourceUrl": "https://gamewith.jp/zenless/502024"
+      "maxStacks": 3,
+      "duration": "40s",
+      "note": "支援突撃『ミックスキャンディーシュート』の強力な砲弾が敵に命中する度に1重(最大3重、各重の継続時間は独立)。メンバー全員の混沌ダメージがアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     },
     {
       "id": "yuzuha_wengine_anomaly_mastery",
-      "name": "音動機(狸の七変化): 異常掌握アップ",
+      "name": "音動機「狸の七変化」: 異常掌握アップ",
       "stat": "anomaly_mastery",
       "target": "self",
       "values": {
@@ -152,12 +165,12 @@
         "p5": 48
       },
       "duration": "40s",
-      "note": "装備者が強化特殊/終結スキルで炎属性以外のダメージを与えた時に付与(自身)。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ukinami-yuzuha/"
+      "note": "装備者の強化特殊スキルまたは終結スキルが物理属性ダメージを与えた時に付与(自身)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/877"
     },
     {
       "id": "yuzuha_wengine_anomaly_proficiency",
-      "name": "音動機(狸の七変化): 異常マスタリーアップ",
+      "name": "音動機「狸の七変化」: 異常マスタリーアップ",
       "stat": "anomaly_proficiency",
       "target": "team",
       "values": {
@@ -171,8 +184,8 @@
         "p5": 96
       },
       "duration": "40s",
-      "note": "装備者の追加攻撃がヒットした時にチーム全員へ付与。",
-      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ukinami-yuzuha/"
+      "note": "装備者の追加攻撃が敵に命中した時にメンバー全員へ付与。チーム内で1つのみ有効",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/877"
     }
   ]
 }

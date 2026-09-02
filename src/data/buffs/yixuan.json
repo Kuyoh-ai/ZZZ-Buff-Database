@@ -2,6 +2,17 @@
   "characterId": "yixuan",
   "buffs": [
     {
+      "id": "yixuan_core_dmg_pct",
+      "name": "コアパッシブ: 与ダメージアップ(術法の第一人者)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 60
+      },
+      "note": "コアスキルLv最大時の値(Lv1で30%)。対象は通常攻撃/強化特殊スキル/支援突撃/連携スキル/終結スキル(特殊スキル・回避は対象外)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
+    },
+    {
       "id": "yixuan_crit_dmg_self_ult",
       "name": "追加能力: 終結スキル後の会心ダメージ",
       "stat": "crit_dmg",
@@ -10,8 +21,8 @@
         "base": 40
       },
       "duration": "15s",
-      "note": "終結スキル発動後15秒間。チームに撃破/支援/防護メンバーがいる場合に発動する追加能力「玄墨の暗流」の効果",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%84%80%E7%8E%84"
+      "note": "終結スキル発動後、「凝神」状態(15秒)。チームに撃破/支援/防護メンバーがいる場合に発動する追加能力「玄墨の暗流」の効果",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
     },
     {
       "id": "yixuan_crit_rate_self_m1",
@@ -22,7 +33,8 @@
         "base": 0,
         "m1": 10
       },
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%84%80%E7%8E%84"
+      "note": "フィールド入場時に獲得",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
     },
     {
       "id": "yixuan_enemy_ether_res_down_m2",
@@ -34,12 +46,37 @@
         "base": 0,
         "m2": 15
       },
-      "note": "終結スキル/強化特殊スキル発動時、対象のエーテル耐性を無視(耐性ダウンとして換算) (自身の攻撃にのみ適用)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%84%80%E7%8E%84"
+      "note": "終結スキル/強化特殊スキルでダメージを与えた時、対象のエーテル耐性を無視(耐性ダウンとして換算)。自身の攻撃にのみ適用",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
+    },
+    {
+      "id": "yixuan_m4_ex_dmg",
+      "name": "心象映画M4: 強化特殊スキルダメージアップ(道術一如)",
+      "stat": "ex_dmg_pct",
+      "target": "self",
+      "maxStacks": 2,
+      "values": {
+        "base": 0,
+        "m4": 30
+      },
+      "note": "終結スキル発動時「静心」を1重獲得(最大2重)。「静心」1重につき次の強化特殊スキルの与ダメージアップ",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
+    },
+    {
+      "id": "yixuan_m6_sheer_dmg",
+      "name": "心象映画M6: 凝神状態の透徹ダメージ上昇",
+      "stat": "sheer_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 20
+      },
+      "note": "M6「動と静の調和」。「凝神」状態にある時、透徹ダメージ+20%",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
     },
     {
       "id": "yixuan_wengine_crit_rate",
-      "name": "音動機: 青溟の鳥籠(会心率)",
+      "name": "音動機「青溟の鳥籠」: 会心率",
       "stat": "crit_rate",
       "target": "self",
       "values": {
@@ -52,11 +89,11 @@
         "p4": 29,
         "p5": 32
       },
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/523303"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/782"
     },
     {
       "id": "yixuan_wengine_ether_dmg",
-      "name": "音動機: 青溟の鳥籠(エーテルダメージ)",
+      "name": "音動機「青溟の鳥籠」: エーテルダメージ",
       "stat": "dmg_pct_element",
       "element": "ether",
       "target": "self",
@@ -72,24 +109,12 @@
       },
       "maxStacks": 2,
       "duration": "15s",
-      "note": "強化特殊スキル発動で「青溟の伴」スタック獲得、1スタックごとにエーテルダメージ上昇。戦闘開始時に2スタック即時獲得",
-      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/523303"
-    },
-    {
-      "id": "yixuan_m6_sheer_dmg",
-      "name": "心象映画M6: 凝神状態の透徹ダメージ上昇",
-      "stat": "sheer_dmg_pct",
-      "target": "self",
-      "values": {
-        "base": 0,
-        "m6": 20
-      },
-      "note": "M6「動と静の調和」。「凝神」状態にある時、透徹ダメージ+20%。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%84%80%E7%8E%84"
+      "note": "強化特殊スキル発動で「青溟随行」を1重獲得(最大2重、接敵状態突入時は即2重)。1重ごとにエーテルダメージ上昇。重複時継続時間更新",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/782"
     },
     {
       "id": "yixuan_wengine_sheer_dmg",
-      "name": "音動機: 青溟の鳥籠(透徹ダメージ)",
+      "name": "音動機「青溟の鳥籠」: 透徹ダメージ",
       "stat": "sheer_dmg_pct",
       "target": "self",
       "values": {
@@ -104,8 +129,8 @@
       },
       "maxStacks": 2,
       "duration": "15s",
-      "note": "「青溟随行」1重につき終結スキルまたは強化特殊スキルの透徹ダメージ上昇(最大2重)。P2〜P4はP1/P5からの等差補間(未確認)。",
-      "sourceUrl": "https://game8.jp/zenless/681363"
+      "note": "「青溟随行」1重につき終結スキルまたは強化特殊スキルの透徹ダメージ上昇(最大2重)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/782"
     }
   ]
 }

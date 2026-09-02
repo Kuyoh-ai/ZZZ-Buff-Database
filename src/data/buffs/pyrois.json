@@ -11,7 +11,7 @@
       },
       "duration": "21s",
       "note": "終結スキル上分岐発動で「陽炎」状態獲得。ブレイク状態の敵への会心ダメージ+40%",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%94%E3%83%A5%E3%83%AD%E3%82%A4%E3%82%B9"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
     },
     {
       "id": "pyrois_core_energy_regen",
@@ -23,7 +23,7 @@
       },
       "duration": "200s",
       "note": "終結スキル下分岐発動で「増光」状態獲得",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%94%E3%83%A5%E3%83%AD%E3%82%A4%E3%82%B9"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
     },
     {
       "id": "pyrois_core_dmg_up",
@@ -35,7 +35,7 @@
       },
       "duration": "200s",
       "note": "終結スキル下分岐発動で「増光」状態獲得。与ダメージ+40%(レベル最大値)",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%94%E3%83%A5%E3%83%AD%E3%82%A4%E3%82%B9"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
     },
     {
       "id": "pyrois_addon_crit_dmg",
@@ -46,7 +46,18 @@
         "base": 40
       },
       "note": "チームに撃破または支援メンバーがいる場合、会心ダメージ+40%",
-      "sourceUrl": "https://game8.jp/zenless/781979"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
+    },
+    {
+      "id": "pyrois_addon_decibel_gain",
+      "name": "追加能力「煌々たる軍勢」: デシベル獲得(連携スキル)",
+      "stat": "decibel_gain",
+      "target": "self",
+      "values": {
+        "base": 300
+      },
+      "note": "チームに撃破または支援メンバーがいる場合、『連携スキル』発動時、自身のデシベル値を300Pt回復する。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
     },
     {
       "id": "pyrois_m1_crit_rate",
@@ -58,7 +69,7 @@
         "m1": 8
       },
       "note": "入場時にデシベル値+1000Ptと共に獲得",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%94%E3%83%A5%E3%83%AD%E3%82%A4%E3%82%B9"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
     },
     {
       "id": "pyrois_wengine_crit_rate",
@@ -68,8 +79,8 @@
       "values": {
         "base": 0
       },
-      "note": "無凸(精錬ランク1)時点の数値。精錬ランクによる変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
-      "sourceUrl": "https://game8.jp/zenless/792991",
+      "note": "会心率+20%固定(精錬ランクによる変化なし)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1105",
       "wengine": {
         "p1": 20,
         "p2": 20,
@@ -96,7 +107,7 @@
       },
       "duration": "45s",
       "note": "ピュロイス装備時、終結スキル発動または接敵状態突入時に「日蝕」効果獲得。敵のエーテル属性ダメージ耐性を無視",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082?lang=ja-jp"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1105"
     }
   ]
 }
