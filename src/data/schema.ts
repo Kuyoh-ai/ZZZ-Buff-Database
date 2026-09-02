@@ -15,6 +15,7 @@ export const CharacterSchema = z.object({
   faction: z.string().min(1),
   wengine: z.object({ nameJa: z.string(), nameEn: z.string() }),
   releaseVersion: z.string().regex(/^\d+\.\d+$/),
+  hasPotential: z.boolean().optional(),
   sourceUrl: z.string().url(),
 });
 
@@ -37,6 +38,7 @@ export const BuffSchema = z
       .optional(),
     values: z.object({ base: z.number(), m1: num, m2: num, m3: num, m4: num, m5: num, m6: num }),
     wengine: z.object({ p1: z.number(), p2: z.number(), p3: z.number(), p4: z.number(), p5: z.number() }).optional(),
+    potential: z.object({ t1: num, t2: num, t3: num, t4: num, t5: num, t6: num }).optional(),
     maxStacks: z.number().int().positive().optional(),
     duration: z.string().optional(),
     note: z.string().optional(),

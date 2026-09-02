@@ -126,3 +126,5 @@ T-9(self: 全検証)
 - 2026-09-02 12:23 ユーザー指摘(ダイアリン会心DMG): 音動機バフの base=p1 二重計上 6件、wengine欠落で常時表示 19件、値ゼロで表示不能 10件 を修正。validate OK
 - 2026-09-02 12:25 セル表示を「パーティ向け合計」+「自 +X(別枠)」に分離(合算をやめた)。ソートもパーティ向け値基準。E2E 14/14, test 41
 - 2026-09-02 12:46 GitHub Pages 公開: https://kuyoh-ai.github.io/ZZZ-Buff-Database/ (Actions deploy.yml)。gh は Kuyoh-ai に切替済
+- 2026-09-02 13:17 追加要望: 命破の有効stat(HP/透徹力/会心。攻撃/貫通は無効)、瞬光の弱体倍率削除、ポテンシャル解放(6段階)対応、gamewith非推奨。code patch + subagent 2件(potential調査→scratchpad、HP/透徹力収集→buffs)
+- 2026-09-02 13:25 命破stat判定/透徹力ラベル修正/hp_flat追加、瞬光ベール弱体倍率削除、ポテンシャル解放(9体対象、数値は ellen/nekomata/jane_doe のみ・要一次確認)、HP/透徹力バフ追加(lucia/yixuan/manato/yidhari/zhao)。test 48, E2E 16

@@ -24,18 +24,6 @@
       "sourceUrl": "https://game8.jp/zenless/682698"
     },
     {
-      "id": "ye_shunguang_veil_weakness_multiplier",
-      "name": "澄心境: ベール弱体倍率上限",
-      "stat": "enemy_stun_dmg_multiplier",
-      "target": "enemy",
-      "values": {
-        "base": 110,
-        "m4": 200
-      },
-      "note": "ブレイクしていない敵にも適用される弱体倍率の上限値。数値の解釈に確信度低め。",
-      "sourceUrl": "https://wikiwiki.jp/zenless/%E8%91%89%E7%9E%AC%E5%85%89"
-    },
-    {
       "id": "ye_shunguang_m1_dmg",
       "name": "心象映画1: うたかたの夢(与ダメージ)",
       "stat": "dmg_pct",

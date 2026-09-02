@@ -1,4 +1,17 @@
-import type { Buff, Character } from "../types";
+import type { Buff, Character, Role } from "../types";
+
+/** 役割ごとに「効果が乗らない」ステータス。命破(rupture)は攻撃力/貫通率/貫通値が無効、それ以外は透徹力が無効 */
+const ROLE_INAPPLICABLE_STATS: Partial<Record<Role, ReadonlySet<string>>> = {
+  rupture: new Set(["atk_pct", "atk_flat", "pen_ratio", "pen_flat"]),
+};
+const SHEER_ONLY_STATS = new Set(["sheer_force_pct", "sheer_force_flat", "sheer_dmg_pct"]);
+
+/** 受け手の役割に対してそのステータスが意味を持つか */
+export function statAppliesToRole(stat: string, role: Role): boolean {
+  if (ROLE_INAPPLICABLE_STATS[role]?.has(stat)) return false;
+  if (role !== "rupture" && SHEER_ONLY_STATS.has(stat)) return false;
+  return true;
+}
 
 /**
  * provider が持つ buff が attacker に適用されるか。
@@ -6,6 +19,7 @@ import type { Buff, Character } from "../types";
  */
 export function appliesTo(buff: Buff, provider: Character, attacker: Character | null): boolean {
   if (!attacker) return true;
+  if (!statAppliesToRole(buff.stat, attacker.role)) return false;
   const isSelf = provider.id === attacker.id;
 
   switch (buff.target) {

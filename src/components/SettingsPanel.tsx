@@ -1,6 +1,7 @@
-import type { CharSetting, Mindscape, WenginePhase } from "../types";
+import type { CharSetting, Mindscape, Potential, WenginePhase } from "../types";
 
 const MS: Mindscape[] = [0, 1, 2, 3, 4, 5, 6];
+const PT: Potential[] = [0, 1, 2, 3, 4, 5, 6];
 const WP: WenginePhase[] = [0, 1, 2, 3, 4, 5];
 
 export function SettingsPanel({
@@ -51,6 +52,25 @@ export function SettingsPanel({
               data-testid={`global-wp-${p}`}
             >
               {p === 0 ? "なし" : `P${p}`}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="settings__group">
+        <div className="settings__label">ポテンシャル解放</div>
+        <div className="segmented" role="radiogroup" aria-label="ポテンシャル解放(一括)">
+          {PT.map((t) => (
+            <button
+              key={t}
+              type="button"
+              role="radio"
+              aria-checked={global.potential === t}
+              className={`seg seg--pt ${global.potential === t ? "seg--on" : ""}`}
+              onClick={() => onChange({ ...global, potential: t })}
+              data-testid={`global-pt-${t}`}
+              title="ポテンシャル解放が実装されているキャラにのみ適用"
+            >
+              {t === 0 ? "なし" : `T${t}`}
             </button>
           ))}
         </div>

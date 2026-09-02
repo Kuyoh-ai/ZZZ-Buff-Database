@@ -6,7 +6,9 @@
       "name": "コアスキル: 猛襲会心率",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 40 },
+      "values": {
+        "base": 40
+      },
       "note": "コアスキル最大レベル時。ギャナウド(撕咬)状態の敵へのAssault(猛襲)ダメージのみに適用",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
     },
@@ -15,7 +17,9 @@
       "name": "コアスキル: 猛襲会心ダメージ",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 50 },
+      "values": {
+        "base": 50
+      },
       "note": "コアスキル最大レベル時。ギャナウド(撕咬)状態の敵へのAssault(猛襲)ダメージのみに適用",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
     },
@@ -24,7 +28,10 @@
       "name": "心象映画1: 物理属性異常蓄積効率",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 0, "m1": 15 },
+      "values": {
+        "base": 0,
+        "m1": 15
+      },
       "note": "Passion状態中",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
     },
@@ -33,7 +40,10 @@
       "name": "心象映画2: 防御力ダウン",
       "stat": "enemy_def_down_pct",
       "target": "enemy",
-      "values": { "base": 0, "m2": 15 },
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
       "note": "ギャナウド状態の敵への命中、または味方のAssaultトリガー時に付与(耐性無視方式)",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
     },
@@ -42,7 +52,10 @@
       "name": "心象映画2: 会心ダメージ上昇",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 0, "m2": 50 },
+      "values": {
+        "base": 0,
+        "m2": 50
+      },
       "note": "Assaultダメージが会心の場合",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
     },
@@ -51,7 +64,10 @@
       "name": "心象映画4: 属性異常ダメージ上昇(チーム)",
       "stat": "anomaly_dmg_pct",
       "target": "team",
-      "values": { "base": 0, "m4": 18 },
+      "values": {
+        "base": 0,
+        "m4": 18
+      },
       "duration": "15s",
       "note": "味方の誰かがAssaultまたはDisorderを発生させるとトリガー",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
@@ -61,7 +77,10 @@
       "name": "心象映画6: 会心率上昇",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 0, "m6": 20 },
+      "values": {
+        "base": 0,
+        "m6": 20
+      },
       "note": "Passion状態中",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
     },
@@ -70,9 +89,30 @@
       "name": "心象映画6: 会心ダメージ上昇",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 0, "m6": 40 },
+      "values": {
+        "base": 0,
+        "m6": 40
+      },
       "note": "Passion状態中",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    },
+    {
+      "id": "jane_doe_pt_assault_crit_dmg",
+      "name": "ポテンシャル覚醒: デッドリーダンス(強撃会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 10,
+        "t3": 15,
+        "t4": 20,
+        "t5": 25,
+        "t6": 30
+      },
+      "note": "ポテンシャルLv2で解放。ジェーン自身が発動した『強撃(Assault)』の会心ダメージに追加加算(既存のjanedoe_core_crit_dmg等と合算可)。ヴェリナ等の乱流由来Assaultには非適用。T1では未解放 ※ポテンシャル数値は要約情報ベースで一次情報未確認",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%B3"
     }
   ]
 }

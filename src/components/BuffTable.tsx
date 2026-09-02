@@ -4,7 +4,7 @@ import type { StatDef } from "../data/stats";
 import type { SortKey } from "../lib/sort";
 import { cellDisplay, type CellData, type Row } from "../lib/table";
 import { effectiveSetting, hasOverride } from "../lib/resolve";
-import type { Character, CharSetting, Mindscape, Settings, WenginePhase } from "../types";
+import type { Character, CharSetting, Mindscape, Potential, Settings, WenginePhase } from "../types";
 import { ElementIcon } from "./Icons";
 
 const TARGET_LABEL = { self: "自身", team: "チーム", enemy: "敵デバフ", next_swap_in: "次の登場キャラ" } as const;
@@ -104,7 +104,14 @@ export function BuffTable({
                     </button>
                   </td>
                   <td className={`td td--setting ${ov ? "td--overridden" : ""}`}>
-                    <RowSetting id={c.id} setting={setting} overridden={ov} onOverride={onOverride} wengineName={c.wengine.nameJa} />
+                    <RowSetting
+                      id={c.id}
+                      setting={setting}
+                      overridden={ov}
+                      onOverride={onOverride}
+                      wengineName={c.wengine.nameJa}
+                      hasPotential={!!c.hasPotential}
+                    />
                   </td>
                   {attacker && (
                     <td className="td td--num">
@@ -214,6 +221,7 @@ function Cell({
 function unlockHint(cell: CellData): string {
   let best: number | null = null;
   let wengine = false;
+  let potential = false;
   const party = cell.buffs.filter((b) => b.buff.target !== "self");
   for (const { buff } of party.length ? party : cell.buffs) {
     const v = buff.values;
@@ -223,7 +231,9 @@ function unlockHint(cell: CellData): string {
       if (x && x !== 0 && (best === null || i + 1 < best)) best = i + 1;
     });
     if (buff.wengine && Object.values(buff.wengine).some((x) => x)) wengine = true;
+    if (buff.potential && Object.values(buff.potential).some((x) => x)) potential = true;
   }
+  if (best === null && !wengine && potential) return "T";
   if (best !== null && wengine) return `M${best}/W`;
   if (best !== null) return `M${best}`;
   if (wengine) return "W";
@@ -232,6 +242,7 @@ function unlockHint(cell: CellData): string {
 
 const MS: Mindscape[] = [0, 1, 2, 3, 4, 5, 6];
 const WP: WenginePhase[] = [0, 1, 2, 3, 4, 5];
+const PT: Potential[] = [0, 1, 2, 3, 4, 5, 6];
 
 function RowSetting({
   id,
@@ -239,12 +250,14 @@ function RowSetting({
   overridden,
   onOverride,
   wengineName,
+  hasPotential,
 }: {
   id: string;
   setting: CharSetting;
   overridden: boolean;
   onOverride: (id: string, patch: Partial<CharSetting> | null) => void;
   wengineName: string;
+  hasPotential: boolean;
 }) {
   const hasWengine = wengineName && wengineName !== "-";
   return (
@@ -277,6 +290,22 @@ function RowSetting({
           </option>
         ))}
       </select>
+      {hasPotential && (
+        <select
+          className="select select--mini select--pt"
+          value={setting.potential}
+          onChange={(e) => onOverride(id, { potential: Number(e.target.value) as Potential })}
+          aria-label="ポテンシャル解放(個別)"
+          title="ポテンシャル解放"
+          data-testid={`row-pt-${id}`}
+        >
+          {PT.map((t) => (
+            <option key={t} value={t}>
+              {t === 0 ? "T-" : `T${t}`}
+            </option>
+          ))}
+        </select>
+      )}
       {overridden && (
         <button
           type="button"
@@ -312,6 +341,7 @@ function DetailPanel({
         <span className="detail__name">{c.nameJa}</span>
         <span className="detail__setting">
           M{setting.mindscape} / {setting.wenginePhase === 0 ? "音動機なし" : `${c.wengine.nameJa} P${setting.wenginePhase}`}
+          {c.hasPotential && ` / ポテンシャル T${setting.potential}`}
         </span>
         <a className="detail__src" href={c.sourceUrl} target="_blank" rel="noreferrer">
           参照元 ↗
@@ -372,6 +402,14 @@ function DetailPanel({
                       </span>
                     );
                   })}
+                  {b.potential && (
+                    <span className="ms ms--pt">
+                      <i>ポテンシャル</i>
+                      {(["t1", "t2", "t3", "t4", "t5", "t6"] as const)
+                        .map((k) => (b.potential![k] === null || b.potential![k] === undefined ? "—" : fmt(b.potential![k]!, unitOf(b.stat))))
+                        .join("/")}
+                    </span>
+                  )}
                   {b.wengine && (
                     <span className="ms ms--w">
                       <i>音動機</i>+{b.wengine.p1}/{b.wengine.p2}/{b.wengine.p3}/{b.wengine.p4}/{b.wengine.p5}

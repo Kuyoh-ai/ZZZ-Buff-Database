@@ -17,11 +17,15 @@ const STORAGE_KEY = "zzz-buff-db:settings:v1";
 function loadSettings(): Settings {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw) as Settings;
+    if (raw) {
+      const s = JSON.parse(raw) as Settings;
+      s.global.potential ??= 0;
+      return s;
+    }
   } catch {
     /* ignore */
   }
-  return { global: { mindscape: 0, wenginePhase: 0 }, overrides: {} };
+  return { global: { mindscape: 0, wenginePhase: 0, potential: 0 }, overrides: {} };
 }
 
 export default function App() {

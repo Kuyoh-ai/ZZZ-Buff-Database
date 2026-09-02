@@ -833,6 +833,16 @@
 .ms--w {
   color: var(--lime);
 }
+.ms--pt {
+  color: var(--el-ether);
+}
+.select--pt {
+  border-color: var(--el-ether);
+}
+.seg--pt.seg--on {
+  background: var(--el-ether);
+  border-color: var(--el-ether);
+}
 .bufffx__src {
   font-size: 10px;
   justify-self: end;

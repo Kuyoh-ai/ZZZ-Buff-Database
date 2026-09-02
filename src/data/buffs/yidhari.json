@@ -133,6 +133,18 @@
       },
       "note": "HP50%以下で会心率上昇。 装備者のHPが最大HPの50%以下の時に発動。",
       "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
+    },
+    {
+      "id": "yidhari_m4_hp_pct",
+      "name": "心象映画M4: エーテルベール中の最大HP上昇",
+      "stat": "hp_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 5
+      },
+      "note": "M4「静寂の中で咲き誇る」。「エーテルベール・湧泉」の効果を受けている時、最大HP+5%。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
     }
   ]
 }

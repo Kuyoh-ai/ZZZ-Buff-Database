@@ -71,6 +71,65 @@
       "duration": "45s",
       "note": "専用音動機「炉で歌い上げられる夢」固有効果。装備者が「エーテルベール」を発動/延長した時、メンバー全員の与ダメージ+25%(P1)〜40%(P5)。音動機由来の効果のためvalues.baseは0。P2〜P4はP1/P5からの等差補間(未確認)。エネルギー自動回復とHP上限上昇は対応statキーがないため未収録",
       "sourceUrl": "https://gamewith.jp/zenless/522493"
+    },
+    {
+      "id": "lucia_core_team_hp_pct",
+      "name": "コアパッシブ: メンバー全員の最大HP上昇",
+      "stat": "hp_pct",
+      "target": "team",
+      "values": {
+        "base": 5
+      },
+      "maxStacks": 1,
+      "duration": "40s",
+      "note": "フィールド入場時、「エーテルベール・湧泉」発動中にメンバー全員の最大HP+5%。",
+      "sourceUrl": "https://game8.jp/zenless/712532"
+    },
+    {
+      "id": "lucia_ex_sheer_force",
+      "name": "強化特殊スキル: 開幕最大HP依存の透徹力上昇",
+      "stat": "sheer_force_flat",
+      "target": "self",
+      "values": {
+        "base": 888
+      },
+      "note": "開幕最大HP200Ptにつき透徹力+7.4Pt、開幕最大HP24000Pt到達で最大値(理論上限888を記載)。",
+      "sourceUrl": "https://game8.jp/zenless/712532"
+    },
+    {
+      "id": "lucia_m2_sheer_dmg",
+      "name": "心象映画M2: 破暗状態メンバーの透徹ダメージ上昇",
+      "stat": "sheer_dmg_pct",
+      "target": "team",
+      "condition": {
+        "roles": ["rupture"]
+      },
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
+      "note": "M2「マジシャンみたいだね」。「破暗」状態(命破特性)のメンバーがリュシアの「エーテルベール・湧泉」効果を受けている時、透徹ダメージ+15%。",
+      "sourceUrl": "https://gamewith.jp/zenless/514875"
+    },
+    {
+      "id": "lucia_wengine_hp_pct",
+      "name": "専用音動機: エーテルベール発動時HP上限上昇",
+      "stat": "hp_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 15,
+        "p2": 17.25,
+        "p3": 19.5,
+        "p4": 21.75,
+        "p5": 24
+      },
+      "maxStacks": 1,
+      "duration": "45s",
+      "note": "専用音動機「炉で歌い上げられる夢」固有効果。装備者が「エーテルベール」を発動/延長した時、メンバー全員のHP上限+15%(P1)〜24%(P5)。P2〜P4はP1/P5からの等差補間(未確認)。",
+      "sourceUrl": "https://gamewith.jp/zenless/522493"
     }
   ]
 }

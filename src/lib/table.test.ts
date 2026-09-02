@@ -17,18 +17,18 @@ const data: CharacterBuffs = {
 
 describe("buildRow", () => {
   it("party total excludes self buffs; self kept separately", () => {
-    const r = buildRow(ch, data, { mindscape: 0, wenginePhase: 0 }, null);
+    const r = buildRow(ch, data, { mindscape: 0, wenginePhase: 0, potential: 0 }, null);
     expect(r.cells.crit_rate.totalAll).toBe(10);
     expect(cellDisplay(r.cells.crit_rate, null)).toEqual({ party: 10, self: 10 });
     expect(r.buffCount).toBe(3);
   });
   it("with attacker = self, self buffs go to totalSelf", () => {
-    const r = buildRow(ch, data, { mindscape: 0, wenginePhase: 0 }, ch);
+    const r = buildRow(ch, data, { mindscape: 0, wenginePhase: 0, potential: 0 }, ch);
     expect(r.cells.crit_rate.total).toBe(10);
     expect(r.cells.crit_rate.totalSelf).toBe(10);
   });
   it("excludeSelfBuffs drops target:self", () => {
-    const r = buildRow(ch, data, { mindscape: 2, wenginePhase: 0 }, null, true);
+    const r = buildRow(ch, data, { mindscape: 2, wenginePhase: 0, potential: 0 }, null, true);
     expect(r.cells.crit_rate.totalAll).toBe(16);
     expect(r.cells.crit_rate.totalSelf).toBe(0);
     expect(r.cells.crit_rate.buffs.map((b) => b.buff.id)).toEqual(["team"]);
@@ -36,7 +36,7 @@ describe("buildRow", () => {
   });
   it("cellSortValue is undefined when nothing applies to attacker", () => {
     const other: Character = { ...ch, id: "b", role: "attack" };
-    const r = buildRow(ch, data, { mindscape: 0, wenginePhase: 0 }, other, true);
+    const r = buildRow(ch, data, { mindscape: 0, wenginePhase: 0, potential: 0 }, other, true);
     expect(cellSortValue(r, "crit_rate", other)).toBe(10); // 5 × 2 stacks
     expect(cellSortValue(r, "atk_pct", other)).toBeUndefined();
   });

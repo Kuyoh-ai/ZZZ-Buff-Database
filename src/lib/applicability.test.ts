@@ -62,6 +62,18 @@ describe("appliesTo", () => {
     expect(appliesTo(iceRes, provider, miyabi)).toBe(true);
     expect(appliesTo(iceRes, provider, zhu)).toBe(false);
   });
+  it("rupture attacker: atk/pen not applicable, sheer force applicable", () => {
+    const rupture = mk("yixuan", { role: "rupture" });
+    expect(appliesTo(b({ stat: "atk_pct" }), provider, rupture)).toBe(false);
+    expect(appliesTo(b({ stat: "pen_ratio" }), provider, rupture)).toBe(false);
+    expect(appliesTo(b({ stat: "sheer_force_flat" }), provider, rupture)).toBe(true);
+    expect(appliesTo(b({ stat: "hp_pct" }), provider, rupture)).toBe(true);
+    expect(appliesTo(b({ stat: "crit_dmg" }), provider, rupture)).toBe(true);
+  });
+  it("non-rupture attacker: sheer force not applicable", () => {
+    expect(appliesTo(b({ stat: "sheer_force_flat" }), provider, zhu)).toBe(false);
+    expect(appliesTo(b({ stat: "atk_pct" }), provider, zhu)).toBe(true);
+  });
   it("faction condition", () => {
     const f = b({ condition: { factions: ["victoria_housekeeping"] } });
     expect(appliesTo(f, provider, ellen)).toBe(true);

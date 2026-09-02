@@ -6,7 +6,9 @@
       "name": "コアパッシブ: 口がおジョーズ(会心ダメージアップ)",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 100 },
+      "values": {
+        "base": 100
+      },
       "note": "『ダッシュ攻撃:薄氷の急襲』のチャージ鋏撃、または急凍パワー消費『通常攻撃:急凍剪定法』発動時、当該スキルの会心ダメージ+100%(コアスキルLv7)。ポテンシャル解放後は連携スキル・終結スキル・通常攻撃『霜鋒』『氷刃の波』にも適用",
       "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A8%E3%83%AC%E3%83%B3"
     },
@@ -16,7 +18,9 @@
       "stat": "dmg_pct_element",
       "element": "ice",
       "target": "self",
-      "values": { "base": 3 },
+      "values": {
+        "base": 3
+      },
       "maxStacks": 10,
       "duration": "10s",
       "note": "発動条件はチームに同属性(氷)または同陣営(ヴィクトリア家政)のメンバーがいること(ポテンシャル解放後は撃破属性も追加、OR条件のためcondition省略)。氷属性ダメージを与えるたびに以降の氷属性ダメージ+3%(最大10重で30%)",
@@ -27,7 +31,10 @@
       "name": "心象映画1: 寒冬の先触れ(会心率アップ)",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 0, "m1": 2 },
+      "values": {
+        "base": 0,
+        "m1": 2
+      },
       "maxStacks": 6,
       "duration": "15s",
       "note": "急凍パワー消費時に会心率+2%(最大6重)",
@@ -38,7 +45,10 @@
       "name": "心象映画2: 極海の捕食者(会心ダメージアップ)",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 0, "m2": 20 },
+      "values": {
+        "base": 0,
+        "m2": 20
+      },
       "maxStacks": 3,
       "note": "強化特殊スキル『シャークトルネード』発動時、消費した急凍パワー1Ptにつき当該スキルの会心ダメージ+20%(最大3Pt消費で+60%)",
       "sourceUrl": "https://gamewith.jp/zenless/455323"
@@ -48,7 +58,10 @@
       "name": "心象映画4: 休みなき寒潮(エネルギー回復)",
       "stat": "energy_gain_flat",
       "target": "self",
-      "values": { "base": 0, "m4": 4 },
+      "values": {
+        "base": 0,
+        "m4": 4
+      },
       "note": "任意メンバーが敵に凍結を付与、またはブレイク状態にした時にエネルギー4Pt回復。10秒に1回のみ発動",
       "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A8%E3%83%AC%E3%83%B3"
     },
@@ -57,7 +70,10 @@
       "name": "心象映画6: 盛宴の時(貫通率アップ)",
       "stat": "pen_ratio",
       "target": "self",
-      "values": { "base": 0, "m6": 20 },
+      "values": {
+        "base": 0,
+        "m6": 20
+      },
       "duration": "6s",
       "note": "強化特殊スキル・連携スキル発動時、またはクイックチャージ効果獲得時に貫通率+20%",
       "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A8%E3%83%AC%E3%83%B3"
@@ -68,8 +84,16 @@
       "stat": "dmg_pct_element",
       "element": "ice",
       "target": "self",
-      "values": { "base": 0 },
-      "wengine": { "p1": 25, "p2": 31.5, "p3": 38, "p4": 44.5, "p5": 50 },
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 25,
+        "p2": 31.5,
+        "p3": 38,
+        "p4": 44.5,
+        "p5": 50
+      },
       "sourceUrl": "https://wikiwiki.jp/zenless/%E9%9F%B3%E5%8B%95%E6%A9%9F/%E5%BC%B7%E6%94%BB"
     },
     {
@@ -77,8 +101,16 @@
       "name": "音動機 ディープシー・ビジター: 会心率アップ(通常攻撃)",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 0 },
-      "wengine": { "p1": 10, "p2": 12.5, "p3": 15, "p4": 17.5, "p5": 20 },
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p2": 12.5,
+        "p3": 15,
+        "p4": 17.5,
+        "p5": 20
+      },
       "duration": "8s",
       "note": "通常攻撃命中時に発動",
       "sourceUrl": "https://wikiwiki.jp/zenless/%E9%9F%B3%E5%8B%95%E6%A9%9F/%E5%BC%B7%E6%94%BB"
@@ -88,11 +120,58 @@
       "name": "音動機 ディープシー・ビジター: 会心率アップ(ダッシュ攻撃)",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 0 },
-      "wengine": { "p1": 10, "p2": 12.5, "p3": 15, "p4": 17.5, "p5": 20 },
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p2": 12.5,
+        "p3": 15,
+        "p4": 17.5,
+        "p5": 20
+      },
       "duration": "15s",
       "note": "ダッシュ攻撃で氷属性ダメージを与えた時に発動。通常攻撃分と加算可能",
       "sourceUrl": "https://wikiwiki.jp/zenless/%E9%9F%B3%E5%8B%95%E6%A9%9F/%E5%BC%B7%E6%94%BB"
+    },
+    {
+      "id": "ellen_pt_crit_dmg_stack",
+      "name": "ポテンシャル覚醒: フロストゾーン(会心ダメージアップ、1重あたり)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 1.6,
+        "t3": 2.4,
+        "t4": 3.2,
+        "t5": 4.0,
+        "t6": 4.8
+      },
+      "maxStacks": 10,
+      "duration": "10s",
+      "note": "ポテンシャルLv2で解放。追加能力『ライジングストーム』の重数(最大10重)ごとに会心ダメージ+値(T2時最大+16%、T6時最大+48%)。T1では未解放(効果なし) ※ポテンシャル数値は要約情報ベースで一次情報未確認",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A8%E3%83%AC%E3%83%B3"
+    },
+    {
+      "id": "ellen_pt_ice_res_ignore",
+      "name": "ポテンシャル覚醒: フロストゾーン(氷属性耐性無視)",
+      "stat": "enemy_res_down_pct",
+      "element": "ice",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 3.3,
+        "t3": 5.0,
+        "t4": 6.7,
+        "t5": 8.3,
+        "t6": 10.0
+      },
+      "note": "ポテンシャルLv2で解放。『ライジングストーム』重数を10重まで蓄積した状態で敵の氷属性ダメージ耐性を無視(耐性ダウンとして近似)。T1では未解放 (自身の攻撃にのみ適用) ※ポテンシャル数値は要約情報ベースで一次情報未確認",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A8%E3%83%AC%E3%83%B3"
     }
   ]
 }

@@ -42,7 +42,8 @@
       "nameEn": "Steel Cushion"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "nicole",
@@ -102,7 +103,8 @@
       "nameEn": "Fusion Compiler"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "koleda",
@@ -132,7 +134,8 @@
       "nameEn": "Flamemaker Shaker"
     },
     "releaseVersion": "1.2",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "caesar",
@@ -372,7 +375,8 @@
       "nameEn": "Weeping Cradle"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "corin",
@@ -402,7 +406,8 @@
       "nameEn": "Deep Sea Visitor"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "lycaon",
@@ -417,7 +422,8 @@
       "nameEn": "The Restrained"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "jane_doe",
@@ -432,7 +438,8 @@
       "nameEn": "Sharpened Stinger"
     },
     "releaseVersion": "1.1",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "qingyi",
@@ -597,7 +604,8 @@
       "nameEn": "The Brimstone"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "trigger",
@@ -627,7 +635,8 @@
       "nameEn": "Severed Innocence"
     },
     "releaseVersion": "1.6",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "ju_fufu",

@@ -20,6 +20,8 @@ export interface Character {
   wengine: { nameJa: string; nameEn: string };
   /** 実装バージョン(例 "1.0") */
   releaseVersion: string;
+  /** ポテンシャル解放(6段階)が実装されているか */
+  hasPotential?: boolean;
   /** キャラ一覧の参照元URL */
   sourceUrl: string;
 }
@@ -53,6 +55,16 @@ export interface MindscapeValues {
   m6?: number | null;
 }
 
+/** ポテンシャル解放段階ごとの実効値。null/未定義は「前段階から変化なし」。心象映画の解決後に上書きする */
+export interface PotentialValues {
+  t1?: number | null;
+  t2?: number | null;
+  t3?: number | null;
+  t4?: number | null;
+  t5?: number | null;
+  t6?: number | null;
+}
+
 /** モチーフ音動機装備時に加算される値(凸=phase 1〜5) */
 export interface WengineValues {
   p1: number;
@@ -73,6 +85,8 @@ export interface Buff {
   /** 1スタックあたりの値 */
   values: MindscapeValues;
   wengine?: WengineValues;
+  /** ポテンシャル解放で値が変わる/追加される場合 */
+  potential?: PotentialValues;
   /** 最大スタック数(既定1) */
   maxStacks?: number;
   duration?: string;
@@ -89,9 +103,13 @@ export type Mindscape = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 /** 0 = 未装備 */
 export type WenginePhase = 0 | 1 | 2 | 3 | 4 | 5;
 
+export type Potential = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+
 export interface CharSetting {
   mindscape: Mindscape;
   wenginePhase: WenginePhase;
+  /** ポテンシャル解放段階(未実装キャラでは無視) */
+  potential: Potential;
 }
 
 export interface Settings {

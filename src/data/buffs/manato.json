@@ -75,6 +75,18 @@
       "duration": "8s",
       "note": "支援突撃命中時+3%、最大5重(合計15%)。1重あたりの値。",
       "sourceUrl": "https://gamewith.jp/zenless/514876"
+    },
+    {
+      "id": "manato_m4_hp_pct",
+      "name": "心象映画4: 最大HP上昇",
+      "stat": "hp_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 8
+      },
+      "note": "M4「幼き日の誓い」。真斗の最大HP+8%。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8B%9B%E9%87%8E%E7%9C%9F%E6%96%97"
     }
   ]
 }

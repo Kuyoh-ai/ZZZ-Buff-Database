@@ -98,6 +98,16 @@ with sync_playwright() as p:
     check("exclude-self default ON hides self buffs", n_off > n_on, f"{n_on} -> {n_off}")
     page.locator('[data-testid="exclude-self"]').click(); page.wait_for_timeout(200)
 
+    # ポテンシャル解放: 対象キャラ(エレン)のみ個別セレクトがあり、T6で自バフ値が変わる
+    check("potential select only on hasPotential rows",
+          page.locator('[data-testid="row-pt-ellen"]').count() == 1 and page.locator('[data-testid="row-pt-zhu_yuan"]').count() == 0)
+    page.locator('[data-testid="exclude-self"]').click(); page.wait_for_timeout(200)  # 自バフ含む
+    before_pt = page.locator('[data-testid="row-ellen"] [data-testid="cell-crit_dmg"]').inner_text()
+    page.locator('[data-testid="global-pt-6"]').click(); page.wait_for_timeout(300)
+    after_pt = page.locator('[data-testid="row-ellen"] [data-testid="cell-crit_dmg"]').inner_text()
+    check("global potential T6 changes Ellen crit_dmg", before_pt != after_pt, f"{before_pt!r} -> {after_pt!r}")
+    page.locator('[data-testid="global-pt-0"]').click(); page.locator('[data-testid="exclude-self"]').click(); page.wait_for_timeout(200)
+
     # 詳細パネル
     page.locator('[data-testid="search"]').fill(""); page.locator('[data-testid="filter-el-ice"]').click()
     page.locator('[data-testid="row-ellen"] .namebtn').click(); page.wait_for_timeout(300)

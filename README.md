@@ -67,6 +67,7 @@ npm run check-anim     # CSSアニメーションが0.5s以内か検証(ロー�
 - `condition`: 受け手の条件。`elements` / `factions` / `roles`(いずれかに一致) / `excludeSelf`
 - `values`: 心象映画段階ごとの**実効値**。`base` が M0。`m1`〜`m6` は「その段階で値が変わる場合のみ」書く(書かない/`null` は前段階から変化なし)
 - `wengine`: モチーフ音動機装備時に**加算**する値(P1〜P5)。音動機で変化しないバフは省略
+- `potential`: ポテンシャル解放(T1〜T6)で値が変わる/追加される場合の段階別実効値(心象映画の解決後に上書き)。対象キャラは `characters.json` で `hasPotential: true`
 - `maxStacks`: 最大スタック数(既定1)。`values` は1スタックあたりの値。テーブルには最大スタック時の合計を表示
 - `sourceUrl`: 必須。数値を確認したページのURL
 
@@ -80,7 +81,9 @@ npm run check-anim     # CSSアニメーションが0.5s以内か検証(ロー�
 2. `npm run validate-data` でスキーマ検証
 3. 陣営を追加する場合は `src/data/labels.ts` の `FACTION_LABEL` にIDと日本語名を追加
 
-参照元の優先順位: HoYoWiki → Game8 → wikiwiki.jp/zenless → Prydwen。
+参照元の優先順位: HoYoWiki → wikiwiki.jp/zenless → Game8。gamewith は精度が低いため参照元にしない(既存データの一部は gamewith 由来のため順次置き換え)。
+
+受け手の役割による有効判定: 命破(rupture)には攻撃力/貫通率/貫通値のバフが乗らず、命破以外には透徹力/透徹ダメージが乗らない扱い(アタッカー指定時の強調に反映)。
 
 ## favicon / OGP 画像
 

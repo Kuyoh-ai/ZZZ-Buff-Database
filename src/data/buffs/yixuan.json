@@ -74,6 +74,38 @@
       "duration": "15s",
       "note": "強化特殊スキル発動で「青溟の伴」スタック獲得、1スタックごとにエーテルダメージ上昇。戦闘開始時に2スタック即時獲得",
       "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/523303"
+    },
+    {
+      "id": "yixuan_m6_sheer_dmg",
+      "name": "心象映画M6: 凝神状態の透徹ダメージ上昇",
+      "stat": "sheer_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 20
+      },
+      "note": "M6「動と静の調和」。「凝神」状態にある時、透徹ダメージ+20%。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%84%80%E7%8E%84"
+    },
+    {
+      "id": "yixuan_wengine_sheer_dmg",
+      "name": "音動機: 青溟の鳥籠(透徹ダメージ)",
+      "stat": "sheer_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p2": 11.5,
+        "p3": 13,
+        "p4": 14.5,
+        "p5": 16
+      },
+      "maxStacks": 2,
+      "duration": "15s",
+      "note": "「青溟随行」1重につき終結スキルまたは強化特殊スキルの透徹ダメージ上昇(最大2重)。P2〜P4はP1/P5からの等差補間(未確認)。",
+      "sourceUrl": "https://game8.jp/zenless/681363"
     }
   ]
 }
