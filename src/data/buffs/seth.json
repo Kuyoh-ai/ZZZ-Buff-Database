@@ -1,0 +1,72 @@
+{
+  "characterId": "seth",
+  "buffs": [
+    {
+      "id": "seth_core_anomaly_proficiency",
+      "name": "コアスキル: 異常マスタリー上昇(被シールド者)",
+      "stat": "anomaly_proficiency",
+      "target": "team",
+      "values": { "base": 100 },
+      "duration": "25s",
+      "note": "コアスキル最大レベル時。シールドを付与された味方のみが対象(全員ではない)",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/460687"
+    },
+    {
+      "id": "seth_passive_anomaly_buildup_res_down",
+      "name": "追加能力: 異常蓄積耐性ダウン",
+      "stat": "enemy_anomaly_buildup_res_down_pct",
+      "target": "enemy",
+      "values": { "base": 20 },
+      "duration": "20s",
+      "note": "編成内に同陣営または同属性メンバーがいる場合(OR条件)",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/460687"
+    },
+    {
+      "id": "seth_m2_anomaly_buildup",
+      "name": "心象映画2: 電気異常蓄積効率上昇",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 0, "m2": 35 },
+      "note": "フィニッシュムーブ命中時",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/460687"
+    },
+    {
+      "id": "seth_m4_daze",
+      "name": "心象映画4: ブレイク値上昇",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": { "base": 0, "m4": 25 },
+      "note": "Defensive Assist(防御支援)のみ",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/460687"
+    },
+    {
+      "id": "seth_m6_crit_dmg",
+      "name": "心象映画6: 会心ダメージ上昇",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": { "base": 0, "m6": 60 },
+      "note": "フィニッシュムーブ使用時",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/460687"
+    },
+    {
+      "id": "seth_wengine_energy_regen",
+      "name": "音動機「Peacekeeper - Specialized」: エネルギー自動回復",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 0.4, "p2": 0.46, "p3": 0.52, "p4": 0.58, "p5": 0.64 },
+      "note": "シールド中。数値は検索スニペット経由の取得で確度は中程度",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/463663"
+    },
+    {
+      "id": "seth_wengine_anomaly_buildup",
+      "name": "音動機「Peacekeeper - Specialized」: 異常蓄積効率上昇",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 36, "p2": 40, "p3": 45, "p4": 50, "p5": 55 },
+      "note": "EX特殊技・アシストフォロー使用時。数値は検索スニペット経由の取得で確度は中程度",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/463663"
+    }
+  ]
+}

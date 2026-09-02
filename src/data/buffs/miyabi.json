@@ -1,0 +1,91 @@
+{
+  "characterId": "miyabi",
+  "buffs": [
+    {
+      "id": "miyabi_core_buildup_rate",
+      "name": "コアパッシブ: 寒炎(霜烈蓄積効率)",
+      "stat": "anomaly_buildup_pct",
+      "element": "ice",
+      "target": "self",
+      "values": {
+        "base": 80
+      },
+      "note": "氷焔付与中の霜烈状態異常蓄積時、会心率100%分を蓄積効率に変換(最大80%アップ)。会心率依存の可変値のため、記載値は上限",
+      "sourceUrl": "https://game8.jp/zenless/619923"
+    },
+    {
+      "id": "miyabi_core_chaos_buildup_team",
+      "name": "コアパッシブ: 霜灼(チーム異常蓄積)",
+      "stat": "anomaly_buildup_pct",
+      "target": "team",
+      "values": {
+        "base": 14
+      },
+      "note": "「霜・破」発動により対象が「霜灼」状態の間、チーム全体の状態異常蓄積値+14%",
+      "sourceUrl": "https://game8.jp/zenless/619923"
+    },
+    {
+      "id": "miyabi_additional_res_ignore_ice",
+      "name": "追加能力: 霜雪を共に沐し(氷耐性ダウン)",
+      "stat": "enemy_res_down_pct",
+      "element": "ice",
+      "target": "self",
+      "values": {
+        "base": 30
+      },
+      "note": "混沌発動で「落霜」を獲得し、次の構えで雅自身の攻撃がターゲットの氷属性ダメージ耐性を30%無視する(雅の攻撃にのみ適用のためtarget=self)。発動には支援特性メンバーまたは同陣営メンバーの編成が必要",
+      "sourceUrl": "https://game8.jp/zenless/619923"
+    },
+    {
+      "id": "miyabi_wengine_crit_dmg",
+      "name": "音動機: あられ落つ星殿(会心ダメージ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "note": "装備時常時発動。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/619923",
+      "wengine": {
+        "p1": 50,
+        "p2": 50,
+        "p3": 50,
+        "p4": 50,
+        "p5": 50
+      }
+    },
+    {
+      "id": "miyabi_wengine_ice_dmg",
+      "name": "音動機: あられ落つ星殿(氷ダメージ)",
+      "stat": "dmg_pct_element",
+      "element": "ice",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 2,
+      "duration": "15s",
+      "note": "強化特殊スキル発動時、または任意メンバーが状態異常付与時に発動。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/619923",
+      "wengine": {
+        "p1": 20,
+        "p2": 20,
+        "p3": 20,
+        "p4": 20,
+        "p5": 20
+      }
+    },
+    {
+      "id": "miyabi_m2_crit_rate",
+      "name": "2凸: 会心率アップ",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
+      "note": "永続の会心率+15%",
+      "sourceUrl": "https://game8.jp/zenless/619923"
+    }
+  ]
+}

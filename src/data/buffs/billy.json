@@ -1,0 +1,52 @@
+{
+  "characterId": "billy",
+  "buffs": [
+    {
+      "id": "billy_core_dmg_self",
+      "name": "コアパッシブ: 射撃姿勢(しゃがみ撃ち時の与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 50 },
+      "note": "しゃがみ撃ちに入ると与ダメージがアップ。移動する、直立状態に戻る、あるいはノックバック/吹き飛ばされるとバフ終了。コアスキル最大レベル(Lv.7)の値50%を記載(Lv.1は25%)",
+      "sourceUrl": "https://game8.jp/zenless/607806"
+    },
+    {
+      "id": "billy_additional_ult_dmg_self",
+      "name": "追加能力: スターライト戦隊(終結スキルダメージアップ)",
+      "stat": "ult_dmg_pct",
+      "target": "self",
+      "values": { "base": 50 },
+      "maxStacks": 2,
+      "note": "連携スキル発動後、次の終結スキル使用時の与ダメージがアップ(最大2重、終結スキル発動でリセット)。発動条件はビリーと同属性または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/billy-kid/"
+    },
+    {
+      "id": "billy_m1_energy_self",
+      "name": "心象映画1: 堂々登場(エネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": { "base": 0, "m1": 2.7 },
+      "note": "ダッシュ攻撃または回避反撃が敵に命中した時、エネルギーを回復(5秒に1回のみ)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/billy-kid/"
+    },
+    {
+      "id": "billy_m4_crit_rate_self",
+      "name": "心象映画4: スターライト・バリスティクス(強化特殊スキル会心率アップ)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": { "base": 0, "m4": 32 },
+      "note": "『強化特殊スキル』命中時、ビリーとターゲットの距離に応じて会心率がアップ(最大+32%)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/billy-kid/"
+    },
+    {
+      "id": "billy_m6_dmg_self",
+      "name": "心象映画6: スターライト・英雄的瞬間(与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 0, "m6": 6 },
+      "maxStacks": 5,
+      "note": "敵に累計10回攻撃命中、または極限回避発動時に与ダメージがアップ(最大5重、ノックバック時にリセット)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/billy-kid/"
+    }
+  ]
+}

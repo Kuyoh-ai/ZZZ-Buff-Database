@@ -1,0 +1,25 @@
+{
+  "characterId": "pan_yinhu",
+  "buffs": [
+    {
+      "id": "pan_yinhu_sheer_force_assist",
+      "name": "コアパッシブ: 気脈乾坤(貫通力付与)",
+      "stat": "sheer_force_flat",
+      "target": "next_swap_in",
+      "values": { "base": 540, "m6": 720 },
+      "duration": "25s",
+      "note": "クイック支援または連携スキルで入場したメンバーに、潘引壺の開幕攻撃力の18%(6凸で24%)分の貫通力を付与(上限は開幕攻撃力3000時の値)。ここでは上限値を記載",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/pan-yinhu/"
+    },
+    {
+      "id": "pan_yinhu_enemy_dmg_taken",
+      "name": "追加能力: パンダの胃袋(被ダメージ増加)",
+      "stat": "enemy_dmg_taken_pct",
+      "target": "enemy",
+      "values": { "base": 20, "m1": 30 },
+      "duration": "10s",
+      "note": "「絶気」状態の敵への与ダメージ増加。チームに[命破]特性または同陣営メンバーが存在する場合に発動。M2で継続時間12秒に延長",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/pan-yinhu/"
+    }
+  ]
+}

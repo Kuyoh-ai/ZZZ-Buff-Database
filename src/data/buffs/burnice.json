@@ -1,0 +1,84 @@
+{
+  "characterId": "burnice",
+  "buffs": [
+    {
+      "id": "burnice_additional_anomaly_buildup_self",
+      "name": "追加能力: 燃え広がる小火(自身の炎属性状態異常蓄積効率アップ)",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": {
+        "base": 65
+      },
+      "note": "『通常攻撃:フレイム・ブレンド』長押し・『強化特殊スキル:ヒートシェイキング・メソッド』・「エンバー」効果による炎属性状態異常蓄積値がアップ。発動条件は[異常]特性メンバーまたは同陣営メンバーがチームにいること",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
+    },
+    {
+      "id": "burnice_passive_anomaly_mastery_self",
+      "name": "熱狂パーティー: 異常掌握アップ",
+      "stat": "anomaly_mastery",
+      "target": "self",
+      "values": {
+        "base": 25
+      },
+      "note": "開幕エネルギー自動回復が1.8Pt以上の場合に発動。超過分0.1Ptにつき+1Pt(最大+25Pt)。値は上限値",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
+    },
+    {
+      "id": "burnice_passive_dmg_self",
+      "name": "熱狂パーティー: 与ダメージアップ",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 20
+      },
+      "note": "開幕エネルギー自動回復が1.8Pt以上の場合に発動。超過分0.1Ptにつき+1%(最大+20%)。値は上限値。同時にエンバー発動間隔が1.5秒→1.35秒に短縮",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
+    },
+    {
+      "id": "burnice_m2_team_pen_ratio",
+      "name": "心象映画2: 貫く熱意(味方の貫通率アップ)",
+      "stat": "pen_ratio",
+      "target": "team",
+      "values": {
+        "base": 0,
+        "m2": 4
+      },
+      "maxStacks": 5,
+      "duration": "6s",
+      "note": "バーニスの攻撃を受けた敵に「貫く熱意」が付与され、そのターゲットへの味方全体の攻撃の貫通率が1重につき+4%(最大5重)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
+    },
+    {
+      "id": "burnice_m4_ex_assist_crit_rate_self",
+      "name": "心象映画4: 燃料マシマシ(強化特殊/支援攻撃の会心率アップ)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 30
+      },
+      "note": "『強化特殊スキル』および『支援攻撃』の会心率がアップ",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%90%E3%83%BC%E3%83%8B%E3%82%B9"
+    },
+    {
+      "id": "burnice_wengine_dmg_self",
+      "name": "モチーフ音動機: バーニング・シェイカー(与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 10,
+      "duration": "6s",
+      "note": "音動機装備時のみ。『強化特殊スキル』または『支援攻撃』が敵に命中すると与ダメージ+3.5%(精錬1、最大10重、0.3秒に1回のみ発動)。控え時はエネルギー自動回復+0.6Pt/秒(精錬1)。精錬2〜5の中間値は未確認のためwengine値は省略 精錬2〜5未確認のため全段にP1値を使用",
+      "sourceUrl": "https://gamewith.jp/zenless/468287",
+      "wengine": {
+        "p1": 3.5,
+        "p2": 3.5,
+        "p3": 3.5,
+        "p4": 3.5,
+        "p5": 3.5
+      }
+    }
+  ]
+}

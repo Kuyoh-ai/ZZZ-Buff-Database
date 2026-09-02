@@ -1,0 +1,95 @@
+{
+  "characterId": "nekomata",
+  "buffs": [
+    {
+      "id": "nekomata_core_dmg_self",
+      "name": "コアパッシブ: 猫の忍び足(自身与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 60 },
+      "duration": "40s",
+      "note": "『回避反撃』または『クイック支援』が命中した時、自身の与ダメージがアップ。コアスキル最大レベル(Lv.7)の値60%を記載(Lv.1は30%)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8C%AB%E5%8F%88"
+    },
+    {
+      "id": "nekomata_core_ex_dmg_self",
+      "name": "コアパッシブ: キャットウォーク・ショー(強化特殊/回避反撃ダメージアップ)",
+      "stat": "ex_dmg_pct",
+      "target": "self",
+      "values": { "base": 35 },
+      "maxStacks": 2,
+      "duration": "30s",
+      "note": "『しっぽないないの術』発動、またはチーム内メンバーが強撃を付与した時、強化特殊スキルと回避反撃の与ダメージがアップ(最大2重)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8C%AB%E5%8F%88"
+    },
+    {
+      "id": "nekomata_additional_crit_dmg_self",
+      "name": "追加能力: 夜行性(肉球ラッシュ中の会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": { "base": 60 },
+      "note": "『肉球ラッシュ』状態中、会心ダメージがアップ。コアスキル最大レベル(Lv.7)の値60%を記載(Lv.1は20%)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8C%AB%E5%8F%88"
+    },
+    {
+      "id": "nekomata_m1_enemy_res_down",
+      "name": "心象映画1: 鳥絶技巧(敵の物理耐性ダウン)",
+      "stat": "enemy_res_down_pct",
+      "element": "physical",
+      "target": "enemy",
+      "values": { "base": 0, "m1": 16 },
+      "note": "敵を背後から攻撃した時、対象の物理属性ダメージ耐性を無視。ブレイク状態の敵への全攻撃は背後攻撃扱いになる",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8C%AB%E5%8F%88"
+    },
+    {
+      "id": "nekomata_m2_energy_regen_self",
+      "name": "心象映画2: ねことねずみ(エネルギー獲得効率アップ)",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": { "base": 0, "m2": 25 },
+      "note": "敵が1体のみの状態で出場中はエネルギー獲得効率がアップ",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8C%AB%E5%8F%88"
+    },
+    {
+      "id": "nekomata_m4_crit_rate_self",
+      "name": "心象映画4: 爪研ぎ(会心率アップ)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": { "base": 0, "m4": 7 },
+      "maxStacks": 2,
+      "duration": "15s",
+      "note": "『強化特殊スキル』発動時、会心率がアップ(最大2重)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8C%AB%E5%8F%88"
+    },
+    {
+      "id": "nekomata_m6_crit_dmg_self",
+      "name": "心象映画6: 捕食者の血(会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": { "base": 0, "m6": 18 },
+      "maxStacks": 3,
+      "note": "『連携スキル』または『終結スキル』発動時、会心ダメージがアップ(最大3重、接敵時継続)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8C%AB%E5%8F%88"
+    },
+    {
+      "id": "nekomata_wengine_steel_cushion_dmg_element",
+      "name": "音動機 鋼の肉球: 物理属性ダメージアップ",
+      "stat": "dmg_pct_element",
+      "element": "physical",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 20, "p2": 25, "p3": 30, "p4": 35, "p5": 40 },
+      "sourceUrl": "https://napgames.jp/zzz/engines/steel_cushion/"
+    },
+    {
+      "id": "nekomata_wengine_steel_cushion_dmg_behind",
+      "name": "音動機 鋼の肉球: 背後攻撃時の与ダメージアップ",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 25, "p2": 31.5, "p3": 38, "p4": 44, "p5": 50 },
+      "note": "敵を背後から攻撃し、命中した時に発動",
+      "sourceUrl": "https://www.thegamer.com/zenless-zone-zero-best-w-engines-ranked/"
+    }
+  ]
+}

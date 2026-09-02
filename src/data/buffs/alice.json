@@ -1,0 +1,94 @@
+{
+  "characterId": "alice",
+  "buffs": [
+    {
+      "id": "alice_core_anomaly_buildup",
+      "name": "コアスキル: 物理異常蓄積効率アップ",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": {
+        "base": 25
+      },
+      "duration": "30s",
+      "note": "極性強撃発動時に自身に付与される物理属性の状態異常蓄積効率アップ。コアスキルレベル強化で12.5%→25%に上昇(最大値を記載)。属性の限定は効果側の性質であり受け手条件ではないためconditionは付けない",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A2%E3%83%AA%E3%82%B9"
+    },
+    {
+      "id": "alice_m1_def_down",
+      "name": "心象映画1: 対象防御力ダウン",
+      "stat": "enemy_def_down_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 20
+      },
+      "duration": "30s",
+      "note": "「強撃」発動時に対象へ付与(gamewith原文は『強撃』)",
+      "sourceUrl": "https://gamewith.jp/zenless/502052"
+    },
+    {
+      "id": "alice_m2_disorder_dmg",
+      "name": "心象映画2: 物理異常敵への混沌ダメージアップ",
+      "stat": "disorder_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
+      "note": "物理属性異常状態の敵に対する混沌(disorder)ダメージ。",
+      "sourceUrl": "https://gamewith.jp/zenless/502052"
+    },
+    {
+      "id": "alice_m4_res_ignore",
+      "name": "心象映画4: 物理耐性無視",
+      "stat": "enemy_res_down_pct",
+      "element": "physical",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 10
+      },
+      "note": "アリス自身の攻撃がターゲットの物理属性ダメージ耐性を10%無視する(アリスの攻撃にのみ適用のためtarget=self)",
+      "sourceUrl": "https://gamewith.jp/zenless/502052"
+    },
+    {
+      "id": "alice_wengine_anomaly_mastery",
+      "name": "音動機(十面百錬の星): 異常マスタリーアップ",
+      "stat": "anomaly_mastery",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 60,
+        "p2": 69,
+        "p3": 78,
+        "p4": 87,
+        "p5": 96
+      },
+      "note": "「星屑を君に」効果。中間精錬値(p2-p4)は線形補間による推定。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/alice-thymefield/"
+    },
+    {
+      "id": "alice_wengine_physical_dmg",
+      "name": "音動機(十面百錬の星): 物理ダメージアップ",
+      "stat": "dmg_pct_element",
+      "element": "physical",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 20,
+        "p2": 23,
+        "p3": 26,
+        "p4": 29,
+        "p5": 32
+      },
+      "maxStacks": 2,
+      "duration": "20s",
+      "note": "「強撃」発動時に1重獲得、最大2重。接敵状態突入時は即座に2重獲得。中間精錬値(p2-p4)は線形補間による推定。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/alice-thymefield/"
+    }
+  ]
+}

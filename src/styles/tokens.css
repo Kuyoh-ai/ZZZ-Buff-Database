@@ -1,0 +1,41 @@
+:root {
+  --bg: #0b0b0b;
+  --bg-2: #141414;
+  --bg-3: #1d1d1d;
+  --line: #2b2b2b;
+  --line-2: #3a3a3a;
+  --fg: #f2f2f2;
+  --fg-2: #b8b8b8;
+  --fg-3: #7a7a7a;
+  --lime: #d4ff2b;
+  --lime-2: #a6d100;
+  --lime-dim: rgba(212, 255, 43, 0.14);
+  --orange: #ff6b1a;
+  --orange-dim: rgba(255, 107, 26, 0.16);
+  --red: #ff3b5c;
+  --white: #ffffff;
+
+  --el-physical: #f5e4b8;
+  --el-fire: #ff7a3d;
+  --el-ice: #6fd6ff;
+  --el-electric: #6f8dff;
+  --el-ether: #ff7de9;
+  --el-auric_ink: #c9b8ff;
+  --el-wind: #7ff0b0;
+  --el-lumiflux: #fff1a8;
+
+  --font-display: "Barlow Condensed", "Noto Sans JP", "Yu Gothic", sans-serif;
+  --font-body: "Noto Sans JP", "Yu Gothic", "Hiragino Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
+
+  --ease-sign: cubic-bezier(0.87, 0.05, 0.02, 0.97);
+  --ease-snap: cubic-bezier(0.7, 0.01, 0.23, 1);
+  --ease-out: cubic-bezier(0, 0.31, 0.18, 0.99);
+
+  --stripe: repeating-linear-gradient(-45deg, transparent 0 8px, rgba(255, 255, 255, 0.05) 8px 10px);
+  --stripe-lime: repeating-linear-gradient(-45deg, var(--lime) 0 6px, #000 6px 12px);
+  --halftone: radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 0 1px, transparent 1.5px);
+
+  --radius: 4px;
+  --cut: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}

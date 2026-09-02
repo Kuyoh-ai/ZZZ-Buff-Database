@@ -1,0 +1,71 @@
+{
+  "characterId": "soldier_11",
+  "buffs": [
+    {
+      "id": "soldier_11_core_skill_dmg",
+      "name": "コアパッシブ: 熱波(与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 70
+      },
+      "note": "コアスキル最大レベル時。『通常攻撃』または『ダッシュ攻撃』を行った時に『火力鎮圧』を発動した場合、スキルの与ダメージ+70%",
+      "sourceUrl": "https://gamewith.jp/zenless/455328"
+    },
+    {
+      "id": "soldier_11_ex_fire_dmg",
+      "name": "追加能力: 燎原(炎属性ダメージアップ)",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "self",
+      "values": {
+        "base": 10
+      },
+      "note": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動(OR条件のためcondition省略)。ブレイク状態の敵を攻撃する時はさらに+22.5%(合計32.5%)",
+      "sourceUrl": "https://game8.jp/zenless/607804"
+    },
+    {
+      "id": "soldier_11_core_potential_crit_dmg",
+      "name": "ポテンシャル覚醒: 絶焔(会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 48
+      },
+      "note": "追加能力『燎原』の効果が発動している間、自身の会心ダメージ+48%",
+      "sourceUrl": "https://gamewith.jp/zenless/455328"
+    },
+    {
+      "id": "soldier_11_m2_dmg",
+      "name": "心象映画2: 高温凝縮(与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 3
+      },
+      "maxStacks": 12,
+      "note": "1スタックあたり+3%、最大12重(最大36%)",
+      "sourceUrl": "https://game8.jp/zenless/607804"
+    },
+    {
+      "id": "soldier_11_wengine_brimstone_atk",
+      "name": "音動機 ブリムストーン: 攻撃力アップ",
+      "stat": "atk_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 8,
+      "note": "『通常攻撃』『ダッシュ攻撃』または『回避反撃』が敵に命中すると、装備者の攻撃力アップ、最大8重。P1:3.5%/スタック、P5:7%/スタック(P2~P4は未確認のため中間値を記載しない) P2〜P4はP1/P5からの等差補間",
+      "sourceUrl": "https://game8.jp/zenless/613915",
+      "wengine": {
+        "p1": 3.5,
+        "p2": 4.375,
+        "p3": 5.25,
+        "p4": 6.125,
+        "p5": 7.0
+      }
+    }
+  ]
+}

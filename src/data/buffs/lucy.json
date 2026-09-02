@@ -1,0 +1,24 @@
+{
+  "characterId": "lucy",
+  "buffs": [
+    {
+      "id": "lucy_ex_atk_flat_team",
+      "name": "強化特殊スキル: ホームラン!(かっとばせ!によるチーム攻撃力アップ)",
+      "stat": "atk_flat",
+      "target": "team",
+      "values": { "base": 600 },
+      "duration": "10s",
+      "note": "『ホームラン!』ヒット時、味方エージェント・ボンプ・親衛隊のイノシシに「かっとばせ!」状態を付与し攻撃力アップ。実際の上昇量はルーシーの攻撃力の25.8%+104Pt相当(スキルLv最大時)で、上限600Ptでキャップされる。ここでは上限値をbaseとして記録(実効値は編成攻撃力依存のため簡略化)。ライナー10秒/フライ15秒",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%BC"
+    },
+    {
+      "id": "lucy_m4_team_crit_dmg",
+      "name": "心象映画4: 無法試合(かっとばせ!状態の会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": { "base": 0, "m4": 10 },
+      "note": "「かっとばせ!」状態にある味方の会心ダメージが追加で+10%",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%BC"
+    }
+  ]
+}

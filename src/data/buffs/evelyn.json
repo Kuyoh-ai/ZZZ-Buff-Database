@@ -1,0 +1,74 @@
+{
+  "characterId": "evelyn",
+  "buffs": [
+    {
+      "id": "evelyn_core_crit_rate",
+      "name": "コアパッシブ: 会心率アップ(絡まる糸)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 25
+      },
+      "duration": "10s",
+      "note": "「纏わりつく牽制」状態突入時に会心率アップ。コアスキル最大レベル(Lv.7)の値25%を記載(Lv.1は12.5%)。状態終了後も10秒間バフ継続",
+      "sourceUrl": "https://gamewith.jp/zenless/478773"
+    },
+    {
+      "id": "evelyn_additional_chain_ult_dmg",
+      "name": "追加能力: 連携/終結スキルダメージアップ(急襲支点)",
+      "stat": "chain_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 30
+      },
+      "note": "チームに撃破または支援メンバーがいる場合発動(OR条件のためcondition省略)。連携スキルの与ダメージアップ",
+      "sourceUrl": "https://gamewith.jp/zenless/478773"
+    },
+    {
+      "id": "evelyn_additional_ult_dmg",
+      "name": "追加能力: 終結スキルダメージアップ(急襲支点)",
+      "stat": "ult_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 30
+      },
+      "note": "チームに撃破または支援メンバーがいる場合発動(OR条件のためcondition省略)。終結スキルの与ダメージアップ",
+      "sourceUrl": "https://gamewith.jp/zenless/478773"
+    },
+    {
+      "id": "evelyn_m1_def_ignore",
+      "name": "心象映画1: 防御力無視(織りなす夢)",
+      "stat": "enemy_def_down_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 12
+      },
+      "note": "「束縛」状態の敵への攻撃時、敵の防御力を無視 (自身の攻撃にのみ適用)",
+      "sourceUrl": "https://gamewith.jp/zenless/478773"
+    },
+    {
+      "id": "evelyn_m2_atk",
+      "name": "心象映画2: 攻撃力アップ(飛んで火に舞う)",
+      "stat": "atk_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
+      "sourceUrl": "https://gamewith.jp/zenless/478773"
+    },
+    {
+      "id": "evelyn_m4_crit_dmg",
+      "name": "心象映画4: 会心ダメージアップ(運命の音)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 40
+      },
+      "note": "連携/終結スキル発動時にHP上限10%分のシールドを生成、シールド保有中は会心ダメージアップ",
+      "sourceUrl": "https://gamewith.jp/zenless/478773"
+    }
+  ]
+}

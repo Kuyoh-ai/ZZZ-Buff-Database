@@ -1,0 +1,93 @@
+{
+  "characterId": "aria",
+  "buffs": [
+    {
+      "id": "aria_core_anomaly_mastery",
+      "name": "コアパッシブ: スポットライトの中心(異常掌握)",
+      "stat": "anomaly_mastery",
+      "target": "self",
+      "values": {
+        "base": 90
+      },
+      "sourceUrl": "https://game8.jp/zenless/754122"
+    },
+    {
+      "id": "aria_m1_crit_rate",
+      "name": "心象映画1: 狂咲(初期会心率)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 25
+      },
+      "note": "「狂咲」発動時の初期値。異常掌握100超過分による追加加算は数値化困難のため未収録。",
+      "sourceUrl": "https://game8.jp/zenless/754122"
+    },
+    {
+      "id": "aria_m1_crit_dmg",
+      "name": "心象映画1: 狂咲(初期会心ダメージ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 25
+      },
+      "note": "「狂咲」発動時の初期値。",
+      "sourceUrl": "https://game8.jp/zenless/754122"
+    },
+    {
+      "id": "aria_m2_pen",
+      "name": "心象映画2: 防御力無視",
+      "stat": "pen_ratio",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 16
+      },
+      "sourceUrl": "https://game8.jp/zenless/754122"
+    },
+    {
+      "id": "aria_m2_pen_extra",
+      "name": "心象映画2: 防御力無視(モーソータイム中追加)",
+      "stat": "pen_ratio",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 8
+      },
+      "note": "「モーソータイム」中にさらに追加される分。M2の16%とは別枠。",
+      "sourceUrl": "https://game8.jp/zenless/754122"
+    },
+    {
+      "id": "aria_m6_ether_dmg",
+      "name": "心象映画6: 強化攻撃エーテルダメージ",
+      "stat": "dmg_pct_element",
+      "element": "ether",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 40
+      },
+      "sourceUrl": "https://game8.jp/zenless/754122"
+    },
+    {
+      "id": "aria_wengine_anomaly_dmg",
+      "name": "音動機 殻の中の魂: 異常ダメージ",
+      "stat": "anomaly_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "duration": "15s",
+      "note": "入場または特殊/強化特殊スキル発動時。精錬2〜5の数値は未確認。 音動機効果(確認できた段階のみ): {'p1': 10} 精錬2〜5未確認のため全段にP1値を使用",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/angel-in-the-shell/",
+      "wengine": {
+        "p1": 10,
+        "p2": 10,
+        "p3": 10,
+        "p4": 10,
+        "p5": 10
+      }
+    }
+  ]
+}

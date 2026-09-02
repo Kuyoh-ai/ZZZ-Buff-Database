@@ -1,0 +1,65 @@
+{
+  "characterId": "grace",
+  "buffs": [
+    {
+      "id": "grace_core_anomaly_buildup",
+      "name": "コアパッシブ: プリドライバ撃針(電気異常蓄積アップ)",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 65 },
+      "note": "『電力』を最大8重獲得後に特殊スキルを発動すると、電気属性の状態異常蓄積値が65%アップ",
+      "sourceUrl": "https://game8.jp/zenless/607801"
+    },
+    {
+      "id": "grace_additional_enemy_shock_taken",
+      "name": "追加能力: 技術支援チーム(次の感電ダメージアップ)",
+      "stat": "enemy_anomaly_taken_pct",
+      "target": "enemy",
+      "values": { "base": 18 },
+      "maxStacks": 2,
+      "note": "強化特殊スキルが敵に命中すると、ターゲットの次の感電ダメージが18%アップ(最大2重)。発動条件は同属性または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
+      "sourceUrl": "https://game8.jp/zenless/607801"
+    },
+    {
+      "id": "grace_m1_team_energy",
+      "name": "心象映画1: リチャージチャンバー(チームエネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "team",
+      "values": { "base": 0, "m1": 2 },
+      "note": "通常攻撃4段目でチーム全体がエネルギーを最大2Pt回復",
+      "sourceUrl": "https://game8.jp/zenless/607801"
+    },
+    {
+      "id": "grace_m2_enemy_res_down",
+      "name": "心象映画2: 絶縁破壊(敵電気耐性ダウン)",
+      "stat": "enemy_res_down_pct",
+      "element": "electric",
+      "target": "enemy",
+      "values": { "base": 0, "m2": 8.5 },
+      "duration": "8s",
+      "note": "手榴弾命中時、電気ダメージ耐性が8.5%ダウン(異常蓄積耐性ダウン8.5%も付与されるが対応するstatが無いため未収録)",
+      "sourceUrl": "https://game8.jp/zenless/607801"
+    },
+    {
+      "id": "grace_wengine_fusion_compiler_atk",
+      "name": "音動機 複合コンパイラ: 攻撃力アップ",
+      "stat": "atk_pct",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 12, "p2": 15, "p3": 18, "p4": 21, "p5": 24 },
+      "sourceUrl": "https://www.korometa.com/zenless-zone-zero/w-engines/fusion-compiler/"
+    },
+    {
+      "id": "grace_wengine_fusion_compiler_anomaly_proficiency",
+      "name": "音動機 複合コンパイラ: 異常マスタリー上昇",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 25, "p2": 31, "p3": 37, "p4": 43, "p5": 50 },
+      "maxStacks": 3,
+      "duration": "8s",
+      "note": "特殊スキルまたは強化特殊スキル発動ごとに異常マスタリーが上昇、最大3重",
+      "sourceUrl": "https://www.korometa.com/zenless-zone-zero/w-engines/fusion-compiler/"
+    }
+  ]
+}

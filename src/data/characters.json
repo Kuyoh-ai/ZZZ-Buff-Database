@@ -1,0 +1,857 @@
+[
+  {
+    "id": "anby",
+    "nameJa": "アンビー",
+    "nameEn": "Anby Demara",
+    "rarity": "A",
+    "element": "electric",
+    "role": "stun",
+    "faction": "cunning_hares",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "billy",
+    "nameJa": "ビリー",
+    "nameEn": "Billy Kid",
+    "rarity": "A",
+    "element": "physical",
+    "role": "attack",
+    "faction": "cunning_hares",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "nekomata",
+    "nameJa": "猫又",
+    "nameEn": "Nekomata",
+    "rarity": "S",
+    "element": "physical",
+    "role": "attack",
+    "faction": "cunning_hares",
+    "wengine": {
+      "nameJa": "鋼の肉球",
+      "nameEn": "Steel Cushion"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "nicole",
+    "nameJa": "ニコ",
+    "nameEn": "Nicole Demara",
+    "rarity": "A",
+    "element": "ether",
+    "role": "support",
+    "faction": "cunning_hares",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "anton",
+    "nameJa": "アンドー",
+    "nameEn": "Anton Ivanov",
+    "rarity": "A",
+    "element": "electric",
+    "role": "attack",
+    "faction": "belobog_heavy_industries",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "ben",
+    "nameJa": "ベン",
+    "nameEn": "Ben Bigger",
+    "rarity": "A",
+    "element": "fire",
+    "role": "defense",
+    "faction": "belobog_heavy_industries",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "grace",
+    "nameJa": "グレース",
+    "nameEn": "Grace Howard",
+    "rarity": "S",
+    "element": "electric",
+    "role": "anomaly",
+    "faction": "belobog_heavy_industries",
+    "wengine": {
+      "nameJa": "複合コンパイラ",
+      "nameEn": "Fusion Compiler"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "koleda",
+    "nameJa": "クレタ",
+    "nameEn": "Koleda Belobog",
+    "rarity": "S",
+    "element": "fire",
+    "role": "stun",
+    "faction": "belobog_heavy_industries",
+    "wengine": {
+      "nameJa": "燃獄ギア",
+      "nameEn": "Hellfire Gears"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "burnice",
+    "nameJa": "バーニス",
+    "nameEn": "Burnice White",
+    "rarity": "S",
+    "element": "fire",
+    "role": "anomaly",
+    "faction": "sons_of_calydon",
+    "wengine": {
+      "nameJa": "バーニング・シェイカー",
+      "nameEn": "Flamemaker Shaker"
+    },
+    "releaseVersion": "1.2",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "caesar",
+    "nameJa": "シーザー",
+    "nameEn": "Caesar King",
+    "rarity": "S",
+    "element": "physical",
+    "role": "defense",
+    "faction": "sons_of_calydon",
+    "wengine": {
+      "nameJa": "猛進するキバ",
+      "nameEn": "Tusks of Fury"
+    },
+    "releaseVersion": "1.2",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "lighter",
+    "nameJa": "ライト",
+    "nameEn": "Lighter",
+    "rarity": "S",
+    "element": "fire",
+    "role": "stun",
+    "faction": "sons_of_calydon",
+    "wengine": {
+      "nameJa": "炎心の桂冠",
+      "nameEn": "Blazing Laurel"
+    },
+    "releaseVersion": "1.3",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "lucy",
+    "nameJa": "ルーシー",
+    "nameEn": "Lucy (Luciana Theodoro)",
+    "rarity": "A",
+    "element": "fire",
+    "role": "support",
+    "faction": "sons_of_calydon",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "piper",
+    "nameJa": "パイパー",
+    "nameEn": "Piper Wheel",
+    "rarity": "A",
+    "element": "physical",
+    "role": "anomaly",
+    "faction": "sons_of_calydon",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "pulchra",
+    "nameJa": "プルクラ",
+    "nameEn": "Pulchra Fellini",
+    "rarity": "A",
+    "element": "physical",
+    "role": "stun",
+    "faction": "sons_of_calydon",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.6",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "hugo",
+    "nameJa": "ヒューゴ",
+    "nameEn": "Hugo Vlad",
+    "rarity": "S",
+    "element": "ice",
+    "role": "attack",
+    "faction": "mockingbird",
+    "wengine": {
+      "nameJa": "千面の落日",
+      "nameEn": "Myriad Eclipse"
+    },
+    "releaseVersion": "1.7",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "vivian",
+    "nameJa": "ビビアン",
+    "nameEn": "Vivian Banshee",
+    "rarity": "S",
+    "element": "ether",
+    "role": "anomaly",
+    "faction": "mockingbird",
+    "wengine": {
+      "nameJa": "鳥は夢へと羽ばたいて",
+      "nameEn": "Flight of Fancy"
+    },
+    "releaseVersion": "1.7",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "alice",
+    "nameJa": "アリス",
+    "nameEn": "Alice Thymefield",
+    "rarity": "S",
+    "element": "physical",
+    "role": "anomaly",
+    "faction": "spook_shack",
+    "wengine": {
+      "nameJa": "十面百錬の星",
+      "nameEn": "Practiced Perfection"
+    },
+    "releaseVersion": "2.1",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "manato",
+    "nameJa": "狛野真斗",
+    "nameEn": "Komano Manato",
+    "rarity": "A",
+    "element": "fire",
+    "role": "rupture",
+    "faction": "spook_shack",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "2.3",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "lucia",
+    "nameJa": "リュシア",
+    "nameEn": "Lucia Elowen",
+    "rarity": "S",
+    "element": "ether",
+    "role": "support",
+    "faction": "spook_shack",
+    "wengine": {
+      "nameJa": "炉で歌い上げられる夢",
+      "nameEn": "Dreamlit Hearth"
+    },
+    "releaseVersion": "2.3",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "yuzuha",
+    "nameJa": "浮波柚葉",
+    "nameEn": "Ukinami Yuzuha",
+    "rarity": "S",
+    "element": "physical",
+    "role": "support",
+    "faction": "spook_shack",
+    "wengine": {
+      "nameJa": "狸の七変化",
+      "nameEn": "Metanukimorphosis"
+    },
+    "releaseVersion": "2.1",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "yidhari",
+    "nameJa": "イドリー",
+    "nameEn": "Yidhari Murphy",
+    "rarity": "S",
+    "element": "ice",
+    "role": "rupture",
+    "faction": "spook_shack",
+    "wengine": {
+      "nameJa": "セイレーンクレードル",
+      "nameEn": "Kraken's Cradle"
+    },
+    "releaseVersion": "2.3",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "aria",
+    "nameJa": "アリア",
+    "nameEn": "Aria",
+    "rarity": "S",
+    "element": "ether",
+    "role": "anomaly",
+    "faction": "angels_of_delusion",
+    "wengine": {
+      "nameJa": "殻の中の魂",
+      "nameEn": "Angel in the Shell"
+    },
+    "releaseVersion": "2.6",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "nangong_yu",
+    "nameJa": "南宮羽",
+    "nameEn": "Nangong Yu",
+    "rarity": "S",
+    "element": "ether",
+    "role": "stun",
+    "faction": "angels_of_delusion",
+    "wengine": {
+      "nameJa": "妄想ディスコテック",
+      "nameEn": "Neon Fantasies"
+    },
+    "releaseVersion": "2.7",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "sunna",
+    "nameJa": "千夏",
+    "nameEn": "Sunna",
+    "rarity": "S",
+    "element": "physical",
+    "role": "support",
+    "faction": "angels_of_delusion",
+    "wengine": {
+      "nameJa": "想いが織りなす歌",
+      "nameEn": "Thoughtbop"
+    },
+    "releaseVersion": "2.6",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "rina",
+    "nameJa": "リナ",
+    "nameEn": "Alexandrina Sebastiane",
+    "rarity": "S",
+    "element": "electric",
+    "role": "support",
+    "faction": "victoria_housekeeping",
+    "wengine": {
+      "nameJa": "啜り泣くゆりかご",
+      "nameEn": "Weeping Cradle"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "corin",
+    "nameJa": "カリン",
+    "nameEn": "Corin Wickes",
+    "rarity": "A",
+    "element": "physical",
+    "role": "attack",
+    "faction": "victoria_housekeeping",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "ellen",
+    "nameJa": "エレン",
+    "nameEn": "Ellen Joe",
+    "rarity": "S",
+    "element": "ice",
+    "role": "attack",
+    "faction": "victoria_housekeeping",
+    "wengine": {
+      "nameJa": "ディープシー・ビジター",
+      "nameEn": "Deep Sea Visitor"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "lycaon",
+    "nameJa": "ライカン",
+    "nameEn": "Von Lycaon",
+    "rarity": "S",
+    "element": "ice",
+    "role": "stun",
+    "faction": "victoria_housekeeping",
+    "wengine": {
+      "nameJa": "拘縛されし者",
+      "nameEn": "The Restrained"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "jane_doe",
+    "nameJa": "ジェーン",
+    "nameEn": "Jane Doe",
+    "rarity": "S",
+    "element": "physical",
+    "role": "anomaly",
+    "faction": "new_eridu_public_security",
+    "wengine": {
+      "nameJa": "磨き抜かれた切っ先",
+      "nameEn": "Sharpened Stinger"
+    },
+    "releaseVersion": "1.1",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "qingyi",
+    "nameJa": "青衣",
+    "nameEn": "Qingyi",
+    "rarity": "S",
+    "element": "electric",
+    "role": "stun",
+    "faction": "new_eridu_public_security",
+    "wengine": {
+      "nameJa": "玉壺青氷",
+      "nameEn": "Ice-Jade Teapot"
+    },
+    "releaseVersion": "1.1",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "seth",
+    "nameJa": "セス",
+    "nameEn": "Seth Lowell",
+    "rarity": "A",
+    "element": "electric",
+    "role": "defense",
+    "faction": "new_eridu_public_security",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.1",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "zhu_yuan",
+    "nameJa": "朱鳶",
+    "nameEn": "Zhu Yuan",
+    "rarity": "S",
+    "element": "ether",
+    "role": "attack",
+    "faction": "new_eridu_public_security",
+    "wengine": {
+      "nameJa": "サプレッサーVI型",
+      "nameEn": "Riot Suppressor Mark VI"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "cissia",
+    "nameJa": "シーシィア",
+    "nameEn": "Cissia",
+    "rarity": "S",
+    "element": "electric",
+    "role": "attack",
+    "faction": "new_eridu_public_security",
+    "wengine": {
+      "nameJa": "影を追う白き牙",
+      "nameEn": "Cordis Germina"
+    },
+    "releaseVersion": "2.7",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "harumasa",
+    "nameJa": "浅羽悠真",
+    "nameEn": "Asaba Harumasa",
+    "rarity": "S",
+    "element": "electric",
+    "role": "attack",
+    "faction": "hollow_special_operations",
+    "wengine": {
+      "nameJa": "残心の青籠",
+      "nameEn": "Zanshin Herb Case"
+    },
+    "releaseVersion": "1.4",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "miyabi",
+    "nameJa": "星見雅",
+    "nameEn": "Hoshimi Miyabi",
+    "rarity": "S",
+    "element": "ice",
+    "role": "anomaly",
+    "faction": "hollow_special_operations",
+    "wengine": {
+      "nameJa": "あられ落つ星殿",
+      "nameEn": "Hailstorm Shrine"
+    },
+    "releaseVersion": "1.4",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "soukaku",
+    "nameJa": "蒼角",
+    "nameEn": "Soukaku",
+    "rarity": "A",
+    "element": "ice",
+    "role": "support",
+    "faction": "hollow_special_operations",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "yanagi",
+    "nameJa": "月城柳",
+    "nameEn": "Tsukishiro Yanagi",
+    "rarity": "S",
+    "element": "electric",
+    "role": "anomaly",
+    "faction": "hollow_special_operations",
+    "wengine": {
+      "nameJa": "刻流の賢者",
+      "nameEn": "Timeweaver"
+    },
+    "releaseVersion": "1.3",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "orphie",
+    "nameJa": "オルペウス&鬼火",
+    "nameEn": "Orphie Magnusson & Magus",
+    "rarity": "S",
+    "element": "fire",
+    "role": "attack",
+    "faction": "obol_squad",
+    "wengine": {
+      "nameJa": "憤怒の銃騒",
+      "nameEn": "Bellicose Blaze"
+    },
+    "releaseVersion": "2.2",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "seed",
+    "nameJa": "シード",
+    "nameEn": "Seed",
+    "rarity": "S",
+    "element": "electric",
+    "role": "attack",
+    "faction": "obol_squad",
+    "wengine": {
+      "nameJa": "駆動する種",
+      "nameEn": "Serpentine Seeker"
+    },
+    "releaseVersion": "2.2",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "soldier_11",
+    "nameJa": "11号",
+    "nameEn": "Soldier 11",
+    "rarity": "S",
+    "element": "fire",
+    "role": "attack",
+    "faction": "obol_squad",
+    "wengine": {
+      "nameJa": "ブリムストーン",
+      "nameEn": "The Brimstone"
+    },
+    "releaseVersion": "1.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "trigger",
+    "nameJa": "トリガー",
+    "nameEn": "Trigger",
+    "rarity": "S",
+    "element": "electric",
+    "role": "stun",
+    "faction": "obol_squad",
+    "wengine": {
+      "nameJa": "奪魂の瞑目",
+      "nameEn": "Spectral Gaze"
+    },
+    "releaseVersion": "1.6",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "soldier_0_anby",
+    "nameJa": "0号・アンビー",
+    "nameEn": "Soldier 0: Anby",
+    "rarity": "S",
+    "element": "electric",
+    "role": "attack",
+    "faction": "obol_squad",
+    "wengine": {
+      "nameJa": "純然たる犠牲",
+      "nameEn": "Severed Innocence"
+    },
+    "releaseVersion": "1.6",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "ju_fufu",
+    "nameJa": "橘福福",
+    "nameEn": "Ju Fufu",
+    "rarity": "S",
+    "element": "fire",
+    "role": "stun",
+    "faction": "yunkui_summit",
+    "wengine": {
+      "nameJa": "招福の虎炉",
+      "nameEn": "Roaring Fur-nace"
+    },
+    "releaseVersion": "2.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "pan_yinhu",
+    "nameJa": "潘引壺",
+    "nameEn": "Pan Yinhu",
+    "rarity": "A",
+    "element": "physical",
+    "role": "defense",
+    "faction": "yunkui_summit",
+    "wengine": {
+      "nameJa": "-",
+      "nameEn": "-"
+    },
+    "releaseVersion": "2.0",
+    "sourceUrl": "https://zenlessdb.com/character"
+  },
+  {
+    "id": "ye_shunguang",
+    "nameJa": "葉瞬光",
+    "nameEn": "Ye Shunguang",
+    "rarity": "S",
+    "element": "physical",
+    "role": "attack",
+    "faction": "yunkui_summit",
+    "wengine": {
+      "nameJa": "孤光彩雲",
+      "nameEn": "Cloudcleave Radiance"
+    },
+    "releaseVersion": "2.5",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "yixuan",
+    "nameJa": "儀玄",
+    "nameEn": "Yixuan",
+    "rarity": "S",
+    "element": "ether",
+    "role": "rupture",
+    "faction": "yunkui_summit",
+    "wengine": {
+      "nameJa": "青溟の鳥籠",
+      "nameEn": "Qingming Birdcage"
+    },
+    "releaseVersion": "2.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "banyue",
+    "nameJa": "盤岳",
+    "nameEn": "Banyue",
+    "rarity": "S",
+    "element": "fire",
+    "role": "rupture",
+    "faction": "krampus_compliance_authority",
+    "wengine": {
+      "nameJa": "金剛不壊怒髪衝冠",
+      "nameEn": "Wrathful Vajra"
+    },
+    "releaseVersion": "2.4",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "dialyn",
+    "nameJa": "ダイアリン",
+    "nameEn": "Dialyn",
+    "rarity": "S",
+    "element": "physical",
+    "role": "stun",
+    "faction": "krampus_compliance_authority",
+    "wengine": {
+      "nameJa": "昨夜からの着信",
+      "nameEn": "Yesterday Calls"
+    },
+    "releaseVersion": "2.4",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "promeia",
+    "nameJa": "プロメイア",
+    "nameEn": "Promeia",
+    "rarity": "S",
+    "element": "ice",
+    "role": "anomaly",
+    "faction": "krampus_compliance_authority",
+    "wengine": {
+      "nameJa": "フロスト・クレセント",
+      "nameEn": "Frostfall Sickle"
+    },
+    "releaseVersion": "2.8",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "zhao",
+    "nameJa": "照",
+    "nameEn": "Zhao",
+    "rarity": "S",
+    "element": "ice",
+    "role": "defense",
+    "faction": "krampus_compliance_authority",
+    "wengine": {
+      "nameJa": "甘さ控えめ雪うさぎ",
+      "nameEn": "Half-Sugar Bunny"
+    },
+    "releaseVersion": "2.5",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "astra",
+    "nameJa": "アストラ",
+    "nameEn": "Astra Yao",
+    "rarity": "S",
+    "element": "ether",
+    "role": "support",
+    "faction": "stars_of_lyra",
+    "wengine": {
+      "nameJa": "優美のヴァニティ",
+      "nameEn": "Elegant Vanity"
+    },
+    "releaseVersion": "1.5",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "evelyn",
+    "nameJa": "イヴリン",
+    "nameEn": "Evelyn Chevalier",
+    "rarity": "S",
+    "element": "fire",
+    "role": "attack",
+    "faction": "stars_of_lyra",
+    "wengine": {
+      "nameJa": "心弦のノクターン",
+      "nameEn": "Heartstring Nocturne"
+    },
+    "releaseVersion": "1.5",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "sigrid",
+    "nameJa": "シグリッド",
+    "nameEn": "Sigrid de L'Azur",
+    "rarity": "S",
+    "element": "ice",
+    "role": "attack",
+    "faction": "ros_khalifa",
+    "wengine": {
+      "nameJa": "栄光の騎士道",
+      "nameEn": "Knight's Extolment"
+    },
+    "releaseVersion": "3.1",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "norma",
+    "nameJa": "ノルムー",
+    "nameEn": "Norma Hollowell",
+    "rarity": "S",
+    "element": "fire",
+    "role": "stun",
+    "faction": "ros_khalifa",
+    "wengine": {
+      "nameJa": "エースのオトモ",
+      "nameEn": "Chief Sidekick"
+    },
+    "releaseVersion": "3.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "pyrois",
+    "nameJa": "ピュロイス",
+    "nameEn": "Pyrois",
+    "rarity": "S",
+    "element": "ether",
+    "role": "attack",
+    "faction": "phaethon",
+    "wengine": {
+      "nameJa": "太陽の抜け殻",
+      "nameEn": "Sol Exuvia"
+    },
+    "releaseVersion": "3.0",
+    "sourceUrl": "https://gamewith.jp/zenless/455296"
+  },
+  {
+    "id": "velina",
+    "nameJa": "ヴェリナ",
+    "nameEn": "Velina Airgid",
+    "rarity": "S",
+    "element": "wind",
+    "role": "anomaly",
+    "faction": "ros_khalifa",
+    "wengine": {
+      "nameJa": "金襴の心",
+      "nameEn": "Joyau Dore"
+    },
+    "releaseVersion": "3.0",
+    "sourceUrl": "https://gamewith.jp/zenless/550723"
+  },
+  {
+    "id": "remielle",
+    "nameJa": "レミエール",
+    "nameEn": "Remielle Dan",
+    "rarity": "S",
+    "element": "lumiflux",
+    "role": "anomaly",
+    "faction": "covenant_of_dayat",
+    "wengine": {
+      "nameJa": "目覚めし翼の聖歌",
+      "nameEn": "Ode of Resurrected Wings"
+    },
+    "releaseVersion": "3.1",
+    "sourceUrl": "https://gamewith.jp/zenless/550725"
+  }
+]

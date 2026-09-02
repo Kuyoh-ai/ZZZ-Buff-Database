@@ -1,0 +1,68 @@
+{
+  "characterId": "zhu_yuan",
+  "buffs": [
+    {
+      "id": "zhu_yuan_core_dmg",
+      "name": "コアパッシブ: 特殊弾薬(与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 40
+      },
+      "note": "コアスキル最大レベル時。「制圧モード」で「強化散弾」を使って攻撃する時、自身の与ダメージ+40%。ブレイク状態の敵を攻撃する際はさらに+40%(合計80%)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E6%9C%B1%E9%B3%B6"
+    },
+    {
+      "id": "zhu_yuan_core_crit_dmg",
+      "name": "コアパッシブ: 特殊弾薬(会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 28.8
+      },
+      "note": "コアスキル最大レベル時。コアスキルLv2/4/6で各+9.6%(合計28.8%)。「強化散弾」使用時の効果",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E6%9C%B1%E9%B3%B6"
+    },
+    {
+      "id": "zhu_yuan_core_atk_flat",
+      "name": "コアパッシブ: 特殊弾薬(攻撃力アップ)",
+      "stat": "atk_flat",
+      "target": "self",
+      "values": {
+        "base": 75
+      },
+      "note": "コアスキル最大レベル時。コアスキルLv3/5/7で各+25Pt(合計75Pt)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E6%9C%B1%E9%B3%B6"
+    },
+    {
+      "id": "zhu_yuan_ex_crit_rate",
+      "name": "追加能力: 武装間連携(会心率アップ)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 30
+      },
+      "duration": "10s",
+      "note": "チームに[支援]のメンバーまたは同陣営のメンバーがいる時に発動(OR条件のためcondition省略)。『強化特殊スキル』『連携スキル』『終結スキル』発動時に付与",
+      "sourceUrl": "https://game8.jp/zenless/609201"
+    },
+    {
+      "id": "zhu_yuan_wengine_suppressor_dmg",
+      "name": "音動機 サプレッサーⅥ型: 与ダメージアップ",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "note": "『強化特殊スキル』発動時にパワーを8重獲得、『通常攻撃』でエーテル属性ダメージを与える時にパワー1重消費し、その攻撃の与ダメージアップ。P1:35%、P5:70%(P2~P4は未確認のため中間値を記載しない) P2〜P4はP1/P5からの等差補間",
+      "sourceUrl": "https://game8.jp/zenless/613911",
+      "wengine": {
+        "p1": 35.0,
+        "p2": 43.75,
+        "p3": 52.5,
+        "p4": 61.25,
+        "p5": 70.0
+      }
+    }
+  ]
+}

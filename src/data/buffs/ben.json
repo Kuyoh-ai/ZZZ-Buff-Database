@@ -1,0 +1,24 @@
+{
+  "characterId": "ben",
+  "buffs": [
+    {
+      "id": "ben_additional_team_crit_rate",
+      "name": "追加能力: 契約合意(チーム会心率アップ)",
+      "stat": "crit_rate",
+      "target": "team",
+      "values": { "base": 16 },
+      "note": "ベンの『コアパッシブ:守護』によるシールド継続中、チームの会心率が16%アップ。発動条件はベンと同属性または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
+      "sourceUrl": "https://game8.jp/zenless/607796"
+    },
+    {
+      "id": "ben_m6_daze_self",
+      "name": "心象映画6: 野性の闘志(ブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": { "base": 0, "m6": 20 },
+      "duration": "12s",
+      "note": "『強化特殊スキル』中に攻撃または強力な追加打撃を行うと、その後の『通常攻撃』『ダッシュ攻撃』『回避反撃』の与ブレイク値が20%アップ",
+      "sourceUrl": "https://game8.jp/zenless/607796"
+    }
+  ]
+}

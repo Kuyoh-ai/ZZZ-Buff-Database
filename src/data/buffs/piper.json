@@ -1,0 +1,34 @@
+{
+  "characterId": "piper",
+  "buffs": [
+    {
+      "id": "piper_core_anomaly_buildup_self",
+      "name": "コアパッシブ: パワーチャージ(自身の物理属性状態異常蓄積効率アップ)",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 4 },
+      "maxStacks": 20,
+      "duration": "12s",
+      "note": "『強化特殊スキル:エンジンぶんぶん』または『終結スキル』の回転斬撃が敵に命中した時「動力」を1重獲得。「動力」1重につき物理属性の状態異常蓄積効率+4%(コアスキル最大レベル時、最大20重)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%91%E3%82%A4%E3%83%91%E3%83%BC"
+    },
+    {
+      "id": "piper_additional_team_dmg",
+      "name": "追加能力: 一緒に飛ばそうぜい(チーム与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": { "base": 18 },
+      "note": "パイパーが「動力」を20重以上所持している時、メンバー全員の与ダメージ+18%。発動条件は「チームに自身と同じ属性のメンバー」「同じ陣営のメンバー」「[異常]特性メンバー」のいずれか(OR条件)がいること",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%91%E3%82%A4%E3%83%91%E3%83%BC"
+    },
+    {
+      "id": "piper_m4_energy_self",
+      "name": "心象映画4: 熟練のドラテク(自身のエネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": { "base": 0, "m4": 20 },
+      "note": "任意のメンバーが敵を状態異常にした時、パイパーのエネルギーが回復(30秒に1回のみ発動)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%91%E3%82%A4%E3%83%91%E3%83%BC"
+    }
+  ]
+}

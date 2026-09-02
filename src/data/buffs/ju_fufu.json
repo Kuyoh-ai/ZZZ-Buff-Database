@@ -1,0 +1,138 @@
+{
+  "characterId": "ju_fufu",
+  "buffs": [
+    {
+      "id": "ju_fufu_crit_dmg_team",
+      "name": "コアパッシブ: 虎の咆哮(会心ダメージ)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": {
+        "base": 20
+      },
+      "duration": "30s",
+      "note": "コアスキルLv最大時の値(Lv1で10%)。開幕攻撃力2800以上で100Ptごとに追加+5%(最大+30%、別枠でスキルレベル非依存)",
+      "sourceUrl": "https://gamewith.jp/zenless/493825"
+    },
+    {
+      "id": "ju_fufu_chain_dmg_team",
+      "name": "コアパッシブ: 虎の咆哮(連携スキルダメージ)",
+      "stat": "chain_dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 20
+      },
+      "duration": "30s",
+      "note": "コアスキルLv最大時の値(Lv1で10%)",
+      "sourceUrl": "https://gamewith.jp/zenless/493825"
+    },
+    {
+      "id": "ju_fufu_ult_dmg_team",
+      "name": "コアパッシブ: 虎の咆哮(終結スキルダメージ)",
+      "stat": "ult_dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 40
+      },
+      "duration": "30s",
+      "note": "コアスキルLv最大時の値(Lv1で20%)",
+      "sourceUrl": "https://gamewith.jp/zenless/493825"
+    },
+    {
+      "id": "ju_fufu_crit_rate_self_m1",
+      "name": "心象映画M1: 会心率アップ",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 12
+      },
+      "sourceUrl": "https://gamewith.jp/zenless/493825"
+    },
+    {
+      "id": "ju_fufu_crit_dmg_team_m2",
+      "name": "心象映画M2: 虎の咆哮会心ダメージ追加",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": {
+        "base": 0,
+        "m2": 22
+      },
+      "note": "「虎の咆哮」状態のメンバーに追加で加算",
+      "sourceUrl": "https://gamewith.jp/zenless/493825"
+    },
+    {
+      "id": "ju_fufu_crit_dmg_self_m4",
+      "name": "心象映画M4: 自身会心ダメージ",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 35
+      },
+      "note": "自身が「虎の咆哮」状態の時のみ",
+      "sourceUrl": "https://gamewith.jp/zenless/493825"
+    },
+    {
+      "id": "ju_fufu_chain_dmg_team_m6",
+      "name": "心象映画M6: 連携スキルダメージ追加",
+      "stat": "chain_dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 0,
+        "m6": 30
+      },
+      "sourceUrl": "https://gamewith.jp/zenless/493825"
+    },
+    {
+      "id": "ju_fufu_enemy_stun_dmg_mult",
+      "name": "心象映画1: ブレイク弱体倍率アップ",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 35
+      },
+      "duration": "30s",
+      "note": "心象映画1「どえらく怖い、虎の子」。連携スキル発動時、ターゲットがブレイク状態の場合に付与(コアパッシブではなくM1効果)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ju-fufu/"
+    },
+    {
+      "id": "ju_fufu_wengine_daze",
+      "name": "音動機: 招福の虎炉/みなぎる虎の熱意(与ブレイク値)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 28,
+        "p2": 32.2,
+        "p3": 36.4,
+        "p4": 40.6,
+        "p5": 44.8
+      },
+      "note": "特殊/連携/強化特殊/終結スキル使用時",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ju-fufu/"
+    },
+    {
+      "id": "ju_fufu_wengine_fire_dmg_team",
+      "name": "音動機: 招福の虎炉/みなぎる虎の熱意(チーム与ダメージ)",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p2": 11.5,
+        "p3": 13,
+        "p4": 14.5,
+        "p5": 16
+      },
+      "maxStacks": 2,
+      "duration": "30s",
+      "note": "連携スキルまたは終結スキルで炎属性ダメージを与えた時、メンバー全員の与ダメージアップ(最大2重)。属性限定の効果ではない",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/ju-fufu/"
+    }
+  ]
+}

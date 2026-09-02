@@ -1,0 +1,110 @@
+{
+  "characterId": "banyue",
+  "buffs": [
+    {
+      "id": "banyue_core_wrath_sheer_force",
+      "name": "怒髪天バフ:透徹力上昇",
+      "stat": "sheer_force_flat",
+      "target": "self",
+      "values": { "base": 300 },
+      "duration": "30s",
+      "note": "強化特殊スキルまたは支援突撃発動時に付与。コアスキルレベルにより数値変動の可能性あり(基礎値のみ確認)。",
+      "sourceUrl": "https://game8.jp/zenless/723895"
+    },
+    {
+      "id": "banyue_core_wrath_fire_dmg",
+      "name": "怒髪天バフ:炎属性ダメージ上昇",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "self",
+      "values": { "base": 36 },
+      "duration": "30s",
+      "note": "強化特殊スキルまたは支援突撃発動時に付与。",
+      "sourceUrl": "https://game8.jp/zenless/723895"
+    },
+    {
+      "id": "banyue_core_wrath_crit_dmg",
+      "name": "怒髪天バフ:会心ダメージ上昇",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": { "base": 36 },
+      "duration": "30s",
+      "note": "強化特殊スキルまたは支援突撃発動時に付与。",
+      "sourceUrl": "https://game8.jp/zenless/723895"
+    },
+    {
+      "id": "banyue_additional_vidyaraja_fire_dmg",
+      "name": "追加能力「天頂」:明王の炎属性ダメージ上昇",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "self",
+      "values": { "base": 5, "m6": 8 },
+      "maxStacks": 3,
+      "duration": "8s",
+      "note": "怒髪天状態での強化特殊スキル発動等で「明王」1重獲得、1重につき+5%(最大3重)。M6で明王の効果が+8%に強化(常時獲得可能になる)。",
+      "sourceUrl": "https://game8.jp/zenless/723895"
+    },
+    {
+      "id": "banyue_m1_enemy_fire_res_down",
+      "name": "M1:戦慄状態の敵の炎耐性低下",
+      "stat": "enemy_res_down_pct",
+      "element": "fire",
+      "target": "enemy",
+      "values": { "base": 0, "m1": 10 },
+      "duration": "30s",
+      "note": "論道・地鳴命中時、敵を「戦慄」状態にし炎耐性-10%。",
+      "sourceUrl": "https://game8.jp/zenless/723895"
+    },
+    {
+      "id": "banyue_m1_enemy_sheer_dmg_taken",
+      "name": "M1:戦慄状態の敵への透徹ダメージ増加",
+      "stat": "enemy_dmg_taken_pct",
+      "target": "enemy",
+      "values": { "base": 0, "m1": 10 },
+      "note": "戦慄状態の敵への透徹ダメージ+10%。",
+      "sourceUrl": "https://game8.jp/zenless/723895"
+    },
+    {
+      "id": "banyue_m2_crit_dmg",
+      "name": "M2:会心ダメージ追加上昇",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": { "base": 0, "m2": 15 },
+      "note": "怒髪天バフの会心ダメージに追加+15%。",
+      "sourceUrl": "https://game8.jp/zenless/723895"
+    },
+    {
+      "id": "banyue_m2_fire_dmg",
+      "name": "M2:炎属性ダメージ追加上昇",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "self",
+      "values": { "base": 0, "m2": 15 },
+      "note": "怒髪天バフの炎属性ダメージに追加+15%。",
+      "sourceUrl": "https://game8.jp/zenless/723895"
+    },
+    {
+      "id": "banyue_wengine_crit_rate",
+      "name": "音動機:会心率上昇",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 20, "p2": 23, "p3": 26, "p4": 29, "p5": 32 },
+      "note": "専用音動機「金剛不壊怒髪衝冠」の基礎ステータス上昇効果(常時)。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/wrathful-vajra/"
+    },
+    {
+      "id": "banyue_wengine_sheer_fire_dmg",
+      "name": "音動機:炎属性透徹ダメージ上昇",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 9, "p2": 10.35, "p3": 11.7, "p4": 13.05, "p5": 14.4 },
+      "maxStacks": 2,
+      "duration": "20s",
+      "note": "専用音動機「金剛不壊怒髪衝冠」、強化特殊スキル発動時に付与、1重ごとに独立して20秒持続、最大2重。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/wrathful-vajra/"
+    }
+  ]
+}

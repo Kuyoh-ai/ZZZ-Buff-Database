@@ -1,0 +1,87 @@
+{
+  "characterId": "yanagi",
+  "buffs": [
+    {
+      "id": "yanagi_core_electric_dmg",
+      "name": "コアパッシブ: 月蝕(電気ダメージ)",
+      "stat": "dmg_pct_element",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 10
+      },
+      "duration": "15s",
+      "note": "強化特殊スキルが敵に命中した時に発動",
+      "sourceUrl": "https://game8.jp/zenless/640231"
+    },
+    {
+      "id": "yanagi_moonphase_buildup",
+      "name": "追加能力: 月相(電気異常蓄積)",
+      "stat": "anomaly_buildup_pct",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 45
+      },
+      "note": "構え切り替え後の通常攻撃命中時に発動。発動条件としてチームに異常特性メンバーまたは同属性(電気)メンバーの編成が必要",
+      "sourceUrl": "https://game8.jp/zenless/640231"
+    },
+    {
+      "id": "yanagi_wengine_buildup",
+      "name": "音動機: 刻流の賢者(電気異常蓄積効率)",
+      "stat": "anomaly_buildup_pct",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "note": "装備時常時発動。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/651291",
+      "wengine": {
+        "p1": 30,
+        "p2": 30,
+        "p3": 30,
+        "p4": 30,
+        "p5": 30
+      }
+    },
+    {
+      "id": "yanagi_wengine_anomaly_mastery",
+      "name": "音動機: 刻流の賢者(異常マスタリー)",
+      "stat": "anomaly_mastery",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 3,
+      "duration": "15s",
+      "note": "特殊スキルが状態異常の敵に命中した時付与。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/651291",
+      "wengine": {
+        "p1": 75,
+        "p2": 75,
+        "p3": 75,
+        "p4": 75,
+        "p5": 75
+      }
+    },
+    {
+      "id": "yanagi_wengine_disorder_dmg",
+      "name": "音動機: 刻流の賢者(混沌ダメージ)",
+      "stat": "disorder_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "note": "異常マスタリーが375以上の時に発動する条件付き効果。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/651291",
+      "wengine": {
+        "p1": 25,
+        "p2": 25,
+        "p3": 25,
+        "p4": 25,
+        "p5": 25
+      }
+    }
+  ]
+}

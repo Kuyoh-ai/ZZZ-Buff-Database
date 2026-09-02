@@ -1,0 +1,98 @@
+{
+  "characterId": "cissia",
+  "buffs": [
+    {
+      "id": "cissia_core_def_ignore_electric",
+      "name": "コアパッシブ:デッドリー・ムーンシャイン(電気属性防御力無視)",
+      "stat": "enemy_def_down_pct",
+      "target": "self",
+      "values": {
+        "base": 25,
+        "m1": 35
+      },
+      "maxStacks": 1,
+      "duration": "30s(毒素消費後も継続)",
+      "note": "電気属性ダメージに対してのみ有効。「毒素」所持時に発動。初期エネルギー自動回復が1.4を超えると0.12ごとに+1%され、最大25%まで上昇(M1では倍率140%となり最大35%相当)。最大値を記載(式: 6% + 超過分×1/0.12、M1は140%倍)。",
+      "sourceUrl": "https://www.icy-veins.com/zenless-zone-zero/cissia-guide-best-builds"
+    },
+    {
+      "id": "cissia_core_crit_dmg_team",
+      "name": "追加能力:ドキドキトキシック(会心ダメージ上昇/全員)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": {
+        "base": 40
+      },
+      "maxStacks": 1,
+      "duration": "30s(毒素消費後も継続)",
+      "note": "編成内に撃破特性または電気属性のメンバーがいる場合に発動、「毒素」所持中有効。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/cissia/"
+    },
+    {
+      "id": "cissia_core_crit_dmg_self",
+      "name": "追加能力:ドキドキトキシック(会心ダメージ上昇/自身追加分)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 10
+      },
+      "maxStacks": 1,
+      "duration": "30s(毒素消費後も継続)",
+      "note": "上記チーム全員+40%に加えて、シーシィア自身のみさらに+10%(合計+50%)。発動条件は同上。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/cissia/"
+    },
+    {
+      "id": "cissia_m1_electric_res_ignore",
+      "name": "心象映画M1:電気属性耐性無視",
+      "stat": "enemy_res_down_pct",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 5
+      },
+      "maxStacks": 1,
+      "note": "M1習得で追加。敵の電気属性耐性を5%無視する。 (自身の攻撃にのみ適用)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B7%E3%83%BC%E3%82%B7%E3%82%A3%E3%82%A2"
+    },
+    {
+      "id": "cissia_wengine_crit_rate",
+      "name": "専用音動機:影を追う白き牙(会心率)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 25,
+        "p2": 28.8,
+        "p3": 32.5,
+        "p4": 36.3,
+        "p5": 40
+      },
+      "maxStacks": 1,
+      "note": "音動機装備の基礎効果(常時)。数値は精錬(重ね)Lv1〜5。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/serpentine-seeker/"
+    },
+    {
+      "id": "cissia_wengine_def_ignore",
+      "name": "専用音動機:影を追う白き牙(防御力無視)",
+      "stat": "enemy_def_down_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 28,
+        "p2": 31.5,
+        "p3": 35,
+        "p4": 38.5,
+        "p5": 42
+      },
+      "maxStacks": 1,
+      "duration": "3s(重複時最大30秒まで延長、接敵時10秒)",
+      "note": "装備者が一度に20ptエネルギーを消費するごとに発動、電気属性ダメージに対して防御力無視。数値は精錬Lv1〜5。 (自身の攻撃にのみ適用)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/w-engine/serpentine-seeker/"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "characterId": "koleda",
+  "buffs": [
+    {
+      "id": "koleda_core_daze_self",
+      "name": "コアパッシブ: 爆砕槌(自身ブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": { "base": 30 },
+      "note": "『強化特殊スキル』または『溶炉昇温』を消費した強化通常攻撃発動時、スキルの与えるブレイク値が30%アップ",
+      "sourceUrl": "https://game8.jp/zenless/607803"
+    },
+    {
+      "id": "koleda_additional_team_chain_dmg",
+      "name": "追加能力: 白祇式経営学(チーム連携スキルダメージアップ)",
+      "stat": "chain_dmg_pct",
+      "target": "team",
+      "values": { "base": 35 },
+      "maxStacks": 2,
+      "note": "強化特殊スキルの爆発が命中しターゲットがブレイク状態になると、チーム全体の連携スキルダメージが35%アップ(最大2重)。発動条件は同属性または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
+      "sourceUrl": "https://game8.jp/zenless/607803"
+    },
+    {
+      "id": "koleda_m1_daze_self",
+      "name": "心象映画1: ハンマリングリズム(自身ブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": { "base": 0, "m1": 15 },
+      "sourceUrl": "https://game8.jp/zenless/607803"
+    },
+    {
+      "id": "koleda_m2_energy_self",
+      "name": "心象映画2: 運動エネルギー回生(エネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": { "base": 0, "m2": 60 },
+      "note": "強化特殊スキル命中時にエネルギーを60Pt回復(45秒に1回)",
+      "sourceUrl": "https://game8.jp/zenless/607803"
+    },
+    {
+      "id": "koleda_wengine_hellfire_gears_impact",
+      "name": "音動機 燃獄ギア: 衝撃力アップ",
+      "stat": "impact_pct",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 10, "p2": 12.5, "p3": 15, "p4": 17.5, "p5": 20 },
+      "maxStacks": 2,
+      "duration": "10s",
+      "note": "強化特殊スキル発動ごとに衝撃力アップ、最大2重(各重の継続時間は個別計算)",
+      "sourceUrl": "https://www.korometa.com/zenless-zone-zero/w-engines/hellfire-gears/"
+    },
+    {
+      "id": "koleda_wengine_hellfire_gears_energy_regen",
+      "name": "音動機 燃獄ギア: 控え時エネルギー自動回復アップ",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 0.6, "p2": 0.75, "p3": 0.9, "p4": 1.05, "p5": 1.2 },
+      "note": "控えにいる時、1秒ごとのエネルギー自動回復がアップ",
+      "sourceUrl": "https://www.korometa.com/zenless-zone-zero/w-engines/hellfire-gears/"
+    }
+  ]
+}

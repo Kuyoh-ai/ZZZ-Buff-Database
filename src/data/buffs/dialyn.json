@@ -1,0 +1,217 @@
+{
+  "characterId": "dialyn",
+  "buffs": [
+    {
+      "id": "dialyn_core_impact",
+      "name": "コアスキル:衝撃力上昇(開幕会心率依存)",
+      "stat": "impact_pct",
+      "target": "self",
+      "condition": {},
+      "values": {
+        "base": 100
+      },
+      "maxStacks": 1,
+      "duration": "常時",
+      "note": "開幕(戦闘開始時)会心率が50%を超えている場合、超えた分1%につき衝撃力+1.4Pt、最大+100Pt。数値はPt加算(百分率換算した衝撃力ステータス上昇)であり実際の効果は会心率依存で変動するため、valuesは最大値のみ記載。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_core_stun_dmg_multiplier",
+      "name": "コアスキル:悪質クレーム(ブレイク弱体倍率上昇)",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "condition": {},
+      "values": {
+        "base": 30
+      },
+      "maxStacks": 1,
+      "duration": "ブレイク中(付与から発動まで)",
+      "note": "強化特殊スキル『パー！』が敵に命中すると「悪質クレーム」を付与。対象がブレイクした場合、ブレイク時間+2秒、ブレイク弱体倍率+15~30%(数値は資料により15%/30%で差異あり。wikiwiki.jp・game8.jpは15~30%表記、game8.co英語版は15%表記のためbaseは資料内で最も高い値30%を採用し30%固定ではなく幅がある点に注意)。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_additional_ex_crit_dmg",
+      "name": "追加能力:強化特殊スキル会心ダメージ上昇",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 50
+      },
+      "maxStacks": 1,
+      "duration": "常時",
+      "note": "チームに強攻(Attack)または命破(Rupture)タイプのメンバーがいる場合、ダイアリンの強化特殊スキルダメージの会心ダメージ+50%。対象はEX特殊攻撃(強化特殊スキル)ダメージのみ。",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/557173"
+    },
+    {
+      "id": "dialyn_additional_team_dmg",
+      "name": "追加能力:好評の嵐(全員与ダメージ上昇)",
+      "stat": "dmg_pct",
+      "target": "team",
+      "condition": {},
+      "values": {
+        "base": 40
+      },
+      "maxStacks": 1,
+      "duration": "15s",
+      "note": "強化特殊スキルまたは終結スキルを発動した時、チーム全員に「好評の嵐」を付与、与ダメージ+40%、継続時間15秒。M4によりダイアリン自身が好評の嵐状態の時、攻撃力+500(atk_flat)を追加(別エントリdialyn_m4_atk参照)。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_m1_positive_review_gain",
+      "name": "心象映画1:高評価獲得量上昇",
+      "stat": "decibel_gain",
+      "target": "self",
+      "condition": {},
+      "values": {
+        "base": 0,
+        "m1": 16
+      },
+      "maxStacks": 1,
+      "duration": "常時",
+      "note": "高評価(専用リソース)獲得量+16%。ゲーム内の「高評価」はディシベル/エネルギーゲージに近い専用ポイントのため暫定的にdecibel_gainを使用。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_m1_res_ignore",
+      "name": "心象映画1:好評の嵐中の敵耐性無視",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "self",
+      "condition": {},
+      "values": {
+        "base": 0,
+        "m1": 15
+      },
+      "maxStacks": 1,
+      "duration": "好評の嵐継続中",
+      "note": "「好評の嵐」効果中、ダイアリン自身の攻撃が敵の全属性ダメージ耐性を15%無視。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_m2_stun_dmg_multiplier",
+      "name": "心象映画2:悪質クレーム対象ブレイク弱体倍率追加上昇",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "condition": {},
+      "values": {
+        "base": 0,
+        "m2": 20
+      },
+      "maxStacks": 1,
+      "duration": "ブレイク中",
+      "note": "「悪質クレーム」付与対象がブレイクした際、ブレイク弱体倍率がさらに+20%(コアスキル分に加算)。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_m2_dmg_taken",
+      "name": "心象映画2:悪質クレーム対象への被ダメージ増加",
+      "stat": "enemy_dmg_taken_pct",
+      "target": "enemy",
+      "condition": {},
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
+      "maxStacks": 1,
+      "duration": "ブレイク中",
+      "note": "「悪質クレーム」付与対象がブレイクした際、チーム全員の該当敵への与ダメージ+15%。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_m4_energy",
+      "name": "心象映画4:入場時エネルギー回復",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "condition": {},
+      "values": {
+        "base": 0,
+        "m4": 20
+      },
+      "maxStacks": 1,
+      "duration": "戦闘参加時1回(180秒に1回)",
+      "note": "フィールドに入場した時エネルギー+20Pt獲得(探査モードでは180秒に1回)。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_m4_atk",
+      "name": "心象映画4:好評の嵐中の攻撃力上昇",
+      "stat": "atk_flat",
+      "target": "self",
+      "condition": {},
+      "values": {
+        "base": 0,
+        "m4": 500
+      },
+      "maxStacks": 1,
+      "duration": "好評の嵐継続中",
+      "note": "「好評の嵐」効果を得ている間、ダイアリン自身の攻撃力+500。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3"
+    },
+    {
+      "id": "dialyn_wengine_daze",
+      "name": "専用音動機:昨夜からの着信(ブレイク値上昇)",
+      "stat": "daze_pct",
+      "target": "self",
+      "condition": {
+        "elements": [
+          "physical"
+        ]
+      },
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 9,
+        "p2": 10.3,
+        "p3": 11.7,
+        "p4": 13,
+        "p5": 14.5
+      },
+      "maxStacks": 3,
+      "duration": "10s",
+      "note": "物理属性ダメージを与える強化特殊スキル(EX特殊攻撃)がヒットした時、与えるブレイク値+9%(最大3重、継続10秒)。",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/565530"
+    },
+    {
+      "id": "dialyn_wengine_crit_dmg",
+      "name": "専用音動機:昨夜からの着信(全員会心ダメージ上昇)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "condition": {},
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 30,
+        "p2": 34.5,
+        "p3": 39,
+        "p4": 43.5,
+        "p5": 48
+      },
+      "maxStacks": 1,
+      "duration": "40s",
+      "note": "ブレイク値上昇効果が3重になった時、チーム全員の会心ダメージ+30%(継続40秒、再発動で継続時間更新、同一チームで1つのみ有効)。",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/565530"
+    },
+    {
+      "id": "dialyn_wengine_energy_regen",
+      "name": "専用音動機:昨夜からの着信(控え時エネルギー回復)",
+      "stat": "energy_regen",
+      "target": "self",
+      "condition": {},
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 1.5,
+        "p2": 1.7,
+        "p3": 1.9,
+        "p4": 2.1,
+        "p5": 2.3
+      },
+      "maxStacks": 1,
+      "duration": "控え中常時",
+      "note": "装備者が控え(オフフィールド)時、エネルギー自動回復+1.5/秒。",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/565530"
+    }
+  ]
+}

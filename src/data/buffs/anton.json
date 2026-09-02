@@ -1,0 +1,33 @@
+{
+  "characterId": "anton",
+  "buffs": [
+    {
+      "id": "anton_m1_drill_energy",
+      "name": "心象映画1: ウォーミングアップ(ドリル攻撃時エネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": { "base": 0, "m1": 5 },
+      "note": "『ドリル攻撃』発動時にエネルギーを最大5Pt回復",
+      "sourceUrl": "https://game8.jp/zenless/607797"
+    },
+    {
+      "id": "anton_m4_team_crit_rate",
+      "name": "心象映画4: 共に燃えようか!(チーム会心率アップ)",
+      "stat": "crit_rate",
+      "target": "team",
+      "values": { "base": 0, "m4": 10 },
+      "duration": "12s",
+      "sourceUrl": "https://game8.jp/zenless/607797"
+    },
+    {
+      "id": "anton_m6_crit_dmg_stack",
+      "name": "心象映画6: 極限突破(会心発生時ダメージ上昇)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 0, "m6": 4 },
+      "maxStacks": 6,
+      "note": "会心発生時に自身の与ダメージが4%アップ、最大6重まで重ね掛け",
+      "sourceUrl": "https://game8.jp/zenless/607797"
+    }
+  ]
+}

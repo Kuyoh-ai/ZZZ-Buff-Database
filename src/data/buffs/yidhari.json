@@ -1,0 +1,138 @@
+{
+  "characterId": "yidhari",
+  "buffs": [
+    {
+      "id": "yidhari_core_ice_pen_ratio",
+      "name": "夢掬いの空想(コアスキル)-氷属性防御無視",
+      "stat": "pen_ratio",
+      "target": "self",
+      "values": {
+        "base": 100
+      },
+      "note": "イドリーの氷属性ダメージは全て透徹ダメージとみなされ、敵の防御力を無視する。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A4%E3%83%89%E3%83%AA%E3%83%BC"
+    },
+    {
+      "id": "yidhari_core_low_hp_dmg",
+      "name": "夢掬いの空想(コアスキル)-HP低下時ダメージ上昇",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 100
+      },
+      "note": "現在HPが低いほど与ダメージが上昇し、HP50%未満で最大+100%。 現在HPが50%未満で最大値。50%以上に回復後も5秒間最大値が継続。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
+    },
+    {
+      "id": "yidhari_core_field_entry_adrenaline",
+      "name": "夢掬いの空想(コアスキル)-入場時アドレナリン回復",
+      "stat": "adrenaline",
+      "target": "self",
+      "values": {
+        "base": 60
+      },
+      "note": "フィールド入場時にアドレナリン60Pt回復。 フィールド入場時に発動。探査モードでは180秒に1回のみ。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A4%E3%83%89%E3%83%AA%E3%83%BC"
+    },
+    {
+      "id": "yidhari_core_decibel_on_hp_loss",
+      "name": "夢掬いの空想(コアスキル)-HP減少時デシベル獲得",
+      "stat": "decibel_gain",
+      "target": "self",
+      "values": {
+        "base": 10
+      },
+      "note": "HP損失1%につきデシベル値+10Pt獲得。 HPが1%減少するごとに発動。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%A4%E3%83%89%E3%83%AA%E3%83%BC"
+    },
+    {
+      "id": "yidhari_add_ability_crit_dmg",
+      "name": "完全なる物語(追加能力)-会心ダメージ上昇",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 30
+      },
+      "note": "HP50%未満時、会心ダメージ+30%。 チーム内に撃破(スタン)または支援タイプのメンバーがいる場合のみ発動。HPが50%未満の間のみ有効(50%以上に戻ると即座に消失)。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
+    },
+    {
+      "id": "yidhari_m1_ice_res_shred",
+      "name": "深き淵に沈む過去(M1)-氷属性耐性無視",
+      "stat": "enemy_res_down_pct",
+      "element": "ice",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 20
+      },
+      "note": "通常攻撃・強化特殊スキルが対象の氷属性ダメージ耐性20%を無視する。 通常攻撃・強化特殊スキルがヒットした敵に対して発動。 (自身の攻撃にのみ適用)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
+    },
+    {
+      "id": "yidhari_m2_crit_dmg",
+      "name": "思いを馳せるのは誰(M2)-会心ダメージ上昇",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 40
+      },
+      "note": "M2で会心ダメージ+40%を獲得。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
+    },
+    {
+      "id": "yidhari_m6_sheer_dmg",
+      "name": "ついに安らかな夢に(M6)-透徹ダメージ上昇",
+      "stat": "dmg_pct_element",
+      "element": "ice",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 25
+      },
+      "duration": "30s",
+      "note": "「諦観」状態中、透徹(氷属性)ダメージ+25%。 デシベル消費で「エーテルベール・湧泉」を発動・延長した後30秒間獲得する「諦観」状態中のみ有効。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
+    },
+    {
+      "id": "yidhari_wengine_ice_sheer_dmg_stack",
+      "name": "セイレーンクレードル(専用音動機)-氷属性透徹ダメージ上昇",
+      "stat": "dmg_pct_element",
+      "element": "ice",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 6,
+        "p2": 7,
+        "p3": 8,
+        "p4": 9,
+        "p5": 10
+      },
+      "maxStacks": 3,
+      "duration": "25s",
+      "note": "HP減少時に氷属性透徹ダメージ上昇(1重あたり)。最大3重まで重複。 装備者のHPが減少するたびに1重獲得。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
+    },
+    {
+      "id": "yidhari_wengine_crit_rate_low_hp",
+      "name": "セイレーンクレードル(専用音動機)-低HP時会心率上昇",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 20,
+        "p2": 23,
+        "p3": 26,
+        "p4": 29,
+        "p5": 32
+      },
+      "note": "HP50%以下で会心率上昇。 装備者のHPが最大HPの50%以下の時に発動。",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/yidhari/"
+    }
+  ]
+}

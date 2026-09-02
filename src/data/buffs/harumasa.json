@@ -1,0 +1,84 @@
+{
+  "characterId": "harumasa",
+  "buffs": [
+    {
+      "id": "harumasa_core_crit_rate_dash",
+      "name": "コアパッシブ: 払暁(ダッシュ攻撃会心率)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 10.6
+      },
+      "note": "ダッシュ攻撃「飛天の弦・斬」/連携技/終結スキルの会心率アップ",
+      "sourceUrl": "https://game8.jp/zenless/651182"
+    },
+    {
+      "id": "harumasa_core_gleaming_crit_dmg",
+      "name": "コアパッシブ: 才覚(会心ダメージ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 6
+      },
+      "maxStacks": 6,
+      "duration": "5s",
+      "note": "ダッシュ攻撃等で会心発生時に「才覚」1重獲得。1重あたりダッシュ攻撃/連携/終結の会心ダメージ+6%",
+      "sourceUrl": "https://game8.jp/zenless/651182"
+    },
+    {
+      "id": "harumasa_wengine_crit_rate",
+      "name": "音動機: 残心の青籠(会心率)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "note": "装備時常時発動。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/658992",
+      "wengine": {
+        "p1": 10,
+        "p2": 10,
+        "p3": 10,
+        "p4": 10,
+        "p5": 10
+      }
+    },
+    {
+      "id": "harumasa_wengine_dash_electric_dmg",
+      "name": "音動機: 残心の青籠(ダッシュ攻撃電気ダメージ)",
+      "stat": "dash_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "note": "ダッシュ攻撃による電気ダメージ+40%。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/658992",
+      "wengine": {
+        "p1": 40,
+        "p2": 40,
+        "p3": 40,
+        "p4": 40,
+        "p5": 40
+      }
+    },
+    {
+      "id": "harumasa_wengine_crit_rate_conditional",
+      "name": "音動機: 残心の青籠(会心率追加)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "duration": "12s",
+      "note": "任意メンバーが状態異常またはブレイクを付与した時に発動。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/658992",
+      "wengine": {
+        "p1": 10,
+        "p2": 10,
+        "p3": 10,
+        "p4": 10,
+        "p5": 10
+      }
+    }
+  ]
+}

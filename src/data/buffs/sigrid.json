@@ -1,0 +1,126 @@
+{
+  "characterId": "sigrid",
+  "buffs": [
+    {
+      "id": "sigrid_core_crit_rate",
+      "name": "コアパッシブ「天空の騎士」: 会心率アップ(不落の構え)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 66
+      },
+      "duration": "8s",
+      "maxStacks": 5,
+      "note": "「不落の構え」状態への移行/更新のたびに獲得(レベル最大値)。重複で継続時間+8秒、最大40秒",
+      "sourceUrl": "https://gamewith.jp/zenless/560635"
+    },
+    {
+      "id": "sigrid_addon_atk_flat",
+      "name": "追加能力「天の彼方の軍勢」: 攻撃力アップ",
+      "stat": "atk_flat",
+      "target": "self",
+      "values": {
+        "base": 840
+      },
+      "note": "チームに[支援]または[撃破]のメンバーがいる場合、攻撃力+840(レベル最大値)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B7%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89"
+    },
+    {
+      "id": "sigrid_addon_dmg_penetrated",
+      "name": "追加能力「天の彼方の軍勢」: 浸透状態の敵への与ダメージアップ",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 15
+      },
+      "note": "「浸透」状態の敵への攻撃命中時、与ダメージ+15%",
+      "sourceUrl": "https://gamewith.jp/zenless/560635"
+    },
+    {
+      "id": "sigrid_m1_atk_pct",
+      "name": "心象映画1「むかーし、むかし」: 攻撃力アップ",
+      "stat": "atk_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 25
+      },
+      "note": "無条件で永続付与",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B7%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89"
+    },
+    {
+      "id": "sigrid_m2_pen_ratio",
+      "name": "心象映画2「伝説の第一幕」: 貫通率アップ",
+      "stat": "pen_ratio",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 24
+      },
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B7%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89"
+    },
+    {
+      "id": "sigrid_m2_decibel_gain",
+      "name": "心象映画2「伝説の第一幕」: デシベル値獲得効率アップ",
+      "stat": "decibel_gain",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 10
+      },
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B7%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89"
+    },
+    {
+      "id": "sigrid_m4_dmg_up",
+      "name": "心象映画4「英雄育成中」: 与ダメージアップ(不落の構え更新時)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 18
+      },
+      "duration": "8s",
+      "note": "「不落の構え」更新時に獲得。重複で継続時間+8秒、最大40秒",
+      "sourceUrl": "https://gamewith.jp/zenless/560635"
+    },
+    {
+      "id": "sigrid_wengine_crit_dmg",
+      "name": "音動機「栄光の騎士道」: 会心ダメージアップ(戦刃)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 2,
+      "duration": "25s",
+      "note": "通常攻撃または強化特殊スキルの重撃命中時に「戦刃」1重獲得(最大2重、1種のスキルにつき1重まで)。精錬ランクによる変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B7%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89",
+      "wengine": {
+        "p1": 32,
+        "p2": 32,
+        "p3": 32,
+        "p4": 32,
+        "p5": 32
+      }
+    },
+    {
+      "id": "sigrid_wengine_ice_res_down",
+      "name": "音動機「栄光の騎士道」: 氷耐性ダウン(徹骨)",
+      "stat": "enemy_res_down_pct",
+      "element": "ice",
+      "target": "enemy",
+      "values": {
+        "base": 0
+      },
+      "note": "「戦刃」2重所持時、氷属性ダメージ耐性を20%無視。精錬ランクによる変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B7%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89",
+      "wengine": {
+        "p1": 20,
+        "p2": 20,
+        "p3": 20,
+        "p4": 20,
+        "p5": 20
+      }
+    }
+  ]
+}

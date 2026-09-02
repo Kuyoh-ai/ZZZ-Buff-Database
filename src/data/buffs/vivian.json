@@ -1,0 +1,78 @@
+{
+  "characterId": "vivian",
+  "buffs": [
+    {
+      "id": "vivian_m2_ether_buildup",
+      "name": "心象映画2: エーテル状態異常蓄積効率アップ",
+      "stat": "anomaly_buildup_pct",
+      "element": "ether",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 25
+      },
+      "sourceUrl": "https://game8.jp/zenless/673769"
+    },
+    {
+      "id": "vivian_m4_atk_pct",
+      "name": "心象映画4: 攻撃力アップ",
+      "stat": "atk_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 12
+      },
+      "duration": "12s",
+      "sourceUrl": "https://game8.jp/zenless/673769"
+    },
+    {
+      "id": "vivian_m6_ether_dmg",
+      "name": "心象映画6: エーテルダメージアップ",
+      "stat": "dmg_pct_element",
+      "element": "ether",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 40
+      },
+      "sourceUrl": "https://game8.jp/zenless/673769"
+    },
+    {
+      "id": "vivian_wengine_anomaly_buildup",
+      "name": "音動機「鳥は夢へと羽ばたいて」: 状態異常蓄積効率アップ",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "note": "凸段階での変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/673769",
+      "wengine": {
+        "p1": 40,
+        "p2": 40,
+        "p3": 40,
+        "p4": 40,
+        "p5": 40
+      }
+    },
+    {
+      "id": "vivian_wengine_anomaly_mastery",
+      "name": "音動機「鳥は夢へと羽ばたいて」: 異常マスタリーアップ",
+      "stat": "anomaly_mastery",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 6,
+      "note": "1スタックにつき+20、最大6重(+120)。基礎+20と合わせ最大210相当との情報あり(未確定) 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/673769",
+      "wengine": {
+        "p1": 20,
+        "p2": 20,
+        "p3": 20,
+        "p4": 20,
+        "p5": 20
+      }
+    }
+  ]
+}

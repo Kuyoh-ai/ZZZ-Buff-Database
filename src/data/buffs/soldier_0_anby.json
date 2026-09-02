@@ -1,0 +1,41 @@
+{
+  "characterId": "soldier_0_anby",
+  "buffs": [
+    {
+      "id": "soldier_0_anby_crit_rate_support",
+      "name": "追加能力: 会心率アップ",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 10
+      },
+      "note": "チームに撃破または支援メンバーがいる時に発動",
+      "sourceUrl": "https://game8.jp/zenless/665676"
+    },
+    {
+      "id": "soldier_0_anby_m2_crit_rate",
+      "name": "心象映画2: 会心率アップ",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 12
+      },
+      "note": "終結スキル発動時に獲得する追加効果",
+      "sourceUrl": "https://game8.jp/zenless/665676"
+    },
+    {
+      "id": "soldier_0_anby_m4_electric_res_down",
+      "name": "心象映画4: 電気耐性ダウン",
+      "stat": "enemy_res_down_pct",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 12
+      },
+      "note": "「銀星」の印を持つ敵に対し、自身の与ダメージ時に電気属性耐性を12%無視",
+      "sourceUrl": "https://wikiwiki.jp/zenless/0%E5%8F%B7%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%93%E3%83%BC"
+    }
+  ]
+}

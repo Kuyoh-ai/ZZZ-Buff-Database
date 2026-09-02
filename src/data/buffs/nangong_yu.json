@@ -1,0 +1,132 @@
+{
+  "characterId": "nangong_yu",
+  "buffs": [
+    {
+      "id": "nangong_yu_core_anomaly_proficiency",
+      "name": "コアスキル: 天才アイドル(異常マスタリー上昇)",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "values": {
+        "base": 120
+      },
+      "note": "コアスキルLv最大時の値。ランクにより60〜120の間で変動(要検証)",
+      "sourceUrl": "https://game8.jp/zenless/758209"
+    },
+    {
+      "id": "nangong_yu_core_team_dmg",
+      "name": "コアスキル: 天才アイドル(チーム与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 25
+      },
+      "maxStacks": 1,
+      "duration": "30s",
+      "note": "通常攻撃3段目または強化特殊スキル命中時に発動。継続30秒",
+      "sourceUrl": "https://game8.jp/zenless/758209"
+    },
+    {
+      "id": "nangong_yu_additional_stun_dmg_mult",
+      "name": "追加能力: エンジェルのリーダー(ブレイク弱体倍率アップ)",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 30,
+        "m2": 60
+      },
+      "note": "「よろめき」効果で敵のブレイク弱体倍率+30%(M2でさらに+30%、計60%)",
+      "sourceUrl": "https://wiki.bittopup.com/zzz/Agents/1038"
+    },
+    {
+      "id": "nangong_yu_m1_enemy_res_down",
+      "name": "心象映画1: 全属性ダメージ耐性ダウン",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 18
+      },
+      "duration": "40s",
+      "note": "EX特殊スキルまたは通常攻撃命中時、敵の全属性ダメージ耐性-18%(40秒継続)",
+      "sourceUrl": "https://wiki.bittopup.com/zzz/Agents/1038"
+    },
+    {
+      "id": "nangong_yu_m4_anomaly_proficiency",
+      "name": "心象映画4: 異常マスタリー上昇",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 40
+      },
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%8D%97%E5%AE%AE%E7%BE%BD"
+    },
+    {
+      "id": "nangong_yu_m6_daze",
+      "name": "心象映画6: 自身ブレイク値アップ",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 50
+      },
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E5%8D%97%E5%AE%AE%E7%BE%BD"
+    },
+    {
+      "id": "nangong_yu_wengine_anomaly_proficiency",
+      "name": "音動機「妄想ディスコテック」: 異常マスタリー上昇",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 90,
+        "p2": 103,
+        "p3": 117,
+        "p4": 130,
+        "p5": 145
+      },
+      "note": "装備者の異常マスタリーが固定値で上昇(基礎効果)",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/586514"
+    },
+    {
+      "id": "nangong_yu_wengine_anomaly_proficiency_2stack",
+      "name": "音動機「妄想ディスコテック」: 異常マスタリー追加上昇(2重時)",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 60,
+        "p2": 69,
+        "p3": 78,
+        "p4": 87,
+        "p5": 96
+      },
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/586514",
+      "note": "上記スタックが2重になった時に追加で加算"
+    },
+    {
+      "id": "nangong_yu_wengine_team_dmg",
+      "name": "音動機「妄想ディスコテック」: チーム与ダメージアップ",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 15,
+        "p2": 17,
+        "p3": 19.5,
+        "p4": 21,
+        "p5": 24
+      },
+      "maxStacks": 2,
+      "duration": "40s",
+      "note": "装備者が強化特殊スキルまたは通常攻撃でエーテル属性ダメージを与えた時、チーム全体の与ダメージがアップ(1重あたりの値、最大2重)",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/586514"
+    }
+  ]
+}

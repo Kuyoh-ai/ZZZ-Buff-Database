@@ -1,0 +1,92 @@
+{
+  "characterId": "sunna",
+  "buffs": [
+    {
+      "id": "sunna_enhanced_special_team_atk",
+      "name": "強化特殊スキル: スペシャル・パシャリ(チーム攻撃力)",
+      "stat": "atk_flat",
+      "target": "team",
+      "values": {
+        "base": 50
+      },
+      "duration": "40s",
+      "note": "「エーテルベール・妄想協奏曲」展開時。",
+      "sourceUrl": "https://game8.jp/zenless/754094"
+    },
+    {
+      "id": "sunna_m1_def_down",
+      "name": "心象映画1: 敵防御力ダウン",
+      "stat": "enemy_def_down_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 7
+      },
+      "duration": "40s",
+      "maxStacks": 3,
+      "sourceUrl": "https://game8.jp/zenless/754094"
+    },
+    {
+      "id": "sunna_m2_team_atk",
+      "name": "心象映画2: エーテルベール中チーム攻撃力",
+      "stat": "atk_pct",
+      "target": "team",
+      "values": {
+        "base": 0,
+        "m2": 10
+      },
+      "note": "「エーテルベール・妄想協奏曲」効果下。",
+      "sourceUrl": "https://game8.jp/zenless/754094"
+    },
+    {
+      "id": "sunna_m4_team_dmg",
+      "name": "心象映画4: 終結スキル発動時チーム与ダメージ",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 0,
+        "m4": 18
+      },
+      "duration": "60s",
+      "sourceUrl": "https://game8.jp/zenless/754094"
+    },
+    {
+      "id": "sunna_wengine_team_dmg",
+      "name": "音動機 想いが織りなす歌: チーム与ダメージ",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "duration": "40s",
+      "maxStacks": 2,
+      "note": "強化特殊スキルで物理属性ダメージを与えた時。精錬2〜5の数値は未確認。 音動機効果(確認できた段階のみ): {'p1': 12.5} 精錬2〜5未確認のため全段にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/759480",
+      "wengine": {
+        "p1": 12.5,
+        "p2": 12.5,
+        "p3": 12.5,
+        "p4": 12.5,
+        "p5": 12.5
+      }
+    },
+    {
+      "id": "sunna_wengine_team_atk_2stack",
+      "name": "音動機 想いが織りなす歌: チーム攻撃力(2重時)",
+      "stat": "atk_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "note": "上記の与ダメージバフが2重積み時に追加される攻撃力バフ。精錬2〜5の数値は未確認。 音動機効果(確認できた段階のみ): {'p1': 10} 精錬2〜5未確認のため全段にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/759480",
+      "wengine": {
+        "p1": 10,
+        "p2": 10,
+        "p3": 10,
+        "p4": 10,
+        "p5": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "characterId": "lighter",
+  "buffs": [
+    {
+      "id": "lighter_accelerant_res_down_fire",
+      "name": "コアパッシブ: 炎耐性ダウン",
+      "stat": "enemy_res_down_pct",
+      "element": "fire",
+      "target": "enemy",
+      "values": {
+        "base": 15,
+        "m1": 25
+      },
+      "duration": "30s",
+      "note": "士気奮発状態の通常攻撃5段目命中時に付与。氷耐性ダウンとセットで発生",
+      "sourceUrl": "https://game8.jp/zenless/640274"
+    },
+    {
+      "id": "lighter_accelerant_res_down_ice",
+      "name": "コアパッシブ: 氷耐性ダウン",
+      "stat": "enemy_res_down_pct",
+      "element": "ice",
+      "target": "enemy",
+      "values": {
+        "base": 15,
+        "m1": 25
+      },
+      "duration": "30s",
+      "note": "士気奮発状態の通常攻撃5段目命中時に付与。炎耐性ダウンとセットで発生",
+      "sourceUrl": "https://game8.jp/zenless/640274"
+    },
+    {
+      "id": "lighter_elation_dmg_fire",
+      "name": "追加能力: 高揚(炎ダメージ)",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "team",
+      "values": {
+        "base": 1.25,
+        "m2": 1.5
+      },
+      "maxStacks": 20,
+      "duration": "30s",
+      "note": "チームに[強攻]または同陣営メンバーがいる時発動。1重あたりの効果量。衝撃力170超過時の追加増加分(最大75%まで)は算出式が不確定なため未収録(最大値未確認)",
+      "sourceUrl": "https://game8.jp/zenless/640274"
+    },
+    {
+      "id": "lighter_elation_dmg_ice",
+      "name": "追加能力: 高揚(氷ダメージ)",
+      "stat": "dmg_pct_element",
+      "element": "ice",
+      "target": "team",
+      "values": {
+        "base": 1.25,
+        "m2": 1.5
+      },
+      "maxStacks": 20,
+      "duration": "30s",
+      "note": "チームに[強攻]または同陣営メンバーがいる時発動。1重あたりの効果量",
+      "sourceUrl": "https://game8.jp/zenless/640274"
+    },
+    {
+      "id": "lighter_m2_enemy_stun_multiplier",
+      "name": "2凸: ブレイク弱体倍率アップ",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m2": 25
+      },
+      "note": "コアパッシブで衰耗(Collapse)付与時に発動",
+      "sourceUrl": "https://game8.jp/zenless/640274"
+    },
+    {
+      "id": "lighter_m4_energy_regen",
+      "name": "4凸: エネルギー自動回復アップ",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 10
+      },
+      "note": "控え時のエネルギー自動回復効率+10%",
+      "sourceUrl": "https://game8.jp/zenless/640274"
+    },
+    {
+      "id": "lighter_wengine_impact",
+      "name": "音動機: 炎心の桂冠(衝撃力アップ)",
+      "stat": "impact_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "duration": "8s",
+      "note": "クイック支援または極限支援発動時。精錬(音動機Lv)による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/654942",
+      "wengine": {
+        "p1": 25,
+        "p2": 25,
+        "p3": 25,
+        "p4": 25,
+        "p5": 25
+      }
+    },
+    {
+      "id": "lighter_wengine_crit_dmg",
+      "name": "音動機: 炎心の桂冠(会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "condition": {
+        "elements": [
+          "fire",
+          "ice"
+        ]
+      },
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 20,
+      "note": "装備者の通常攻撃命中で敵に「衰耗」付与(最大20重)。任意メンバー攻撃時、衰耗1重につき氷炎属性攻撃の会心ダメージ+1.5%。精錬による数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/654942",
+      "wengine": {
+        "p1": 1.5,
+        "p2": 1.5,
+        "p3": 1.5,
+        "p4": 1.5,
+        "p5": 1.5
+      }
+    }
+  ]
+}

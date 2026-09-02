@@ -1,0 +1,231 @@
+/* =========================================================
+   アニメーション定義
+   ロード演出(.splash*)以外はすべて 0.5s 以内 (scripts/check-anim.mjs で検証)
+   方針: transform + opacity 縛り、--delay でスタガー、in/out ペア
+   ========================================================= */
+
+/* ---- ロード演出(0.5s制限の対象外) ---- */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--bg);
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  pointer-events: none;
+  animation: splash-out 0.35s var(--ease-sign) 0.8s forwards;
+}
+.splash__band {
+  position: absolute;
+  inset: -20% -10%;
+  transform: translateX(-101%) skewX(-12deg);
+}
+.splash__band--1 {
+  background: var(--lime);
+  animation:
+    band-in 0.5s var(--ease-sign) 0s both,
+    band-out 0.5s var(--ease-sign) 0.55s forwards;
+}
+.splash__band--2 {
+  background: var(--fg);
+  animation:
+    band-in 0.5s var(--ease-sign) 0.12s both,
+    band-out 0.5s var(--ease-sign) 0.6s forwards;
+}
+.splash__logo {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 0.02em;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(64px, 14vw, 140px);
+  line-height: 1;
+  color: var(--bg);
+  mix-blend-mode: difference;
+}
+.splash__z {
+  display: inline-block;
+  animation: z-pop 0.45s var(--ease-out) calc(0.25s + var(--i, 0) * 0.07s) both;
+}
+.splash__z:nth-child(1) {
+  --i: 0;
+}
+.splash__z:nth-child(2) {
+  --i: 1;
+}
+.splash__z:nth-child(3) {
+  --i: 2;
+}
+.splash__sub {
+  font-size: 0.16em;
+  letter-spacing: 0.3em;
+  margin-left: 0.3em;
+  animation: fade-up 0.4s var(--ease-out) 0.5s both;
+}
+@keyframes band-in {
+  from {
+    transform: translateX(-101%) skewX(-12deg);
+  }
+  to {
+    transform: translateX(0) skewX(-12deg);
+  }
+}
+@keyframes band-out {
+  from {
+    transform: translateX(0) skewX(-12deg);
+  }
+  to {
+    transform: translateX(101%) skewX(-12deg);
+  }
+}
+@keyframes z-pop {
+  0% {
+    transform: scale(0) rotate(-8deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.25) rotate(2deg);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes splash-out {
+  to {
+    transform: translateY(-101%);
+  }
+}
+
+/* ---- 汎用 keyframes (すべて 0.5s 以内で使用) ---- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-16px) skewX(-6deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) skewX(0);
+  }
+}
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes value-pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.2;
+  }
+  60% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes chip-pop {
+  0% {
+    transform: scale(0.9);
+  }
+  55% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes sort-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes wipe-underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes stripe-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 24px 0;
+  }
+}
+
+/* ---- 適用 ---- */
+.app {
+  opacity: 0;
+}
+.app--ready {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+.app--ready .header__inner {
+  animation: slide-in-left 0.45s var(--ease-out) 0s both;
+}
+.app--ready .panel {
+  animation: fade-up 0.4s var(--ease-out) var(--delay, 0s) both;
+}
+.row {
+  animation: row-in 0.3s var(--ease-out) var(--delay, 0s) both;
+}
+.cell__value {
+  display: inline-block;
+  animation: value-pop 0.3s var(--ease-out) both;
+}
+.seg--on,
+.chip--on {
+  animation: chip-pop 0.25s var(--ease-out) both;
+}
+.th__sort {
+  animation: sort-drop 0.2s var(--ease-out) both;
+}
+.th--sorted::after {
+  animation: wipe-underline 0.25s var(--ease-snap) both;
+}
+.attacker__card {
+  animation: slide-in-left 0.35s var(--ease-out) both;
+}
+.row--detail > td {
+  animation: fade-up 0.25s var(--ease-out) both;
+}
+.bufffx {
+  animation: fade-up 0.3s var(--ease-out) calc(var(--i, 0) * 0.03s) both;
+}
+.header__stripe {
+  animation: stripe-scroll 0.5s linear infinite;
+}

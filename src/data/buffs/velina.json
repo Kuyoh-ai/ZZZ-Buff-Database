@@ -1,0 +1,81 @@
+{
+  "characterId": "velina",
+  "buffs": [
+    {
+      "id": "velina_core_dmg_pct",
+      "name": "コアパッシブ:エネルギー自動回復超過分の与ダメージ上昇",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 35 },
+      "note": "エネルギー自動回復が1.2を超える場合、超過0.01Ptごとに与ダメージ+0.21%(最大+35%)。最大値を記載。",
+      "sourceUrl": "https://game8.jp/zenless/760640"
+    },
+    {
+      "id": "velina_core_anomaly_mastery",
+      "name": "コアパッシブ:エネルギー自動回復超過分の異常掌握上昇",
+      "stat": "anomaly_mastery",
+      "target": "self",
+      "values": { "base": 84 },
+      "note": "エネルギー自動回復が1.2を超える場合、超過0.01Ptごとに異常掌握+0.5Pt(最大+84Pt)。最大値を記載。",
+      "sourceUrl": "https://game8.jp/zenless/760640"
+    },
+    {
+      "id": "velina_core_tornado_daze",
+      "name": "追加能力:竜巻のブレイク値上昇",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": { "base": 30, "m1": 50 },
+      "note": "追加能力「お茶会の礼節」(異常または同属性キャラ2名編成)で竜巻のブレイク値+30%。M1で竜巻ブレイク値さらに+20%。竜巻攻撃にのみ適用。",
+      "sourceUrl": "https://game8.jp/zenless/760640"
+    },
+    {
+      "id": "velina_core_tornado_buildup",
+      "name": "追加能力:竜巻の状態異常蓄積値上昇",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 15 },
+      "note": "追加能力「お茶会の礼節」発動時、竜巻の状態異常蓄積値+15%。竜巻攻撃にのみ適用。",
+      "sourceUrl": "https://game8.jp/zenless/760640"
+    },
+    {
+      "id": "velina_m4_atk_pct",
+      "name": "M4:強化特殊スキル発動時の攻撃力上昇",
+      "stat": "atk_pct",
+      "target": "self",
+      "values": { "base": 0, "m4": 15 },
+      "duration": "40s",
+      "note": "M4「審判する茶会」。強化特殊スキル発動時に攻撃力+15%。",
+      "sourceUrl": "https://game8.jp/zenless/760640"
+    },
+    {
+      "id": "velina_m6_wind_anomaly_buildup",
+      "name": "M6:風属性状態異常の敵への状態異常蓄積値上昇",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 0, "m6": 20 },
+      "note": "M6。風属性の状態異常が付与されている敵に対して状態異常蓄積値+20%。",
+      "sourceUrl": "https://gamewith.jp/zenless/550723"
+    },
+    {
+      "id": "velina_wengine_anomaly_proficiency",
+      "name": "音動機:異常マスタリー上昇",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "values": { "base": 0 },
+      "wengine": { "p1": 70, "p2": 80, "p3": 90, "p4": 100, "p5": 110 },
+      "note": "専用音動機「金襴の心」の常時効果。p1=70、p5=110を確認、中間は等差で補間。",
+      "sourceUrl": "https://gamewith.jp/zenless/550723"
+    },
+    {
+      "id": "velina_wengine_team_anomaly_proficiency",
+      "name": "音動機:メンバー全員の異常マスタリー上昇",
+      "stat": "anomaly_proficiency",
+      "target": "team",
+      "values": { "base": 0 },
+      "wengine": { "p1": 60, "p2": 69, "p3": 78, "p4": 87, "p5": 96 },
+      "duration": "40s",
+      "note": "専用音動機「金襴の心」。装備者が乱流・風化ダメージ上昇効果を2重所持している間、メンバー全員の異常マスタリー上昇。p1=60、p5=96を確認、中間は等差で補間。",
+      "sourceUrl": "https://gamewith.jp/zenless/550723"
+    }
+  ]
+}

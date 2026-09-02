@@ -1,0 +1,102 @@
+{
+  "characterId": "trigger",
+  "buffs": [
+    {
+      "id": "trigger_core_stun_multiplier",
+      "name": "コアパッシブ: ブレイク弱体倍率アップ(虚を突く幽目)",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 35
+      },
+      "duration": "5s",
+      "note": "「追加攻撃」が敵に命中した時、ターゲットのブレイク弱体倍率アップ(ブレイク状態でない敵にも有効)。コアスキル最大レベルの値35%を記載(Lv.1は20%)",
+      "sourceUrl": "https://game8.jp/zenless/665774"
+    },
+    {
+      "id": "trigger_m1_stun_multiplier",
+      "name": "心象映画1: ブレイク弱体倍率アップ追加(研ぎ澄まされた洞察)",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 20
+      },
+      "duration": "5s",
+      "note": "コアパッシブのブレイク弱体倍率上昇にさらに加算",
+      "sourceUrl": "https://game8.jp/zenless/665774"
+    },
+    {
+      "id": "trigger_m2_crit_dmg",
+      "name": "心象映画2: 会心ダメージアップ(狩人の眼)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 6
+      },
+      "maxStacks": 4,
+      "duration": "10s",
+      "note": "「狩人の眼」1重につき会心ダメージ+6%、最大4重(合計24%)",
+      "sourceUrl": "https://game8.jp/zenless/665774"
+    },
+    {
+      "id": "trigger_wengine_def_down",
+      "name": "音動機「奪魂の瞑目」: 防御力ダウン",
+      "stat": "enemy_def_down_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0
+      },
+      "duration": "5s",
+      "note": "装備者の「追加攻撃」が命中し電気属性ダメージを与えた時、ターゲットの防御力ダウン。重ね掛け不可。精錬ランクによる数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://gamewith.jp/zenless/491872",
+      "wengine": {
+        "p1": 25,
+        "p2": 25,
+        "p3": 25,
+        "p4": 25,
+        "p5": 25
+      }
+    },
+    {
+      "id": "trigger_wengine_impact",
+      "name": "音動機「奪魂の瞑目」: 衝撃力アップ(魂の鎖)",
+      "stat": "impact_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 3,
+      "duration": "12s",
+      "note": "装備者が控えの時、「魂の鎖」を1重につき衝撃力+4%(最大3重、各重の継続時間は独立)。精錬ランクによる数値変化は未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://gamewith.jp/zenless/491872",
+      "wengine": {
+        "p1": 4,
+        "p2": 4,
+        "p3": 4,
+        "p4": 4,
+        "p5": 4
+      }
+    },
+    {
+      "id": "trigger_wengine_impact_max_bonus",
+      "name": "音動機「奪魂の瞑目」: 衝撃力アップ追加(魂の鎖上限時)",
+      "stat": "impact_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "duration": "12s",
+      "note": "「魂の鎖」が最大重数に達している時、衝撃力がさらに追加でアップ 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://gamewith.jp/zenless/491872",
+      "wengine": {
+        "p1": 8,
+        "p2": 8,
+        "p3": 8,
+        "p4": 8,
+        "p5": 8
+      }
+    }
+  ]
+}

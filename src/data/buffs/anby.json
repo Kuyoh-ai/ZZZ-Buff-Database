@@ -1,0 +1,70 @@
+{
+  "characterId": "anby",
+  "buffs": [
+    {
+      "id": "anby_core_daze_self",
+      "name": "コアパッシブ: 波動電圧(自身ブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": { "base": 64 },
+      "note": "『通常攻撃』3段目の後に『通常攻撃:落雷』『特殊スキル』『強化特殊スキル』を発動した場合、そのスキルの与えるブレイク値がアップ。コアスキル最大レベル(Lv.7)の値64%を記載(Lv.1は32%)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/anby-demara/"
+    },
+    {
+      "id": "anby_additional_energy_self",
+      "name": "追加能力: 並列回路(自身エネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": { "base": 7.2 },
+      "note": "『回避反撃』が敵に命中すると、エネルギーを追加で7.2Pt回復(5秒に1回のみ)。発動条件はアンビーと同属性(電気)または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
+      "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/anby-demara/"
+    },
+    {
+      "id": "anby_m1_energy_regen_self",
+      "name": "心象映画1: 急速充電モード(エネルギー獲得効率アップ)",
+      "stat": "energy_regen",
+      "target": "self",
+      "values": { "base": 0, "m1": 12 },
+      "duration": "30s",
+      "note": "『通常攻撃』4段目が敵に命中した時、エネルギー獲得効率がアップ",
+      "sourceUrl": "https://game8.jp/zenless/607757"
+    },
+    {
+      "id": "anby_m2_basic_dmg_self",
+      "name": "心象映画2: 精密放電(ブレイク状態敵への通常攻撃ダメージアップ)",
+      "stat": "basic_dmg_pct",
+      "target": "self",
+      "values": { "base": 0, "m2": 30 },
+      "note": "ブレイク状態の敵に『通常攻撃:落雷』が命中した時、スキルの与ダメージがアップ",
+      "sourceUrl": "https://game8.jp/zenless/607757"
+    },
+    {
+      "id": "anby_m2_daze_self",
+      "name": "心象映画2: 精密放電(非ブレイク敵への強化特殊スキルのブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": { "base": 0, "m2": 10 },
+      "note": "ブレイク状態でない敵に『強化特殊スキル』が命中した時、ブレイク値がアップ",
+      "sourceUrl": "https://game8.jp/zenless/607757"
+    },
+    {
+      "id": "anby_m4_team_electric_energy",
+      "name": "心象映画4: 電荷伝導(控え電気属性メンバーのエネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "team",
+      "condition": { "elements": ["electric"], "excludeSelf": true },
+      "values": { "base": 0, "m4": 3 },
+      "note": "『連携』または『終結スキル』発動時、控え(オフフィールド)の電気属性メンバーのエネルギーを回復。アンビーのエネルギー獲得効率+12%につき追加で+2Pt回復(最大6Ptまで加算、変動値のため基礎値の3Ptのみ記載)",
+      "sourceUrl": "https://game8.jp/zenless/607757"
+    },
+    {
+      "id": "anby_m6_dmg_self",
+      "name": "心象映画6: フィールドチャージ(パワー消費時の与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": { "base": 0, "m6": 45 },
+      "note": "『強化特殊スキル』発動時にパワーを8重獲得。『通常攻撃』または『ダッシュ攻撃』が敵に命中した時、パワーを1重消費して与ダメージがアップ",
+      "sourceUrl": "https://game8.jp/zenless/607757"
+    }
+  ]
+}

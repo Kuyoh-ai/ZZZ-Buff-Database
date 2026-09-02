@@ -1,0 +1,95 @@
+{
+  "characterId": "hugo",
+  "buffs": [
+    {
+      "id": "hugo_core_crit_rate",
+      "name": "コアパッシブ: 会心率アップ(終末の裁定)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 12
+      },
+      "note": "「ダーク・アビス・リバーブ」状態(通常攻撃/特殊スキル命中等で発動、6秒間持続)",
+      "sourceUrl": "https://game8.jp/zenless/666110"
+    },
+    {
+      "id": "hugo_core_crit_dmg",
+      "name": "コアパッシブ: 会心ダメージアップ(終末の裁定)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 25
+      },
+      "note": "「ダーク・アビス・リバーブ」状態(通常攻撃/特殊スキル命中等で発動、6秒間持続)",
+      "sourceUrl": "https://game8.jp/zenless/666110"
+    },
+    {
+      "id": "hugo_m1_crit_rate",
+      "name": "心象映画1: 会心率アップ(累算発動時)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 12
+      },
+      "note": "「累算(Totalize)」発動時に追加で獲得",
+      "sourceUrl": "https://game8.jp/zenless/666110"
+    },
+    {
+      "id": "hugo_m1_crit_dmg",
+      "name": "心象映画1: 会心ダメージアップ(累算発動時)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 30
+      },
+      "note": "「累算(Totalize)」発動時に追加で獲得",
+      "sourceUrl": "https://game8.jp/zenless/666110"
+    },
+    {
+      "id": "hugo_m2_def_down",
+      "name": "心象映画2: 防御力ダウン",
+      "stat": "enemy_def_down_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
+      "note": "敵の防御力を15%無視",
+      "sourceUrl": "https://game8.jp/zenless/666110"
+    },
+    {
+      "id": "hugo_m4_ice_res_down",
+      "name": "心象映画4: 氷耐性ダウン",
+      "stat": "enemy_res_down_pct",
+      "element": "ice",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m4": 12
+      },
+      "duration": "15s",
+      "note": "敵の氷属性ダメージ耐性を12%無視",
+      "sourceUrl": "https://game8.jp/zenless/666110"
+    },
+    {
+      "id": "hugo_wengine_def_down",
+      "name": "音動機「千面の落日」: 防御力ダウン",
+      "stat": "enemy_def_down_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0
+      },
+      "note": "「零度処刑宣言」効果発動中、敵の防御力を25%無視。効果量が凸段階で変化するかは未確認 精錬段階別の数値は未確認のため全段階にP1値を使用",
+      "sourceUrl": "https://game8.jp/zenless/687304",
+      "wengine": {
+        "p1": 25,
+        "p2": 25,
+        "p3": 25,
+        "p4": 25,
+        "p5": 25
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "characterId": "ye_shunguang",
+  "buffs": [
+    {
+      "id": "ye_shunguang_core_crit_rate",
+      "name": "コアパッシブ: 無明照破(会心率)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 30
+      },
+      "note": "フィールド入場時「合一」効果。コアスキルLv最大時の値。",
+      "sourceUrl": "https://game8.jp/zenless/682698"
+    },
+    {
+      "id": "ye_shunguang_core_dmg",
+      "name": "コアパッシブ: 無明照破(与ダメージ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 25
+      },
+      "note": "フィールド入場時「合一」効果。コアスキルLv最大時の値。",
+      "sourceUrl": "https://game8.jp/zenless/682698"
+    },
+    {
+      "id": "ye_shunguang_veil_weakness_multiplier",
+      "name": "澄心境: ベール弱体倍率上限",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 110,
+        "m4": 200
+      },
+      "note": "ブレイクしていない敵にも適用される弱体倍率の上限値。数値の解釈に確信度低め。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E8%91%89%E7%9E%AC%E5%85%89"
+    },
+    {
+      "id": "ye_shunguang_m1_dmg",
+      "name": "心象映画1: うたかたの夢(与ダメージ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 10
+      },
+      "sourceUrl": "https://game8.jp/zenless/682698"
+    },
+    {
+      "id": "ye_shunguang_m1_pen",
+      "name": "心象映画1: うたかたの夢(防御力無視)",
+      "stat": "pen_ratio",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 20
+      },
+      "sourceUrl": "https://game8.jp/zenless/682698"
+    },
+    {
+      "id": "ye_shunguang_m2_pen",
+      "name": "心象映画2: 光と影(防御力無視追加)",
+      "stat": "pen_ratio",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 40
+      },
+      "note": "強化特殊スキル/終結スキル使用時のみ。M1の防御力無視とは別枠の可能性。",
+      "sourceUrl": "https://game8.jp/zenless/682698"
+    },
+    {
+      "id": "ye_shunguang_wengine_res_down",
+      "name": "音動機 孤光彩雲: 物理耐性無視",
+      "stat": "enemy_res_down_pct",
+      "element": "physical",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 20,
+        "p2": 22,
+        "p3": 24,
+        "p4": 26,
+        "p5": 28
+      },
+      "note": "装備者の与ダメージに対する敵の物理耐性を無視 (自身の攻撃にのみ適用)",
+      "sourceUrl": "https://game8.jp/zenless/682698"
+    },
+    {
+      "id": "ye_shunguang_wengine_dmg",
+      "name": "音動機 孤光彩雲: 与ダメージ(エーテルベール展開時)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 25,
+        "p2": 28.7,
+        "p3": 32.5,
+        "p4": 36.2,
+        "p5": 40
+      },
+      "duration": "40s",
+      "sourceUrl": "https://game8.jp/zenless/682698"
+    },
+    {
+      "id": "ye_shunguang_wengine_critdmg",
+      "name": "音動機 孤光彩雲: 会心ダメージ(エーテルベール展開時)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 25,
+        "p2": 28.7,
+        "p3": 32.5,
+        "p4": 36.2,
+        "p5": 40
+      },
+      "duration": "40s",
+      "sourceUrl": "https://game8.jp/zenless/682698"
+    }
+  ]
+}

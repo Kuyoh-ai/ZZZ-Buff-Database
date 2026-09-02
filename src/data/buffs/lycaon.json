@@ -1,0 +1,128 @@
+{
+  "characterId": "lycaon",
+  "buffs": [
+    {
+      "id": "lycaon_core_daze_charged",
+      "name": "コアパッシブ: フルメタル・レッグ(ブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 80
+      },
+      "note": "コアスキル最大レベル時。『通常攻撃』チャージ完了、または『回避反撃』『ダッシュ攻撃』発動時、与えるブレイク値+80%",
+      "sourceUrl": "https://gamewith.jp/zenless/455326"
+    },
+    {
+      "id": "lycaon_core_ice_res_down",
+      "name": "コアパッシブ: フルメタル・レッグ(氷属性耐性ダウン)",
+      "stat": "enemy_res_down_pct",
+      "element": "ice",
+      "target": "enemy",
+      "values": {
+        "base": 25
+      },
+      "duration": "30s",
+      "note": "強化特殊スキル『人狼の刻』または支援突撃『復讐の反攻』が敵に命中した時に付与",
+      "sourceUrl": "https://gamewith.jp/zenless/455326"
+    },
+    {
+      "id": "lycaon_core_other_element_dmg_taken",
+      "name": "コアパッシブ: フルメタル・レッグ(氷属性以外の被ダメージ増加)",
+      "stat": "enemy_dmg_taken_pct",
+      "target": "enemy",
+      "values": {
+        "base": 30
+      },
+      "duration": "30s",
+      "note": "強化特殊スキル『人狼の刻』または支援突撃『復讐の反攻』が敵に命中した時、氷属性以外の与ダメージ+30%(氷属性耐性ダウンと同時付与)",
+      "sourceUrl": "https://gamewith.jp/zenless/455326"
+    },
+    {
+      "id": "lycaon_ex_stun_dmg_multiplier",
+      "name": "追加能力: 優雅なる狩人(ブレイク弱体倍率アップ)",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 35
+      },
+      "note": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動。ライカンがブレイク状態の敵を攻撃する時、ブレイク弱体倍率+35%(150%→185%)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%B3"
+    },
+    {
+      "id": "lycaon_m1_daze",
+      "name": "心象映画1: 満月に備えよ(ブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 22
+      },
+      "note": "強化特殊スキルが敵に命中するとブレイク値+12%、チャージ完了時はさらに+10%(合計22%)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%B3"
+    },
+    {
+      "id": "lycaon_m2_energy",
+      "name": "心象映画2: エネルギー還元",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 5
+      },
+      "note": "敵をブレイク状態にするか連携スキル発動時にエネルギー回復",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%B3"
+    },
+    {
+      "id": "lycaon_m6_self_dmg",
+      "name": "心象映画6: 冷酷な猟人(与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 10
+      },
+      "maxStacks": 5,
+      "duration": "12s",
+      "note": "チャージ攻撃が敵に命中した時、対象への与ダメージ+10%、最大5重(最大50%)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%B3"
+    },
+    {
+      "id": "lycaon_wengine_restrained_dmg",
+      "name": "音動機 拘縛されし者: 通常攻撃与ダメージアップ",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 5,
+      "note": "攻撃が敵に命中した時、『通常攻撃』の与ダメージアップ。P1:6%、P5:12%(P2~P4は未確認のため中間値を記載しない) P2〜P4はP1/P5からの等差補間",
+      "sourceUrl": "https://game8.jp/zenless/613926",
+      "wengine": {
+        "p1": 6.0,
+        "p2": 7.5,
+        "p3": 9.0,
+        "p4": 10.5,
+        "p5": 12.0
+      }
+    },
+    {
+      "id": "lycaon_wengine_restrained_daze",
+      "name": "音動機 拘縛されし者: 通常攻撃ブレイク値アップ",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "maxStacks": 5,
+      "note": "攻撃が敵に命中した時、『通常攻撃』の与えるブレイク値アップ。P1:6%、P5:12%(P2~P4は未確認のため中間値を記載しない) P2〜P4はP1/P5からの等差補間",
+      "sourceUrl": "https://game8.jp/zenless/613926",
+      "wengine": {
+        "p1": 6.0,
+        "p2": 7.5,
+        "p3": 9.0,
+        "p4": 10.5,
+        "p5": 12.0
+      }
+    }
+  ]
+}

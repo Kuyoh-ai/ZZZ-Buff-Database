@@ -1,0 +1,53 @@
+{
+  "characterId": "nicole",
+  "buffs": [
+    {
+      "id": "nicole_core_enemy_def_down",
+      "name": "コアパッシブ: からくり箱(敵防御力ダウン)",
+      "stat": "enemy_def_down_pct",
+      "target": "enemy",
+      "values": { "base": 40 },
+      "duration": "3.5s",
+      "note": "強化特殊スキル・連携スキル・終結スキルによる力場が敵に命中した時、対象の防御力がダウン。コアスキル最大レベル(Lv.7)の値40%を記載(Lv.1は20%)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+    },
+    {
+      "id": "nicole_additional_team_ether_dmg",
+      "name": "追加能力: 狡兎三窟(チームのエーテル属性ダメージアップ)",
+      "stat": "dmg_pct_element",
+      "element": "ether",
+      "target": "team",
+      "values": { "base": 25 },
+      "duration": "3.5s",
+      "note": "『からくり箱』で防御力ダウンを付与した時、チーム全体のエーテル属性ダメージがアップ。発動条件はニコと同属性(エーテル)または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+    },
+    {
+      "id": "nicole_m1_ex_dmg_self",
+      "name": "心象映画1: 加圧式強装弾(強化特殊スキルダメージアップ)",
+      "stat": "ex_dmg_pct",
+      "target": "self",
+      "values": { "base": 0, "m1": 16 },
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+    },
+    {
+      "id": "nicole_m1_anomaly_buildup_self",
+      "name": "心象映画1: 加圧式強装弾(強化特殊スキル異常蓄積値アップ)",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 0, "m1": 16 },
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+    },
+    {
+      "id": "nicole_m6_team_crit_rate",
+      "name": "心象映画6: 侵蝕力場(チーム会心率アップ)",
+      "stat": "crit_rate",
+      "target": "team",
+      "values": { "base": 0, "m6": 1.5 },
+      "maxStacks": 10,
+      "duration": "12s",
+      "note": "ニコの力場が敵にダメージを与えた時、該当ターゲットに対する全ユニットの会心率がアップ(1.5%刻み、最大10重で15%)",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%8B%E3%82%B3"
+    }
+  ]
+}

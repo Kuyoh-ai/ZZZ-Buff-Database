@@ -1,0 +1,117 @@
+{
+  "characterId": "zhao",
+  "buffs": [
+    {
+      "id": "zhao_core_team_atk",
+      "name": "コアパッシブ: 最高の同僚(チーム攻撃力)",
+      "stat": "atk_flat",
+      "target": "team",
+      "values": {
+        "base": 1000
+      },
+      "duration": "50s",
+      "note": "「エーテルベール・湧泉」展開時。再展開で継続時間更新。",
+      "sourceUrl": "https://www.icy-veins.com/zenless-zone-zero/zhao-profile-skills-mindscapes"
+    },
+    {
+      "id": "zhao_extra_team_dmg",
+      "name": "追加能力: 氷結んで手も結んで(与ダメージ)",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 10
+      },
+      "note": "チームに強攻/異常/支援のいずれかが存在し、照がエーテルベール効果を受けている時。HP依存の追加加算(最大+40%)は数値化困難のため未収録。",
+      "sourceUrl": "https://gamewith.jp/zenless/525762"
+    },
+    {
+      "id": "zhao_m1_res_down",
+      "name": "心象映画1: 凛然たる裁決(全属性耐性無視)",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 15
+      },
+      "duration": "50s",
+      "note": "全属性耐性無視。",
+      "sourceUrl": "https://gamewith.jp/zenless/525762"
+    },
+    {
+      "id": "zhao_m2_self_atk",
+      "name": "心象映画2: 黒枝の大先輩(自己攻撃力)",
+      "stat": "atk_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 20
+      },
+      "duration": "50s",
+      "sourceUrl": "https://gamewith.jp/zenless/525762"
+    },
+    {
+      "id": "zhao_m2_team_atk",
+      "name": "心象映画2: 黒枝の大先輩(チーム攻撃力)",
+      "stat": "atk_pct",
+      "target": "team",
+      "condition": {
+        "excludeSelf": true
+      },
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
+      "duration": "50s",
+      "sourceUrl": "https://gamewith.jp/zenless/525762"
+    },
+    {
+      "id": "zhao_m4_crit_dmg",
+      "name": "心象映画4: トコトコ(会心ダメージ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 40
+      },
+      "note": "発動条件の詳細未確認。確信度低め。",
+      "sourceUrl": "https://gamewith.jp/zenless/525762"
+    },
+    {
+      "id": "zhao_wengine_team_atk",
+      "name": "音動機 甘さ控えめ雪うさぎ: チーム攻撃力",
+      "stat": "atk_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p5": 16,
+        "p2": 11.5,
+        "p3": 13.0,
+        "p4": 14.5
+      },
+      "note": "チームに1回のみ適用。精錬2〜4の数値は未確認。 音動機P2〜P4は P1/P5 からの等差補間(未確認)",
+      "sourceUrl": "https://gamewith.jp/zenless/537079"
+    },
+    {
+      "id": "zhao_wengine_team_critdmg",
+      "name": "音動機 甘さ控えめ雪うさぎ: チーム会心ダメージ",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 30,
+        "p5": 48,
+        "p2": 34.5,
+        "p3": 39.0,
+        "p4": 43.5
+      },
+      "duration": "60s",
+      "note": "装備者が「エーテルベール」を発動/更新した時。精錬2〜4の数値は未確認。 音動機P2〜P4は P1/P5 からの等差補間(未確認)",
+      "sourceUrl": "https://gamewith.jp/zenless/537079"
+    }
+  ]
+}

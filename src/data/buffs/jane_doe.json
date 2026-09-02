@@ -1,0 +1,78 @@
+{
+  "characterId": "jane_doe",
+  "buffs": [
+    {
+      "id": "janedoe_core_crit_rate",
+      "name": "コアスキル: 猛襲会心率",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": { "base": 40 },
+      "note": "コアスキル最大レベル時。ギャナウド(撕咬)状態の敵へのAssault(猛襲)ダメージのみに適用",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    },
+    {
+      "id": "janedoe_core_crit_dmg",
+      "name": "コアスキル: 猛襲会心ダメージ",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": { "base": 50 },
+      "note": "コアスキル最大レベル時。ギャナウド(撕咬)状態の敵へのAssault(猛襲)ダメージのみに適用",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    },
+    {
+      "id": "janedoe_m1_anomaly_buildup",
+      "name": "心象映画1: 物理属性異常蓄積効率",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": { "base": 0, "m1": 15 },
+      "note": "Passion状態中",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    },
+    {
+      "id": "janedoe_m2_def_down",
+      "name": "心象映画2: 防御力ダウン",
+      "stat": "enemy_def_down_pct",
+      "target": "enemy",
+      "values": { "base": 0, "m2": 15 },
+      "note": "ギャナウド状態の敵への命中、または味方のAssaultトリガー時に付与(耐性無視方式)",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    },
+    {
+      "id": "janedoe_m2_crit_dmg_bonus",
+      "name": "心象映画2: 会心ダメージ上昇",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": { "base": 0, "m2": 50 },
+      "note": "Assaultダメージが会心の場合",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    },
+    {
+      "id": "janedoe_m4_team_anomaly_dmg",
+      "name": "心象映画4: 属性異常ダメージ上昇(チーム)",
+      "stat": "anomaly_dmg_pct",
+      "target": "team",
+      "values": { "base": 0, "m4": 18 },
+      "duration": "15s",
+      "note": "味方の誰かがAssaultまたはDisorderを発生させるとトリガー",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    },
+    {
+      "id": "janedoe_m6_crit_rate",
+      "name": "心象映画6: 会心率上昇",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": { "base": 0, "m6": 20 },
+      "note": "Passion状態中",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    },
+    {
+      "id": "janedoe_m6_crit_dmg",
+      "name": "心象映画6: 会心ダメージ上昇",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": { "base": 0, "m6": 40 },
+      "note": "Passion状態中",
+      "sourceUrl": "https://game8.co/games/Zenless-Zone-Zero/archives/461990"
+    }
+  ]
+}

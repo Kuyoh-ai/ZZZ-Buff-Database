@@ -1,0 +1,76 @@
+{
+  "characterId": "lucia",
+  "buffs": [
+    {
+      "id": "lucia_core_dream_lullaby_dmg",
+      "name": "夢巡りの童謡(全体与ダメージ上昇)",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 20
+      },
+      "maxStacks": 1,
+      "duration": "12s",
+      "note": "コアパッシブ「迷える夜の歌」でメンバー全員に付与される「夢巡りの童謡」状態の与ダメージアップ。数値はコアスキル最大Lv時(gamewithはLv1相当の10%表記)",
+      "sourceUrl": "https://gamewith.jp/zenless/514875"
+    },
+    {
+      "id": "lucia_m1_res_ignore",
+      "name": "M1: 全属性耐性無視",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "enemy",
+      "values": {
+        "base": 0,
+        "m1": 18
+      },
+      "maxStacks": 1,
+      "note": "M1「秘密の友達」。「夢巡りの童謡」状態中、敵の全属性ダメージ耐性を18%無視",
+      "sourceUrl": "https://gamewith.jp/zenless/514875"
+    },
+    {
+      "id": "lucia_m1_decibel_gain",
+      "name": "M1: デシベル値獲得効率上昇",
+      "stat": "decibel_gain",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 5
+      },
+      "maxStacks": 1,
+      "note": "M1「秘密の友達」で追加。リュシア自身のデシベル値獲得効率+5%。",
+      "sourceUrl": "https://gamewith.jp/zenless/514875"
+    },
+    {
+      "id": "lucia_additional_critdmg",
+      "name": "追加能力: 会心ダメージ上昇",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": {
+        "base": 30
+      },
+      "maxStacks": 1,
+      "note": "追加能力「長夜の詩篇」。「破暗」状態付与時に会心ダメージ+30%。発動条件としてチームに命破または撃破特性のメンバーが必要(編成条件のためconditionではなくnoteに記載)",
+      "sourceUrl": "https://game8.jp/zenless/712532"
+    },
+    {
+      "id": "lucia_wengine_dmg",
+      "name": "専用音動機: エーテルベール発動時ダメージ上昇",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 25,
+        "p2": 28.75,
+        "p3": 32.5,
+        "p4": 36.25,
+        "p5": 40
+      },
+      "maxStacks": 1,
+      "duration": "45s",
+      "note": "専用音動機「炉で歌い上げられる夢」固有効果。装備者が「エーテルベール」を発動/延長した時、メンバー全員の与ダメージ+25%(P1)〜40%(P5)。音動機由来の効果のためvalues.baseは0。P2〜P4はP1/P5からの等差補間(未確認)。エネルギー自動回復とHP上限上昇は対応statキーがないため未収録",
+      "sourceUrl": "https://gamewith.jp/zenless/522493"
+    }
+  ]
+}
