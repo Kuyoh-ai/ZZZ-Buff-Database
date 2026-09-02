@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <pattern id="s" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <rect width="8" height="8" fill="#0b0b0b"/>
+      <rect width="3" height="8" fill="#1c1c1c"/>
+    </pattern>
+  </defs>
+  <path d="M0 0H54L64 10V64H10L0 54Z" fill="url(#s)"/>
+  <path d="M0 0H54L64 10V64H10L0 54Z" fill="none" stroke="#d4ff2b" stroke-width="4"/>
+  <path d="M0 0H64V7H0Z" fill="#d4ff2b"/>
+  <text x="33" y="52" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, Impact, sans-serif" font-weight="900" font-style="italic" font-size="46" fill="#d4ff2b">Z</text>
+  <text x="33" y="52" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, Impact, sans-serif" font-weight="900" font-style="italic" font-size="46" fill="none" stroke="#0b0b0b" stroke-width="0.5">Z</text>
+</svg>

@@ -82,6 +82,10 @@ npm run check-anim     # CSSアニメーションが0.5s以内か検証(ロー�
 
 参照元の優先順位: HoYoWiki → Game8 → wikiwiki.jp/zenless → Prydwen。
 
+## favicon / OGP 画像
+
+`public/favicon.svg` が元データです。PNG 版(favicon-32 / apple-touch-icon / icon-192 / icon-512)と OGP 画像 `public/og.png` は `python scripts/gen-assets.py` で再生成できます(OGP のレイアウトは `scripts/assets/og-template.html`)。
+
 ## 技術構成
 
 Vite + React + TypeScript。状態管理はReact標準のみ。設定(一括/個別)は localStorage に保存されます。

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #0b0b0b;
+    background-image: repeating-linear-gradient(-45deg, transparent 0 14px, rgba(255,255,255,0.05) 14px 18px);
+    font-family: "Barlow Condensed", "Noto Sans JP", sans-serif; color: #f2f2f2; position: relative; }
+  .top { position: absolute; top: 0; left: 0; right: 0; height: 22px;
+    background: repeating-linear-gradient(-45deg, #d4ff2b 0 18px, #000 18px 36px); }
+  .bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 8px; background: #d4ff2b; }
+  .halftone { position: absolute; right: -60px; top: 20px; z-index: 0; width: 620px; height: 420px;
+    background-image: radial-gradient(circle, rgba(212,255,43,0.35) 0 2px, transparent 2.6px);
+    background-size: 16px 16px; transform: skewX(-20deg);
+    -webkit-mask-image: linear-gradient(to left, #000 20%, transparent); }
+  .wrap { position: absolute; left: 80px; top: 96px; z-index: 2; }
+  .tag { font-size: 30px; letter-spacing: 0.45em; color: #d4ff2b; font-style: italic; font-weight: 800; }
+  .title { font-size: 136px; line-height: 0.95; font-weight: 900; font-style: italic; color: #fff; margin-top: 8px; }
+  .title em { color: #d4ff2b; font-style: italic; }
+  .db { display: inline-block; background: #fff; color: #0b0b0b; padding: 0 22px; transform: skewX(-8deg); margin-top: 6px; }
+  .sub { margin-top: 26px; font-family: "Noto Sans JP", sans-serif; font-size: 27px; font-weight: 500; color: #b8b8b8; }
+  .sub b { color: #d4ff2b; font-weight: 700; }
+  .chips { position: absolute; left: 80px; bottom: 44px; z-index: 2; display: flex; gap: 14px; }
+  .chip { border: 2px solid #3a3a3a; padding: 8px 22px; font-size: 26px; font-style: italic; font-weight: 800; letter-spacing: 0.1em; transform: skewX(-12deg); color: #b8b8b8; }
+  .chip b { color: #d4ff2b; font-size: 32px; margin-right: 6px; }
+  .z { position: absolute; right: 40px; top: 30px; font-size: 420px; font-weight: 900; font-style: italic; color: #d4ff2b; line-height: 1; opacity: 0.16; z-index: 1; }
+</style>
+</head>
+<body>
+  <div class="top"></div>
+  <div class="halftone"></div>
+  <div class="wrap">
+    <div class="tag">ZENLESS ZONE ZERO</div>
+    <div class="title">BUFF<em>/</em>DEBUFF<br /><span class="db">DATABASE</span></div>
+    <div class="sub">全エージェントのバフ・デバフ効果量を<b>心象映画</b>と<b>音動機</b>込みで一覧・比較</div>
+  </div>
+  <div class="chips">
+    <div class="chip"><b>57</b>AGENTS</div>
+    <div class="chip"><b>388</b>EFFECTS</div>
+  </div>
+  <div class="z">Z</div>
+  <div class="bottom"></div>
+</body>
+</html>

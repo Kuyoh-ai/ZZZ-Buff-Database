@@ -125,3 +125,4 @@ T-9(self: 全検証)
 - 2026-09-02 (再開後) 最終検証: V-1 build OK / V-2 validate OK(57体, 388件) / V-3〜V-5 npm test 40 pass / V-6 E2E 14/14 pass(スクリーンショット scratchpad/e2e3) / V-7 check-anim OK / V-8 目視OK / V-9 README手順どおり dev 起動・JSON例は validate 通過。条件付きバフの最大値化(subagent + Rina手動修正)、自バフ除外チェック、陣営名修正を反映。
 - 2026-09-02 12:23 ユーザー指摘(ダイアリン会心DMG): 音動機バフの base=p1 二重計上 6件、wengine欠落で常時表示 19件、値ゼロで表示不能 10件 を修正。validate OK
 - 2026-09-02 12:25 セル表示を「パーティ向け合計」+「自 +X(別枠)」に分離(合算をやめた)。ソートもパーティ向け値基準。E2E 14/14, test 41
+- 2026-09-02 12:46 GitHub Pages 公開: https://kuyoh-ai.github.io/ZZZ-Buff-Database/ (Actions deploy.yml)。gh は Kuyoh-ai に切替済
