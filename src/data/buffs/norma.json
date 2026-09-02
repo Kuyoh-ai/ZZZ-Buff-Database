@@ -40,11 +40,11 @@
       "stat": "enemy_stun_dmg_multiplier",
       "target": "enemy",
       "values": {
-        "base": 30,
-        "m2": 60
+        "base": 3,
+        "m2": 6
       },
       "maxStacks": 10,
-      "note": "強攻/命破特性メンバーまたは同陣営メンバーがチームにいる場合、ノルムーの攻撃命中で「技術格差」1重(ブレイク弱体倍率+3%、M2で+6%)を付与、最大10重。valuesは最大重複時の合計値(base=3%x10, m2=6%x10)。",
+      "note": "チームに強攻/命破特性または同陣営メンバーがいる時に発動。ノルムーの攻撃命中で「技術格差」1重付与(0.5秒に1重、最大10重)。1重につきブレイク弱体倍率+3%(M2で+6%)。表示は最大10重時の合計(30% / M2 60%)。",
       "sourceUrl": "https://game.mintparm.jp/zenlesszonezero/character/norma/"
     },
     {

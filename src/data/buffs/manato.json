@@ -69,11 +69,11 @@
       "target": "self",
       "values": {
         "base": 0,
-        "m6": 15
+        "m6": 3
       },
       "maxStacks": 5,
       "duration": "8s",
-      "note": "支援突撃命中時+3%、最大5重(重複最大15%)。",
+      "note": "支援突撃命中時+3%、最大5重(合計15%)。1重あたりの値。",
       "sourceUrl": "https://gamewith.jp/zenless/514876"
     }
   ]
