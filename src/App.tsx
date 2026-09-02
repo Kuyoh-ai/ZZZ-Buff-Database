@@ -78,8 +78,9 @@ export default function App() {
 
   const visibleStats = useMemo(() => {
     if (showEmptyCols) return STATS;
-    return STATS.filter((s) => rows.some((r) => r.cells[s.key]));
-  }, [rows, showEmptyCols]);
+    // フィルタ後に表示されているキャラの中で、その列にバフを持つキャラがいる列だけ表示
+    return STATS.filter((s) => filtered.some((r) => r.cells[s.key]));
+  }, [filtered, showEmptyCols]);
 
   const sorted = useMemo(
     () =>
