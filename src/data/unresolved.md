@@ -76,6 +76,7 @@
 
 ## 系統的な注意点
 
-- **コアスキルのレベル依存値**: 原則コアスキル最大レベル時の値を base にしているが、一部ファイル(anby, billy, nekomata, nicole, trigger, astra, evelyn)は Lv.1 相当の値を採用し note に上限を記載している。統一する場合はこれらを最大値に更新する
+- **コアスキルのレベル依存値**: コアスキル最大レベル時の値を base にしている(2026-09-02 に統一済み)
+- **ポテンシャル解放**: 対象9体のうち数値を収録できたのは ellen / nekomata / jane_doe のみで、いずれも要約情報ベース(一次情報未確認)。他6体は `src/data/potential.md` の「未収録」参照
 - **音動機の中間段階(P2〜P4)**: 多くのキャラで P1/P5 からの等差補間(note に明記)。公式値と若干異なる可能性がある
-- HoYoWiki は JS 描画のためほとんど直接参照できず、game8 / gamewith / wikiwiki / mintparm を主参照にしている
+- HoYoWiki は JS 描画のためほとんど直接参照できず、wikiwiki / game8 / mintparm を主参照にしている。gamewith 由来の値(初期収集分に残存)は順次 HoYoWiki / wikiwiki で置き換える
