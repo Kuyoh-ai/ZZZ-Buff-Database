@@ -26,15 +26,22 @@
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/21"
     },
     {
-      "id": "nekomata_additional_crit_dmg_self",
-      "name": "追加能力: 夜行性(肉球ラッシュ中の会心ダメージアップ)",
+      "id": "nekomata_potential_crit_dmg_self",
+      "name": "ポテンシャル覚醒: 夜行性(肉球ラッシュ中の会心ダメージアップ)",
       "stat": "crit_dmg",
       "target": "self",
       "values": {
-        "base": 60
+        "base": 0
       },
-      "note": "『肉球ラッシュ』状態中、会心ダメージがアップ。コアスキル最大レベル(Lv.7)の値60%を記載(Lv.1は20%)",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/21"
+      "note": "ポテンシャル解放で追加。『肉球ラッシュ』状態中、会心ダメージ+20/30/40/50/60%(ポテンシャルLv2〜6)。Lv1は数値なし。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E7%8C%AB%E5%8F%88",
+      "potential": {
+        "t2": 20,
+        "t3": 30,
+        "t4": 40,
+        "t5": 50,
+        "t6": 60
+      }
     },
     {
       "id": "nekomata_m1_enemy_res_down",

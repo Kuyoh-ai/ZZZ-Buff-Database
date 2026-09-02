@@ -42,7 +42,8 @@
       "nameEn": "Steel Cushion"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "nicole",
@@ -374,7 +375,8 @@
       "nameEn": "Weeping Cradle"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "corin",
@@ -436,7 +438,8 @@
       "nameEn": "Sharpened Stinger"
     },
     "releaseVersion": "1.1",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "qingyi",

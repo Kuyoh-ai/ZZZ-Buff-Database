@@ -104,6 +104,62 @@
       },
       "note": "装備者が控えにいる間のエネルギー自動回復アップ",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/86"
+    },
+    {
+      "id": "rina_potential_pen_ratio_self",
+      "name": "ポテンシャル覚醒: 完璧なご奉仕(貫通率アップ)",
+      "stat": "pen_ratio",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t1": 1.6
+      },
+      "note": "ポテンシャル解放(Lv1〜)で貫通率+1.6%。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%AA%E3%83%8A"
+    },
+    {
+      "id": "rina_potential_team_atk_flat",
+      "name": "ポテンシャル覚醒: 完璧なご奉仕(チーム攻撃力アップ)",
+      "stat": "atk_flat",
+      "target": "team",
+      "condition": {
+        "excludeSelf": true
+      },
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 216,
+        "t3": 302.4,
+        "t4": 396,
+        "t5": 482.4,
+        "t6": 576
+      },
+      "note": "コアパッシブのバフ継続中、リナ自身の貫通率1%につきメンバーの攻撃力+3/4.2/5.5/6.7/8Pt(ポテンシャルLv2〜6)、上限+576Pt。貫通率72%(到達可能な最大値)時の値を記載。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%AA%E3%83%8A"
+    },
+    {
+      "id": "rina_potential_team_def_flat",
+      "name": "ポテンシャル覚醒: 完璧なご奉仕(チーム防御力アップ)",
+      "stat": "def_flat",
+      "target": "team",
+      "condition": {
+        "excludeSelf": true
+      },
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 180,
+        "t3": 252,
+        "t4": 324,
+        "t5": 396,
+        "t6": 468
+      },
+      "note": "コアパッシブのバフ継続中、リナ自身の貫通率1%につきメンバーの防御力+2.5/3.5/4.5/5.5/6.5Pt(ポテンシャルLv2〜6)、上限+468Pt。貫通率72%(到達可能な最大値)時の値を記載。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%83%AA%E3%83%8A"
     }
   ]
 }

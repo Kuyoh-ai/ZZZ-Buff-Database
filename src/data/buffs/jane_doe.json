@@ -6,7 +6,9 @@
       "name": "コアパッシブ: 洞察(強撃会心率)",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 40 },
+      "values": {
+        "base": 40
+      },
       "note": "コアスキル最大レベル時。「噛み傷」状態(自身の攻撃命中で付与、10秒)の敵への「強撃」ダメージが確率で会心するようになる基礎会心率。異常マスタリーによる上乗せ(1Ptにつき+0.16%、上限記載なし)は上限が無いため収録しない",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -15,7 +17,9 @@
       "name": "コアパッシブ: 洞察(強撃会心ダメージ)",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 50 },
+      "values": {
+        "base": 50
+      },
       "note": "「噛み傷」状態の敵への「強撃」ダメージが会心した場合の会心ダメージ",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -24,7 +28,9 @@
       "name": "追加能力: 痛点(物理属性異常蓄積効率アップ)",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 20 },
+      "values": {
+        "base": 20
+      },
       "note": "チームに他の[異常]特性メンバーまたは自身と同じ陣営(新エリー都治安局)のメンバーがいる時に発動",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -33,7 +39,9 @@
       "name": "追加能力: 痛点(状態異常の敵への蓄積値アップ)",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 15 },
+      "values": {
+        "base": 15
+      },
       "note": "チームに他の[異常]特性メンバーまたは自身と同じ陣営のメンバーがいる時に発動。状態異常の敵に対し、ジェーンの攻撃による物理属性の状態異常蓄積値+15%(janedoe_ex_anomaly_buildupとは別枠)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -42,7 +50,10 @@
       "name": "心象映画1: 犯罪のプロ(物理属性異常蓄積効率上昇)",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 0, "m1": 15 },
+      "values": {
+        "base": 0,
+        "m1": 15
+      },
       "note": "「熱狂」状態中",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -51,7 +62,10 @@
       "name": "心象映画1: 犯罪のプロ(異常マスタリーによる与ダメージ上昇)",
       "stat": "dmg_pct",
       "target": "self",
-      "values": { "base": 0, "m1": 30 },
+      "values": {
+        "base": 0,
+        "m1": 30
+      },
       "note": "「熱狂」状態中、異常マスタリー1Ptにつき与ダメージ+0.1%、上限+30%(上限値を収録)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -60,7 +74,10 @@
       "name": "心象映画2: 朱に交われば赤くなる(敵防御力無視)",
       "stat": "enemy_def_down_pct",
       "target": "enemy",
-      "values": { "base": 0, "m2": 15 },
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
       "note": "ジェーンの攻撃が「噛み傷」状態の敵に命中、または任意のメンバーが「噛み傷」状態の敵に「強撃」効果を発動した時、ターゲットの防御力を15%無視",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -69,7 +86,10 @@
       "name": "心象映画2: 朱に交われば赤くなる(強撃会心ダメージ上昇)",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 0, "m2": 50 },
+      "values": {
+        "base": 0,
+        "m2": 50
+      },
       "note": "「強撃」ダメージで会心が出た時、会心ダメージ追加+50%",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -78,7 +98,10 @@
       "name": "心象映画4: 秤の傾くほう(チーム属性異常ダメージ上昇)",
       "stat": "anomaly_dmg_pct",
       "target": "team",
-      "values": { "base": 0, "m4": 18 },
+      "values": {
+        "base": 0,
+        "m4": 18
+      },
       "duration": "15s",
       "note": "任意のメンバーが「強撃」または「混沌」効果を発動した時にトリガー",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
@@ -88,7 +111,10 @@
       "name": "心象映画6: 「汚い」やり方(会心率上昇)",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 0, "m6": 20 },
+      "values": {
+        "base": 0,
+        "m6": 20
+      },
       "note": "「熱狂」状態中",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -97,7 +123,10 @@
       "name": "心象映画6: 「汚い」やり方(会心ダメージ上昇)",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 0, "m6": 40 },
+      "values": {
+        "base": 0,
+        "m6": 40
+      },
       "note": "「熱狂」状態中",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
@@ -107,10 +136,18 @@
       "stat": "dmg_pct_element",
       "element": "physical",
       "target": "self",
-      "values": { "base": 0 },
+      "values": {
+        "base": 0
+      },
       "maxStacks": 3,
       "duration": "10s",
-      "wengine": { "p1": 12, "p2": 15, "p3": 18, "p4": 21, "p5": 24 },
+      "wengine": {
+        "p1": 12,
+        "p2": 15,
+        "p3": 18,
+        "p4": 21,
+        "p5": 24
+      },
       "note": "『ダッシュ攻撃』発動時「猟欲」を1重獲得。1重あたりの効果量(0.5秒に1回のみ発動)。接敵状態突入時/『極限回避』発動時は即座に3重獲得",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/377"
     },
@@ -119,10 +156,36 @@
       "name": "専用音動機「磨き抜かれた切っ先」: 状態異常蓄積効率上昇",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 0 },
-      "wengine": { "p1": 40, "p2": 50, "p3": 60, "p4": 70, "p5": 80 },
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 40,
+        "p2": 50,
+        "p3": 60,
+        "p4": 70,
+        "p5": 80
+      },
       "note": "「猟欲」が上限(3重)に達した時に発動",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/377"
+    },
+    {
+      "id": "janedoe_potential_assault_crit_dmg",
+      "name": "ポテンシャル覚醒: デッドリーダンス(強撃の会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 10,
+        "t3": 15,
+        "t4": 20,
+        "t5": 25,
+        "t6": 30
+      },
+      "note": "ポテンシャル解放で追加。ジェーン自身が発動させた「強撃」の会心ダメージ+10/15/20/25/30%(ポテンシャルLv2〜6)。他キャラが発動した強撃(乱流など)には乗らない。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%B3"
     }
   ]
 }

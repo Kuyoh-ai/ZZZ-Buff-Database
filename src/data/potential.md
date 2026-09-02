@@ -1,6 +1,6 @@
 # ポテンシャル解放システム(HoYoWiki 日本語データ準拠、2026-09-02)
 
-**注意**: 以下の初期調査は攻略サイト要約に基づくもので、HoYoWiki の本文で「ポテンシャル解放」の記載が確認できたのは grace, burnice, ellen, lycaon, harumasa, soldier_11, soldier_0_anby の7体のみ。猫又・ジェーン・リナは HoYoWiki に記載が無いため対象から外した(データは各キャラの JSON の `potential` フィールドに HoYoWiki 準拠で収録済み)。
+**注意**: 以下の初期調査は攻略サイト要約に基づくもので、HoYoWiki の本文で「ポテンシャル解放」の記載が確認できたのは grace, burnice, ellen, lycaon, harumasa, soldier_11, soldier_0_anby の7体のみ。猫又・ジェーン・リナ(Ver.3.1 追加)は HoYoWiki 日本語版に未反映のため、wikiwiki(https://wikiwiki.jp/zenless/)の「ポテンシャル」解放後コアスキル表を正として収録した(2026-09-02)。合計10体。数値は各キャラの JSON の `potential` フィールド参照。
 
 ---
 
