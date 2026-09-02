@@ -102,11 +102,21 @@ with sync_playwright() as p:
     check("potential select only on hasPotential rows",
           page.locator('[data-testid="row-pt-ellen"]').count() == 1 and page.locator('[data-testid="row-pt-zhu_yuan"]').count() == 0)
     page.locator('[data-testid="exclude-self"]').click(); page.wait_for_timeout(200)  # 自バフ含む
+    check("potential default is T6", page.locator('[data-testid="global-pt-6"]').get_attribute("aria-checked") == "true")
+    page.locator('[data-testid="global-pt-0"]').click(); page.wait_for_timeout(300)
     before_pt = page.locator('[data-testid="row-ellen"] [data-testid="cell-crit_dmg"]').inner_text()
     page.locator('[data-testid="global-pt-6"]').click(); page.wait_for_timeout(300)
     after_pt = page.locator('[data-testid="row-ellen"] [data-testid="cell-crit_dmg"]').inner_text()
     check("global potential T6 changes Ellen crit_dmg", before_pt != after_pt, f"{before_pt!r} -> {after_pt!r}")
-    page.locator('[data-testid="global-pt-0"]').click(); page.locator('[data-testid="exclude-self"]').click(); page.wait_for_timeout(200)
+    page.locator('[data-testid="exclude-self"]').click(); page.wait_for_timeout(200)
+
+    # A級のみ M6 / P5 ボタン: A級行の個別セレクトだけが変わる
+    page.locator('[data-testid="search"]').fill(""); page.wait_for_timeout(300)  # 氷属性フィルタのみ(蒼角=A級, エレン=S級)
+    page.locator('[data-testid="arank-ms6"]').click(); page.locator('[data-testid="arank-wp5"]').click(); page.wait_for_timeout(300)
+    check("A-rank only M6/P5 buttons",
+          page.locator('[data-testid="row-ms-soukaku"]').input_value() == "6" and page.locator('[data-testid="row-wp-soukaku"]').input_value() == "5"
+          and page.locator('[data-testid="row-ms-ellen"]').input_value() == "0" and page.locator('[data-testid="row-wp-ellen"]').input_value() == "0")
+    page.locator('text=個別設定をすべてリセット').click(); page.wait_for_timeout(200)
 
     # 詳細パネル
     page.locator('[data-testid="search"]').fill(""); page.locator('[data-testid="filter-el-ice"]').click()

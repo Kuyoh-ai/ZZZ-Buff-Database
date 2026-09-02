@@ -12,20 +12,28 @@ import { Filters, type FilterState } from "./components/Filters";
 import { BuffTable } from "./components/BuffTable";
 import { Splash } from "./components/Splash";
 
-const STORAGE_KEY = "zzz-buff-db:settings:v1";
+const STORAGE_KEY = "zzz-buff-db:settings:v2";
+const LEGACY_KEY = "zzz-buff-db:settings:v1";
+const DEFAULT_GLOBAL: CharSetting = { mindscape: 0, wenginePhase: 0, potential: 6 };
 
 function loadSettings(): Settings {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const s = JSON.parse(raw) as Settings;
-      s.global.potential ??= 0;
+      s.global.potential ??= 6;
       return s;
+    }
+    // v1 からの移行: ポテンシャル解放の既定を T6 にする
+    const legacy = localStorage.getItem(LEGACY_KEY);
+    if (legacy) {
+      const s = JSON.parse(legacy) as Settings;
+      return { ...s, global: { ...s.global, potential: 6 } };
     }
   } catch {
     /* ignore */
   }
-  return { global: { mindscape: 0, wenginePhase: 0, potential: 0 }, overrides: {} };
+  return { global: { ...DEFAULT_GLOBAL }, overrides: {} };
 }
 
 export default function App() {
@@ -97,6 +105,13 @@ export default function App() {
       return { ...p, overrides };
     });
   const clearOverrides = () => setSettings((p) => ({ ...p, overrides: {} }));
+  /** A級キャラ全員に個別設定を上書き適用 */
+  const setARank = (patch: Partial<CharSetting>) =>
+    setSettings((p) => {
+      const overrides = { ...p.overrides };
+      for (const c of CHARACTERS) if (c.rarity === "A") overrides[c.id] = { ...overrides[c.id], ...patch };
+      return { ...p, overrides };
+    });
 
   const elements = useMemo(() => [...new Set(CHARACTERS.flatMap((c) => [c.element, c.subElement].filter(Boolean)))] as Element[], []);
   const roles = useMemo(() => [...new Set(CHARACTERS.map((c) => c.role))] as Role[], []);
@@ -114,6 +129,7 @@ export default function App() {
               overrideCount={Object.keys(settings.overrides).length}
               onChange={setGlobal}
               onClearOverrides={clearOverrides}
+              onSetARank={setARank}
             />
           </section>
           <section className="panel panel--attacker" style={{ "--delay": "0.1s" } as React.CSSProperties}>

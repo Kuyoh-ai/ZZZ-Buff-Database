@@ -166,10 +166,13 @@
 }
 .settings__group {
   display: grid;
-  grid-template-columns: 96px 1fr;
+  grid-template-columns: 96px 1fr auto;
   align-items: center;
   gap: 8px;
   margin-bottom: 10px;
+}
+.settings__group .btn--sm {
+  white-space: nowrap;
 }
 .settings__label {
   font-family: var(--font-display);

@@ -9,11 +9,13 @@ export function SettingsPanel({
   overrideCount,
   onChange,
   onClearOverrides,
+  onSetARank,
 }: {
   global: CharSetting;
   overrideCount: number;
   onChange: (s: CharSetting) => void;
   onClearOverrides: () => void;
+  onSetARank: (patch: Partial<CharSetting>) => void;
 }) {
   return (
     <div className="settings">
@@ -37,6 +39,15 @@ export function SettingsPanel({
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          className="btn btn--ghost btn--sm"
+          onClick={() => onSetARank({ mindscape: 6 })}
+          title="A級キャラ全員の心象映画を個別設定で M6 にする"
+          data-testid="arank-ms6"
+        >
+          A級のみ M6
+        </button>
       </div>
       <div className="settings__group">
         <div className="settings__label">モチーフ音動機</div>
@@ -55,6 +66,15 @@ export function SettingsPanel({
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          className="btn btn--ghost btn--sm"
+          onClick={() => onSetARank({ wenginePhase: 5 })}
+          title="A級キャラ全員のモチーフ音動機を個別設定で P5 にする"
+          data-testid="arank-wp5"
+        >
+          A級のみ P5
+        </button>
       </div>
       <div className="settings__group">
         <div className="settings__label">ポテンシャル解放</div>
