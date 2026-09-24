@@ -3,3 +3,4 @@ dist/
 explainer/
 .playwright/
 *.log
+e2e-out/
