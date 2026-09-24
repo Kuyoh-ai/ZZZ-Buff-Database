@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { BUFFS_BY_CHARACTER, CHARACTERS, CHARACTER_BY_ID } from "./data/load";
 import { STATS } from "./data/stats";
+import { FACTIONS, FACTION_ORDER } from "./data/labels";
 import type { Character, CharSetting, Element, Role, Settings } from "./types";
 import { effectiveSetting } from "./lib/resolve";
 import { multiSort, toggleSortKey, type SortKey } from "./lib/sort";
@@ -90,7 +91,7 @@ export default function App() {
         if (key === "rarity") return row.character.rarity === "S" ? 1 : 0;
         if (key === "element") return row.character.element;
         if (key === "role") return row.character.role;
-        if (key === "faction") return row.character.faction;
+        if (key === "faction") return FACTION_ORDER[row.character.faction] ?? 999;
         if (key === "applicable") return row.applicableCount;
         if (key === "version") return parseFloat(row.character.releaseVersion);
         return cellSortValue(row, key, attacker);
@@ -117,7 +118,10 @@ export default function App() {
 
   const elements = useMemo(() => [...new Set(CHARACTERS.flatMap((c) => [c.element, c.subElement].filter(Boolean)))] as Element[], []);
   const roles = useMemo(() => [...new Set(CHARACTERS.map((c) => c.role))] as Role[], []);
-  const factions = useMemo(() => [...new Set(CHARACTERS.map((c) => c.faction))], []);
+  const factions = useMemo(() => {
+    const present = new Set(CHARACTERS.map((c) => c.faction));
+    return FACTIONS.filter((f) => present.has(f.id)).map((f) => f.id);
+  }, []);
 
   return (
     <>

@@ -80,7 +80,7 @@ npm run check-anim     # CSSアニメーションが0.5s以内か検証(ロー�
 
 1. `src/data/buffs/<characterId>.json` を編集(新キャラは `characters.json` にも追加)
 2. `npm run validate-data` でスキーマ検証
-3. 陣営を追加する場合は `src/data/labels.ts` の `FACTION_LABEL` にIDと日本語名を追加
+3. 陣営を追加する場合は `src/data/labels.ts` の `FACTIONS` に ID・日本語名・大区分(group)・色帯の色を追加(配列順が既定の並び順)。同陣営判定は大区分単位(防衛軍/治安局/ロスカリファ)
 
 参照元の優先順位: HoYoWiki → wikiwiki.jp/zenless → Game8。gamewith は精度が低いため参照元にしない。
 

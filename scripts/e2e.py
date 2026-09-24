@@ -27,6 +27,18 @@ with sync_playwright() as p:
     n0 = rows().count()
     check("rows rendered", n0 >= 40, f"{n0} rows")
 
+    # 既定順: 陣営(邪兎屋が先頭) → Ver. → 名前
+    ids5 = lambda: [rows().nth(i).get_attribute("data-testid") for i in range(5)]
+    EXPECT_HEAD = ["row-anby", "row-nicole", "row-billy", "row-nekomata", "row-starlight_billy"]  # 邪兎屋 Ver.1.0 を localeCompare(ja) 順(かな→漢字)、次に Ver.2.8
+    check("default order: faction > version > name", ids5() == EXPECT_HEAD, str(ids5()))
+    # 陣営色帯とレアリティチップ
+    band = lambda rid: page.locator(f'[data-testid="row-{rid}"] .td--name').evaluate("e => getComputedStyle(e).borderLeftColor")
+    check("faction color band (cunning_hares #ff498c)", band("anby") == "rgb(255, 73, 140)", band("anby"))
+    check("faction color band (victoria #404049)", band("ellen") == "rgb(64, 64, 73)", band("ellen"))
+    check("faction color band (neps public order #c9a97b)", band("cissia") == "rgb(201, 169, 123)", band("cissia"))
+    rtxt = lambda rid: page.locator(f'[data-testid="row-{rid}"] .rarity').inner_text()
+    check("rarity chips read S級 / A級", rtxt("ellen") == "S級" and rtxt("anby") == "A級", f"{rtxt('ellen')} / {rtxt('anby')}")
+
     # (a) 列ヘッダクリックでソート
     first_names = lambda: [rows().nth(i).get_attribute("data-testid") for i in range(min(5, rows().count()))]
     before = first_names()
@@ -37,6 +49,10 @@ with sync_playwright() as p:
     page.locator('[data-testid="th-atk_pct"]').click(modifiers=["Shift"])
     page.wait_for_timeout(300)
     check("multi-key sort shows 2 keys", page.locator(".sortkey").count() == 2)
+    page.locator('[data-testid="sort-clear"]').click(); page.wait_for_timeout(300)
+    check("clearing sort returns to default order", ids5() == EXPECT_HEAD, str(ids5()))
+    page.locator('[data-testid="th-crit_dmg"]').click(); page.wait_for_timeout(200)
+    page.locator('[data-testid="th-atk_pct"]').click(modifiers=["Shift"]); page.wait_for_timeout(200)
     page.screenshot(path=f"{out}/02-sorted.png")
 
     # (b) 一括心象映画 0 -> 6 でセル値が変わる
@@ -77,11 +93,25 @@ with sync_playwright() as p:
         check("reset returns to global", cell_text(rid, stat) == v0)
 
     # (d) アタッカー選択で applicable / muted が両方存在
-    page.locator('[data-testid="attacker-select"]').select_option("ellen"); page.wait_for_timeout(400)
+    page.locator('[data-testid="attacker-toggle"]').click(); page.wait_for_timeout(200)
+    page.locator('[data-testid="attacker-opt-ellen"]').click(); page.wait_for_timeout(400)
     na = page.locator(".cell--applicable").count(); nm = page.locator(".cell--muted").count()
     check("attacker highlight: applicable & muted cells", na > 0 and nm > 0, f"applicable={na} muted={nm}")
     check("attacker row marked as self", page.locator("tr.row--self").count() == 1)
+    check("attacker card shows rarity chip", page.locator(".attacker__card .rarity").inner_text() == "S級")
     page.screenshot(path=f"{out}/04-attacker.png")
+    # ドロップダウンのキーボード操作: 解除 → ↓↓ Enter で先頭キャラ(anby)を選択、Esc で閉じる
+    page.locator('[data-testid="attacker-clear"]').click(); page.wait_for_timeout(200)
+    tg = page.locator('[data-testid="attacker-toggle"]'); tg.focus()
+    tg.press("ArrowDown"); page.wait_for_timeout(100)
+    check("ArrowDown opens list", page.locator('[data-testid="attacker-list"]').count() == 1)
+    tg.press("ArrowDown"); tg.press("Enter"); page.wait_for_timeout(300)
+    check("keyboard selects first character (anby)", page.locator('[data-testid="row-anby"].row--self').count() == 1)
+    tg.click(); page.wait_for_timeout(100)
+    check("list options carry faction band", page.locator('[data-testid="attacker-opt-anby"]').evaluate("e => getComputedStyle(e).borderLeftColor") == "rgb(255, 73, 140)")
+    tg.press("Escape"); page.wait_for_timeout(100)
+    check("Escape closes list", page.locator('[data-testid="attacker-list"]').count() == 0)
+    tg.click(); page.locator('[data-testid="attacker-opt-ellen"]').click(); page.wait_for_timeout(300)
 
     # (e) 属性フィルタで行数が減る
     page.locator('[data-testid="filter-el-ice"]').click(); page.wait_for_timeout(300)

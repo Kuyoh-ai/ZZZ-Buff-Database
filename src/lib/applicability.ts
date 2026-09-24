@@ -1,3 +1,4 @@
+import { factionGroupOf } from "../data/labels";
 import type { Buff, Character, Role } from "../types";
 
 /**
@@ -58,7 +59,11 @@ export function appliesTo(buff: Buff, provider: Character, attacker: Character |
     const els = [attacker.element, attacker.subElement].filter(Boolean);
     if (!c.elements.some((e) => els.includes(e))) return false;
   }
-  if (c.factions && c.factions.length > 0 && !c.factions.includes(attacker.faction)) return false;
+  // 同陣営は大区分(防衛軍/治安局/ロスカリファ)単位で判定する
+  if (c.factions && c.factions.length > 0) {
+    const g = factionGroupOf(attacker.faction);
+    if (!c.factions.some((f) => factionGroupOf(f) === g)) return false;
+  }
   if (c.roles && c.roles.length > 0 && !c.roles.includes(attacker.role)) return false;
   return true;
 }

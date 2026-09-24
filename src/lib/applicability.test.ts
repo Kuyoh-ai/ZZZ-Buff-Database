@@ -104,3 +104,21 @@ describe("appliesTo", () => {
     expect(appliesTo(c, provider, miyabi)).toBe(false);
   });
 });
+
+describe("faction condition uses faction group", () => {
+  const neps1 = mk("zhu", { faction: "neps_special_investigation" });
+  const neps2 = mk("cissia", { faction: "neps_public_order" });
+  const hares = mk("nicole", { faction: "cunning_hares" });
+  it("group id in condition applies to every sub-faction", () => {
+    expect(appliesTo(b({ condition: { factions: ["new_eridu_public_security"] } }), provider, neps1)).toBe(true);
+    expect(appliesTo(b({ condition: { factions: ["new_eridu_public_security"] } }), provider, neps2)).toBe(true);
+    expect(appliesTo(b({ condition: { factions: ["new_eridu_public_security"] } }), provider, hares)).toBe(false);
+  });
+  it("sub-faction id in condition applies to sibling sub-faction of the same group", () => {
+    expect(appliesTo(b({ condition: { factions: ["neps_special_investigation"] } }), provider, neps2)).toBe(true);
+  });
+  it("ungrouped factions match only themselves", () => {
+    expect(appliesTo(b({ condition: { factions: ["cunning_hares"] } }), provider, hares)).toBe(true);
+    expect(appliesTo(b({ condition: { factions: ["cunning_hares"] } }), provider, neps1)).toBe(false);
+  });
+});

@@ -601,7 +601,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "anomaly",
-    "faction": "new_eridu_public_security",
+    "faction": "neps_special_investigation",
     "wengine": {
       "nameJa": "磨き抜かれた切っ先",
       "nameEn": "Sharpened Stinger"
@@ -623,7 +623,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "stun",
-    "faction": "new_eridu_public_security",
+    "faction": "neps_special_investigation",
     "wengine": {
       "nameJa": "玉壺青氷",
       "nameEn": "Ice-Jade Teapot"
@@ -644,7 +644,7 @@
     "rarity": "A",
     "element": "electric",
     "role": "defense",
-    "faction": "new_eridu_public_security",
+    "faction": "neps_special_investigation",
     "wengine": {
       "nameJa": "-",
       "nameEn": "-"
@@ -665,7 +665,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "attack",
-    "faction": "new_eridu_public_security",
+    "faction": "neps_special_investigation",
     "wengine": {
       "nameJa": "サプレッサーVI型",
       "nameEn": "Riot Suppressor Mark VI"
@@ -686,7 +686,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "attack",
-    "faction": "new_eridu_public_security",
+    "faction": "neps_public_order",
     "wengine": {
       "nameJa": "影を追う白き牙",
       "nameEn": "Cordis Germina"
@@ -792,7 +792,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "attack",
-    "faction": "obol_squad",
+    "faction": "defense_force_obol",
     "wengine": {
       "nameJa": "憤怒の銃騒",
       "nameEn": "Bellicose Blaze"
@@ -813,7 +813,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "attack",
-    "faction": "obol_squad",
+    "faction": "defense_force_obol",
     "wengine": {
       "nameJa": "駆動する種",
       "nameEn": "Serpentine Seeker"
@@ -834,7 +834,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "attack",
-    "faction": "obol_squad",
+    "faction": "defense_force_obol",
     "wengine": {
       "nameJa": "ブリムストーン",
       "nameEn": "The Brimstone"
@@ -856,7 +856,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "stun",
-    "faction": "obol_squad",
+    "faction": "defense_force_obol",
     "wengine": {
       "nameJa": "奪魂の瞑目",
       "nameEn": "Spectral Gaze"
@@ -877,7 +877,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "attack",
-    "faction": "obol_squad",
+    "faction": "defense_force_silver",
     "wengine": {
       "nameJa": "純然たる犠牲",
       "nameEn": "Severed Innocence"
@@ -1109,7 +1109,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "attack",
-    "faction": "ros_khalifa",
+    "faction": "ros_khalifa_airspace",
     "wengine": {
       "nameJa": "栄光の騎士道",
       "nameEn": "Knight's Extolment"
@@ -1130,7 +1130,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "stun",
-    "faction": "ros_khalifa",
+    "faction": "ros_khalifa_foreign_affairs",
     "wengine": {
       "nameJa": "エースのオトモ",
       "nameEn": "Chief Sidekick"
@@ -1172,7 +1172,7 @@
     "rarity": "S",
     "element": "wind",
     "role": "anomaly",
-    "faction": "ros_khalifa",
+    "faction": "ros_khalifa_foreign_affairs",
     "wengine": {
       "nameJa": "金襴の心",
       "nameEn": "Joyau Dore"
@@ -1214,7 +1214,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "armorer",
-    "faction": "ros_khalifa",
+    "faction": "ros_khalifa_flint_workshop",
     "wengine": {
       "nameJa": "深紅の渇望",
       "nameEn": "Crimson Thirst"

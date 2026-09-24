@@ -1,3 +1,6 @@
+import { FACTION_ORDER } from "../data/labels";
+import type { Character } from "../types";
+
 export interface SortKey {
   key: string;
   dir: "asc" | "desc";
@@ -36,4 +39,19 @@ export function toggleSortKey(keys: SortKey[], key: string, multi: boolean): Sor
   if (!multi) return [next];
   if (existing) return keys.map((k) => (k.key === key ? next : k));
   return [...keys, next];
+}
+
+/** 既定の並び順: 陣営(FACTIONS の順) → 実装 Ver. 昇順 → 名前(50音) */
+export function defaultOrder(a: Character, b: Character): number {
+  const fa = FACTION_ORDER[a.faction] ?? 999;
+  const fb = FACTION_ORDER[b.faction] ?? 999;
+  if (fa !== fb) return fa - fb;
+  const va = parseFloat(a.releaseVersion);
+  const vb = parseFloat(b.releaseVersion);
+  if (va !== vb) return va - vb;
+  return a.nameJa.localeCompare(b.nameJa, "ja");
+}
+
+export function sortDefault<T extends Character>(chars: T[]): T[] {
+  return chars.slice().sort(defaultOrder);
 }

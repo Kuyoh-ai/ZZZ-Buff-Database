@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { ELEMENT_LABEL, FACTION_LABEL, ROLE_LABEL } from "../data/labels";
+import { ELEMENT_LABEL, FACTION_COLOR, FACTION_LABEL, ROLE_LABEL, factionLabelOf } from "../data/labels";
 import type { StatDef } from "../data/stats";
 import type { SortKey } from "../lib/sort";
 import { cellDisplay, type CellData, type Row } from "../lib/table";
@@ -91,12 +91,12 @@ export function BuffTable({
                   style={{ "--delay": `${Math.min(ri, 20) * 0.02}s` } as React.CSSProperties}
                   data-testid={`row-${c.id}`}
                 >
-                  <td className="td td--name">
+                  <td className="td td--name" style={{ "--fac": FACTION_COLOR[c.faction] } as React.CSSProperties}>
                     <button type="button" className="namebtn" onClick={() => setOpen(open === c.id ? null : c.id)}>
                       <span className={`elicon el--${c.element}`}>
                         <ElementIcon element={c.element} size={14} />
                       </span>
-                      <span className={`rarity rarity--${c.rarity}`}>{c.rarity}</span>
+                      <RarityChip rarity={c.rarity} />
                       <span className="namebtn__ja">{c.nameJa}</span>
                       <span className="namebtn__sub">
                         {ROLE_LABEL[c.role]} · {FACTION_LABEL[c.faction] ?? c.faction}
@@ -172,6 +172,15 @@ export function BuffTable({
         </tbody>
       </table>
     </div>
+  );
+}
+
+/** レアリティの平行四辺形チップ([S級] 黄金 / [A級] 濃ピンク) */
+export function RarityChip({ rarity }: { rarity: "S" | "A" }) {
+  return (
+    <span className={`rarity rarity--${rarity}`}>
+      <span className="rarity__t">{rarity}級</span>
+    </span>
   );
 }
 
@@ -405,7 +414,7 @@ function DetailPanel({
                   ))}
                   {b.condition?.factions?.map((f) => (
                     <span key={f} className="tag tag--xs">
-                      {FACTION_LABEL[f] ?? f}のみ
+                      {factionLabelOf(f)}のみ
                     </span>
                   ))}
                   {b.condition?.excludeSelf && <span className="tag tag--xs">自身除く</span>}

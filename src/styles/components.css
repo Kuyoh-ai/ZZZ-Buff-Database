@@ -262,8 +262,83 @@
   display: flex;
   gap: 8px;
 }
-.attacker__row .select {
+.dd {
+  position: relative;
   flex: 1;
+  min-width: 0;
+}
+.dd__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-3);
+  border: 1px solid var(--line-2);
+  color: var(--fg);
+  padding: 6px 8px;
+  border-radius: var(--radius);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.dd__btn:focus-visible,
+.dd--open .dd__btn {
+  outline: none;
+  border-color: var(--lime);
+}
+.dd__btn::after {
+  content: "";
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--fg-2);
+}
+.dd__placeholder {
+  color: var(--fg-3);
+}
+.dd__list {
+  /* body 直下に portal で描画(panel の clip-path に切られないため)。位置は JS で設定 */
+  position: fixed;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dd__opt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px 5px 6px;
+  border-left: 4px solid var(--fac, transparent);
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  cursor: pointer;
+}
+.dd__opt--active {
+  background: var(--bg-3);
+}
+.dd__opt--sel .dd__name {
+  color: var(--lime);
+}
+.dd__name {
+  font-weight: 700;
+  color: var(--white);
+}
+.dd__sub {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--fg-3);
+}
+.dd__fac {
+  font-size: 10px;
+  color: var(--fg-3);
 }
 .attacker__hint {
   color: var(--fg-3);
@@ -351,16 +426,24 @@
   padding: 0 5px;
 }
 .rarity {
+  display: inline-block;
   font-family: var(--font-display);
   font-weight: 900;
   font-style: italic;
-  font-size: 11px;
-  padding: 0 5px;
+  font-size: 10px;
+  line-height: 16px;
+  padding: 0 7px;
   color: var(--bg);
-  background: var(--fg-2);
+  background: var(--pink);
+  transform: skewX(-14deg);
+  white-space: nowrap;
+}
+.rarity__t {
+  display: inline-block;
+  transform: skewX(14deg);
 }
 .rarity--S {
-  background: var(--orange);
+  background: var(--gold);
 }
 
 /* ---------- filters ---------- */
@@ -538,7 +621,8 @@
   position: sticky;
   left: 0;
   z-index: 2;
-  padding: 4px 8px;
+  padding: 4px 8px 4px 6px;
+  border-left: 4px solid var(--fac, var(--line-2));
 }
 .td--setting {
   position: sticky;
@@ -561,7 +645,10 @@
   padding: 30px;
 }
 .row--self .td--name {
-  box-shadow: inset 3px 0 0 var(--orange);
+  background: var(--orange-dim);
+}
+.row--self .namebtn__ja {
+  color: var(--orange);
 }
 .namebtn {
   display: grid;

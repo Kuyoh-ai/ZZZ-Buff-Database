@@ -134,7 +134,7 @@ export function Filters({
                     <i>{k.dir === "desc" ? "▼" : "▲"}</i>
                   </span>
                 ))}
-                <button type="button" className="btn btn--ghost btn--sm" onClick={onClearSort}>
+                <button type="button" className="btn btn--ghost btn--sm" onClick={onClearSort} data-testid="sort-clear">
                   解除
                 </button>
               </>

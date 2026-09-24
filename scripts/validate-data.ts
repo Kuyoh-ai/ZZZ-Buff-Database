@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CharacterSchema, CharacterBuffsSchema } from "../src/data/schema";
-import { FACTION_LABEL } from "../src/data/labels";
+import { FACTION_LABEL, isFactionId } from "../src/data/labels";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const charsPath = path.join(root, "src/data/characters.json");
@@ -47,7 +47,7 @@ for (const f of files) {
     if (buffIds.has(b.id)) err(`${f}: duplicate buff id ${b.id}`);
     buffIds.add(b.id);
     for (const fac of b.condition?.factions ?? []) {
-      if (!(fac in FACTION_LABEL)) err(`${f}/${b.id}: unknown faction ${fac}`);
+      if (!isFactionId(fac)) err(`${f}/${b.id}: unknown faction ${fac}`);
     }
     buffCount++;
   }
