@@ -70,6 +70,20 @@ describe("appliesTo", () => {
     expect(appliesTo(b({ stat: "hp_pct" }), provider, rupture)).toBe(true);
     expect(appliesTo(b({ stat: "crit_dmg" }), provider, rupture)).toBe(true);
   });
+  it("armorer attacker: atk/hp/crit dmg/sheer not applicable, def/crit rate/sharp crit dmg/dmg applicable", () => {
+    const armorer = mk("claretta", { role: "armorer", element: "electric" });
+    for (const stat of ["atk_pct", "atk_flat", "hp_pct", "hp_flat", "crit_dmg", "sheer_force_pct", "sheer_force_flat", "sheer_dmg_pct"]) {
+      expect(appliesTo(b({ stat }), provider, armorer)).toBe(false);
+    }
+    for (const stat of ["def_pct", "def_flat", "crit_rate", "sharp_crit_dmg", "dmg_pct", "basic_dmg_pct"]) {
+      expect(appliesTo(b({ stat }), provider, armorer)).toBe(true);
+    }
+    expect(appliesTo(b({ stat: "dmg_pct_element", element: "electric" }), provider, armorer)).toBe(true);
+  });
+  it("non-armorer attacker: sharp crit dmg not applicable", () => {
+    expect(appliesTo(b({ stat: "sharp_crit_dmg" }), provider, zhu)).toBe(false);
+    expect(appliesTo(b({ stat: "sharp_crit_dmg" }), provider, mk("y", { role: "rupture" }))).toBe(false);
+  });
   it("non-rupture attacker: sheer force not applicable", () => {
     expect(appliesTo(b({ stat: "sheer_force_flat" }), provider, zhu)).toBe(false);
     expect(appliesTo(b({ stat: "atk_pct" }), provider, zhu)).toBe(true);

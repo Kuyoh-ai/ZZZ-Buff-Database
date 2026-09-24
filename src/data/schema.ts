@@ -2,7 +2,7 @@ import { z } from "zod";
 import { STAT_KEYS, STAT_BY_KEY } from "./stats";
 
 export const ElementSchema = z.enum(["physical", "fire", "ice", "electric", "ether", "auric_ink", "wind", "lumiflux"]);
-export const RoleSchema = z.enum(["attack", "stun", "anomaly", "support", "defense", "rupture"]);
+export const RoleSchema = z.enum(["attack", "stun", "anomaly", "support", "defense", "rupture", "armorer"]);
 
 export const CharacterSchema = z.object({
   id: z.string().regex(/^[a-z0-9_]+$/),

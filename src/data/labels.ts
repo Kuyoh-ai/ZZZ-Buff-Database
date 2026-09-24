@@ -18,6 +18,7 @@ export const ROLE_LABEL: Record<Role, string> = {
   support: "支援",
   defense: "防護",
   rupture: "命破",
+  armorer: "鋭御",
 };
 
 /** 陣営IDと日本語名。characters.json の faction はここに登録されたIDを使う */

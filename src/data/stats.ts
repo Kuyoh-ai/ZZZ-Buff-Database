@@ -20,6 +20,7 @@ export const STATS: StatDef[] = [
   { key: "sheer_force_pct", label: "透徹力%", short: "透徹力%", unit: "%", group: "基礎" },
   { key: "sheer_force_flat", label: "透徹力(固定)", short: "透徹力+", unit: "", group: "基礎" },
   { key: "sheer_dmg_pct", label: "透徹ダメージ", short: "透徹DMG", unit: "%", group: "ダメージ" },
+  { key: "sharp_crit_dmg", label: "暴傷ダメージ", short: "暴傷DMG", unit: "%", group: "基礎" },
   { key: "dmg_pct", label: "与ダメージ", short: "与DMG", unit: "%", group: "ダメージ" },
   { key: "dmg_pct_element", label: "属性ダメージ", short: "属性DMG", unit: "%", elemental: true, group: "ダメージ" },
   { key: "impact_pct", label: "衝撃力%", short: "衝撃力%", unit: "%", group: "ブレイク" },

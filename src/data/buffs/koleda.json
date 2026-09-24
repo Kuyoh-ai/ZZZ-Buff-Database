@@ -21,7 +21,7 @@
         "base": 35
       },
       "maxStacks": 2,
-      "note": "強化特殊スキルの爆発が命中しターゲットがブレイク状態になると、当該ターゲットへの連携スキルダメージが35%アップ(最大2重、ブレイク解除でリセット)。発動条件はクレタと同属性/同陣営/[命破]役割のいずれかのメンバーがチームにいること(OR条件のためcondition省略)",
+      "note": "強化特殊スキルの爆発が命中しターゲットがブレイク状態になると、当該ターゲットへの連携スキルダメージが35%アップ(最大2重、ブレイク解除でリセット)。発動条件はクレタと同属性/同陣営/[命破]役割のいずれかのメンバーがチームにいること(OR条件のためcondition省略) ポテンシャル解放(T1〜)で発動条件に[鋭御]のメンバーが追加される(値は変化なし)。",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/26"
     },
     {
@@ -97,6 +97,106 @@
       },
       "note": "控えにいる時、1秒ごとのエネルギー自動回復がアップ",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/82"
+    },
+    {
+      "id": "koleda_potential_team_dmg",
+      "name": "ポテンシャル覚醒: 溶炉昇温(チーム与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t1": 35
+      },
+      "duration": "40s",
+      "note": "ポテンシャル解放(Lv1〜)で『通常攻撃:打ち砕いて、ぶちのめす』が強化。「溶炉昇温」を消費(強化『通常攻撃』発動時)すると、メンバー全員の与ダメージ+35%、継続時間40秒、重複発動で継続時間更新。ポテンシャルLv2〜6で値は変化しない。 HoYoWiki未反映のため wikiwiki を根拠とする(Lv2〜6で不変は wikiwiki 記載)。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AF%E3%83%AC%E3%82%BF"
+    },
+    {
+      "id": "koleda_potential_team_crit_dmg",
+      "name": "ポテンシャル覚醒: 発破作業(チーム会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 11,
+        "t3": 17,
+        "t4": 23,
+        "t5": 29,
+        "t6": 35
+      },
+      "note": "チーム内の[鋭御]以外のメンバーの会心ダメージ+11/17/23/29/35%(ポテンシャルLv2〜6、永続)。Lv1は数値なし。条件に役割の除外指定が無いため[鋭御]の行にも表示される点に注意。[鋭御]メンバーには代わりに暴傷ダメージ(koleda_potential_armorer_sharp_crit_dmg)。HoYoWiki未反映のため wikiwiki を根拠とする。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AF%E3%83%AC%E3%82%BF"
+    },
+    {
+      "id": "koleda_potential_armorer_sharp_crit_dmg",
+      "name": "ポテンシャル覚醒: 発破作業(鋭御メンバー暴傷ダメージアップ)",
+      "stat": "sharp_crit_dmg",
+      "target": "team",
+      "condition": {
+        "roles": [
+          "armorer"
+        ]
+      },
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t2": 4,
+        "t3": 6,
+        "t4": 8,
+        "t5": 10,
+        "t6": 12
+      },
+      "note": "チーム内の[鋭御]メンバーの暴傷ダメージ+4/6/8/10/12%(ポテンシャルLv2〜6、永続)。Lv1は数値なし。HoYoWiki未反映のため wikiwiki を根拠とする。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AF%E3%83%AC%E3%82%BF"
+    },
+    {
+      "id": "koleda_potential_basic2_dmg_self",
+      "name": "ポテンシャル覚醒: 溶炉昇温(強化通常攻撃2段目の与ダメージアップ)",
+      "stat": "basic_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t1": 10
+      },
+      "maxStacks": 2,
+      "note": "ポテンシャル解放(Lv1〜)で、消費した「溶炉昇温」1重につき強化『通常攻撃』2段目の与ダメージ+10%(「溶炉昇温」は最大2重、強化『通常攻撃』発動時に全て消費)。強化『通常攻撃』2段目のみ対象。 HoYoWiki未反映のため wikiwiki を根拠とする(Lv2〜6で不変は wikiwiki 記載)。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AF%E3%83%AC%E3%82%BF"
+    },
+    {
+      "id": "koleda_potential_basic2_daze_self",
+      "name": "ポテンシャル覚醒: 溶炉昇温(強化通常攻撃2段目のブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t1": 20
+      },
+      "maxStacks": 2,
+      "note": "ポテンシャル解放(Lv1〜)で、消費した「溶炉昇温」1重につき強化『通常攻撃』2段目の与えるブレイク値+20%(最大2重)。強化『通常攻撃』2段目のみ対象。 HoYoWiki未反映のため wikiwiki を根拠とする(Lv2〜6で不変は wikiwiki 記載)。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AF%E3%83%AC%E3%82%BF"
+    },
+    {
+      "id": "koleda_potential_ex_quick_daze_self",
+      "name": "ポテンシャル覚醒: 沸騰溶炉(高速発動時のブレイク値アップ)",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "potential": {
+        "t1": 10
+      },
+      "note": "ポテンシャル解放(Lv1〜)で、『通常攻撃』2段目・4段目または強化『通常攻撃』の後に繋げて素早く起こした『強化特殊スキル』の爆発が与えるブレイク値+10%。 HoYoWiki未反映のため wikiwiki を根拠とする(Lv2〜6で不変は wikiwiki 記載)。",
+      "sourceUrl": "https://wikiwiki.jp/zenless/%E3%82%AF%E3%83%AC%E3%82%BF"
     }
   ]
 }

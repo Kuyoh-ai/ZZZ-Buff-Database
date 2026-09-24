@@ -1,7 +1,7 @@
 /** 属性 */
 export type Element = "physical" | "fire" | "ice" | "electric" | "ether" | "auric_ink" | "wind" | "lumiflux";
 /** 役割(特性) */
-export type Role = "attack" | "stun" | "anomaly" | "support" | "defense" | "rupture";
+export type Role = "attack" | "stun" | "anomaly" | "support" | "defense" | "rupture" | "armorer";
 export type Rarity = "S" | "A";
 
 export interface Character {

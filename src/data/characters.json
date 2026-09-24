@@ -119,7 +119,8 @@
       "nameEn": "Hellfire Gears"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "hasPotential": true
   },
   {
     "id": "burnice",
@@ -863,5 +864,20 @@
     },
     "releaseVersion": "3.1",
     "sourceUrl": "https://gamewith.jp/zenless/550725"
+  },
+  {
+    "id": "claretta",
+    "nameJa": "クラレッタ",
+    "nameEn": "Claret Flint",
+    "rarity": "S",
+    "element": "electric",
+    "role": "armorer",
+    "faction": "ros_khalifa",
+    "wengine": {
+      "nameJa": "深紅の渇望",
+      "nameEn": "Crimson Thirst"
+    },
+    "releaseVersion": "3.2",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
   }
 ]

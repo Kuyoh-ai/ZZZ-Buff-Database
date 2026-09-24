@@ -1,0 +1,141 @@
+{
+  "characterId": "claretta",
+  "buffs": [
+    {
+      "id": "claretta_core_crit_rate",
+      "name": "コアパッシブ: 蒼白の血宴(会心率アップ)",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 30
+      },
+      "note": "「ブラッドエンブレム」状態中、または『連携スキル』/『終結スキル』/『カウンター支援』/『支援突撃』発動中に会心率アップ。コアスキルLv1〜7(無/A〜F)で15%/17.5%/20%/22.5%/25%/27.5%/30%。上限値(Lv7)を記載。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
+      "id": "claretta_core_dmg_pct",
+      "name": "コアパッシブ: 蒼白の血宴(極限回避後の与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 15
+      },
+      "note": "『通常攻撃：血の誓約・鍛星』または『通常攻撃：血の誓約・斧断』の攻撃中に『極限回避』が発動した場合、そのスキルの残り時間中、与ダメージ+15%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
+      "id": "claretta_add_ability_decibel",
+      "name": "追加能力: 受け継がれし血脈(デシベル回復)",
+      "stat": "decibel_gain",
+      "target": "self",
+      "values": {
+        "base": 300
+      },
+      "note": "チームに[撃破]、他の[鋭御]、またはクラレッタと同じ属性(電気)のメンバーがいる時に発動(OR条件)。任意のメンバーが「浸透」を発生させた時、クラレッタはデシベル値を300Pt回復。18秒に1回のみ。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
+      "id": "claretta_add_ability_sharp_crit_dmg",
+      "name": "追加能力: 受け継がれし血脈(鋭御メンバー暴傷ダメージアップ)",
+      "stat": "sharp_crit_dmg",
+      "target": "team",
+      "condition": {
+        "roles": [
+          "armorer"
+        ]
+      },
+      "values": {
+        "base": 25
+      },
+      "duration": "40s",
+      "note": "クラレッタまたは他のメンバーが「重傷」を発生させた時、[鋭御]メンバー全員が「残鋭」状態(暴傷ダメージ+25%、40秒、重複で継続時間更新)。発動条件はチームに[撃破]・他の[鋭御]・同属性(電気)のメンバーがいること(OR条件のためcondition省略)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
+      "id": "claretta_m2_res_ignore_electric",
+      "name": "心象映画2: 薪の栄冠(電気耐性無視)",
+      "stat": "enemy_res_down_pct",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 18
+      },
+      "note": "「ブラッドエンブレム」状態中、または『連携スキル』/『終結スキル』/『カウンター支援』/『支援突撃』発動中に攻撃が命中した時、ターゲットの電気属性ダメージ耐性を18%無視(クラレッタ自身の攻撃にのみ適用のためtarget=self)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
+      "id": "claretta_m4_basic_dmg",
+      "name": "心象映画4: 赤き月がさまよう(鍛星3段目の与ダメージアップ)",
+      "stat": "basic_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 20
+      },
+      "note": "『通常攻撃：血の誓約・鍛星』3段目のみ与ダメージ+20%(通常攻撃全般ではない)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
+      "id": "claretta_m4_chain_dmg",
+      "name": "心象映画4: 赤き月がさまよう(連携スキルの与ダメージアップ)",
+      "stat": "chain_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 20
+      },
+      "note": "『連携スキル：血の誓約・血契共鳴』の与ダメージ+20%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
+      "id": "claretta_m4_ult_dmg",
+      "name": "心象映画4: 赤き月がさまよう(終結スキルの与ダメージアップ)",
+      "stat": "ult_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 20
+      },
+      "note": "『終結スキル：血の誓約・千の鍛撃』の与ダメージ+20%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
+      "id": "claretta_wengine_crit_rate",
+      "name": "専用音動機「深紅の渇望」: 会心率アップ",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 25,
+        "p2": 27.5,
+        "p3": 30,
+        "p4": 32.5,
+        "p5": 35
+      },
+      "note": "音動機効果「渇血」(常時)。[鋭御]のエージェントが装備時のみ発動。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1189"
+    },
+    {
+      "id": "claretta_wengine_electric_dmg",
+      "name": "専用音動機「深紅の渇望」: 電気属性ダメージアップ",
+      "stat": "dmg_pct_element",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 15,
+        "p2": 17.5,
+        "p3": 20,
+        "p4": 23,
+        "p5": 25
+      },
+      "note": "音動機効果「渇血」(常時)。[鋭御]のエージェントが装備時のみ発動。P4はHoYoWiki表記どおり23%(等差なら22.5%の可能性あり、要確認)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1189"
+    }
+  ]
+}
