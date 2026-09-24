@@ -95,6 +95,25 @@ export function SettingsPanel({
           ))}
         </div>
       </div>
+      <div className="settings__group">
+        <div className="settings__label">追加能力</div>
+        <div className="segmented" role="radiogroup" aria-label="追加能力(一括)">
+          {([true, false] as const).map((on) => (
+            <button
+              key={String(on)}
+              type="button"
+              role="radio"
+              aria-checked={(global.additionalAbility ?? true) === on}
+              className={`seg seg--aa ${(global.additionalAbility ?? true) === on ? "seg--on" : ""}`}
+              onClick={() => onChange({ ...global, additionalAbility: on })}
+              data-testid={`global-aa-${on ? "on" : "off"}`}
+              title="追加能力(コアスキルの2つ目)由来のバフを集計に含めるか"
+            >
+              {on ? "ON" : "OFF"}
+            </button>
+          ))}
+        </div>
+      </div>
       <div className="settings__foot">
         <span className="settings__hint">
           個別設定 <b className="num">{overrideCount}</b> 件

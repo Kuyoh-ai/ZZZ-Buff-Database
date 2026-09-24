@@ -46,14 +46,40 @@ describe("effectiveSetting", () => {
     global: { mindscape: 2, wenginePhase: 1, potential: 0 },
     overrides: { a: { mindscape: 6 }, b: { mindscape: 0, wenginePhase: 5, potential: 3 } },
   };
-  it("global when no override", () => expect(effectiveSetting(s, "z")).toEqual({ mindscape: 2, wenginePhase: 1, potential: 0 }));
+  it("global when no override", () =>
+    expect(effectiveSetting(s, "z")).toEqual({ mindscape: 2, wenginePhase: 1, potential: 0, additionalAbility: true }));
   it("partial override keeps other from global", () =>
-    expect(effectiveSetting(s, "a")).toEqual({ mindscape: 6, wenginePhase: 1, potential: 0 }));
-  it("full override", () => expect(effectiveSetting(s, "b")).toEqual({ mindscape: 0, wenginePhase: 5, potential: 3 }));
+    expect(effectiveSetting(s, "a")).toEqual({ mindscape: 6, wenginePhase: 1, potential: 0, additionalAbility: true }));
+  it("full override", () =>
+    expect(effectiveSetting(s, "b")).toEqual({ mindscape: 0, wenginePhase: 5, potential: 3, additionalAbility: true }));
   it("reset returns to global", () => {
     const reset: Settings = { ...s, overrides: { ...s.overrides, a: {} } };
-    expect(effectiveSetting(reset, "a")).toEqual({ mindscape: 2, wenginePhase: 1, potential: 0 });
+    expect(effectiveSetting(reset, "a")).toEqual({ mindscape: 2, wenginePhase: 1, potential: 0, additionalAbility: true });
     expect(hasOverride(reset, "a")).toBe(false);
     expect(hasOverride(s, "a")).toBe(true);
+  });
+});
+
+describe("additionalAbility setting", () => {
+  const base: Settings = { global: { mindscape: 0, wenginePhase: 0, potential: 0 }, overrides: {} };
+  it("defaults to true when neither global nor override has it (legacy saved settings)", () =>
+    expect(effectiveSetting(base, "a").additionalAbility).toBe(true));
+  it("global false applies to everyone", () => {
+    const s: Settings = { ...base, global: { ...base.global, additionalAbility: false } };
+    expect(effectiveSetting(s, "a").additionalAbility).toBe(false);
+  });
+  it("override wins over global in both directions", () => {
+    const s: Settings = {
+      global: { ...base.global, additionalAbility: false },
+      overrides: { a: { additionalAbility: true }, b: { additionalAbility: false } },
+    };
+    expect(effectiveSetting(s, "a").additionalAbility).toBe(true);
+    expect(effectiveSetting(s, "b").additionalAbility).toBe(false);
+    expect(effectiveSetting(s, "c").additionalAbility).toBe(false);
+  });
+  it("hasOverride detects additionalAbility-only override", () => {
+    const s: Settings = { ...base, overrides: { a: { additionalAbility: false } } };
+    expect(hasOverride(s, "a")).toBe(true);
+    expect(hasOverride(s, "b")).toBe(false);
   });
 });

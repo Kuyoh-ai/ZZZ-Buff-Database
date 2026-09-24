@@ -16,6 +16,9 @@ export const CharacterSchema = z.object({
   wengine: z.object({ nameJa: z.string(), nameEn: z.string() }),
   releaseVersion: z.string().regex(/^\d+\.\d+$/),
   hasPotential: z.boolean().optional(),
+  additionalAbility: z
+    .object({ name: z.string(), condition: z.string(), conditionShort: z.string(), sourceUrl: z.string().url() })
+    .optional(),
   sourceUrl: z.string().url(),
 });
 

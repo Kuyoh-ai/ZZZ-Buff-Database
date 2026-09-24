@@ -102,6 +102,26 @@ export function BuffTable({
                         {ROLE_LABEL[c.role]} · {FACTION_LABEL[c.faction] ?? c.faction}
                       </span>
                     </button>
+                    <label
+                      className={`aa ${setting.additionalAbility === false ? "aa--off" : ""}`}
+                      title={
+                        c.additionalAbility
+                          ? `追加能力「${c.additionalAbility.name}」: ${c.additionalAbility.condition}`
+                          : "追加能力由来のバフを含める"
+                      }
+                    >
+                      <input
+                        type="checkbox"
+                        className="aa__check"
+                        checked={setting.additionalAbility !== false}
+                        onChange={(e) => onOverride(c.id, { additionalAbility: e.target.checked })}
+                        aria-label={`追加能力を含める(${c.nameJa})`}
+                        data-testid={`row-aa-${c.id}`}
+                      />
+                      <span className="aa__label">
+                        追加能力{c.additionalAbility?.conditionShort ? `: ${c.additionalAbility.conditionShort}` : ""}
+                      </span>
+                    </label>
                   </td>
                   <td className={`td td--setting ${ov ? "td--overridden" : ""}`}>
                     <RowSetting

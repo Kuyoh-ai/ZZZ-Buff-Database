@@ -592,6 +592,28 @@
   font-size: 10px;
   color: var(--fg-3);
 }
+.aa {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 2px 0 0 28px;
+  font-size: 10px;
+  color: var(--fg-3);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+.aa__check {
+  width: 11px;
+  height: 11px;
+  margin: 0;
+  accent-color: var(--lime);
+  cursor: pointer;
+}
+.aa--off .aa__label {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
 .rowset {
   display: flex;
   gap: 3px;

@@ -14,7 +14,7 @@ import { Splash } from "./components/Splash";
 
 const STORAGE_KEY = "zzz-buff-db:settings:v2";
 const LEGACY_KEY = "zzz-buff-db:settings:v1";
-const DEFAULT_GLOBAL: CharSetting = { mindscape: 0, wenginePhase: 0, potential: 6 };
+const DEFAULT_GLOBAL: CharSetting = { mindscape: 0, wenginePhase: 0, potential: 6, additionalAbility: true };
 
 function loadSettings(): Settings {
   try {
@@ -22,13 +22,14 @@ function loadSettings(): Settings {
     if (raw) {
       const s = JSON.parse(raw) as Settings;
       s.global.potential ??= 6;
+      s.global.additionalAbility ??= true;
       return s;
     }
     // v1 からの移行: ポテンシャル解放の既定を T6 にする
     const legacy = localStorage.getItem(LEGACY_KEY);
     if (legacy) {
       const s = JSON.parse(legacy) as Settings;
-      return { ...s, global: { ...s.global, potential: 6 } };
+      return { ...s, global: { ...s.global, potential: 6, additionalAbility: true } };
     }
   } catch {
     /* ignore */

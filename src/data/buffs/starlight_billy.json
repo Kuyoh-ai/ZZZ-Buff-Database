@@ -1,0 +1,207 @@
+{
+  "characterId": "starlight_billy",
+  "buffs": [
+    {
+      "id": "starlight_billy_core_crit_dmg",
+      "name": "コアパッシブ: ナイトの決意(会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 90
+      },
+      "duration": "45s",
+      "note": "接敵状態中に『特殊スキル：この馬力はどうよ！』を発動するたび会心ダメージアップ(重複発動で継続時間更新、スタックなし)。コアスキルLv1〜7(無/A〜F)で45%/53%/60%/68%/75%/83%/90%。上限値(Lv7)を記載。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_core_adrenaline",
+      "name": "コアパッシブ: ナイトの決意(入場時アドレナリン回復)",
+      "stat": "adrenaline",
+      "target": "self",
+      "values": {
+        "base": 60,
+        "m1": 120
+      },
+      "note": "フィールド入場時にアドレナリンを60Pt回復(探査モードでは180秒に1回のみ)。M1で回復量+60Pt(計120Pt)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_add_ability_chain_dmg",
+      "name": "追加能力: バーニング・スターライト(連携スキルの与ダメージアップ)",
+      "stat": "chain_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 20
+      },
+      "maxStacks": 2,
+      "duration": "45s",
+      "note": "チームに[撃破]、[防護]または[支援]のメンバーがいる時に発動(OR条件のためcondition省略)。『強化特殊スキル：ウィリー・ビリー・アッパー』、『通常攻撃：ナイトコンビネーション』4段目、『連携スキル』または『終結スキル』命中時に「スターライト」を1重獲得(45秒、継続時間内は同一スキルにつき1回まで、最大2重)。1重につき『連携スキル』『終結スキル』『強化特殊スキル』『通常攻撃：スターライト、フルスロットル！』の与ダメージ+20%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_add_ability_ult_dmg",
+      "name": "追加能力: バーニング・スターライト(終結スキルの与ダメージアップ)",
+      "stat": "ult_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 20
+      },
+      "maxStacks": 2,
+      "duration": "45s",
+      "note": "チームに[撃破]、[防護]または[支援]のメンバーがいる時に発動(OR条件のためcondition省略)。『強化特殊スキル：ウィリー・ビリー・アッパー』、『通常攻撃：ナイトコンビネーション』4段目、『連携スキル』または『終結スキル』命中時に「スターライト」を1重獲得(45秒、継続時間内は同一スキルにつき1回まで、最大2重)。1重につき『連携スキル』『終結スキル』『強化特殊スキル』『通常攻撃：スターライト、フルスロットル！』の与ダメージ+20%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_add_ability_ex_dmg",
+      "name": "追加能力: バーニング・スターライト(強化特殊スキルの与ダメージアップ)",
+      "stat": "ex_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 20
+      },
+      "maxStacks": 2,
+      "duration": "45s",
+      "note": "チームに[撃破]、[防護]または[支援]のメンバーがいる時に発動(OR条件のためcondition省略)。『強化特殊スキル：ウィリー・ビリー・アッパー』、『通常攻撃：ナイトコンビネーション』4段目、『連携スキル』または『終結スキル』命中時に「スターライト」を1重獲得(45秒、継続時間内は同一スキルにつき1回まで、最大2重)。1重につき『連携スキル』『終結スキル』『強化特殊スキル』『通常攻撃：スターライト、フルスロットル！』の与ダメージ+20%。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_add_ability_basic_dmg",
+      "name": "追加能力: バーニング・スターライト(通常攻撃：スターライト、フルスロットル！の与ダメージアップ)",
+      "stat": "basic_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 20
+      },
+      "maxStacks": 2,
+      "duration": "45s",
+      "note": "チームに[撃破]、[防護]または[支援]のメンバーがいる時に発動(OR条件のためcondition省略)。『強化特殊スキル：ウィリー・ビリー・アッパー』、『通常攻撃：ナイトコンビネーション』4段目、『連携スキル』または『終結スキル』命中時に「スターライト」を1重獲得(45秒、継続時間内は同一スキルにつき1回まで、最大2重)。1重につき『連携スキル』『終結スキル』『強化特殊スキル』『通常攻撃：スターライト、フルスロットル！』の与ダメージ+20%。『通常攻撃：スターライト、フルスロットル！』のみ対象(通常攻撃全般ではない)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_m1_res_ignore_physical",
+      "name": "心象映画1: ヒーローの始まり(物理耐性無視)",
+      "stat": "enemy_res_down_pct",
+      "element": "physical",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m1": 18
+      },
+      "duration": "45s",
+      "note": "『強化特殊スキル』が敵に命中すると、自身の攻撃によるダメージがターゲットの物理属性ダメージ耐性を18%無視(自身の攻撃にのみ適用のためtarget=self、重複発動で継続時間更新)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_m2_basic_dmg",
+      "name": "心象映画2: 荒野構造体(フルスロットルの与ダメージアップ)",
+      "stat": "basic_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 50
+      },
+      "note": "常時。『通常攻撃：スターライト、フルスロットル！』のみ対象(通常攻撃全般ではない)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_m2_ex_dmg",
+      "name": "心象映画2: 荒野構造体(ウィリー・ビリー・アッパーの与ダメージアップ)",
+      "stat": "ex_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 50
+      },
+      "note": "常時。『強化特殊スキル：ウィリー・ビリー・アッパー』のみ対象(強化特殊スキル全般ではない)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_m2_ult_dmg",
+      "name": "心象映画2: 荒野構造体(スターライトキック！の与ダメージアップ)",
+      "stat": "ult_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 50
+      },
+      "note": "常時。『終結スキル：スターライトキック！』。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_m2_turbo_crit_dmg",
+      "name": "心象映画2: 荒野構造体(ターボ消費時のウィリー・ビリー・アッパー会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 50
+      },
+      "note": "「ターボ」(『強化特殊スキル：スウィング・ステップ』/『強化特殊スキル：これが「グリップ」だ！』発動時、または『特殊スキル：この馬力はどうよ！』がブレイク状態の敵に命中時に獲得、最大1重)を『特殊スキル：この馬力はどうよ！』発動時に消費し、そのまま繋げた『強化特殊スキル：ウィリー・ビリー・アッパー』1回のみ会心ダメージ+50%。単一スキル限定の値。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_m4_crit_dmg",
+      "name": "心象映画4: 裁きの雷管(会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m4": 8
+      },
+      "maxStacks": 2,
+      "duration": "45s",
+      "note": "接敵状態中、『特殊スキル：この馬力はどうよ！』を発動するたび会心ダメージ+8%(最大2重、重複で継続時間更新)。コアパッシブの会心ダメージとは別枠。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_m6_sheer_dmg",
+      "name": "心象映画6: スターライトナイト(終結スキル/フルスロットルの透徹ダメージアップ)",
+      "stat": "sheer_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 18
+      },
+      "note": "『終結スキル：スターライトキック！』と『通常攻撃：スターライト、フルスロットル！』による透徹ダメージ+18%(この2スキルのみ)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    },
+    {
+      "id": "starlight_billy_wengine_crit_rate",
+      "name": "専用音動機「スターライトバイザー」: 会心率アップ",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 20,
+        "p2": 23,
+        "p3": 26,
+        "p4": 29,
+        "p5": 32
+      },
+      "note": "音動機効果(常時)。[命破]のエージェントが装備時のみ発動。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1088"
+    },
+    {
+      "id": "starlight_billy_wengine_sheer_dmg",
+      "name": "専用音動機「スターライトバイザー」: 物理透徹ダメージアップ",
+      "stat": "sheer_dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p2": 11.5,
+        "p3": 13,
+        "p4": 14.5,
+        "p5": 16
+      },
+      "maxStacks": 2,
+      "duration": "30s",
+      "note": "装備者が『特殊スキル』を発動した時、装備者が与える物理属性の透徹ダメージアップ(最大2重、重複で継続時間更新)。[命破]のエージェントが装備時のみ発動。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1088"
+    }
+  ]
+}

@@ -108,6 +108,35 @@ with sync_playwright() as p:
     page.locator('[data-testid="global-pt-6"]').click(); page.wait_for_timeout(300)
     after_pt = page.locator('[data-testid="row-ellen"] [data-testid="cell-crit_dmg"]').inner_text()
     check("global potential T6 changes Ellen crit_dmg", before_pt != after_pt, f"{before_pt!r} -> {after_pt!r}")
+
+    # 詳細パネル
+    page.locator('[data-testid="search"]').fill(""); page.locator('[data-testid="filter-el-ice"]').click()
+    page.locator('[data-testid="row-ellen"] .namebtn').click(); page.wait_for_timeout(300)
+    check("detail panel opens", page.locator(".row--detail").count() == 1)
+    page.screenshot(path=f"{out}/06-detail.png")
+
+    # (f) 追加能力トグル: 既定 ON、一括 OFF で追加能力由来のセルが消える、個別チェックで1行だけ、リセットで戻る
+    aa_cell = lambda rid: page.locator(f'[data-testid="row-{rid}"] [data-testid="cell-chain_dmg_pct"]')
+    check("additional-ability default ON (global + row checkbox)",
+          page.locator('[data-testid="global-aa-on"]').get_attribute("aria-checked") == "true"
+          and page.locator('[data-testid="row-aa-koleda"]').is_checked())
+    check("row checkbox label shows condition", "同属性 / 同陣営" in page.locator('[data-testid="row-koleda"] .aa__label').inner_text(),
+          page.locator('[data-testid="row-koleda"] .aa__label').inner_text())
+    check("koleda additional-ability cell present when ON", aa_cell("koleda").count() == 1)
+    page.locator('[data-testid="global-aa-off"]').click(); page.wait_for_timeout(300)
+    check("global OFF removes koleda additional-ability cell", aa_cell("koleda").count() == 0)
+    check("global OFF unchecks row checkbox", not page.locator('[data-testid="row-aa-koleda"]').is_checked())
+    page.screenshot(path=f"{out}/07-aa-off.png")
+    page.locator('[data-testid="global-aa-on"]').click(); page.wait_for_timeout(300)
+    check("global ON restores cell", aa_cell("koleda").count() == 1)
+    other_cell = page.locator('[data-testid="row-caesar"] [data-testid="cell-enemy_dmg_taken_pct"]')  # シーザーの追加能力(敵被ダメ増加)
+    check("other row additional-ability cell present", other_cell.count() == 1)
+    page.locator('[data-testid="row-aa-koleda"]').click(); page.wait_for_timeout(300)
+    check("row uncheck removes only that row's cell", aa_cell("koleda").count() == 0 and other_cell.count() == 1)
+    check("row uncheck shows override marker", page.locator('[data-testid="row-reset-koleda"]').count() == 1)
+    page.locator('[data-testid="row-reset-koleda"]').click(); page.wait_for_timeout(300)
+    check("row reset restores cell and checkbox", aa_cell("koleda").count() == 1 and page.locator('[data-testid="row-aa-koleda"]').is_checked())
+    page.screenshot(path=f"{out}/08-aa-row.png")
     page.locator('[data-testid="exclude-self"]').click(); page.wait_for_timeout(200)
 
     # A級のみ M6 / P5 ボタン: A級行の個別セレクトだけが変わる
@@ -118,11 +147,6 @@ with sync_playwright() as p:
           and page.locator('[data-testid="row-ms-ellen"]').input_value() == "0" and page.locator('[data-testid="row-wp-ellen"]').input_value() == "0")
     page.locator('text=個別設定をすべてリセット').click(); page.wait_for_timeout(200)
 
-    # 詳細パネル
-    page.locator('[data-testid="search"]').fill(""); page.locator('[data-testid="filter-el-ice"]').click()
-    page.locator('[data-testid="row-ellen"] .namebtn').click(); page.wait_for_timeout(300)
-    check("detail panel opens", page.locator(".row--detail").count() == 1)
-    page.screenshot(path=f"{out}/06-detail.png")
 
     check("no page errors", len(errors) == 0, "; ".join(errors)[:300])
     browser.close()

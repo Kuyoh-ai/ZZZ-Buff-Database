@@ -4,6 +4,15 @@ export type Element = "physical" | "fire" | "ice" | "electric" | "ether" | "auri
 export type Role = "attack" | "stun" | "anomaly" | "support" | "defense" | "rupture" | "armorer";
 export type Rarity = "S" | "A";
 
+export interface AdditionalAbility {
+  name: string;
+  /** 原文の発動条件(「チームに…時に発動」) */
+  condition: string;
+  /** 表示用の短縮形(例「同属性 / 同陣営 / [命破]」) */
+  conditionShort: string;
+  sourceUrl: string;
+}
+
 export interface Character {
   /** 英字snake_case。バフJSONのファイル名と一致させる */
   id: string;
@@ -22,6 +31,8 @@ export interface Character {
   releaseVersion: string;
   /** ポテンシャル解放(6段階)が実装されているか */
   hasPotential?: boolean;
+  /** 追加能力の名称と発動条件(HoYoWiki 原文と短縮形)。トグルのラベルに使う */
+  additionalAbility?: AdditionalAbility;
   /** キャラ一覧の参照元URL */
   sourceUrl: string;
 }
@@ -110,6 +121,8 @@ export interface CharSetting {
   wenginePhase: WenginePhase;
   /** ポテンシャル解放段階(未実装キャラでは無視) */
   potential: Potential;
+  /** 追加能力由来のバフを含めるか(既定 true。name に「追加能力」を含むバフが対象) */
+  additionalAbility?: boolean;
 }
 
 export interface Settings {

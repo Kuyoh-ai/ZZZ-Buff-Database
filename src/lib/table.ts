@@ -30,6 +30,11 @@ export interface Row {
   buffCount: number;
 }
 
+/** 追加能力由来のバフか(name に「追加能力」を含む) */
+export function isAdditionalAbility(buff: Buff): boolean {
+  return buff.name.includes("追加能力");
+}
+
 export function buildRow(
   character: Character,
   data: CharacterBuffs | undefined,
@@ -40,7 +45,10 @@ export function buildRow(
 ): Row {
   const cells: Record<string, CellData> = {};
   let applicableCount = 0;
-  const buffs = (data?.buffs ?? []).filter((b) => !(excludeSelfBuffs && b.target === "self"));
+  const includeAdditional = setting.additionalAbility ?? true;
+  const buffs = (data?.buffs ?? []).filter(
+    (b) => !(excludeSelfBuffs && b.target === "self") && (includeAdditional || !isAdditionalAbility(b)),
+  );
   for (const buff of buffs) {
     const total = resolveBuffTotal(buff, setting);
     const perStack = round(total / (buff.maxStacks ?? 1));

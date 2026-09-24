@@ -48,12 +48,16 @@ export function effectiveSetting(settings: Settings, characterId: string): CharS
     mindscape: o?.mindscape ?? settings.global.mindscape,
     wenginePhase: o?.wenginePhase ?? settings.global.wenginePhase,
     potential: o?.potential ?? settings.global.potential ?? 0,
+    additionalAbility: o?.additionalAbility ?? settings.global.additionalAbility ?? true,
   };
 }
 
 export function hasOverride(settings: Settings, characterId: string): boolean {
   const o = settings.overrides[characterId];
-  return !!o && (o.mindscape !== undefined || o.wenginePhase !== undefined || o.potential !== undefined);
+  return (
+    !!o &&
+    (o.mindscape !== undefined || o.wenginePhase !== undefined || o.potential !== undefined || o.additionalAbility !== undefined)
+  );
 }
 
 export function round(n: number): number {

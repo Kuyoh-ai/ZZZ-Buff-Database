@@ -70,6 +70,7 @@ npm run check-anim     # CSSアニメーションが0.5s以内か検証(ロー�
 - `potential`: ポテンシャル解放(T1〜T6)で値が変わる/追加される場合の段階別実効値(心象映画の解決後に上書き)。対象キャラは `characters.json` で `hasPotential: true`
 - `maxStacks`: 最大スタック数(既定1)。`values` は1スタックあたりの値。テーブルには最大スタック時の合計を表示
 - `sourceUrl`: 必須。数値を確認したページのURL
+- `name`: 追加能力由来のバフは名前に「追加能力」を含める(例「追加能力: 〜(〜)」)。UI の追加能力トグル(一括/個別)はこの文字列で対象を識別する。発動条件は `characters.json` の `additionalAbility` に記載
 
 値の解決: `効果量 = values[適用中の最大段階] + wengine[P] (装備時)` を `maxStacks` 倍。
 

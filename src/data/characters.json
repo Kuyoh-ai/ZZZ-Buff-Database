@@ -12,7 +12,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "並列回路",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/2"
+    }
   },
   {
     "id": "billy",
@@ -27,7 +33,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "スターライト戦隊",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/19"
+    }
   },
   {
     "id": "nekomata",
@@ -43,7 +55,13 @@
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "キャットウォーク・ショー",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/21"
+    }
   },
   {
     "id": "nicole",
@@ -58,7 +76,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "狡兎三窟",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
+    }
   },
   {
     "id": "anton",
@@ -73,7 +97,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "一致協力",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
+    }
   },
   {
     "id": "ben",
@@ -88,7 +118,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "契約合意",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/25"
+    }
   },
   {
     "id": "grace",
@@ -104,7 +140,13 @@
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "技術支援チーム",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
+    }
   },
   {
     "id": "koleda",
@@ -120,7 +162,13 @@
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "白祇式経営学",
+      "condition": "チームに自身と同じ属性、同じ陣営、または[命破]のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営 / [命破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/26"
+    }
   },
   {
     "id": "burnice",
@@ -136,7 +184,13 @@
     },
     "releaseVersion": "1.2",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "燃え広がる小火",
+      "condition": "チームに他の[異常]メンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "他の[異常] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
+    }
   },
   {
     "id": "caesar",
@@ -151,7 +205,13 @@
       "nameEn": "Tusks of Fury"
     },
     "releaseVersion": "1.2",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "ほとばしる闘志",
+      "condition": "チームに『パリィ支援』を発動できる他のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "パリィ支援可能な他メンバー / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/381"
+    }
   },
   {
     "id": "lighter",
@@ -166,7 +226,13 @@
       "nameEn": "Blazing Laurel"
     },
     "releaseVersion": "1.3",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "燃える闘志",
+      "condition": "チームに[強攻]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
+    }
   },
   {
     "id": "lucy",
@@ -181,7 +247,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "打席に立て！",
+      "condition": "チームに自身と同じ属性、同じ陣営または[命破]のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営 / [命破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/125"
+    }
   },
   {
     "id": "piper",
@@ -196,7 +268,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "一緒に飛ばそうぜい",
+      "condition": "チームに自身と同じ属性、同じ陣営のメンバー、または他の[異常]メンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営 / 他の[異常]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/126"
+    }
   },
   {
     "id": "pulchra",
@@ -211,7 +289,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.6",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "ビジネスパートナー",
+      "condition": "チームに[強攻]または[命破]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / [命破] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619"
+    }
   },
   {
     "id": "hugo",
@@ -226,7 +310,13 @@
       "nameEn": "Myriad Eclipse"
     },
     "releaseVersion": "1.7",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "終焉の序曲",
+      "condition": "チームに他の[撃破]メンバーまたは自身と同じ属性のメンバーがいる時に発動",
+      "conditionShort": "他の[撃破] / 同属性",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/707"
+    }
   },
   {
     "id": "vivian",
@@ -241,7 +331,13 @@
       "nameEn": "Flight of Fancy"
     },
     "releaseVersion": "1.7",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "予見の涙",
+      "condition": "チームに他の[異常]メンバーまたは自身と同じ属性のメンバーがいる時に発動",
+      "conditionShort": "他の[異常] / 同属性",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/626"
+    }
   },
   {
     "id": "alice",
@@ -256,7 +352,13 @@
       "nameEn": "Practiced Perfection"
     },
     "releaseVersion": "2.1",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "奇怪を探して",
+      "condition": "チームに他の[異常]または[支援]メンバーがいる時に発動",
+      "conditionShort": "他の[異常] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838"
+    }
   },
   {
     "id": "manato",
@@ -271,7 +373,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "2.3",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "蘇る心",
+      "condition": "チームに[支援]または[撃破]のメンバーがいる時に発動",
+      "conditionShort": "[支援] / [撃破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
+    }
   },
   {
     "id": "lucia",
@@ -286,7 +394,13 @@
       "nameEn": "Dreamlit Hearth"
     },
     "releaseVersion": "2.3",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "長夜の詩篇",
+      "condition": "チームに[命破]または[撃破]のメンバーがいる時に発動",
+      "conditionShort": "[命破] / [撃破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
+    }
   },
   {
     "id": "yuzuha",
@@ -301,7 +415,13 @@
       "nameEn": "Metanukimorphosis"
     },
     "releaseVersion": "2.1",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "みんなで大騒ぎ！",
+      "condition": "チーム内に[異常]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[異常] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
+    }
   },
   {
     "id": "yidhari",
@@ -316,7 +436,13 @@
       "nameEn": "Kraken's Cradle"
     },
     "releaseVersion": "2.3",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "完全なる物語",
+      "condition": "チーム内に[撃破]または[支援]メンバーがいる時に発動",
+      "conditionShort": "[撃破] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/909"
+    }
   },
   {
     "id": "aria",
@@ -331,7 +457,13 @@
       "nameEn": "Angel in the Shell"
     },
     "releaseVersion": "2.6",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "みんなで一緒にステージを",
+      "condition": "チームに[撃破]、[支援]、自身と同じ陣営のメンバー、または他の[異常]メンバーがいる時に発動",
+      "conditionShort": "[撃破] / [支援] / 同陣営 / 他の[異常]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
+    }
   },
   {
     "id": "nangong_yu",
@@ -346,7 +478,13 @@
       "nameEn": "Neon Fantasies"
     },
     "releaseVersion": "2.7",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "エンジェルのリーダー",
+      "condition": "チームに[異常]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[異常] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
+    }
   },
   {
     "id": "sunna",
@@ -361,7 +499,13 @@
       "nameEn": "Thoughtbop"
     },
     "releaseVersion": "2.6",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "白昼夢の対位法",
+      "condition": "チームに[強攻]または自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
+    }
   },
   {
     "id": "rina",
@@ -377,7 +521,13 @@
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "完美なる舞踏会",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/30"
+    }
   },
   {
     "id": "corin",
@@ -392,7 +542,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "お掃除ヘルパー",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/23"
+    }
   },
   {
     "id": "ellen",
@@ -408,7 +564,13 @@
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "ライジングストーム",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/29"
+    }
   },
   {
     "id": "lycaon",
@@ -424,7 +586,13 @@
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "優雅なる狩人",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
+    }
   },
   {
     "id": "jane_doe",
@@ -440,7 +608,13 @@
     },
     "releaseVersion": "1.1",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "痛点",
+      "condition": "チームに他の[異常]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "他の[異常] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
+    }
   },
   {
     "id": "qingyi",
@@ -455,7 +629,13 @@
       "nameEn": "Ice-Jade Teapot"
     },
     "releaseVersion": "1.1",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "陽関三畳",
+      "condition": "チームに[強攻]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
+    }
   },
   {
     "id": "seth",
@@ -470,7 +650,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.1",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "意気揚々",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/369"
+    }
   },
   {
     "id": "zhu_yuan",
@@ -485,7 +671,13 @@
       "nameEn": "Riot Suppressor Mark VI"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "武装間連携",
+      "condition": "チームに[支援]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[支援] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
+    }
   },
   {
     "id": "cissia",
@@ -500,7 +692,13 @@
       "nameEn": "Cordis Germina"
     },
     "releaseVersion": "2.7",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "ドキドキトキシック",
+      "condition": "チーム内に[撃破]または自身と同じ属性のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / 同属性",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039"
+    }
   },
   {
     "id": "harumasa",
@@ -516,7 +714,13 @@
     },
     "releaseVersion": "1.4",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "定格超越",
+      "condition": "チームに「撃破」または「異常」のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / [異常]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/538"
+    }
   },
   {
     "id": "miyabi",
@@ -531,7 +735,13 @@
       "nameEn": "Hailstorm Shrine"
     },
     "releaseVersion": "1.4",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "霜雪を共に沐し",
+      "condition": "チームに[支援]、自身と同じ陣営のメンバー、または他の[異常]メンバーがいる時に発動",
+      "conditionShort": "[支援] / 同陣営 / 他の[異常]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/537"
+    }
   },
   {
     "id": "soukaku",
@@ -546,7 +756,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "1.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "ケータリングセット",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
+    }
   },
   {
     "id": "yanagi",
@@ -561,7 +777,13 @@
       "nameEn": "Timeweaver"
     },
     "releaseVersion": "1.3",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "月相",
+      "condition": "チームに他の[異常]メンバーまたは自身と同じ属性のメンバーがいる時に発動",
+      "conditionShort": "他の[異常] / 同属性",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
+    }
   },
   {
     "id": "orphie",
@@ -576,7 +798,13 @@
       "nameEn": "Bellicose Blaze"
     },
     "releaseVersion": "2.2",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "溶炉鍛心",
+      "condition": "チームに[撃破]または[支援]のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
+    }
   },
   {
     "id": "seed",
@@ -591,7 +819,13 @@
       "nameEn": "Serpentine Seeker"
     },
     "releaseVersion": "2.2",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "思いがけない援軍",
+      "condition": "チームに他の[強攻]メンバーがいる時に発動",
+      "conditionShort": "他の[強攻]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
+    }
   },
   {
     "id": "soldier_11",
@@ -607,7 +841,13 @@
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "燎原",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "同属性 / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
+    }
   },
   {
     "id": "trigger",
@@ -622,7 +862,13 @@
       "nameEn": "Spectral Gaze"
     },
     "releaseVersion": "1.6",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "銀灯の霊眼",
+      "condition": "チームに[強攻]のメンバーまたは自身と同じ属性のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / 同属性",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/620"
+    }
   },
   {
     "id": "soldier_0_anby",
@@ -638,7 +884,13 @@
     },
     "releaseVersion": "1.6",
     "sourceUrl": "https://gamewith.jp/zenless/455296",
-    "hasPotential": true
+    "hasPotential": true,
+    "additionalAbility": {
+      "name": "誘電分極",
+      "condition": "チームに[撃破]または[支援]のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/618"
+    }
   },
   {
     "id": "ju_fufu",
@@ -653,7 +905,13 @@
       "nameEn": "Roaring Fur-nace"
     },
     "releaseVersion": "2.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "威風堂々",
+      "condition": "チームに[強攻]または[命破]のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / [命破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
+    }
   },
   {
     "id": "pan_yinhu",
@@ -668,7 +926,13 @@
       "nameEn": "-"
     },
     "releaseVersion": "2.0",
-    "sourceUrl": "https://zenlessdb.com/character"
+    "sourceUrl": "https://zenlessdb.com/character",
+    "additionalAbility": {
+      "name": "パンダの胃袋",
+      "condition": "チームに[命破]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[命破] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/751"
+    }
   },
   {
     "id": "ye_shunguang",
@@ -683,7 +947,13 @@
       "nameEn": "Cloudcleave Radiance"
     },
     "releaseVersion": "2.5",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "残影の光",
+      "condition": "チームに[支援]または[防護]のメンバーがいる時に発動",
+      "conditionShort": "[支援] / [防護]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
+    }
   },
   {
     "id": "yixuan",
@@ -698,7 +968,13 @@
       "nameEn": "Qingming Birdcage"
     },
     "releaseVersion": "2.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "玄墨の暗流",
+      "condition": "チーム内に[撃破]、[支援]または[防護]のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / [支援] / [防護]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
+    }
   },
   {
     "id": "banyue",
@@ -713,7 +989,13 @@
       "nameEn": "Wrathful Vajra"
     },
     "releaseVersion": "2.4",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "天頂",
+      "condition": "チームに[支援]または[撃破]メンバーがいる時に発動",
+      "conditionShort": "[支援] / [撃破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/934"
+    }
   },
   {
     "id": "dialyn",
@@ -728,7 +1010,13 @@
       "nameEn": "Yesterday Calls"
     },
     "releaseVersion": "2.4",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "迷ったらテレフォンを！",
+      "condition": "チームに[強攻]または[命破]のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / [命破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
+    }
   },
   {
     "id": "promeia",
@@ -743,7 +1031,13 @@
       "nameEn": "Frostfall Sickle"
     },
     "releaseVersion": "2.8",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "氷に沈むこの心は",
+      "condition": "チームに他の[異常]または[支援]メンバーがいる時に発動",
+      "conditionShort": "他の[異常] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
+    }
   },
   {
     "id": "zhao",
@@ -758,7 +1052,13 @@
       "nameEn": "Half-Sugar Bunny"
     },
     "releaseVersion": "2.5",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "氷結んで手も結んで",
+      "condition": "チームに[強攻]、[異常]、または[支援]のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / [異常] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
+    }
   },
   {
     "id": "astra",
@@ -773,7 +1073,13 @@
       "nameEn": "Elegant Vanity"
     },
     "releaseVersion": "1.5",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "ムーンリット・フレンジー",
+      "condition": "チームに[強攻]、[異常]または[命破]のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / [異常] / [命破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/588"
+    }
   },
   {
     "id": "evelyn",
@@ -788,7 +1094,13 @@
       "nameEn": "Heartstring Nocturne"
     },
     "releaseVersion": "1.5",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "急襲支点",
+      "condition": "チームに[撃破]または[支援]のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/589"
+    }
   },
   {
     "id": "sigrid",
@@ -803,7 +1115,13 @@
       "nameEn": "Knight's Extolment"
     },
     "releaseVersion": "3.1",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "天の彼方の軍勢",
+      "condition": "チームに[支援]または[撃破]のメンバーがいる時に発動",
+      "conditionShort": "[支援] / [撃破]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1113"
+    }
   },
   {
     "id": "norma",
@@ -818,7 +1136,13 @@
       "nameEn": "Chief Sidekick"
     },
     "releaseVersion": "3.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "数的優位性",
+      "condition": "チームに[強攻]、[命破]、または自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / [命破] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
+    }
   },
   {
     "id": "pyrois",
@@ -833,7 +1157,13 @@
       "nameEn": "Sol Exuvia"
     },
     "releaseVersion": "3.0",
-    "sourceUrl": "https://gamewith.jp/zenless/455296"
+    "sourceUrl": "https://gamewith.jp/zenless/455296",
+    "additionalAbility": {
+      "name": "煌々たる軍勢",
+      "condition": "チームに[撃破]または[支援]のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
+    }
   },
   {
     "id": "velina",
@@ -848,7 +1178,13 @@
       "nameEn": "Joyau Dore"
     },
     "releaseVersion": "3.0",
-    "sourceUrl": "https://gamewith.jp/zenless/550723"
+    "sourceUrl": "https://gamewith.jp/zenless/550723",
+    "additionalAbility": {
+      "name": "お茶会の礼節",
+      "condition": "チームに他の[異常]メンバー、または自身と同じ属性のメンバーがいる時に発動",
+      "conditionShort": "他の[異常] / 同属性",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
+    }
   },
   {
     "id": "remielle",
@@ -863,7 +1199,13 @@
       "nameEn": "Ode of Resurrected Wings"
     },
     "releaseVersion": "3.1",
-    "sourceUrl": "https://gamewith.jp/zenless/550725"
+    "sourceUrl": "https://gamewith.jp/zenless/550725",
+    "additionalAbility": {
+      "name": "芳しき花々の誘い",
+      "condition": "チームに他の[異常]メンバー、または自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "他の[異常] / 同陣営",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1112"
+    }
   },
   {
     "id": "claretta",
@@ -878,6 +1220,33 @@
       "nameEn": "Crimson Thirst"
     },
     "releaseVersion": "3.2",
-    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185",
+    "additionalAbility": {
+      "name": "受け継がれし血脈",
+      "condition": "チームに[撃破]、他の[鋭御]、または自身と同じ属性のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / 他の[鋭御] / 同属性",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    }
+  },
+  {
+    "id": "starlight_billy",
+    "nameJa": "スターライト・ビリー",
+    "nameEn": "Starlight - Billy",
+    "rarity": "S",
+    "element": "physical",
+    "role": "rupture",
+    "faction": "cunning_hares",
+    "wengine": {
+      "nameJa": "スターライトバイザー",
+      "nameEn": "Starlight Rider Faceplate"
+    },
+    "releaseVersion": "2.8",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073",
+    "additionalAbility": {
+      "name": "バーニング・スターライト",
+      "condition": "チームに[撃破]、[防護]または[支援]のメンバーがいる時に発動",
+      "conditionShort": "[撃破] / [防護] / [支援]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
+    }
   }
 ]
