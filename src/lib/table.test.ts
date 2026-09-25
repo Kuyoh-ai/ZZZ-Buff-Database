@@ -3,7 +3,7 @@ import type { Character, CharacterBuffs } from "../types";
 import { buildRow, cellDisplay, cellSortValue, isAdditionalAbility } from "./table";
 
 const ch: Character = {
-  id: "a", nameJa: "a", nameEn: "a", rarity: "S", element: "ice", role: "support", faction: "x",
+  id: "a", nameJa: "a", nameEn: "a", rarity: "S", element: "ice", role: "support", assist: "parry", faction: "x",
   wengine: { nameJa: "-", nameEn: "-" }, releaseVersion: "1.0", sourceUrl: "x",
 };
 const data: CharacterBuffs = {

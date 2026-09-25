@@ -4,6 +4,7 @@ import type { StatDef } from "../data/stats";
 import type { SortKey } from "../lib/sort";
 import { cellDisplay, type CellData, type Row } from "../lib/table";
 import { effectiveSetting, hasOverride } from "../lib/resolve";
+import { judgeAdditionalAbility } from "../lib/activation";
 import type { Character, CharSetting, Mindscape, Potential, Settings, WenginePhase } from "../types";
 import { ElementIcon } from "./Icons";
 
@@ -19,6 +20,7 @@ export function BuffTable({
   stats,
   attacker,
   settings,
+  aaAuto,
   sortKeys,
   onSort,
   onOverride,
@@ -27,6 +29,8 @@ export function BuffTable({
   stats: StatDef[];
   attacker: Character | null;
   settings: Settings;
+  /** アタッカー選択中の追加能力の一時レイヤー(自動判定 + 手動変更)。null なら保存設定のみ */
+  aaAuto: Record<string, boolean> | null;
   sortKeys: SortKey[];
   onSort: (key: string, multi: boolean) => void;
   onOverride: (id: string, patch: Partial<CharSetting> | null) => void;
@@ -81,9 +85,12 @@ export function BuffTable({
         <tbody>
           {rows.map((row, ri) => {
             const c = row.character;
-            const setting = effectiveSetting(settings, c.id);
+            const setting = effectiveSetting(settings, c.id, aaAuto);
             const ov = hasOverride(settings, c.id);
             const isSelf = attacker?.id === c.id;
+            // 追加能力チェックの状態: 自動判定どおり(auto) / 選択中に手動で変えた(manual) / 判定対象外(undefined)
+            const judged = attacker && aaAuto ? judgeAdditionalAbility(c, attacker, c.hasPotential ? setting.potential : 0) : null;
+            const aaMode = aaAuto && c.id in aaAuto ? (aaAuto[c.id] === judged ? "auto" : "manual") : undefined;
             return (
               <Fragment key={c.id}>
                 <tr
@@ -103,12 +110,19 @@ export function BuffTable({
                       </span>
                     </button>
                     <label
-                      className={`aa ${setting.additionalAbility === false ? "aa--off" : ""}`}
+                      className={`aa ${setting.additionalAbility === false ? "aa--off" : ""} ${aaMode ? `aa--${aaMode}` : ""}`}
                       title={
-                        c.additionalAbility
+                        (c.additionalAbility
                           ? `追加能力「${c.additionalAbility.name}」: ${c.additionalAbility.condition}`
-                          : "追加能力由来のバフを含める"
+                          : "追加能力由来のバフを含める") +
+                        (aaMode === "auto"
+                          ? `\n${attacker!.nameJa}との2人編成で発動条件を${setting.additionalAbility === false ? "満たさないため OFF" : "満たすため ON"}(自動判定、手動で変更可)`
+                          : aaMode === "manual"
+                            ? "\n自動判定から手動で変更済み(アタッカーの変更・解除で戻ります)"
+                            : "")
                       }
+                      data-testid={`row-aa-mode-${c.id}`}
+                      data-aa-mode={aaMode ?? ""}
                     >
                       <input
                         type="checkbox"
@@ -121,6 +135,7 @@ export function BuffTable({
                       <span className="aa__label">
                         追加能力{c.additionalAbility?.conditionShort ? `: ${c.additionalAbility.conditionShort}` : ""}
                       </span>
+                      {aaMode && <span className={`aa__badge aa__badge--${aaMode}`}>{aaMode === "auto" ? "自動" : "手動"}</span>}
                     </label>
                   </td>
                   <td className={`td td--setting ${ov ? "td--overridden" : ""}`}>

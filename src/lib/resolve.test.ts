@@ -77,6 +77,14 @@ describe("additionalAbility setting", () => {
     expect(effectiveSetting(s, "b").additionalAbility).toBe(false);
     expect(effectiveSetting(s, "c").additionalAbility).toBe(false);
   });
+  it("aaAuto layer wins over override and global, and only for listed ids", () => {
+    const s: Settings = { global: { ...base.global, additionalAbility: true }, overrides: { a: { additionalAbility: true } } };
+    const auto = { a: false, b: true };
+    expect(effectiveSetting(s, "a", auto).additionalAbility).toBe(false);
+    expect(effectiveSetting(s, "b", auto).additionalAbility).toBe(true);
+    expect(effectiveSetting(s, "c", auto).additionalAbility).toBe(true);
+    expect(effectiveSetting(s, "a", null).additionalAbility).toBe(true);
+  });
   it("hasOverride detects additionalAbility-only override", () => {
     const s: Settings = { ...base, overrides: { a: { additionalAbility: false } } };
     expect(hasOverride(s, "a")).toBe(true);

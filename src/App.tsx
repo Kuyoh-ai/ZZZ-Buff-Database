@@ -4,6 +4,7 @@ import { STATS } from "./data/stats";
 import { FACTIONS, FACTION_ORDER } from "./data/labels";
 import type { Character, CharSetting, Element, Role, Settings } from "./types";
 import { effectiveSetting } from "./lib/resolve";
+import { judgeAdditionalAbilities, judgeAdditionalAbility } from "./lib/activation";
 import { multiSort, toggleSortKey, type SortKey } from "./lib/sort";
 import { buildRow, cellSortValue } from "./lib/table";
 import { Header } from "./components/Header";
@@ -41,6 +42,11 @@ function loadSettings(): Settings {
 export default function App() {
   const [settings, setSettings] = useState<Settings>(loadSettings);
   const [attackerId, setAttackerId] = useState<string | null>(null);
+  /**
+   * アタッカー選択中の追加能力の一時レイヤー(キャラ id → ON/OFF)。選択時にアタッカー基準で自動判定して作り、
+   * その後の個別チェック変更はここに入る(保存設定は触らない)。解除で null に戻す = 元の状態に戻る
+   */
+  const [aaAuto, setAaAuto] = useState<Record<string, boolean> | null>(null);
   const [sortKeys, setSortKeys] = useState<SortKey[]>([]);
   const [filter, setFilter] = useState<FilterState>({ elements: [], roles: [], factions: [], rarities: [], query: "" });
   const [showEmptyCols, setShowEmptyCols] = useState(false);
@@ -56,13 +62,20 @@ export default function App() {
   }, [settings]);
 
   const attacker: Character | null = attackerId ? (CHARACTER_BY_ID[attackerId] ?? null) : null;
+  /** 出し手のポテンシャル解放段階(クレタなど potentialRoles の判定に使う) */
+  const potentialOf = (c: Character, s: Settings = settings) => (c.hasPotential ? effectiveSetting(s, c.id).potential : 0);
+  const selectAttacker = (id: string | null) => {
+    setAttackerId(id);
+    const a = id ? CHARACTER_BY_ID[id] : undefined;
+    setAaAuto(a ? judgeAdditionalAbilities(CHARACTERS, a, (c) => potentialOf(c)) : null);
+  };
 
   const rows = useMemo(
     () =>
       CHARACTERS.map((c) =>
-        buildRow(c, BUFFS_BY_CHARACTER[c.id], effectiveSetting(settings, c.id), attacker, excludeSelfBuffs),
+        buildRow(c, BUFFS_BY_CHARACTER[c.id], effectiveSetting(settings, c.id, aaAuto), attacker, excludeSelfBuffs),
       ),
-    [settings, attacker, excludeSelfBuffs],
+    [settings, aaAuto, attacker, excludeSelfBuffs],
   );
 
   const filtered = useMemo(() => {
@@ -99,14 +112,45 @@ export default function App() {
     [filtered, sortKeys, attacker],
   );
 
-  const setGlobal = (s: CharSetting) => setSettings((p) => ({ ...p, global: s }));
-  const setOverride = (id: string, patch: Partial<CharSetting> | null) =>
+  const setGlobal = (s: CharSetting) => {
+    // アタッカー選択中に一括の追加能力を変えたら、一時レイヤーも全員その値にする
+    if (aaAuto && s.additionalAbility !== settings.global.additionalAbility) {
+      const v = s.additionalAbility ?? true;
+      setAaAuto(Object.fromEntries(Object.keys(aaAuto).map((k) => [k, v])));
+    } else if (aaAuto && attacker && s.potential !== settings.global.potential) {
+      // 一括のポテンシャル変更は発動条件に影響し得る(クレタの[鋭御])ので再判定
+      const next = { ...settings, global: s };
+      setAaAuto(judgeAdditionalAbilities(CHARACTERS, attacker, (c) => potentialOf(c, next)));
+    }
+    setSettings((p) => ({ ...p, global: s }));
+  };
+  const setOverride = (id: string, patch: Partial<CharSetting> | null) => {
+    if (aaAuto && patch && patch.additionalAbility !== undefined && Object.keys(patch).length === 1) {
+      // アタッカー選択中の個別チェックは一時レイヤーだけを変える(保存設定は変えない)
+      setAaAuto({ ...aaAuto, [id]: patch.additionalAbility });
+      return;
+    }
+    if (aaAuto && attacker && (patch === null || patch.potential !== undefined)) {
+      // 行リセット / 個別ポテンシャル変更: 一時レイヤーはそのキャラの自動判定値に戻す
+      const c = CHARACTER_BY_ID[id];
+      const overrides = { ...settings.overrides };
+      if (patch === null) delete overrides[id];
+      else overrides[id] = { ...overrides[id], ...patch };
+      const j = judgeAdditionalAbility(c, attacker, potentialOf(c, { ...settings, overrides }));
+      setAaAuto((prev) => {
+        const next = { ...prev };
+        if (j === null) delete next[id];
+        else next[id] = j;
+        return next;
+      });
+    }
     setSettings((p) => {
       const overrides = { ...p.overrides };
       if (patch === null) delete overrides[id];
       else overrides[id] = { ...overrides[id], ...patch };
       return { ...p, overrides };
     });
+  };
   const clearOverrides = () => setSettings((p) => ({ ...p, overrides: {} }));
   /** A級キャラ全員に個別設定を上書き適用 */
   const setARank = (patch: Partial<CharSetting>) =>
@@ -139,7 +183,7 @@ export default function App() {
             />
           </section>
           <section className="panel panel--attacker" style={{ "--delay": "0.1s" } as React.CSSProperties}>
-            <AttackerPicker characters={CHARACTERS} value={attackerId} onChange={setAttackerId} />
+            <AttackerPicker characters={CHARACTERS} value={attackerId} onChange={selectAttacker} />
           </section>
           <section className="panel panel--filters" style={{ "--delay": "0.15s" } as React.CSSProperties}>
             <Filters
@@ -162,6 +206,7 @@ export default function App() {
               stats={visibleStats}
               attacker={attacker}
               settings={settings}
+              aaAuto={aaAuto}
               sortKeys={sortKeys}
               onSort={(key, multi) => setSortKeys((k) => toggleSortKey(k, key, multi))}
               onOverride={setOverride}

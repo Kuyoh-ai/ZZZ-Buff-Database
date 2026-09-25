@@ -66,7 +66,7 @@ describe("toggleSortKey", () => {
 
 describe("defaultOrder", () => {
   const mk = (id: string, faction: string, ver: string, name: string): Character => ({
-    id, nameJa: name, nameEn: id, rarity: "S", element: "ice", role: "attack", faction,
+    id, nameJa: name, nameEn: id, rarity: "S", element: "ice", role: "attack", assist: "parry", faction,
     wengine: { nameJa: "-", nameEn: "-" }, releaseVersion: ver, sourceUrl: "x",
   });
   const hares10b = mk("billy", "cunning_hares", "1.0", "ビリー");

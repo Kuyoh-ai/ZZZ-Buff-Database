@@ -4,12 +4,31 @@ export type Element = "physical" | "fire" | "ice" | "electric" | "ether" | "auri
 export type Role = "attack" | "stun" | "anomaly" | "support" | "defense" | "rupture" | "armorer";
 export type Rarity = "S" | "A";
 
+/** 支援スキルの種類(パリィ支援 / 回避支援)。シーザーの追加能力条件の判定に使う */
+export type AssistType = "parry" | "evasive";
+
+/** 追加能力の発動条件(構造化)。いずれか 1 つでも満たせば発動(OR)。判定は src/lib/activation.ts */
+export interface AdditionalAbilityActivation {
+  /** 自身と同じ属性(element / subElement のいずれか)のメンバーがいる */
+  sameElement?: boolean;
+  /** 自身と同じ陣営(大区分で判定)のメンバーがいる */
+  sameFaction?: boolean;
+  /** いずれかの役割のメンバーがいる(「他の[異常]」も含む。自分以外のメンバーで判定するため同じ扱い) */
+  roles?: Role[];
+  /** 『パリィ支援』を発動できる他のメンバーがいる(assist === "parry") */
+  parrySupport?: boolean;
+  /** ポテンシャル解放(T1 以降)で条件に追加される役割(例: クレタの[鋭御])。出し手のポテンシャル設定が 1 以上のとき roles と同様に扱う */
+  potentialRoles?: Role[];
+}
+
 export interface AdditionalAbility {
   name: string;
   /** 原文の発動条件(「チームに…時に発動」) */
   condition: string;
   /** 表示用の短縮形(例「同属性 / 同陣営 / [命破]」) */
   conditionShort: string;
+  /** conditionShort を構造化したもの(アタッカー選択時の自動判定に使う) */
+  activation?: AdditionalAbilityActivation;
   sourceUrl: string;
 }
 
@@ -23,6 +42,8 @@ export interface Character {
   /** 霜烈(frost)・玄墨など複合属性の第二属性(任意) */
   subElement?: Element;
   role: Role;
+  /** 支援スキルの種類(HoYoWiki の「パリィ支援：〜」/「回避支援：〜」) */
+  assist: AssistType;
   /** 陣営ID(snake_case)。ラベルは factions.ts */
   faction: string;
   /** モチーフ音動機 */

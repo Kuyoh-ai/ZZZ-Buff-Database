@@ -388,6 +388,12 @@
   gap: 4px;
   flex-wrap: wrap;
 }
+.attacker__note {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: var(--fg-3);
+}
 .attacker__legend {
   grid-column: 1 / -1;
   display: flex;
@@ -700,6 +706,22 @@
 .aa--off .aa__label {
   text-decoration: line-through;
   opacity: 0.6;
+}
+.aa__badge {
+  font-size: 9px;
+  line-height: 1;
+  padding: 2px 4px;
+  border: 1px solid var(--line-2);
+  color: var(--fg-3);
+  letter-spacing: 0.05em;
+}
+.aa__badge--auto {
+  border-color: var(--lime);
+  color: var(--lime);
+}
+.aa__badge--manual {
+  border-color: var(--orange);
+  color: var(--orange);
 }
 .rowset {
   display: flex;

@@ -41,14 +41,17 @@ export function resolveBuffTotal(buff: Buff, setting: CharSetting): number {
   return round(resolveBuffValue(buff, setting) * (buff.maxStacks ?? 1));
 }
 
-/** キャラごとの実効設定(個別設定が一括設定を上書き) */
-export function effectiveSetting(settings: Settings, characterId: string): CharSetting {
+/**
+ * キャラごとの実効設定(個別設定が一括設定を上書き)。
+ * aaAuto はアタッカー選択中だけ存在する追加能力の一時レイヤー(自動判定 + その後の手動変更)で、保存設定より優先する
+ */
+export function effectiveSetting(settings: Settings, characterId: string, aaAuto?: Record<string, boolean> | null): CharSetting {
   const o = settings.overrides[characterId];
   return {
     mindscape: o?.mindscape ?? settings.global.mindscape,
     wenginePhase: o?.wenginePhase ?? settings.global.wenginePhase,
     potential: o?.potential ?? settings.global.potential ?? 0,
-    additionalAbility: o?.additionalAbility ?? settings.global.additionalAbility ?? true,
+    additionalAbility: aaAuto?.[characterId] ?? o?.additionalAbility ?? settings.global.additionalAbility ?? true,
   };
 }
 

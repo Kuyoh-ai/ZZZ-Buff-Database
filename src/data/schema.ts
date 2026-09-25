@@ -12,12 +12,27 @@ export const CharacterSchema = z.object({
   element: ElementSchema,
   subElement: ElementSchema.optional(),
   role: RoleSchema,
+  assist: z.enum(["parry", "evasive"]),
   faction: z.string().min(1),
   wengine: z.object({ nameJa: z.string(), nameEn: z.string() }),
   releaseVersion: z.string().regex(/^\d+\.\d+$/),
   hasPotential: z.boolean().optional(),
   additionalAbility: z
-    .object({ name: z.string(), condition: z.string(), conditionShort: z.string(), sourceUrl: z.string().url() })
+    .object({
+      name: z.string(),
+      condition: z.string(),
+      conditionShort: z.string(),
+      activation: z
+        .object({
+          sameElement: z.boolean().optional(),
+          sameFaction: z.boolean().optional(),
+          roles: z.array(RoleSchema).optional(),
+          parrySupport: z.boolean().optional(),
+          potentialRoles: z.array(RoleSchema).optional(),
+        })
+        .optional(),
+      sourceUrl: z.string().url(),
+    })
     .optional(),
   sourceUrl: z.string().url(),
 });

@@ -27,6 +27,17 @@ for (const c of chars) {
   if (ids.has(r.data.id)) err(`duplicate character id ${r.data.id}`);
   ids.add(r.data.id);
   if (!(r.data.faction in FACTION_LABEL)) err(`character ${r.data.id}: unknown faction ${r.data.faction}`);
+  // 追加能力の構造化条件(activation)は conditionShort の「/」区切りの項目数と一致していること
+  const aa = r.data.additionalAbility;
+  if (aa) {
+    const act = aa.activation;
+    if (!act) err(`character ${r.data.id}: additionalAbility.activation missing`);
+    else {
+      const n = (act.sameElement ? 1 : 0) + (act.sameFaction ? 1 : 0) + (act.parrySupport ? 1 : 0) + (act.roles?.length ?? 0) + (act.potentialRoles?.length ?? 0);
+      const m = aa.conditionShort ? aa.conditionShort.split("/").length : 0;
+      if (n !== m) err(`character ${r.data.id}: activation has ${n} item(s) but conditionShort has ${m}`);
+    }
+  }
 }
 console.log(`characters: ${ids.size}`);
 if (ids.size < MIN_CHARS) err(`expected at least ${MIN_CHARS} characters`);

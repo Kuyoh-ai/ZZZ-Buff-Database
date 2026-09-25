@@ -6,6 +6,7 @@
     "rarity": "A",
     "element": "electric",
     "role": "stun",
+    "assist": "parry",
     "faction": "cunning_hares",
     "wengine": {
       "nameJa": "-",
@@ -17,6 +18,10 @@
       "name": "並列回路",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/2"
     }
   },
@@ -27,6 +32,7 @@
     "rarity": "A",
     "element": "physical",
     "role": "attack",
+    "assist": "evasive",
     "faction": "cunning_hares",
     "wengine": {
       "nameJa": "-",
@@ -38,6 +44,10 @@
       "name": "スターライト戦隊",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/19"
     }
   },
@@ -48,6 +58,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "attack",
+    "assist": "parry",
     "faction": "cunning_hares",
     "wengine": {
       "nameJa": "鋼の肉球",
@@ -60,6 +71,10 @@
       "name": "キャットウォーク・ショー",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/21"
     }
   },
@@ -70,6 +85,7 @@
     "rarity": "A",
     "element": "ether",
     "role": "support",
+    "assist": "parry",
     "faction": "cunning_hares",
     "wengine": {
       "nameJa": "-",
@@ -81,6 +97,10 @@
       "name": "狡兎三窟",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     }
   },
@@ -91,6 +111,7 @@
     "rarity": "A",
     "element": "electric",
     "role": "attack",
+    "assist": "parry",
     "faction": "belobog_heavy_industries",
     "wengine": {
       "nameJa": "-",
@@ -102,6 +123,10 @@
       "name": "一致協力",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
     }
   },
@@ -112,6 +137,7 @@
     "rarity": "A",
     "element": "fire",
     "role": "defense",
+    "assist": "parry",
     "faction": "belobog_heavy_industries",
     "wengine": {
       "nameJa": "-",
@@ -123,6 +149,10 @@
       "name": "契約合意",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/25"
     }
   },
@@ -133,6 +163,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "anomaly",
+    "assist": "evasive",
     "faction": "belobog_heavy_industries",
     "wengine": {
       "nameJa": "複合コンパイラ",
@@ -145,6 +176,10 @@
       "name": "技術支援チーム",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
     }
   },
@@ -155,6 +190,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "stun",
+    "assist": "parry",
     "faction": "belobog_heavy_industries",
     "wengine": {
       "nameJa": "燃獄ギア",
@@ -165,8 +201,18 @@
     "hasPotential": true,
     "additionalAbility": {
       "name": "白祇式経営学",
-      "condition": "チームに自身と同じ属性、同じ陣営、または[命破]のメンバーがいる時に発動",
-      "conditionShort": "同属性 / 同陣営 / [命破]",
+      "condition": "チームに自身と同じ属性、同じ陣営、または[命破]のメンバーがいる時に発動(ポテンシャル解放 T1 以降は[鋭御]のメンバーも対象)",
+      "conditionShort": "同属性 / 同陣営 / [命破] / [鋭御](T1)",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true,
+        "roles": [
+          "rupture"
+        ],
+        "potentialRoles": [
+          "armorer"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/26"
     }
   },
@@ -177,6 +223,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "sons_of_calydon",
     "wengine": {
       "nameJa": "バーニング・シェイカー",
@@ -189,6 +236,12 @@
       "name": "燃え広がる小火",
       "condition": "チームに他の[異常]メンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "他の[異常] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382"
     }
   },
@@ -199,6 +252,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "defense",
+    "assist": "parry",
     "faction": "sons_of_calydon",
     "wengine": {
       "nameJa": "猛進するキバ",
@@ -210,6 +264,10 @@
       "name": "ほとばしる闘志",
       "condition": "チームに『パリィ支援』を発動できる他のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "パリィ支援可能な他メンバー / 同陣営",
+      "activation": {
+        "parrySupport": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/381"
     }
   },
@@ -220,6 +278,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "stun",
+    "assist": "parry",
     "faction": "sons_of_calydon",
     "wengine": {
       "nameJa": "炎心の桂冠",
@@ -231,6 +290,12 @@
       "name": "燃える闘志",
       "condition": "チームに[強攻]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[強攻] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "attack"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530"
     }
   },
@@ -241,6 +306,7 @@
     "rarity": "A",
     "element": "fire",
     "role": "support",
+    "assist": "parry",
     "faction": "sons_of_calydon",
     "wengine": {
       "nameJa": "-",
@@ -252,6 +318,13 @@
       "name": "打席に立て！",
       "condition": "チームに自身と同じ属性、同じ陣営または[命破]のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営 / [命破]",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true,
+        "roles": [
+          "rupture"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/125"
     }
   },
@@ -262,6 +335,7 @@
     "rarity": "A",
     "element": "physical",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "sons_of_calydon",
     "wengine": {
       "nameJa": "-",
@@ -273,6 +347,13 @@
       "name": "一緒に飛ばそうぜい",
       "condition": "チームに自身と同じ属性、同じ陣営のメンバー、または他の[異常]メンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営 / 他の[異常]",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/126"
     }
   },
@@ -283,6 +364,7 @@
     "rarity": "A",
     "element": "physical",
     "role": "stun",
+    "assist": "evasive",
     "faction": "sons_of_calydon",
     "wengine": {
       "nameJa": "-",
@@ -294,6 +376,13 @@
       "name": "ビジネスパートナー",
       "condition": "チームに[強攻]または[命破]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[強攻] / [命破] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "attack",
+          "rupture"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619"
     }
   },
@@ -304,6 +393,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "attack",
+    "assist": "parry",
     "faction": "mockingbird",
     "wengine": {
       "nameJa": "千面の落日",
@@ -315,6 +405,12 @@
       "name": "終焉の序曲",
       "condition": "チームに他の[撃破]メンバーまたは自身と同じ属性のメンバーがいる時に発動",
       "conditionShort": "他の[撃破] / 同属性",
+      "activation": {
+        "sameElement": true,
+        "roles": [
+          "stun"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/707"
     }
   },
@@ -325,6 +421,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "mockingbird",
     "wengine": {
       "nameJa": "鳥は夢へと羽ばたいて",
@@ -336,6 +433,12 @@
       "name": "予見の涙",
       "condition": "チームに他の[異常]メンバーまたは自身と同じ属性のメンバーがいる時に発動",
       "conditionShort": "他の[異常] / 同属性",
+      "activation": {
+        "sameElement": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/626"
     }
   },
@@ -346,6 +449,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "spook_shack",
     "wengine": {
       "nameJa": "十面百錬の星",
@@ -357,6 +461,12 @@
       "name": "奇怪を探して",
       "condition": "チームに他の[異常]または[支援]メンバーがいる時に発動",
       "conditionShort": "他の[異常] / [支援]",
+      "activation": {
+        "roles": [
+          "anomaly",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838"
     }
   },
@@ -367,6 +477,7 @@
     "rarity": "A",
     "element": "fire",
     "role": "rupture",
+    "assist": "parry",
     "faction": "spook_shack",
     "wengine": {
       "nameJa": "-",
@@ -378,6 +489,12 @@
       "name": "蘇る心",
       "condition": "チームに[支援]または[撃破]のメンバーがいる時に発動",
       "conditionShort": "[支援] / [撃破]",
+      "activation": {
+        "roles": [
+          "support",
+          "stun"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
     }
   },
@@ -388,6 +505,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "support",
+    "assist": "parry",
     "faction": "spook_shack",
     "wengine": {
       "nameJa": "炉で歌い上げられる夢",
@@ -399,6 +517,12 @@
       "name": "長夜の詩篇",
       "condition": "チームに[命破]または[撃破]のメンバーがいる時に発動",
       "conditionShort": "[命破] / [撃破]",
+      "activation": {
+        "roles": [
+          "rupture",
+          "stun"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
     }
   },
@@ -409,6 +533,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "support",
+    "assist": "parry",
     "faction": "spook_shack",
     "wengine": {
       "nameJa": "狸の七変化",
@@ -420,6 +545,12 @@
       "name": "みんなで大騒ぎ！",
       "condition": "チーム内に[異常]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[異常] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837"
     }
   },
@@ -430,6 +561,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "rupture",
+    "assist": "parry",
     "faction": "spook_shack",
     "wengine": {
       "nameJa": "セイレーンクレードル",
@@ -441,6 +573,12 @@
       "name": "完全なる物語",
       "condition": "チーム内に[撃破]または[支援]メンバーがいる時に発動",
       "conditionShort": "[撃破] / [支援]",
+      "activation": {
+        "roles": [
+          "stun",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/909"
     }
   },
@@ -451,6 +589,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "angels_of_delusion",
     "wengine": {
       "nameJa": "殻の中の魂",
@@ -462,6 +601,14 @@
       "name": "みんなで一緒にステージを",
       "condition": "チームに[撃破]、[支援]、自身と同じ陣営のメンバー、または他の[異常]メンバーがいる時に発動",
       "conditionShort": "[撃破] / [支援] / 同陣営 / 他の[異常]",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "stun",
+          "support",
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998"
     }
   },
@@ -472,6 +619,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "stun",
+    "assist": "parry",
     "faction": "angels_of_delusion",
     "wengine": {
       "nameJa": "妄想ディスコテック",
@@ -483,6 +631,12 @@
       "name": "エンジェルのリーダー",
       "condition": "チームに[異常]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[異常] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038"
     }
   },
@@ -493,6 +647,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "support",
+    "assist": "parry",
     "faction": "angels_of_delusion",
     "wengine": {
       "nameJa": "想いが織りなす歌",
@@ -504,6 +659,12 @@
       "name": "白昼夢の対位法",
       "condition": "チームに[強攻]または自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[強攻] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "attack"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995"
     }
   },
@@ -514,6 +675,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "support",
+    "assist": "evasive",
     "faction": "victoria_housekeeping",
     "wengine": {
       "nameJa": "啜り泣くゆりかご",
@@ -526,6 +688,10 @@
       "name": "完美なる舞踏会",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/30"
     }
   },
@@ -536,6 +702,7 @@
     "rarity": "A",
     "element": "physical",
     "role": "attack",
+    "assist": "parry",
     "faction": "victoria_housekeeping",
     "wengine": {
       "nameJa": "-",
@@ -547,6 +714,10 @@
       "name": "お掃除ヘルパー",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/23"
     }
   },
@@ -557,6 +728,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "attack",
+    "assist": "parry",
     "faction": "victoria_housekeeping",
     "wengine": {
       "nameJa": "ディープシー・ビジター",
@@ -569,6 +741,10 @@
       "name": "ライジングストーム",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/29"
     }
   },
@@ -579,6 +755,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "stun",
+    "assist": "parry",
     "faction": "victoria_housekeeping",
     "wengine": {
       "nameJa": "拘縛されし者",
@@ -591,6 +768,10 @@
       "name": "優雅なる狩人",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
     }
   },
@@ -601,6 +782,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "neps_special_investigation",
     "wengine": {
       "nameJa": "磨き抜かれた切っ先",
@@ -613,6 +795,12 @@
       "name": "痛点",
       "condition": "チームに他の[異常]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "他の[異常] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     }
   },
@@ -623,6 +811,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "stun",
+    "assist": "parry",
     "faction": "neps_special_investigation",
     "wengine": {
       "nameJa": "玉壺青氷",
@@ -634,6 +823,12 @@
       "name": "陽関三畳",
       "condition": "チームに[強攻]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[強攻] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "attack"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
     }
   },
@@ -644,6 +839,7 @@
     "rarity": "A",
     "element": "electric",
     "role": "defense",
+    "assist": "parry",
     "faction": "neps_special_investigation",
     "wengine": {
       "nameJa": "-",
@@ -655,6 +851,10 @@
       "name": "意気揚々",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/369"
     }
   },
@@ -665,6 +865,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "attack",
+    "assist": "evasive",
     "faction": "neps_special_investigation",
     "wengine": {
       "nameJa": "サプレッサーVI型",
@@ -676,6 +877,12 @@
       "name": "武装間連携",
       "condition": "チームに[支援]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[支援] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
     }
   },
@@ -686,6 +893,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "attack",
+    "assist": "parry",
     "faction": "neps_public_order",
     "wengine": {
       "nameJa": "影を追う白き牙",
@@ -697,6 +905,12 @@
       "name": "ドキドキトキシック",
       "condition": "チーム内に[撃破]または自身と同じ属性のメンバーがいる時に発動",
       "conditionShort": "[撃破] / 同属性",
+      "activation": {
+        "sameElement": true,
+        "roles": [
+          "stun"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039"
     }
   },
@@ -707,6 +921,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "attack",
+    "assist": "parry",
     "faction": "hollow_special_operations",
     "wengine": {
       "nameJa": "残心の青籠",
@@ -719,6 +934,12 @@
       "name": "定格超越",
       "condition": "チームに「撃破」または「異常」のメンバーがいる時に発動",
       "conditionShort": "[撃破] / [異常]",
+      "activation": {
+        "roles": [
+          "stun",
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/538"
     }
   },
@@ -729,6 +950,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "hollow_special_operations",
     "wengine": {
       "nameJa": "あられ落つ星殿",
@@ -740,6 +962,13 @@
       "name": "霜雪を共に沐し",
       "condition": "チームに[支援]、自身と同じ陣営のメンバー、または他の[異常]メンバーがいる時に発動",
       "conditionShort": "[支援] / 同陣営 / 他の[異常]",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "support",
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/537"
     }
   },
@@ -750,6 +979,7 @@
     "rarity": "A",
     "element": "ice",
     "role": "support",
+    "assist": "parry",
     "faction": "hollow_special_operations",
     "wengine": {
       "nameJa": "-",
@@ -761,6 +991,10 @@
       "name": "ケータリングセット",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
     }
   },
@@ -771,6 +1005,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "hollow_special_operations",
     "wengine": {
       "nameJa": "刻流の賢者",
@@ -782,6 +1017,12 @@
       "name": "月相",
       "condition": "チームに他の[異常]メンバーまたは自身と同じ属性のメンバーがいる時に発動",
       "conditionShort": "他の[異常] / 同属性",
+      "activation": {
+        "sameElement": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
     }
   },
@@ -792,6 +1033,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "attack",
+    "assist": "parry",
     "faction": "defense_force_obol",
     "wengine": {
       "nameJa": "憤怒の銃騒",
@@ -803,6 +1045,12 @@
       "name": "溶炉鍛心",
       "condition": "チームに[撃破]または[支援]のメンバーがいる時に発動",
       "conditionShort": "[撃破] / [支援]",
+      "activation": {
+        "roles": [
+          "stun",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     }
   },
@@ -813,6 +1061,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "attack",
+    "assist": "parry",
     "faction": "defense_force_obol",
     "wengine": {
       "nameJa": "駆動する種",
@@ -824,6 +1073,11 @@
       "name": "思いがけない援軍",
       "condition": "チームに他の[強攻]メンバーがいる時に発動",
       "conditionShort": "他の[強攻]",
+      "activation": {
+        "roles": [
+          "attack"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901"
     }
   },
@@ -834,6 +1088,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "attack",
+    "assist": "parry",
     "faction": "defense_force_obol",
     "wengine": {
       "nameJa": "ブリムストーン",
@@ -846,6 +1101,10 @@
       "name": "燎原",
       "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
       "conditionShort": "同属性 / 同陣営",
+      "activation": {
+        "sameElement": true,
+        "sameFaction": true
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
     }
   },
@@ -856,6 +1115,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "stun",
+    "assist": "parry",
     "faction": "defense_force_obol",
     "wengine": {
       "nameJa": "奪魂の瞑目",
@@ -867,6 +1127,12 @@
       "name": "銀灯の霊眼",
       "condition": "チームに[強攻]のメンバーまたは自身と同じ属性のメンバーがいる時に発動",
       "conditionShort": "[強攻] / 同属性",
+      "activation": {
+        "sameElement": true,
+        "roles": [
+          "attack"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/620"
     }
   },
@@ -877,6 +1143,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "attack",
+    "assist": "parry",
     "faction": "defense_force_silver",
     "wengine": {
       "nameJa": "純然たる犠牲",
@@ -889,6 +1156,12 @@
       "name": "誘電分極",
       "condition": "チームに[撃破]または[支援]のメンバーがいる時に発動",
       "conditionShort": "[撃破] / [支援]",
+      "activation": {
+        "roles": [
+          "stun",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/618"
     }
   },
@@ -899,6 +1172,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "stun",
+    "assist": "parry",
     "faction": "yunkui_summit",
     "wengine": {
       "nameJa": "招福の虎炉",
@@ -910,6 +1184,12 @@
       "name": "威風堂々",
       "condition": "チームに[強攻]または[命破]のメンバーがいる時に発動",
       "conditionShort": "[強攻] / [命破]",
+      "activation": {
+        "roles": [
+          "attack",
+          "rupture"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750"
     }
   },
@@ -920,6 +1200,7 @@
     "rarity": "A",
     "element": "physical",
     "role": "defense",
+    "assist": "parry",
     "faction": "yunkui_summit",
     "wengine": {
       "nameJa": "-",
@@ -931,6 +1212,12 @@
       "name": "パンダの胃袋",
       "condition": "チームに[命破]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[命破] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "rupture"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/751"
     }
   },
@@ -941,6 +1228,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "attack",
+    "assist": "parry",
     "faction": "yunkui_summit",
     "wengine": {
       "nameJa": "孤光彩雲",
@@ -952,6 +1240,12 @@
       "name": "残影の光",
       "condition": "チームに[支援]または[防護]のメンバーがいる時に発動",
       "conditionShort": "[支援] / [防護]",
+      "activation": {
+        "roles": [
+          "support",
+          "defense"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
     }
   },
@@ -962,6 +1256,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "rupture",
+    "assist": "parry",
     "faction": "yunkui_summit",
     "wengine": {
       "nameJa": "青溟の鳥籠",
@@ -973,6 +1268,13 @@
       "name": "玄墨の暗流",
       "condition": "チーム内に[撃破]、[支援]または[防護]のメンバーがいる時に発動",
       "conditionShort": "[撃破] / [支援] / [防護]",
+      "activation": {
+        "roles": [
+          "stun",
+          "support",
+          "defense"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
     }
   },
@@ -983,6 +1285,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "rupture",
+    "assist": "parry",
     "faction": "krampus_compliance_authority",
     "wengine": {
       "nameJa": "金剛不壊怒髪衝冠",
@@ -994,6 +1297,12 @@
       "name": "天頂",
       "condition": "チームに[支援]または[撃破]メンバーがいる時に発動",
       "conditionShort": "[支援] / [撃破]",
+      "activation": {
+        "roles": [
+          "support",
+          "stun"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/934"
     }
   },
@@ -1004,6 +1313,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "stun",
+    "assist": "parry",
     "faction": "krampus_compliance_authority",
     "wengine": {
       "nameJa": "昨夜からの着信",
@@ -1015,6 +1325,12 @@
       "name": "迷ったらテレフォンを！",
       "condition": "チームに[強攻]または[命破]のメンバーがいる時に発動",
       "conditionShort": "[強攻] / [命破]",
+      "activation": {
+        "roles": [
+          "attack",
+          "rupture"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932"
     }
   },
@@ -1025,6 +1341,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "krampus_compliance_authority",
     "wengine": {
       "nameJa": "フロスト・クレセント",
@@ -1036,6 +1353,12 @@
       "name": "氷に沈むこの心は",
       "condition": "チームに他の[異常]または[支援]メンバーがいる時に発動",
       "conditionShort": "他の[異常] / [支援]",
+      "activation": {
+        "roles": [
+          "anomaly",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     }
   },
@@ -1046,6 +1369,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "defense",
+    "assist": "parry",
     "faction": "krampus_compliance_authority",
     "wengine": {
       "nameJa": "甘さ控えめ雪うさぎ",
@@ -1057,6 +1381,13 @@
       "name": "氷結んで手も結んで",
       "condition": "チームに[強攻]、[異常]、または[支援]のメンバーがいる時に発動",
       "conditionShort": "[強攻] / [異常] / [支援]",
+      "activation": {
+        "roles": [
+          "attack",
+          "anomaly",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960"
     }
   },
@@ -1067,6 +1398,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "support",
+    "assist": "evasive",
     "faction": "stars_of_lyra",
     "wengine": {
       "nameJa": "優美のヴァニティ",
@@ -1078,6 +1410,13 @@
       "name": "ムーンリット・フレンジー",
       "condition": "チームに[強攻]、[異常]または[命破]のメンバーがいる時に発動",
       "conditionShort": "[強攻] / [異常] / [命破]",
+      "activation": {
+        "roles": [
+          "attack",
+          "anomaly",
+          "rupture"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/588"
     }
   },
@@ -1088,6 +1427,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "attack",
+    "assist": "parry",
     "faction": "stars_of_lyra",
     "wengine": {
       "nameJa": "心弦のノクターン",
@@ -1099,6 +1439,12 @@
       "name": "急襲支点",
       "condition": "チームに[撃破]または[支援]のメンバーがいる時に発動",
       "conditionShort": "[撃破] / [支援]",
+      "activation": {
+        "roles": [
+          "stun",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/589"
     }
   },
@@ -1109,6 +1455,7 @@
     "rarity": "S",
     "element": "ice",
     "role": "attack",
+    "assist": "parry",
     "faction": "ros_khalifa_airspace",
     "wengine": {
       "nameJa": "栄光の騎士道",
@@ -1120,6 +1467,12 @@
       "name": "天の彼方の軍勢",
       "condition": "チームに[支援]または[撃破]のメンバーがいる時に発動",
       "conditionShort": "[支援] / [撃破]",
+      "activation": {
+        "roles": [
+          "support",
+          "stun"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1113"
     }
   },
@@ -1130,6 +1483,7 @@
     "rarity": "S",
     "element": "fire",
     "role": "stun",
+    "assist": "parry",
     "faction": "ros_khalifa_foreign_affairs",
     "wengine": {
       "nameJa": "エースのオトモ",
@@ -1141,6 +1495,13 @@
       "name": "数的優位性",
       "condition": "チームに[強攻]、[命破]、または自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "[強攻] / [命破] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "attack",
+          "rupture"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     }
   },
@@ -1151,6 +1512,7 @@
     "rarity": "S",
     "element": "ether",
     "role": "attack",
+    "assist": "parry",
     "faction": "phaethon",
     "wengine": {
       "nameJa": "太陽の抜け殻",
@@ -1162,6 +1524,12 @@
       "name": "煌々たる軍勢",
       "condition": "チームに[撃破]または[支援]のメンバーがいる時に発動",
       "conditionShort": "[撃破] / [支援]",
+      "activation": {
+        "roles": [
+          "stun",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
     }
   },
@@ -1172,6 +1540,7 @@
     "rarity": "S",
     "element": "wind",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "ros_khalifa_foreign_affairs",
     "wengine": {
       "nameJa": "金襴の心",
@@ -1183,6 +1552,12 @@
       "name": "お茶会の礼節",
       "condition": "チームに他の[異常]メンバー、または自身と同じ属性のメンバーがいる時に発動",
       "conditionShort": "他の[異常] / 同属性",
+      "activation": {
+        "sameElement": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
     }
   },
@@ -1193,6 +1568,7 @@
     "rarity": "S",
     "element": "lumiflux",
     "role": "anomaly",
+    "assist": "parry",
     "faction": "covenant_of_dayat",
     "wengine": {
       "nameJa": "目覚めし翼の聖歌",
@@ -1204,6 +1580,12 @@
       "name": "芳しき花々の誘い",
       "condition": "チームに他の[異常]メンバー、または自身と同じ陣営のメンバーがいる時に発動",
       "conditionShort": "他の[異常] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1112"
     }
   },
@@ -1214,6 +1596,7 @@
     "rarity": "S",
     "element": "electric",
     "role": "armorer",
+    "assist": "parry",
     "faction": "ros_khalifa_flint_workshop",
     "wengine": {
       "nameJa": "深紅の渇望",
@@ -1225,6 +1608,13 @@
       "name": "受け継がれし血脈",
       "condition": "チームに[撃破]、他の[鋭御]、または自身と同じ属性のメンバーがいる時に発動",
       "conditionShort": "[撃破] / 他の[鋭御] / 同属性",
+      "activation": {
+        "sameElement": true,
+        "roles": [
+          "stun",
+          "armorer"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
     }
   },
@@ -1235,6 +1625,7 @@
     "rarity": "S",
     "element": "physical",
     "role": "rupture",
+    "assist": "parry",
     "faction": "cunning_hares",
     "wengine": {
       "nameJa": "スターライトバイザー",
@@ -1246,6 +1637,13 @@
       "name": "バーニング・スターライト",
       "condition": "チームに[撃破]、[防護]または[支援]のメンバーがいる時に発動",
       "conditionShort": "[撃破] / [防護] / [支援]",
+      "activation": {
+        "roles": [
+          "stun",
+          "defense",
+          "support"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
     }
   },
@@ -1256,6 +1654,7 @@
     "rarity": "S",
     "element": "wind",
     "role": "stun",
+    "assist": "parry",
     "faction": "ros_khalifa_flint_workshop",
     "wengine": {
       "nameJa": "眠れぬ夜は永遠に",
@@ -1267,6 +1666,13 @@
       "name": "合金の心臓",
       "condition": "チームに[強攻]、[命破]、または[鋭御]のメンバーがいる時に発動",
       "conditionShort": "[強攻] / [命破] / [鋭御]",
+      "activation": {
+        "roles": [
+          "attack",
+          "rupture",
+          "armorer"
+        ]
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
     }
   }

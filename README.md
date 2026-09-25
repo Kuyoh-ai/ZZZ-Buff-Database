@@ -71,6 +71,8 @@ npm run check-anim     # CSSアニメーションが0.5s以内か検証(ロー�
 - `maxStacks`: 最大スタック数(既定1)。`values` は1スタックあたりの値。テーブルには最大スタック時の合計を表示
 - `sourceUrl`: 必須。数値を確認したページのURL
 - `name`: 追加能力由来のバフは名前に「追加能力」を含める(例「追加能力: 〜(〜)」)。UI の追加能力トグル(一括/個別)はこの文字列で対象を識別する。発動条件は `characters.json` の `additionalAbility` に記載
+- `additionalAbility.activation`(`characters.json`): 発動条件の構造化(`sameElement` / `sameFaction`(大区分で判定) / `roles` / `parrySupport` / `potentialRoles`(ポテンシャル解放 T1 以降で追加される役割)、OR 条件)。アタッカー選択時に「出し手 + アタッカーの2人編成」で条件を満たすかを自動判定し、各行の追加能力チェックを切り替えるのに使う(3人目は未考慮。手動で変更可、解除で元に戻る)。`conditionShort` の項目数と一致させる(validate-data が検証)
+- `assist`(`characters.json`): 支援スキルの種類 `parry`(パリィ支援)/ `evasive`(回避支援)。HoYoWiki の支援スキル名から取る。シーザーの「パリィ支援可能な他メンバー」条件の判定に使う
 
 値の解決: `効果量 = values[適用中の最大段階] + wengine[P] (装備時)` を `maxStacks` 倍。
 

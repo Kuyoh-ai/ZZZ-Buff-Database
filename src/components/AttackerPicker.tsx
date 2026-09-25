@@ -201,6 +201,9 @@ export function AttackerPicker({
             <span className="legend legend--off">適用不可</span>
             <span className="legend legend--self">自己バフ</span>
           </div>
+          <p className="attacker__note" data-testid="attacker-aa-note">
+            各行の「追加能力」チェックは、{sel.nameJa}との2人編成で発動条件を満たすかで自動設定しています(3人目は未考慮)。手動で変更でき、解除すると元の設定に戻ります。
+          </p>
         </div>
       ) : (
         <p className="attacker__hint">アタッカーを指定すると、そのキャラに有効なバフが強調表示されます。</p>

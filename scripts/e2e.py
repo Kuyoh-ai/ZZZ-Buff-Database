@@ -144,6 +144,7 @@ with sync_playwright() as p:
     page.locator('[data-testid="row-ellen"] .namebtn').click(); page.wait_for_timeout(300)
     check("detail panel opens", page.locator(".row--detail").count() == 1)
     page.screenshot(path=f"{out}/06-detail.png")
+    page.locator('[data-testid="attacker-clear"]').click(); page.wait_for_timeout(200)  # 以降の追加能力トグル検証は保存設定のみで見る
 
     # (f) 追加能力トグル: 既定 ON、一括 OFF で追加能力由来のセルが消える、個別チェックで1行だけ、リセットで戻る
     aa_cell = lambda rid: page.locator(f'[data-testid="row-{rid}"] [data-testid="cell-chain_dmg_pct"]')
@@ -167,6 +168,43 @@ with sync_playwright() as p:
     page.locator('[data-testid="row-reset-koleda"]').click(); page.wait_for_timeout(300)
     check("row reset restores cell and checkbox", aa_cell("koleda").count() == 1 and page.locator('[data-testid="row-aa-koleda"]').is_checked())
     page.screenshot(path=f"{out}/08-aa-row.png")
+
+    # (g) アタッカー選択で追加能力の発動可否を自動判定(2人基準)。解除で元に戻り、別アタッカーで再判定、手動変更は保持
+    aa_on = lambda rid: page.locator(f'[data-testid="row-aa-{rid}"]').is_checked()
+    aa_mode = lambda rid: page.locator(f'[data-testid="row-aa-mode-{rid}"]').get_attribute("data-aa-mode")
+    page.locator('[data-testid="row-aa-koleda"]').click(); page.wait_for_timeout(200)  # 保存設定でクレタ OFF にしておく(解除時の復元確認用)
+    check("pre: koleda OFF in saved settings", not aa_on("koleda"))
+    page.locator('[data-testid="attacker-toggle"]').click(); page.locator('[data-testid="attacker-opt-ellen"]').click(); page.wait_for_timeout(400)
+    check("ellen: lycaon ON (same element)", aa_on("lycaon") and aa_mode("lycaon") == "auto")
+    check("ellen: koleda OFF (fire/belobog/rupture not met)", not aa_on("koleda") and aa_mode("koleda") == "auto")
+    check("ellen: lighter ON ([強攻])", aa_on("lighter"))
+    check("ellen: caesar ON (ellen has parry support)", aa_on("caesar"))
+    check("ellen: self row not judged", aa_mode("ellen") == "")
+    check("attacker note shown", page.locator('[data-testid="attacker-aa-note"]').count() == 1)
+    page.screenshot(path=f"{out}/09-aa-auto.png")
+    page.locator('[data-testid="row-aa-koleda"]').click(); page.wait_for_timeout(200)  # 手動で ON
+    check("manual ON kept while same attacker", aa_on("koleda") and aa_mode("koleda") == "manual")
+    page.locator('[data-testid="row-aa-lycaon"]').click(); page.wait_for_timeout(200)  # 手動で OFF
+    check("manual change does not create saved override", not aa_on("lycaon") and aa_mode("lycaon") == "manual" and page.locator('[data-testid="row-reset-lycaon"]').count() == 0)
+    page.locator('[data-testid="attacker-toggle"]').click(); page.locator('[data-testid="attacker-opt-billy"]').click(); page.wait_for_timeout(400)
+    check("billy: caesar OFF (billy has evasive assist)", not aa_on("caesar") and aa_mode("caesar") == "auto")
+    check("billy: koleda re-judged OFF (manual dropped)", not aa_on("koleda") and aa_mode("koleda") == "auto")
+    check("billy: nicole ON (same faction)", aa_on("nicole"))
+    page.locator('[data-testid="attacker-toggle"]').click(); page.locator('[data-testid="attacker-opt-claretta"]').click(); page.wait_for_timeout(400)
+    check("claretta: koleda ON via potential [鋭御] (T6 default)", aa_on("koleda") and aa_mode("koleda") == "auto")
+    page.locator('[data-testid="global-pt-0"]').click(); page.wait_for_timeout(300)
+    check("claretta: koleda OFF when potential T0", not aa_on("koleda") and aa_mode("koleda") == "auto")
+    page.locator('[data-testid="global-pt-6"]').click(); page.wait_for_timeout(300)
+    check("claretta: koleda ON again at T6", aa_on("koleda"))
+    page.locator('[data-testid="attacker-toggle"]').click(); page.locator('[data-testid="attacker-opt-billy"]').click(); page.wait_for_timeout(400)
+    page.locator('[data-testid="global-aa-off"]').click(); page.wait_for_timeout(300)
+    check("global OFF while attacker selected turns rows OFF", not aa_on("nicole") and not aa_on("lycaon"))
+    page.locator('[data-testid="global-aa-on"]').click(); page.wait_for_timeout(300)
+    check("global ON while attacker selected turns rows ON", aa_on("nicole") and aa_on("caesar"))
+    page.locator('[data-testid="attacker-clear"]').click(); page.wait_for_timeout(300)
+    check("clear: koleda back to saved OFF, lycaon ON, no mode", not aa_on("koleda") and aa_on("lycaon") and aa_mode("koleda") == "")
+    page.locator('[data-testid="row-reset-koleda"]').click(); page.wait_for_timeout(200)
+    check("post: koleda reset to ON", aa_on("koleda"))
     page.locator('[data-testid="exclude-self"]').click(); page.wait_for_timeout(200)
 
     # A級のみ M6 / P5 ボタン: A級行の個別セレクトだけが変わる

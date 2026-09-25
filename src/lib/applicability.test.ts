@@ -9,6 +9,7 @@ const mk = (id: string, p: Partial<Character> = {}): Character => ({
   rarity: "S",
   element: "ether",
   role: "attack",
+  assist: "parry",
   faction: "cunning_hares",
   wengine: { nameJa: "-", nameEn: "-" },
   releaseVersion: "1.0",
