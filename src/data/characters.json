@@ -1248,5 +1248,26 @@
       "conditionShort": "[撃破] / [防護] / [支援]",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073"
     }
+  },
+  {
+    "id": "roxy",
+    "nameJa": "ロクシー",
+    "nameEn": "Roxy Ifrita Pryce",
+    "rarity": "S",
+    "element": "wind",
+    "role": "stun",
+    "faction": "ros_khalifa_flint_workshop",
+    "wengine": {
+      "nameJa": "眠れぬ夜は永遠に",
+      "nameEn": ""
+    },
+    "releaseVersion": "3.2",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186",
+    "additionalAbility": {
+      "name": "合金の心臓",
+      "condition": "チームに[強攻]、[命破]、または[鋭御]のメンバーがいる時に発動",
+      "conditionShort": "[強攻] / [命破] / [鋭御]",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    }
   }
 ]

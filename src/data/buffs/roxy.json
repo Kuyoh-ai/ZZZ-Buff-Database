@@ -1,0 +1,189 @@
+{
+  "characterId": "roxy",
+  "buffs": [
+    {
+      "id": "roxy_core_atk_flat",
+      "name": "コアパッシブ: 熱夜のエンブレイス(自身攻撃力アップ)",
+      "stat": "atk_flat",
+      "target": "self",
+      "values": {
+        "base": 960
+      },
+      "note": "開幕エネルギー自動回復が 1.2 を上回る場合、超過分 0.01Pt につき攻撃力+5Pt、上限+960Pt(自動回復 3.12 で最大)。上限値を記載。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_core_impact_flat",
+      "name": "コアパッシブ: 熱夜のエンブレイス(自身衝撃力アップ)",
+      "stat": "impact_flat",
+      "target": "self",
+      "values": {
+        "base": 76.8
+      },
+      "note": "開幕エネルギー自動回復が 1.2 を上回る場合、超過分 0.01Pt につき衝撃力+0.4Pt、上限+76.8Pt(自動回復 3.12 で最大)。上限値を記載。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_core_team_crit_dmg",
+      "name": "コアパッシブ: 熱夜のエンブレイス(チーム会心ダメージアップ)",
+      "stat": "crit_dmg",
+      "target": "team",
+      "values": {
+        "base": 40
+      },
+      "duration": "50s",
+      "note": "任意のメンバーが「浸透」または「清浄」を発動した時、[鋭御]でないメンバーが対応属性および風属性のダメージを与える際、ロクシーの会心率 1% につき会心ダメージ+0.4%、上限+40%(会心率 100% で最大)。上限値を記載。役割の除外指定が無いため[鋭御]の行にも表示される。属性ごとに継続 50 秒、重複で更新。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_core_armorer_sharp_crit_dmg",
+      "name": "コアパッシブ: 熱夜のエンブレイス(鋭御メンバー暴傷ダメージアップ)",
+      "stat": "sharp_crit_dmg",
+      "target": "team",
+      "condition": {
+        "roles": [
+          "armorer"
+        ]
+      },
+      "values": {
+        "base": 20
+      },
+      "duration": "50s",
+      "note": "任意のメンバーが「浸透」または「清浄」を発動した時、[鋭御]メンバーが対応属性および風属性のダメージを与える際、ロクシーの会心率 1% につき暴傷ダメージ+0.2%、上限+20%(会心率 100% で最大)。上限値を記載。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_add_ability_dmg_self",
+      "name": "追加能力: 合金の心臓(自身与ダメージアップ)",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 80
+      },
+      "note": "与ダメージ+8%、エージェントレベル 1 につき+1.2%、上限+80%(Lv60)。上限値を記載。発動条件はチームに[強攻]/[命破]/[鋭御]のメンバーがいること(OR条件のため condition 省略)。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_add_ability_stun_multiplier",
+      "name": "追加能力: 合金の心臓(敵ブレイク弱体倍率アップ)",
+      "stat": "enemy_stun_dmg_multiplier",
+      "target": "enemy",
+      "values": {
+        "base": 30
+      },
+      "note": "他のメンバーの攻撃が敵に命中した時、ターゲットのブレイク弱体倍率+30%。敵がブレイク状態に入った時、ブレイク継続時間+2秒(同種効果と重複不可、stat なしのため未収録)。ブレイク終了時に解除。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_add_ability_enemy_dmg_taken",
+      "name": "追加能力: 合金の心臓(風化中の敵被ダメージ増加)",
+      "stat": "enemy_dmg_taken_pct",
+      "target": "enemy",
+      "values": {
+        "base": 8
+      },
+      "note": "敵が他のメンバーが発動させた「風化」状態にある時、ターゲットが受ける風属性直接ダメージおよび「浸透」対応属性の直接ダメージ+8%(直接ダメージのみ、属性限定)。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_add_ability_energy",
+      "name": "追加能力: 合金の心臓(入場時エネルギー回復)",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "values": {
+        "base": 40
+      },
+      "note": "フィールド入場時に自身のエネルギーを 40Pt 回復。探査モードでは 180 秒に 1 回のみ。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_add_ability_anomaly_buildup",
+      "name": "追加能力: 合金の心臓(自身状態異常蓄積効率アップ)",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "values": {
+        "base": 30
+      },
+      "duration": "50s",
+      "note": "『強化特殊スキル』発動時、自身の状態異常蓄積効率+30%、継続 50 秒、重複で更新。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_wengine_crit_rate",
+      "name": "音動機 眠れぬ夜は永遠に: 会心率アップ",
+      "stat": "crit_rate",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 24,
+        "p2": 24,
+        "p3": 24,
+        "p4": 24,
+        "p5": 24
+      },
+      "note": "装備者([撃破])の会心率+24%(P1)。P2〜P5 は未公開のため P1 の値を仮置き(要更新)。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_wengine_wind_res_ignore",
+      "name": "音動機 眠れぬ夜は永遠に: 風属性耐性無視",
+      "stat": "enemy_res_down_pct",
+      "element": "wind",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 15,
+        "p2": 15,
+        "p3": 15,
+        "p4": 15,
+        "p5": 15
+      },
+      "note": "装備者の与ダメージはターゲットの風属性ダメージ耐性を 15% 無視(P1)。自身の攻撃にのみ適用のため target=self。P2〜P5 は未公開のため P1 の値を仮置き(要更新)。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_wengine_ex_daze",
+      "name": "音動機 眠れぬ夜は永遠に: 強化特殊スキルのブレイク値アップ",
+      "stat": "daze_pct",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 16,
+        "p2": 16,
+        "p3": 16,
+        "p4": 16,
+        "p5": 16
+      },
+      "note": "装備者が『強化特殊スキル』で風属性ダメージを与えた時、与えるブレイク値+16%(P1)。強化特殊スキルのみ対象。P2〜P5 は未公開のため P1 の値を仮置き(要更新)。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    },
+    {
+      "id": "roxy_wengine_team_dmg",
+      "name": "音動機 眠れぬ夜は永遠に: 他メンバー与ダメージアップ",
+      "stat": "dmg_pct",
+      "target": "team",
+      "condition": {
+        "excludeSelf": true
+      },
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 20,
+        "p2": 20,
+        "p3": 20,
+        "p4": 20,
+        "p5": 20
+      },
+      "duration": "50s",
+      "note": "装備者が『強化特殊スキル』で風属性ダメージを与えた時、他のメンバーの与ダメージ+20%(P1)、継続 50 秒、重複で更新。この与ダメージアップはチーム内で 1 つしか有効にならない。P2〜P5 は未公開のため P1 の値を仮置き(要更新)。数値はゲーム内スキル画面の画像(2026-09-25 時点、コア Lv7 / 音動機 Lv60 P1)を根拠とし、HoYoWiki(entry 1186)は本文未掲載",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
+    }
+  ]
+}
