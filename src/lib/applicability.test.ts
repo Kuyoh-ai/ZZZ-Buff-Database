@@ -76,14 +76,21 @@ describe("appliesTo", () => {
     for (const stat of ["atk_pct", "atk_flat", "hp_pct", "hp_flat", "crit_dmg", "sheer_force_pct", "sheer_force_flat", "sheer_dmg_pct"]) {
       expect(appliesTo(b({ stat }), provider, armorer)).toBe(false);
     }
-    for (const stat of ["def_pct", "def_flat", "crit_rate", "sharp_crit_dmg", "dmg_pct", "basic_dmg_pct"]) {
+    for (const stat of ["def_pct", "def_flat", "crit_rate", "sharp_crit_dmg", "sharp_dmg_pct", "dmg_pct", "basic_dmg_pct"]) {
       expect(appliesTo(b({ stat }), provider, armorer)).toBe(true);
     }
     expect(appliesTo(b({ stat: "dmg_pct_element", element: "electric" }), provider, armorer)).toBe(true);
   });
+  it("active / bench targets: active は出し手以外、bench はアタッカー(出場中)に乗らない", () => {
+    expect(appliesTo(b({ target: "active" }), provider, zhu)).toBe(true);
+    expect(appliesTo(b({ target: "active" }), provider, provider)).toBe(false);
+    expect(appliesTo(b({ target: "bench" }), provider, zhu)).toBe(false);
+    expect(appliesTo(b({ target: "bench" }), provider, null)).toBe(true);
+  });
   it("non-armorer attacker: sharp crit dmg not applicable", () => {
     expect(appliesTo(b({ stat: "sharp_crit_dmg" }), provider, zhu)).toBe(false);
     expect(appliesTo(b({ stat: "sharp_crit_dmg" }), provider, mk("y", { role: "rupture" }))).toBe(false);
+    expect(appliesTo(b({ stat: "sharp_dmg_pct" }), provider, zhu)).toBe(false);
   });
   it("non-rupture attacker: sheer force not applicable", () => {
     expect(appliesTo(b({ stat: "sheer_force_flat" }), provider, zhu)).toBe(false);

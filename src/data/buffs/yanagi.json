@@ -4,11 +4,13 @@
     {
       "id": "yanagi_core_disorder_dmg",
       "name": "コアパッシブ: 月蝕(混沌ダメージ倍率アップ)",
-      "stat": "disorder_dmg_pct",
+      "stat": "disorder_multiplier_pct",
       "target": "self",
-      "values": { "base": 250 },
+      "values": {
+        "base": 250
+      },
       "duration": "15s",
-      "note": "コアスキル最大レベル時。『強化特殊スキル』発動後、任意のメンバーが敵に「混沌」効果を付与した時に発動",
+      "note": "コアスキル最大レベル時。『強化特殊スキル』発動後、任意のメンバーが敵に「混沌」効果を付与した時に発動。2026-10-19 ユーザー回答: 「混沌ダメージ倍率+」は混沌の基礎倍率(450%)への加算として専用 stat に移動(混沌ダメージ% とは別枠)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
     },
     {
@@ -17,7 +19,9 @@
       "stat": "dmg_pct_element",
       "element": "electric",
       "target": "self",
-      "values": { "base": 20 },
+      "values": {
+        "base": 20
+      },
       "duration": "15s",
       "note": "コアスキル最大レベル時。『強化特殊スキル』が敵に命中した時に発動",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
@@ -27,18 +31,23 @@
       "name": "追加能力: 月相(電気異常蓄積)",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 45 },
+      "values": {
+        "base": 45
+      },
       "note": "チームに他の[異常]特性メンバーまたは自身と同じ属性(電気)のメンバーがいる時に発動。構え切り替え後の『通常攻撃:月夜見神楽』命中時に発動",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
     },
     {
       "id": "yanagi_m1_anomaly_mastery",
       "name": "心象映画1: 敵を知り、己を知る(異常マスタリーアップ)",
-      "stat": "anomaly_mastery",
+      "stat": "anomaly_proficiency",
       "target": "self",
-      "values": { "base": 0, "m1": 80 },
+      "values": {
+        "base": 0,
+        "m1": 80
+      },
       "duration": "15s",
-      "note": "任意のメンバーが敵を状態異常にすると「洞察力」を1重獲得(最大3重)。「洞察力」を1重以上所持している間、異常マスタリー+80Pt(重数によらず一定)",
+      "note": "任意のメンバーが敵を状態異常にすると「洞察力」を1重獲得(最大3重)。「洞察力」を1重以上所持している間、異常マスタリー+80Pt(重数によらず一定)。2026-10-19 監査: 原文「異常マスタリー+」のため stat を異常掌握 → 異常マスタリーに修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
     },
     {
@@ -46,7 +55,10 @@
       "name": "心象映画2: 卓越した適性(強化特殊スキルの電気異常蓄積値アップ)",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 0, "m2": 20 },
+      "values": {
+        "base": 0,
+        "m2": 20
+      },
       "note": "『強化特殊スキル』の高速突き刺しによる電気属性の状態異常蓄積値+20%(このエントリはyanagi_moonphase_buildupとは別枠)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
     },
@@ -55,7 +67,10 @@
       "name": "心象映画4: 盤上の支配者(貫通率アップ)",
       "stat": "pen_ratio",
       "target": "team",
-      "values": { "base": 0, "m4": 16 },
+      "values": {
+        "base": 0,
+        "m4": 16
+      },
       "duration": "15s",
       "note": "月城柳が敵に状態異常ダメージを与えると「暴露」効果(15秒)を付与。「暴露」状態の敵を攻撃した時、その攻撃の貫通率+16%",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
@@ -65,7 +80,10 @@
       "name": "心象映画6: 人ならざる血(強化特殊スキル与ダメージアップ)",
       "stat": "ex_dmg_pct",
       "target": "self",
-      "values": { "base": 0, "m6": 20 },
+      "values": {
+        "base": 0,
+        "m6": 20
+      },
       "note": "『強化特殊スキル』の突き刺し攻撃発動後、「森羅万象」状態が30秒まで延長。継続中『強化特殊スキル』の与ダメージ+20%",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529"
     },
@@ -74,31 +92,55 @@
       "name": "専用音動機「刻流の賢者」: 電気異常蓄積効率",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 0 },
+      "values": {
+        "base": 0
+      },
       "note": "装備時常時発動",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/531",
-      "wengine": { "p1": 30, "p2": 35, "p3": 40, "p4": 45, "p5": 50 }
+      "wengine": {
+        "p1": 30,
+        "p2": 35,
+        "p3": 40,
+        "p4": 45,
+        "p5": 50
+      }
     },
     {
       "id": "yanagi_wengine_anomaly_mastery",
       "name": "専用音動機「刻流の賢者」: 異常マスタリー",
-      "stat": "anomaly_mastery",
+      "stat": "anomaly_proficiency",
       "target": "self",
-      "values": { "base": 0 },
+      "values": {
+        "base": 0
+      },
       "duration": "15s",
-      "note": "『特殊スキル』または『強化特殊スキル』が状態異常の敵に命中した時付与",
+      "note": "『特殊スキル』または『強化特殊スキル』が状態異常の敵に命中した時付与。2026-10-19 監査: 原文「異常マスタリー+」のため stat を異常掌握 → 異常マスタリーに修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/531",
-      "wengine": { "p1": 75, "p2": 85, "p3": 95, "p4": 105, "p5": 115 }
+      "wengine": {
+        "p1": 75,
+        "p2": 85,
+        "p3": 95,
+        "p4": 105,
+        "p5": 115
+      }
     },
     {
       "id": "yanagi_wengine_disorder_dmg",
       "name": "専用音動機「刻流の賢者」: 混沌ダメージ",
       "stat": "disorder_dmg_pct",
       "target": "self",
-      "values": { "base": 0 },
+      "values": {
+        "base": 0
+      },
       "note": "異常マスタリーが375Pt以上の時に発動する条件付き効果",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/531",
-      "wengine": { "p1": 25, "p2": 27.5, "p3": 30, "p4": 32.5, "p5": 35 }
+      "wengine": {
+        "p1": 25,
+        "p2": 27.5,
+        "p3": 30,
+        "p4": 32.5,
+        "p5": 35
+      }
     }
   ]
 }

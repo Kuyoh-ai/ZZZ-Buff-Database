@@ -7,31 +7,9 @@
       "stat": "dmg_pct",
       "target": "self",
       "values": {
-        "base": 40
+        "base": 80
       },
-      "note": "コアスキル最大レベル時。「制圧モード」で「強化散弾」を使って攻撃する時、自身の与ダメージ+40%。ブレイク状態の敵を攻撃する際はさらに+40%(合計80%)",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
-    },
-    {
-      "id": "zhu_yuan_core_crit_dmg",
-      "name": "コアパッシブ: 特殊弾薬(会心ダメージアップ)",
-      "stat": "crit_dmg",
-      "target": "self",
-      "values": {
-        "base": 28.8
-      },
-      "note": "コアスキル最大レベル時。コアスキルLv2/4/6で各+9.6%(合計28.8%)。「強化散弾」使用時の効果",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
-    },
-    {
-      "id": "zhu_yuan_core_atk_flat",
-      "name": "コアパッシブ: 特殊弾薬(攻撃力アップ)",
-      "stat": "atk_flat",
-      "target": "self",
-      "values": {
-        "base": 75
-      },
-      "note": "コアスキル最大レベル時。コアスキルLv3/5/7で各+25Pt(合計75Pt)",
+      "note": "コアスキル最大レベル時。「制圧モード」で「強化散弾」を使って攻撃する時、自身の与ダメージ+40%。ブレイク状態の敵を攻撃する際はさらに+40%(合計80%)。2026-10-19 監査: ブレイク状態の敵への +40% を含めた上限値 80 に修正(上限値の規約)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31"
     },
     {

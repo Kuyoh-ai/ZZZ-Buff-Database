@@ -52,6 +52,21 @@
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
     },
     {
+      "id": "claretta_m1_grievous_multiplier",
+      "name": "心象映画1: 「重傷」ダメージ倍率アップ",
+      "stat": "grievous_multiplier_pct",
+      "target": "self",
+      "modes": [
+        "grievous"
+      ],
+      "values": {
+        "base": 0,
+        "m1": 30
+      },
+      "note": "クラレッタによって発生する「重傷」ダメージ倍率が本来の130%になる(重傷モードでのみ乗る)。同 M1 の残痕蓄積効率+20% は固有リソースのため未収録。2026-10-19: 重傷モード追加に伴い収録",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185"
+    },
+    {
       "id": "claretta_m2_res_ignore_electric",
       "name": "心象映画2: 薪の栄冠(電気耐性無視)",
       "stat": "enemy_res_down_pct",
@@ -135,6 +150,26 @@
         "p5": 25
       },
       "note": "音動機効果「渇血」(常時)。[鋭御]のエージェントが装備時のみ発動。P4はHoYoWiki表記どおり23%(等差なら22.5%の可能性あり、要確認)。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1189"
+    },
+    {
+      "id": "claretta_wengine_sharp_dmg",
+      "name": "専用音動機「深紅の渇望」: 電気属性鋭撃ダメージ",
+      "stat": "sharp_dmg_pct",
+      "element": "electric",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 10,
+        "p2": 11.5,
+        "p3": 13,
+        "p4": 14.5,
+        "p5": 16
+      },
+      "duration": "40s",
+      "note": "装備者が『強化特殊スキル』を発動、または「重傷」を発生させた時、与える電気属性鋭撃ダメージアップ(40秒、重複で継続時間更新)。鋭撃ダメージ% は与ダメ枠とは別枠乗算(wikiwiki: 命破の透徹ダメージと同じ扱い)。2026-10-19 に stat sharp_dmg_pct を新設して収録",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1189"
     }
   ]

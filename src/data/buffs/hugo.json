@@ -53,12 +53,12 @@
       "id": "hugo_m2_def_down",
       "name": "心象映画2: 防御力ダウン(内なる子ども)",
       "stat": "enemy_def_down_pct",
-      "target": "enemy",
+      "target": "self",
       "values": {
         "base": 0,
         "m2": 15
       },
-      "note": "「累算」効果を発動したとどめの一撃は敵の防御力を15%無視",
+      "note": "「累算」効果を発動したとどめの一撃は敵の防御力を15%無視。2026-10-19 監査: 原文「『累算』効果を発動したとどめの一撃は、敵の防御力を15%無視する」は自身の攻撃にのみ効く無視効果のため target を enemy → self に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/707"
     },
     {
@@ -66,13 +66,13 @@
       "name": "心象映画4: 氷耐性ダウン(作劇法)",
       "stat": "enemy_res_down_pct",
       "element": "ice",
-      "target": "enemy",
+      "target": "self",
       "values": {
         "base": 0,
         "m4": 12
       },
       "duration": "15s",
-      "note": "チャージ射撃命中後、ヒューゴの攻撃が敵の氷属性ダメージ耐性を12%無視。重複時継続時間更新",
+      "note": "チャージ射撃命中後、ヒューゴの攻撃が敵の氷属性ダメージ耐性を12%無視。重複時継続時間更新。2026-10-19 監査: 原文「ヒューゴの攻撃はターゲットの氷属性ダメージ耐性を12%無視する」は自身の攻撃にのみ効く無視効果のため target を enemy → self に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/707"
     },
     {
@@ -97,12 +97,12 @@
       "id": "hugo_wengine_def_down",
       "name": "音動機「千面の落日」: 防御力ダウン",
       "stat": "enemy_def_down_pct",
-      "target": "enemy",
+      "target": "self",
       "values": {
         "base": 0
       },
       "duration": "3s",
-      "note": "強化特殊スキル/連携スキル/終結スキルが氷属性ダメージを与えると「零度処刑宣言」効果(3秒)を獲得。効果発動中、装備者の攻撃が命中する敵の防御力を無視",
+      "note": "強化特殊スキル/連携スキル/終結スキルが氷属性ダメージを与えると「零度処刑宣言」効果(3秒)を獲得。効果発動中、装備者の攻撃が命中する敵の防御力を無視。2026-10-19 監査: 原文「装備者の攻撃が敵に命中する時、敵の防御力を無視する」は自身の攻撃にのみ効く無視効果のため target を enemy → self に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/706",
       "wengine": {
         "p1": 25,
@@ -111,6 +111,39 @@
         "p4": 36.25,
         "p5": 40
       }
+    },
+    {
+      "id": "hugo_additional_chain_dmg",
+      "name": "追加能力: 連携スキルの与ダメージアップ",
+      "stat": "chain_dmg_pct",
+      "values": {
+        "base": 15
+      },
+      "note": "追加能力。『連携スキル：運命のトリック』の与ダメージ+15%(通常エネミーに対してはさらに+35%。ボス比較のため 15 を収録)。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/707"
+    },
+    {
+      "id": "hugo_additional_ex_finisher_dmg",
+      "name": "追加能力: 累算とどめの一撃の与ダメージアップ(強化特殊)",
+      "stat": "ex_dmg_pct",
+      "values": {
+        "base": 40
+      },
+      "note": "追加能力。『累算』発動時、とどめの一撃の与ダメージ+40%(強化特殊スキル側)。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/707"
+    },
+    {
+      "id": "hugo_additional_ult_finisher_dmg",
+      "name": "追加能力: 累算とどめの一撃の与ダメージアップ(終結)",
+      "stat": "ult_dmg_pct",
+      "values": {
+        "base": 40
+      },
+      "note": "追加能力。『累算』発動時、とどめの一撃の与ダメージ+40%(終結スキル側)。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/707"
     }
   ]
 }

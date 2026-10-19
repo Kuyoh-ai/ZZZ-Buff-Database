@@ -3,23 +3,83 @@
   "buffs": [
     {
       "id": "pan_yinhu_sheer_force_assist",
-      "name": "コアパッシブ: 気脈乾坤(貫通力付与)",
+      "name": "コアパッシブ: 気脈乾坤(透徹力付与)",
       "stat": "sheer_force_flat",
       "target": "next_swap_in",
-      "values": { "base": 540, "m6": 720 },
+      "values": {
+        "base": 540,
+        "m6": 720
+      },
       "duration": "25s",
       "note": "クイック支援または連携スキルで入場したメンバーに、潘引壺の開幕攻撃力の18%(M6で24%)分の透徹力を付与(上限は開幕攻撃力3000時の値)。ここでは上限値を記載",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/751"
     },
     {
-      "id": "pan_yinhu_enemy_dmg_taken",
-      "name": "追加能力: パンダの胃袋(被ダメージ増加)",
-      "stat": "enemy_dmg_taken_pct",
+      "id": "pan_yinhu_team_dmg_vs_marked",
+      "name": "追加能力: パンダの胃袋(与ダメージ増加)",
+      "stat": "dmg_pct",
       "target": "enemy",
-      "values": { "base": 20, "m1": 30 },
+      "values": {
+        "base": 20,
+        "m1": 30
+      },
       "duration": "10s",
-      "note": "「絶気」状態の敵への与ダメージ増加。チームに命破特性または同陣営メンバーが存在する場合に発動。M2で継続時間12秒に延長",
+      "note": "「絶気」状態の敵への与ダメージ増加。チームに命破特性または同陣営メンバーが存在する場合に発動。M2で継続時間12秒に延長。2026-10-19 監査: 原文「全ユニットがその敵に与えるダメージ+20%(M1 で +10%)」のため敵被ダメージ増加 → 与ダメージ(target enemy)に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/751"
+    },
+    {
+      "id": "pan_yinhu_wengine_ex_dmg",
+      "name": "音動機「雷鳴が如き八卦」: 強化特殊スキルの与ダメージ",
+      "stat": "ex_dmg_pct",
+      "target": "self",
+      "wengine": {
+        "p1": 25,
+        "p2": 28.7,
+        "p3": 32.5,
+        "p4": 36.2,
+        "p5": 40
+      },
+      "note": "装備時常時。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/783"
+    },
+    {
+      "id": "pan_yinhu_wengine_ult_dmg",
+      "name": "音動機「雷鳴が如き八卦」: 終結スキルの与ダメージ",
+      "stat": "ult_dmg_pct",
+      "target": "self",
+      "wengine": {
+        "p1": 25,
+        "p2": 28.7,
+        "p3": 32.5,
+        "p4": 36.2,
+        "p5": 40
+      },
+      "note": "装備時常時。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/783"
+    },
+    {
+      "id": "pan_yinhu_wengine_energy",
+      "name": "音動機「雷鳴が如き八卦」: エネルギー回復",
+      "stat": "energy_gain_flat",
+      "target": "self",
+      "wengine": {
+        "p1": 2,
+        "p2": 2.3,
+        "p3": 2.6,
+        "p4": 2.9,
+        "p5": 3.2
+      },
+      "note": "任意のメンバーがダメージを受けた時、または HP を回復した時(5秒に1回)。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/783"
     }
   ]
 }

@@ -131,6 +131,17 @@
       "duration": "15s",
       "note": "「青溟随行」1重につき終結スキルまたは強化特殊スキルの透徹ダメージ上昇(最大2重)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/782"
+    },
+    {
+      "id": "yixuan_additional_ex_dmg_broken",
+      "name": "追加能力: ブレイク中の敵への強化特殊スキル与ダメージアップ",
+      "stat": "ex_dmg_pct",
+      "values": {
+        "base": 30
+      },
+      "note": "追加能力。『強化特殊スキル』がブレイク状態の敵に命中した時、与えるダメージ+30%(ブレイク中限定)。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752"
     }
   ]
 }

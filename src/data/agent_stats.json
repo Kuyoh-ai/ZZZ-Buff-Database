@@ -1,0 +1,1863 @@
+{
+  "anby": {
+    "nameJa": "アンビー・デマラ",
+    "entryId": "2",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/2",
+    "level": 60,
+    "base": {
+      "hp": 7500.0,
+      "atk": 583.0,
+      "def": 612.0,
+      "impact": 118.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "impact": 18.0
+    },
+    "wengine": {
+      "nameJa": "デマラ式電池Ⅱ型",
+      "entryId": "3",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "impact_pct",
+      "advValue": 15.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/3"
+    }
+  },
+  "billy": {
+    "nameJa": "ビリー・キッド",
+    "entryId": "19",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/19",
+    "level": 60,
+    "base": {
+      "hp": 6907.0,
+      "atk": 712.0,
+      "def": 606.0,
+      "impact": 91.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 92.0,
+      "anomaly_proficiency": 91.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "なんちゃってスターライトエンジン",
+      "entryId": "73",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "atk_pct",
+      "advValue": 25.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/73"
+    }
+  },
+  "nekomata": {
+    "nameJa": "猫宮又奈",
+    "entryId": "21",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/21",
+    "level": 60,
+    "base": {
+      "hp": 7560.0,
+      "atk": 835.0,
+      "def": 587.0,
+      "impact": 92.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 97.0,
+      "anomaly_proficiency": 96.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "鋼の肉球",
+      "entryId": "80",
+      "baseStat": "atk",
+      "baseValue": 684.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/80"
+    }
+  },
+  "nicole": {
+    "nameJa": "ニコ・デマラ",
+    "entryId": "20",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20",
+    "level": 60,
+    "base": {
+      "hp": 8145.0,
+      "atk": 574.0,
+      "def": 622.0,
+      "impact": 88.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 90.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "ザ・ボールト",
+      "entryId": "71",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "energy_regen",
+      "advValue": 50.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/71"
+    }
+  },
+  "anton": {
+    "nameJa": "アンドー・イワノフ",
+    "entryId": "24",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24",
+    "level": 60,
+    "base": {
+      "hp": 7219.0,
+      "atk": 716.0,
+      "def": 622.0,
+      "impact": 95.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 86.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "ドリルリグ-レッドシャフト",
+      "entryId": "74",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "energy_regen",
+      "advValue": 50.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/74"
+    }
+  },
+  "ben": {
+    "nameJa": "ベン・ビガー",
+    "entryId": "25",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/25",
+    "level": 60,
+    "base": {
+      "hp": 8577.0,
+      "atk": 867.0,
+      "def": 724.0,
+      "impact": 95.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 86.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "ビガー・シリンダー",
+      "entryId": "75",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "def_pct",
+      "advValue": 40.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/75"
+    }
+  },
+  "grace": {
+    "nameJa": "グレース・ハワード",
+    "entryId": "27",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27",
+    "level": 60,
+    "base": {
+      "hp": 7482.0,
+      "atk": 750.0,
+      "def": 600.0,
+      "impact": 83.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 115.0,
+      "anomaly_proficiency": 116.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_mastery": 36.0
+    },
+    "wengine": {
+      "nameJa": "複合コンパイラ",
+      "entryId": "84",
+      "baseStat": "atk",
+      "baseValue": 684.0,
+      "advStat": "pen_ratio",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/84"
+    }
+  },
+  "koleda": {
+    "nameJa": "クレタ・ベロボーグ",
+    "entryId": "26",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/26",
+    "level": 60,
+    "base": {
+      "hp": 8127.0,
+      "atk": 660.0,
+      "def": 594.0,
+      "impact": 116.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 97.0,
+      "anomaly_proficiency": 96.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "impact": 18.0
+    },
+    "wengine": {
+      "nameJa": "燃獄ギア",
+      "entryId": "82",
+      "baseStat": "atk",
+      "baseValue": 684.0,
+      "advStat": "impact_pct",
+      "advValue": 18.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/82"
+    }
+  },
+  "burnice": {
+    "nameJa": "バーニス・ホワイト",
+    "entryId": "382",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/382",
+    "level": 60,
+    "base": {
+      "hp": 7368.0,
+      "atk": 788.0,
+      "def": 600.0,
+      "impact": 83.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 118.0,
+      "anomaly_proficiency": 120.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "バーニング・シェイカー",
+      "entryId": "525",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "atk_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/525"
+    }
+  },
+  "caesar": {
+    "nameJa": "キング・シーザー",
+    "entryId": "381",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/381",
+    "level": 60,
+    "base": {
+      "hp": 9526.0,
+      "atk": 636.0,
+      "def": 753.0,
+      "impact": 105.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 87.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "impact": 18.0
+    },
+    "wengine": {
+      "nameJa": "猛進するキバ",
+      "entryId": "389",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "impact_pct",
+      "advValue": 18.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/389"
+    }
+  },
+  "lighter": {
+    "nameJa": "ライト",
+    "entryId": "530",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/530",
+    "level": 60,
+    "base": {
+      "hp": 8253.0,
+      "atk": 722.0,
+      "def": 612.0,
+      "impact": 119.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 91.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "impact": 18.0
+    },
+    "wengine": {
+      "nameJa": "炎心の桂冠",
+      "entryId": "534",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "impact_pct",
+      "advValue": 18.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/534"
+    }
+  },
+  "lucy": {
+    "nameJa": "ルシアーナ・デ・モンテフィーノ",
+    "entryId": "125",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/125",
+    "level": 60,
+    "base": {
+      "hp": 8025.0,
+      "atk": 583.0,
+      "def": 612.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "喧嘩腰のボンバルダム",
+      "entryId": "273",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "energy_regen",
+      "advValue": 50.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/273"
+    }
+  },
+  "piper": {
+    "nameJa": "パイパー・ウィール",
+    "entryId": "126",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/126",
+    "level": 60,
+    "base": {
+      "hp": 6976.0,
+      "atk": 683.0,
+      "def": 612.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 116.0,
+      "anomaly_proficiency": 118.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "グロウル・マイ・カー",
+      "entryId": "274",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "atk_pct",
+      "advValue": 25.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/274"
+    }
+  },
+  "pulchra": {
+    "nameJa": "プルクラ・フェリーニ",
+    "entryId": "619",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619",
+    "level": 60,
+    "base": {
+      "hp": 7612.0,
+      "atk": 590.0,
+      "def": 606.0,
+      "impact": 118.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 92.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "impact": 18.0
+    },
+    "wengine": {
+      "nameJa": "ペーパーカッター",
+      "entryId": "622",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "impact_pct",
+      "advValue": 15.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/622"
+    }
+  },
+  "hugo": {
+    "nameJa": "ヒューゴ・ヴラド",
+    "entryId": "707",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/707",
+    "level": 60,
+    "base": {
+      "hp": 7940.0,
+      "atk": 844.0,
+      "def": 616.0,
+      "impact": 95.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 86.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "千面の落日",
+      "entryId": "706",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/706"
+    }
+  },
+  "vivian": {
+    "nameJa": "ビビアン・バンシー",
+    "entryId": "626",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/626",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 805.0,
+      "def": 606.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 108.0,
+      "anomaly_proficiency": 118.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_mastery": 36.0
+    },
+    "wengine": {
+      "nameJa": "鳥は夢へと羽ばたいて",
+      "entryId": "705",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "anomaly_proficiency",
+      "advValue": 90.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/705"
+    }
+  },
+  "alice": {
+    "nameJa": "アリス・タイムフィールド",
+    "entryId": "838",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 805.0,
+      "def": 606.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 106.0,
+      "anomaly_proficiency": 118.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_mastery": 36.0
+    },
+    "wengine": {
+      "nameJa": "十面百錬の星",
+      "entryId": "903",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "atk_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/903"
+    }
+  },
+  "manato": {
+    "nameJa": "狛野真斗",
+    "entryId": "908",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908",
+    "level": 60,
+    "base": {
+      "hp": 7724.0,
+      "atk": 680.0,
+      "def": 443.0,
+      "impact": 95.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 87.0,
+      "anomaly_proficiency": 90.0,
+      "sheer_force": 976.0,
+      "adrenaline_regen": 0.0
+    },
+    "core": {
+      "atk": 75.0,
+      "hp_pct": 18.0
+    },
+    "wengine": {
+      "nameJa": "燔火の朧夜",
+      "entryId": "936",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "hp_pct",
+      "advValue": 25.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/936"
+    }
+  },
+  "lucia": {
+    "nameJa": "リュシア・エロウェン",
+    "entryId": "907",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907",
+    "level": 60,
+    "base": {
+      "hp": 8477.0,
+      "atk": 683.0,
+      "def": 594.0,
+      "impact": 83.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 96.0,
+      "anomaly_proficiency": 95.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "炉で歌い上げられる夢",
+      "entryId": "935",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "hp_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/935"
+    }
+  },
+  "yuzuha": {
+    "nameJa": "浮波柚葉",
+    "entryId": "837",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/837",
+    "level": 60,
+    "base": {
+      "hp": 8829.0,
+      "atk": 683.0,
+      "def": 612.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 88.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_mastery": 36.0
+    },
+    "wengine": {
+      "nameJa": "狸の七変化",
+      "entryId": "877",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "energy_regen",
+      "advValue": 60.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/877"
+    }
+  },
+  "yidhari": {
+    "nameJa": "イドリー・マーフィー",
+    "entryId": "909",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/909",
+    "level": 60,
+    "base": {
+      "hp": 8497.0,
+      "atk": 784.0,
+      "def": 448.0,
+      "impact": 95.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 87.0,
+      "anomaly_proficiency": 90.0,
+      "sheer_force": 1084.0,
+      "adrenaline_regen": 2.0
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "セイレーンクレードル",
+      "entryId": "937",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "hp_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/937"
+    }
+  },
+  "aria": {
+    "nameJa": "アリア",
+    "entryId": "998",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/998",
+    "level": 60,
+    "base": {
+      "hp": 7749.0,
+      "atk": 788.0,
+      "def": 619.0,
+      "impact": 87.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 115.0,
+      "anomaly_proficiency": 116.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_proficiency": 90.0
+    },
+    "wengine": {
+      "nameJa": "殻の中の魂",
+      "entryId": "1047",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "anomaly_mastery_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1047"
+    }
+  },
+  "nangong_yu": {
+    "nameJa": "南宮羽",
+    "entryId": "1038",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1038",
+    "level": 60,
+    "base": {
+      "hp": 8373.0,
+      "atk": 671.0,
+      "def": 622.0,
+      "impact": 120.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 90.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_mastery": 36.0
+    },
+    "wengine": {
+      "nameJa": "妄想ディスコテック",
+      "entryId": "1067",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "anomaly_mastery_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1067"
+    }
+  },
+  "sunna": {
+    "nameJa": "千夏",
+    "entryId": "995",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/995",
+    "level": 60,
+    "base": {
+      "hp": 8477.0,
+      "atk": 675.0,
+      "def": 600.0,
+      "impact": 98.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 96.0,
+      "anomaly_proficiency": 95.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.0
+    },
+    "core": {
+      "atk": 75.0,
+      "atk_pct": 21.0
+    },
+    "wengine": {
+      "nameJa": "想いが織りなす歌",
+      "entryId": "1015",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "energy_regen",
+      "advValue": 60.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1015"
+    }
+  },
+  "rina": {
+    "nameJa": "アレクサンドリナ・セバスチャン",
+    "entryId": "30",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/30",
+    "level": 60,
+    "base": {
+      "hp": 8609.0,
+      "atk": 642.0,
+      "def": 600.0,
+      "impact": 83.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 93.0,
+      "anomaly_proficiency": 92.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "pen_ratio": 14.4
+    },
+    "wengine": {
+      "nameJa": "啜り泣くゆりかご",
+      "entryId": "86",
+      "baseStat": "atk",
+      "baseValue": 684.0,
+      "advStat": "pen_ratio",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/86"
+    }
+  },
+  "corin": {
+    "nameJa": "カリン・ウィクス",
+    "entryId": "23",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/23",
+    "level": 60,
+    "base": {
+      "hp": 6976.0,
+      "atk": 732.0,
+      "def": 604.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 93.0,
+      "anomaly_proficiency": 96.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_dmg": 28.8
+    },
+    "wengine": {
+      "nameJa": "ハウスキーパー",
+      "entryId": "72",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "atk_pct",
+      "advValue": 25.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/72"
+    }
+  },
+  "ellen": {
+    "nameJa": "エレン・ジョー",
+    "entryId": "29",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/29",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 863.0,
+      "def": 606.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "ディープシー・ビジター",
+      "entryId": "85",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/85"
+    }
+  },
+  "lycaon": {
+    "nameJa": "フォン・ライカン",
+    "entryId": "28",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28",
+    "level": 60,
+    "base": {
+      "hp": 8416.0,
+      "atk": 653.0,
+      "def": 606.0,
+      "impact": 119.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 90.0,
+      "anomaly_proficiency": 91.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "impact": 18.0
+    },
+    "wengine": {
+      "nameJa": "拘縛されし者",
+      "entryId": "83",
+      "baseStat": "atk",
+      "baseValue": 684.0,
+      "advStat": "impact_pct",
+      "advValue": 18.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/83"
+    }
+  },
+  "jane_doe": {
+    "nameJa": "ジェーン・ドゥ",
+    "entryId": "368",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368",
+    "level": 60,
+    "base": {
+      "hp": 7788.0,
+      "atk": 805.0,
+      "def": 606.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 112.0,
+      "anomaly_proficiency": 114.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_mastery": 36.0
+    },
+    "wengine": {
+      "nameJa": "磨き抜かれた切っ先",
+      "entryId": "377",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "anomaly_proficiency",
+      "advValue": 90.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/377"
+    }
+  },
+  "qingyi": {
+    "nameJa": "青衣",
+    "entryId": "350",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350",
+    "level": 60,
+    "base": {
+      "hp": 8250.0,
+      "atk": 683.0,
+      "def": 612.0,
+      "impact": 118.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "impact": 18.0
+    },
+    "wengine": {
+      "nameJa": "玉壺青氷",
+      "entryId": "355",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "impact_pct",
+      "advValue": 18.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/355"
+    }
+  },
+  "seth": {
+    "nameJa": "セス・ローウェル",
+    "entryId": "369",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/369",
+    "level": 60,
+    "base": {
+      "hp": 8701.0,
+      "atk": 568.0,
+      "def": 746.0,
+      "impact": 94.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 86.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "秩序の守り手・特化型",
+      "entryId": "378",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "atk_pct",
+      "advValue": 25.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/378"
+    }
+  },
+  "zhu_yuan": {
+    "nameJa": "朱鳶",
+    "entryId": "31",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/31",
+    "level": 60,
+    "base": {
+      "hp": 7482.0,
+      "atk": 844.0,
+      "def": 600.0,
+      "impact": 90.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 93.0,
+      "anomaly_proficiency": 92.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_dmg": 28.8
+    },
+    "wengine": {
+      "nameJa": "サプレッサーVI型",
+      "entryId": "87",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_dmg",
+      "advValue": 48.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/87"
+    }
+  },
+  "cissia": {
+    "nameJa": "シーシィア",
+    "entryId": "1039",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 863.0,
+      "def": 606.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "影を追う白き牙",
+      "entryId": "1078",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "energy_regen",
+      "advValue": 60.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1078"
+    }
+  },
+  "harumasa": {
+    "nameJa": "浅羽悠真",
+    "entryId": "538",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/538",
+    "level": 60,
+    "base": {
+      "hp": 7405.0,
+      "atk": 840.0,
+      "def": 600.0,
+      "impact": 90.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 80.0,
+      "anomaly_proficiency": 95.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "残心の青籠",
+      "entryId": "541",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_dmg",
+      "advValue": 48.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/541"
+    }
+  },
+  "miyabi": {
+    "nameJa": "星見雅",
+    "entryId": "537",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/537",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 805.0,
+      "def": 606.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 116.0,
+      "anomaly_proficiency": 148.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_proficiency": 90.0
+    },
+    "wengine": {
+      "nameJa": "あられ落つ星殿",
+      "entryId": "540",
+      "baseStat": "atk",
+      "baseValue": 743.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/540"
+    }
+  },
+  "soukaku": {
+    "nameJa": "蒼角",
+    "entryId": "89",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89",
+    "level": 60,
+    "base": {
+      "hp": 8025.0,
+      "atk": 590.0,
+      "def": 597.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 93.0,
+      "anomaly_proficiency": 96.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "恥じらう悪面",
+      "entryId": "76",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "atk_pct",
+      "advValue": 25.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/76"
+    }
+  },
+  "yanagi": {
+    "nameJa": "月城柳",
+    "entryId": "529",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/529",
+    "level": 60,
+    "base": {
+      "hp": 7788.0,
+      "atk": 797.0,
+      "def": 612.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 112.0,
+      "anomaly_proficiency": 114.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_mastery": 36.0
+    },
+    "wengine": {
+      "nameJa": "刻流の賢者",
+      "entryId": "531",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "atk_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/531"
+    }
+  },
+  "orphie": {
+    "nameJa": "オルペウス・マグヌッソン＆「鬼火」",
+    "entryId": "902",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902",
+    "level": 60,
+    "base": {
+      "hp": 7788.0,
+      "atk": 909.0,
+      "def": 612.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 92.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.48
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "憤怒の銃騒",
+      "entryId": "929",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "energy_regen",
+      "advValue": 60.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/929"
+    }
+  },
+  "seed": {
+    "nameJa": "「シード」",
+    "entryId": "901",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/901",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 854.0,
+      "def": 612.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 78.8,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_dmg": 28.8
+    },
+    "wengine": {
+      "nameJa": "駆動する種",
+      "entryId": "910",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/910"
+    }
+  },
+  "soldier_11": {
+    "nameJa": "「11号」",
+    "entryId": "22",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 813.0,
+      "def": 612.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "ブリムストーン",
+      "entryId": "81",
+      "baseStat": "atk",
+      "baseValue": 684.0,
+      "advStat": "atk_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/81"
+    }
+  },
+  "trigger": {
+    "nameJa": "「トリガー」",
+    "entryId": "620",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/620",
+    "level": 60,
+    "base": {
+      "hp": 7923.0,
+      "atk": 675.0,
+      "def": 600.0,
+      "impact": 113.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 96.0,
+      "anomaly_proficiency": 95.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "impact": 18.0
+    },
+    "wengine": {
+      "nameJa": "奪魂の瞑目",
+      "entryId": "701",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/701"
+    }
+  },
+  "soldier_0_anby": {
+    "nameJa": "0号・アンビー",
+    "entryId": "618",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/618",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 854.0,
+      "def": 612.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "純然たる犠牲",
+      "entryId": "621",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_dmg",
+      "advValue": 48.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/621"
+    }
+  },
+  "ju_fufu": {
+    "nameJa": "橘福福",
+    "entryId": "750",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/750",
+    "level": 60,
+    "base": {
+      "hp": 8250.0,
+      "atk": 690.0,
+      "def": 597.0,
+      "impact": 118.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 93.0,
+      "anomaly_proficiency": 96.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "招福の虎炉",
+      "entryId": "851",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "atk_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/851"
+    }
+  },
+  "pan_yinhu": {
+    "nameJa": "潘引壺",
+    "entryId": "751",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/751",
+    "level": 60,
+    "base": {
+      "hp": 8453.0,
+      "atk": 586.0,
+      "def": 712.0,
+      "impact": 94.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 91.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "雷鳴が如き八卦",
+      "entryId": "783",
+      "baseStat": "atk",
+      "baseValue": 624.0,
+      "advStat": "atk_pct",
+      "advValue": 25.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/783"
+    }
+  },
+  "ye_shunguang": {
+    "nameJa": "葉瞬光",
+    "entryId": "961",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 863.0,
+      "def": 606.0,
+      "impact": 83.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "孤光彩雲",
+      "entryId": "982",
+      "baseStat": "atk",
+      "baseValue": 743.0,
+      "advStat": "crit_dmg",
+      "advValue": 48.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/982"
+    }
+  },
+  "yixuan": {
+    "nameJa": "儀玄",
+    "entryId": "752",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/752",
+    "level": 60,
+    "base": {
+      "hp": 7953.0,
+      "atk": 872.0,
+      "def": 441.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 92.0,
+      "anomaly_proficiency": 90.0,
+      "sheer_force": 1056.0,
+      "adrenaline_regen": 2.0
+    },
+    "core": {
+      "hp": 420.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "青溟の鳥籠",
+      "entryId": "782",
+      "baseStat": "atk",
+      "baseValue": 743.0,
+      "advStat": "hp_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/782"
+    }
+  },
+  "banyue": {
+    "nameJa": "盤岳",
+    "entryId": "934",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/934",
+    "level": 60,
+    "base": {
+      "hp": 8497.0,
+      "atk": 784.0,
+      "def": 445.0,
+      "impact": 95.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 90.0,
+      "anomaly_proficiency": 89.0,
+      "sheer_force": 1084.0,
+      "adrenaline_regen": 2.0
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "金剛不壊怒髪衝冠",
+      "entryId": "965",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "hp_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/965"
+    }
+  },
+  "dialyn": {
+    "nameJa": "ダイアリン",
+    "entryId": "932",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/932",
+    "level": 60,
+    "base": {
+      "hp": 8250.0,
+      "atk": 683.0,
+      "def": 612.0,
+      "impact": 110.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 93.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "昨夜からの着信",
+      "entryId": "964",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/964"
+    }
+  },
+  "promeia": {
+    "nameJa": "プロメイア",
+    "entryId": "1072",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072",
+    "level": 60,
+    "base": {
+      "hp": 7788.0,
+      "atk": 797.0,
+      "def": 612.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 112.0,
+      "anomaly_proficiency": 114.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "anomaly_mastery": 36.0,
+      "atk": 75.0
+    },
+    "wengine": {
+      "nameJa": "フロスト・クレセント",
+      "entryId": "1087",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "anomaly_mastery_pct",
+      "advValue": 30.0,
+      "advLabelNote": "突破表の表記は「異常マスタリー」(baseInfo は「異常掌握」)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1087"
+    }
+  },
+  "zhao": {
+    "nameJa": "照",
+    "entryId": "960",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/960",
+    "level": 60,
+    "base": {
+      "hp": 9117.0,
+      "atk": 690.0,
+      "def": 701.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 93.0,
+      "anomaly_proficiency": 96.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "hp_pct": 18.0
+    },
+    "wengine": {
+      "nameJa": "甘さ控えめ雪うさぎ",
+      "entryId": "983",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "hp_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/983"
+    }
+  },
+  "astra": {
+    "nameJa": "アストラ・ヤオ",
+    "entryId": "588",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/588",
+    "level": 60,
+    "base": {
+      "hp": 8609.0,
+      "atk": 640.0,
+      "def": 600.0,
+      "impact": 83.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 93.0,
+      "anomaly_proficiency": 92.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "energy_regen": 0.36
+    },
+    "wengine": {
+      "nameJa": "優美のヴァニティ",
+      "entryId": "590",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "atk_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/590"
+    }
+  },
+  "evelyn": {
+    "nameJa": "イヴリン・シェヴァリエ",
+    "entryId": "589",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/589",
+    "level": 60,
+    "base": {
+      "hp": 7788.0,
+      "atk": 854.0,
+      "def": 612.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 92.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "crit_rate": 14.4
+    },
+    "wengine": {
+      "nameJa": "心弦のノクターン",
+      "entryId": "591",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/591"
+    }
+  },
+  "sigrid": {
+    "nameJa": "シグリッド・ドゥ・ラズール",
+    "entryId": "1113",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1113",
+    "level": 60,
+    "base": {
+      "hp": 7788.0,
+      "atk": 863.0,
+      "def": 606.0,
+      "impact": 93.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 92.0,
+      "anomaly_proficiency": 90.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "crit_rate": 14.4,
+      "atk": 75.0
+    },
+    "wengine": {
+      "nameJa": "栄光の騎士道",
+      "entryId": "1188",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_dmg",
+      "advValue": 48.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1188"
+    }
+  },
+  "norma": {
+    "nameJa": "ノルムー・ホローウェル",
+    "entryId": "1085",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085",
+    "level": 60,
+    "base": {
+      "hp": 7799.0,
+      "atk": 687.0,
+      "def": 582.0,
+      "impact": 106.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 99.0,
+      "anomaly_proficiency": 98.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "crit_rate": 14.4,
+      "atk": 75.0
+    },
+    "wengine": {
+      "nameJa": "エースのオトモ",
+      "entryId": "1134",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "crit_rate",
+      "advValue": 24.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1134"
+    }
+  },
+  "pyrois": {
+    "nameJa": "ピュロイス",
+    "entryId": "1082",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082",
+    "level": 60,
+    "base": {
+      "hp": 7673.0,
+      "atk": 849.0,
+      "def": 612.0,
+      "impact": 94.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 94.0,
+      "anomaly_proficiency": 147.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.0
+    },
+    "core": {
+      "crit_rate": 14.4,
+      "atk": 75.0
+    },
+    "wengine": {
+      "nameJa": "太陽の抜け殻",
+      "entryId": "1105",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "atk_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1105"
+    }
+  },
+  "velina": {
+    "nameJa": "ヴェリナ・エガード",
+    "entryId": "1084",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084",
+    "level": 60,
+    "base": {
+      "hp": 7788.0,
+      "atk": 797.0,
+      "def": 612.0,
+      "impact": 86.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 112.0,
+      "anomaly_proficiency": 111.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "anomaly_proficiency": 54.0,
+      "atk": 75.0
+    },
+    "wengine": {
+      "nameJa": "金襴の心",
+      "entryId": "1104",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "energy_regen",
+      "advValue": 60.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1104"
+    }
+  },
+  "remielle": {
+    "nameJa": "レミエール・ダン",
+    "entryId": "1112",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1112",
+    "level": 60,
+    "base": {
+      "hp": 7482.0,
+      "atk": 748.0,
+      "def": 600.0,
+      "impact": 83.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 115.0,
+      "anomaly_proficiency": 116.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "anomaly_proficiency": 54.0,
+      "atk": 75.0
+    },
+    "wengine": {
+      "nameJa": "目覚めし翼の聖歌",
+      "entryId": "1174",
+      "baseStat": "atk",
+      "baseValue": 743.0,
+      "advStat": "atk_pct",
+      "advValue": 36.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1174"
+    }
+  },
+  "claretta": {
+    "nameJa": "クラレッタ・フリンツ",
+    "entryId": "1185",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1185",
+    "level": 60,
+    "base": {
+      "hp": 5651.0,
+      "atk": 626.0,
+      "sharp_crit_dmg": 150.0,
+      "def": 441.0,
+      "impact": 93.0,
+      "crit_rate": 22.5,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 80.0,
+      "anomaly_proficiency": 79.0,
+      "pen_ratio": 0.0,
+      "sharpness_regen": 1.5
+    },
+    "core": {
+      "crit_rate": 28.8
+    },
+    "wengine": {
+      "nameJa": "深紅の渇望",
+      "entryId": "1189",
+      "baseStat": "def",
+      "baseValue": 431.0,
+      "advStat": "def_pct",
+      "advValue": 48.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1189"
+    }
+  },
+  "starlight_billy": {
+    "nameJa": "スターライト・ビリー・キッド",
+    "entryId": "1073",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1073",
+    "level": 60,
+    "base": {
+      "hp": 8497.0,
+      "atk": 784.0,
+      "def": 445.0,
+      "impact": 95.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 90.0,
+      "anomaly_proficiency": 89.0,
+      "sheer_force": 1084.0,
+      "adrenaline_regen": 2.0
+    },
+    "core": {
+      "crit_rate": 14.4,
+      "atk": 75.0
+    },
+    "wengine": {
+      "nameJa": "スターライトバイザー",
+      "entryId": "1088",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "hp_pct",
+      "advValue": 30.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1088"
+    }
+  },
+  "roxy": {
+    "nameJa": "ロクシー・イフリータ・プライス",
+    "entryId": "1186",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186",
+    "level": 60,
+    "base": {
+      "hp": 8418.0,
+      "atk": 666.0,
+      "def": 641.0,
+      "impact": 100.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 110.0,
+      "anomaly_proficiency": 63.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "crit_rate": 14.4,
+      "atk": 75.0
+    },
+    "wengine": {
+      "nameJa": "緋月の銀棺",
+      "entryId": "1209",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "energy_regen",
+      "advValue": 60.0,
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1209"
+    }
+  }
+}

@@ -9,8 +9,8 @@
       "values": {
         "base": 60
       },
-      "duration": "40s",
-      "note": "『回避反撃』または『クイック支援』が命中した時、自身の与ダメージがアップ。コアスキル最大レベル(Lv.7)の値60%を記載(Lv.1は30%)",
+      "duration": "6s",
+      "note": "『回避反撃』または『クイック支援』が命中した時、自身の与ダメージがアップ。コアスキル最大レベル(Lv.7)の値60%を記載(Lv.1は30%)。2026-10-19 監査: HoYoWiki 原文「継続時間6秒」に合わせ duration を 40s → 6s に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/21"
     },
     {
@@ -48,24 +48,24 @@
       "name": "心象映画1: 鳥絶技巧(敵の物理耐性ダウン)",
       "stat": "enemy_res_down_pct",
       "element": "physical",
-      "target": "enemy",
+      "target": "self",
       "values": {
         "base": 0,
         "m1": 16
       },
-      "note": "敵を背後から攻撃した時、対象の物理属性ダメージ耐性を無視。ブレイク状態の敵への全攻撃は背後攻撃扱いになる",
+      "note": "敵を背後から攻撃した時、対象の物理属性ダメージ耐性を無視。ブレイク状態の敵への全攻撃は背後攻撃扱いになる。2026-10-19 監査: 原文「猫又がターゲットの物理属性ダメージ耐性を16%無視する」は自身の攻撃にのみ効く無視効果のため target を enemy → self に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/21"
     },
     {
       "id": "nekomata_m2_energy_regen_self",
       "name": "心象映画2: ねことねずみ(エネルギー獲得効率アップ)",
-      "stat": "energy_regen",
+      "stat": "energy_gain_eff_pct",
       "target": "self",
       "values": {
         "base": 0,
         "m2": 25
       },
-      "note": "敵が1体のみの状態で出場中はエネルギー獲得効率がアップ",
+      "note": "敵が1体のみの状態で出場中はエネルギー獲得効率がアップ。2026-10-19 ユーザー回答: エネルギー獲得効率(%)専用 stat に移動",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/21"
     },
     {

@@ -6,7 +6,10 @@
       "name": "心象映画1: ウォーミングアップ(ドリル攻撃時エネルギー回復)",
       "stat": "energy_gain_flat",
       "target": "self",
-      "values": { "base": 0, "m1": 5 },
+      "values": {
+        "base": 0,
+        "m1": 5
+      },
       "note": "『ドリル攻撃』発動時にエネルギーを最大5Pt回復",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
     },
@@ -15,7 +18,10 @@
       "name": "心象映画4: 共に燃えようか!(チーム会心率アップ)",
       "stat": "crit_rate",
       "target": "team",
-      "values": { "base": 0, "m4": 10 },
+      "values": {
+        "base": 0,
+        "m4": 10
+      },
       "duration": "12s",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
     },
@@ -24,10 +30,56 @@
       "name": "心象映画6: 極限突破(会心発生時ダメージ上昇)",
       "stat": "dmg_pct",
       "target": "self",
-      "values": { "base": 0, "m6": 4 },
+      "values": {
+        "base": 0,
+        "m6": 4
+      },
       "maxStacks": 6,
-      "note": "会心発生時に自身の与ダメージが4%アップ、最大6重まで重ね掛け",
+      "note": "『杭打ち攻撃』が会心を出すと『通常攻撃：熱血準備体操(爆発状態)』および『回避反撃：オーバーロード・ドリルブレイク(爆発状態)』の与ダメージ+4%、最大6重、継続時間30秒(自身のみ)。2026-10-19 監査: 発動条件・対象スキル・継続時間を原文に合わせて修正",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24",
+      "duration": "30s"
+    },
+    {
+      "id": "anton_core_pile_dmg",
+      "name": "コアパッシブ: 兄弟と一つに!(杭打ち攻撃の与ダメージアップ)",
+      "stat": "basic_dmg_pct",
+      "values": {
+        "base": 24
+      },
+      "note": "『杭打ち攻撃』(爆発状態の通常攻撃)を発動した時、スキルの与ダメージ+12〜24%(最大段階)。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
+    },
+    {
+      "id": "anton_core_drill_dmg",
+      "name": "コアパッシブ: 兄弟と一つに!(ドリル攻撃の与ダメージアップ)",
+      "stat": "dash_dmg_pct",
+      "values": {
+        "base": 40
+      },
+      "note": "『ドリル攻撃』(爆発状態のダッシュ攻撃/回避反撃)を発動した時、スキルの与ダメージ+20〜40%(最大段階)。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/24"
+    },
+    {
+      "id": "anton_wengine_electric_dmg",
+      "name": "音動機「ドリルリグ-レッドシャフト」: 通常/ダッシュ攻撃の電気属性ダメージ",
+      "stat": "dmg_pct_element",
+      "element": "electric",
+      "target": "self",
+      "wengine": {
+        "p1": 50,
+        "p2": 57.5,
+        "p3": 65,
+        "p4": 72.5,
+        "p5": 80
+      },
+      "duration": "10s",
+      "note": "『強化特殊スキル』または『連携スキル』発動時、『通常攻撃』と『ダッシュ攻撃』による電気属性ダメージアップ(15秒に1回)。スキル限定だが属性ダメージとして収録。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/74"
     }
   ]
 }

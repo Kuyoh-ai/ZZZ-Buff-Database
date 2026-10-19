@@ -4,24 +4,40 @@
     {
       "id": "janedoe_core_crit_rate",
       "name": "コアパッシブ: 洞察(強撃会心率)",
-      "stat": "crit_rate",
+      "stat": "anomaly_crit_rate",
       "target": "self",
       "values": {
         "base": 40
       },
-      "note": "コアスキル最大レベル時。「噛み傷」状態(自身の攻撃命中で付与、10秒)の敵への「強撃」ダメージが確率で会心するようになる基礎会心率。異常マスタリーによる上乗せ(1Ptにつき+0.16%、上限記載なし)は上限が無いため収録しない",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
+      "note": "コアスキル最大レベル時。「噛み傷」状態(自身の攻撃命中で付与、10秒)の敵への「強撃」ダメージが確率で会心するようになる基礎会心率。異常マスタリーによる上乗せ(1Ptにつき+0.16%、上限記載なし)は上限が無いため収録しない。2026-10-19 ユーザー回答: 「強撃」(物理状態異常)の会心として状態異常会心率 stat に移動(modes: anomaly、物理限定)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368",
+      "modes": [
+        "anomaly"
+      ],
+      "condition": {
+        "elements": [
+          "physical"
+        ]
+      }
     },
     {
       "id": "janedoe_core_crit_dmg",
       "name": "コアパッシブ: 洞察(強撃会心ダメージ)",
-      "stat": "crit_dmg",
+      "stat": "anomaly_crit_dmg",
       "target": "self",
       "values": {
         "base": 50
       },
-      "note": "「噛み傷」状態の敵への「強撃」ダメージが会心した場合の会心ダメージ",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
+      "note": "「噛み傷」状態の敵への「強撃」ダメージが会心した場合の会心ダメージ。2026-10-19 ユーザー回答: 状態異常会心ダメージ stat に移動(modes: anomaly、物理限定)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368",
+      "modes": [
+        "anomaly"
+      ],
+      "condition": {
+        "elements": [
+          "physical"
+        ]
+      }
     },
     {
       "id": "janedoe_ex_anomaly_buildup",
@@ -78,20 +94,36 @@
         "base": 0,
         "m2": 15
       },
-      "note": "ジェーンの攻撃が「噛み傷」状態の敵に命中、または任意のメンバーが「噛み傷」状態の敵に「強撃」効果を発動した時、ターゲットの防御力を15%無視",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
+      "note": "ジェーンの攻撃が「噛み傷」状態の敵に命中、または任意のメンバーが「噛み傷」状態の敵に「強撃」効果を発動した時、ターゲットの防御力を15%無視。2026-10-19 ユーザー回答: 敵デバフだが「強撃」限定(≒物理の状態異常)のため modes: anomaly + 物理限定",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368",
+      "modes": [
+        "anomaly"
+      ],
+      "condition": {
+        "elements": [
+          "physical"
+        ]
+      }
     },
     {
       "id": "janedoe_m2_crit_dmg_bonus",
       "name": "心象映画2: 朱に交われば赤くなる(強撃会心ダメージ上昇)",
-      "stat": "crit_dmg",
+      "stat": "anomaly_crit_dmg",
       "target": "self",
       "values": {
         "base": 0,
         "m2": 50
       },
-      "note": "「強撃」ダメージで会心が出た時、会心ダメージ追加+50%",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
+      "note": "「強撃」ダメージで会心が出た時、会心ダメージ追加+50%。2026-10-19 ユーザー回答: 状態異常会心ダメージ stat に移動(modes: anomaly、物理限定)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368",
+      "modes": [
+        "anomaly"
+      ],
+      "condition": {
+        "elements": [
+          "physical"
+        ]
+      }
     },
     {
       "id": "janedoe_m4_team_anomaly_dmg",

@@ -6,9 +6,23 @@
       "name": "コアパッシブ: 刃旗激励(自身攻撃力アップ)",
       "stat": "atk_flat",
       "target": "self",
-      "values": { "base": 1000 },
+      "values": {
+        "base": 1000
+      },
       "duration": "22s",
-      "note": "「旗挙げ」発動時、自身の攻撃力が開幕攻撃力の20%(最大レベル)アップ、最大500Ptまで。「旗挙げ」発動とともに「渦潮」を消費した場合は効果2倍で最大1000Ptまで(上限値を収録)。出場メンバー交代時も次のメンバーに効果を引き継ぎ継続時間リセット。心象映画1で継続時間+8s(30s)",
+      "note": "「旗挙げ」発動時、自身の攻撃力が開幕攻撃力の20%(最大レベル)アップ、最大500Ptまで。「旗挙げ」発動とともに「渦潮」を消費した場合は効果2倍で最大1000Ptまで(上限値を収録)。出場メンバー交代時も次のメンバーに効果を引き継ぎ継続時間リセット。心象映画1で継続時間+8s(30s)。2026-10-19 ユーザー回答: 交代時に次の出場メンバーへ引き継ぐ分を next_swap_in の別エントリに",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
+    },
+    {
+      "id": "soukaku_core_atk_swap_in",
+      "name": "コアパッシブ: 刃旗激励(交代した出場メンバーへの攻撃力引き継ぎ)",
+      "stat": "atk_flat",
+      "target": "next_swap_in",
+      "values": {
+        "base": 1000
+      },
+      "duration": "22s",
+      "note": "「旗挙げ」発動時、自身の攻撃力が開幕攻撃力の20%(最大レベル)アップ、最大500Ptまで。「旗挙げ」発動とともに「渦潮」を消費した場合は効果2倍で最大1000Ptまで(上限値を収録)。出場メンバー交代時も次のメンバーに効果を引き継ぎ継続時間リセット。心象映画1で継続時間+8s(30s)。2026-10-19 ユーザー回答: 交代時に次の出場メンバーへ引き継ぐ分を next_swap_in の別エントリに",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
     },
     {
@@ -17,7 +31,9 @@
       "stat": "dmg_pct_element",
       "element": "ice",
       "target": "team",
-      "values": { "base": 20 },
+      "values": {
+        "base": 20
+      },
       "duration": "22s",
       "note": "蒼角が「渦潮」を消費して「旗挙げ」を発動した時に発動。発動条件はチームに同属性(氷)または同陣営(対ホロウ特別行動部第六課)のメンバーがいること(OR条件のためcondition省略)。心象映画1で継続時間+8s(30s)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
@@ -28,10 +44,76 @@
       "stat": "enemy_res_down_pct",
       "element": "ice",
       "target": "enemy",
-      "values": { "base": 0, "m4": 10 },
+      "values": {
+        "base": 0,
+        "m4": 10
+      },
       "duration": "8s",
       "note": "「旗挙げ」の攻撃が敵に命中した時に付与",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
+    },
+    {
+      "id": "soukaku_m6_basic_dmg",
+      "name": "心象映画6: 強化された通常攻撃の与ダメージアップ",
+      "stat": "basic_dmg_pct",
+      "values": {
+        "base": 0,
+        "m6": 45
+      },
+      "note": "強化された『通常攻撃』の与ダメージ+45%。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
+    },
+    {
+      "id": "soukaku_m6_dash_dmg",
+      "name": "心象映画6: 強化されたダッシュ攻撃の与ダメージアップ",
+      "stat": "dash_dmg_pct",
+      "values": {
+        "base": 0,
+        "m6": 45
+      },
+      "note": "強化された『ダッシュ攻撃』の与ダメージ+45%。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/89"
+    },
+    {
+      "id": "soukaku_wengine_ice_dmg",
+      "name": "音動機「恥じらう悪面」: 氷属性ダメージ",
+      "stat": "dmg_pct_element",
+      "element": "ice",
+      "target": "self",
+      "wengine": {
+        "p1": 15,
+        "p2": 17.5,
+        "p3": 20,
+        "p4": 22,
+        "p5": 24
+      },
+      "note": "装備時常時。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/76"
+    },
+    {
+      "id": "soukaku_wengine_team_atk",
+      "name": "音動機「恥じらう悪面」: チーム攻撃力アップ",
+      "stat": "atk_pct",
+      "target": "team",
+      "maxStacks": 4,
+      "wengine": {
+        "p1": 2,
+        "p2": 2.3,
+        "p3": 2.6,
+        "p4": 2.9,
+        "p5": 3.2
+      },
+      "duration": "12s",
+      "note": "『強化特殊スキル』を発動する度にメンバー全員の攻撃力アップ(最大 4 重、重ね掛け不可)。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/76"
     }
   ]
 }

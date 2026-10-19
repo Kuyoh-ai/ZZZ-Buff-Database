@@ -15,12 +15,12 @@
     {
       "id": "orphie_core_assist_dmg",
       "name": "コアパッシブ: 追加攻撃ダメージアップ(風と炎を御して)",
-      "stat": "assist_dmg_pct",
+      "stat": "aftershock_dmg_pct",
       "target": "self",
       "values": {
         "base": 85
       },
-      "note": "コアスキルLv最大時の値(Lv1で42.5%)",
+      "note": "コアスキルLv最大時の値(Lv1で42.5%)。2026-10-19 監査: 原文「『追加攻撃』の与ダメージ+85%」のため支援攻撃 → 追加攻撃ダメージに修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
@@ -38,12 +38,12 @@
     {
       "id": "orphie_additional_pen_ratio",
       "name": "追加能力: フォーカス状態の防御力無視(溶炉鍛心)",
-      "stat": "pen_ratio",
+      "stat": "enemy_def_down_pct",
       "target": "team",
       "values": {
         "base": 25
       },
-      "note": "チームに撃破または支援メンバーがいる時に発動。「フォーカス」を所持しているメンバーが追加攻撃を行う時、その追加攻撃が敵防御力を無視",
+      "note": "チームに撃破または支援メンバーがいる時に発動。「フォーカス」を所持しているメンバーが追加攻撃を行う時、その追加攻撃が敵防御力を無視。2026-10-19 監査: 原文「防御力を無視」のため貫通率 → 敵防御力ダウン/無視(防御ダウンと同枠)に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     },
     {
@@ -104,7 +104,7 @@
     {
       "id": "orphie_wengine_pen_ratio",
       "name": "音動機「憤怒の銃騒」: 防御力無視",
-      "stat": "pen_ratio",
+      "stat": "enemy_def_down_pct",
       "target": "self",
       "values": {
         "base": 0
@@ -118,8 +118,32 @@
       },
       "maxStacks": 2,
       "duration": "8s",
-      "note": "追加攻撃で炎属性ダメージを与えた時に1重獲得(3秒に1重、最大2重)。重複時継続時間更新",
+      "note": "追加攻撃で炎属性ダメージを与えた時に1重獲得(3秒に1重、最大2重)。重複時継続時間更新。2026-10-19 監査: 原文「防御力を無視」のため貫通率 → 敵防御力ダウン/無視(防御ダウンと同枠)に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/929"
+    },
+    {
+      "id": "orphie_m4_ex_dmg",
+      "name": "心象映画4: 強化特殊スキルの与ダメージアップ",
+      "stat": "ex_dmg_pct",
+      "values": {
+        "base": 0,
+        "m4": 40
+      },
+      "note": "『強化特殊スキル：チャージ』の与えるダメージ+40%。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
+    },
+    {
+      "id": "orphie_m4_ult_dmg",
+      "name": "心象映画4: 終結スキルの与ダメージアップ",
+      "stat": "ult_dmg_pct",
+      "values": {
+        "base": 0,
+        "m4": 40
+      },
+      "note": "『終結スキル』の与えるダメージ+40%。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/902"
     }
   ]
 }

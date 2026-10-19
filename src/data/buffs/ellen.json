@@ -172,6 +172,18 @@
       },
       "note": "ポテンシャルT2で解放。『ライジングストーム』重数を10重まで蓄積した状態で攻撃すると、ターゲットの氷属性ダメージ耐性を無視(自身の攻撃にのみ適用のためtarget: self)。T1では未解放",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/29"
+    },
+    {
+      "id": "ellen_m6_dash_charge_dmg",
+      "name": "心象映画6: チャージ鋏撃の与ダメージアップ",
+      "stat": "dash_dmg_pct",
+      "values": {
+        "base": 0,
+        "m6": 250
+      },
+      "note": "「盛宴」3重所持時、『ダッシュ攻撃：薄氷の急襲』のチャージ鋏撃の与ダメージ+250%(単発・条件付き)。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/29"
     }
   ]
 }

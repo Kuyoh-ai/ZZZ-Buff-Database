@@ -6,9 +6,12 @@
       "name": "コアパッシブ: 千秋万歳(ブレイク弱体倍率アップ)",
       "stat": "enemy_stun_dmg_multiplier",
       "target": "enemy",
-      "values": { "base": 4 },
+      "values": {
+        "base": 4,
+        "m2": 5.4
+      },
       "maxStacks": 20,
-      "note": "コアスキル最大レベル時。『通常攻撃』のとどめの一撃が命中した敵に「征服」を5重付与(最大20重)。「征服」1重につきブレイク弱体倍率+4%。心象映画2で効果が135%になる(m2で1スタックあたり5.4%)",
+      "note": "コアスキル最大レベル時。『通常攻撃』のとどめの一撃が命中した敵に「征服」を5重付与(最大20重)。「征服」1重につきブレイク弱体倍率+4%。心象映画2で効果が135%になる(m2で1スタックあたり5.4%)。2026-10-19 監査: M2「本来の135%」を values に反映(1重 4 → 5.4)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
     },
     {
@@ -16,7 +19,9 @@
       "name": "追加能力: 陽関三畳(通常攻撃の与えるブレイク値アップ)",
       "stat": "daze_pct",
       "target": "self",
-      "values": { "base": 20 },
+      "values": {
+        "base": 20
+      },
       "note": "チームに[強攻]特性メンバーまたは自身と同じ陣営(新エリー都治安局)のメンバーがいる時に発動。『通常攻撃』の与えるブレイク値+20%",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
     },
@@ -25,17 +30,10 @@
       "name": "追加能力: 陽関三畳(衝撃力による自身攻撃力アップ)",
       "stat": "atk_flat",
       "target": "self",
-      "values": { "base": 600 },
+      "values": {
+        "base": 600
+      },
       "note": "青衣の衝撃力が120Ptを上回る場合、1Ptごとに自身の攻撃力+6Pt。最大600Ptまで(上限値を収録。衝撃力480Pt以上で到達)",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
-    },
-    {
-      "id": "qingyi_m1_anomaly_buildup",
-      "name": "心象映画1: 誘電破壊(感電蓄積効率上昇)",
-      "stat": "anomaly_buildup_pct",
-      "target": "self",
-      "values": { "base": 0, "m1": 30 },
-      "note": "青衣のフィールド入場時、即座に「閃絡電圧」が最大まで溜まり、その後の(感電)蓄積効率+30%",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
     },
     {
@@ -43,7 +41,10 @@
       "name": "心象映画1: 誘電破壊(敵防御力ダウン)",
       "stat": "enemy_def_down_pct",
       "target": "enemy",
-      "values": { "base": 0, "m1": 15 },
+      "values": {
+        "base": 0,
+        "m1": 15
+      },
       "note": "「閃絡電圧」が最大の状態で『通常攻撃』を発動して命中した敵に付与",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
     },
@@ -52,7 +53,10 @@
       "name": "心象映画1: 誘電破壊(会心率上昇)",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 0, "m1": 20 },
+      "values": {
+        "base": 0,
+        "m1": 20
+      },
       "duration": "15s",
       "note": "「閃絡電圧」が最大の状態で『通常攻撃』を発動して命中した敵に対して",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
@@ -62,7 +66,10 @@
       "name": "心象映画4: 定常電弧の障壁(エネルギー回復)",
       "stat": "energy_gain_flat",
       "target": "self",
-      "values": { "base": 0, "m4": 5 },
+      "values": {
+        "base": 0,
+        "m4": 5
+      },
       "note": "「」状態突入/終了時に発生するシールドが更新された時、前回生成分がまだ残っている場合に発動(10秒に1回のみ)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
     },
@@ -71,7 +78,10 @@
       "name": "心象映画6: 奇経八脈(会心ダメージ上昇)",
       "stat": "crit_dmg",
       "target": "self",
-      "values": { "base": 0, "m6": 100 },
+      "values": {
+        "base": 0,
+        "m6": 100
+      },
       "note": "『通常攻撃』の中断レベルが大幅にアップし、スキルの与える会心ダメージ+100%",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
     },
@@ -80,7 +90,10 @@
       "name": "心象映画6: 奇経八脈(全属性耐性ダウン)",
       "stat": "enemy_res_ignore_all_pct",
       "target": "enemy",
-      "values": { "base": 0, "m6": 20 },
+      "values": {
+        "base": 0,
+        "m6": 20
+      },
       "duration": "15s",
       "note": "『通常攻撃:酔花月雲転』が敵に命中すると付与",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/350"
@@ -90,10 +103,18 @@
       "name": "専用音動機「玉壺青氷」: 衝撃力上昇",
       "stat": "impact_pct",
       "target": "self",
-      "values": { "base": 0 },
+      "values": {
+        "base": 0
+      },
       "maxStacks": 30,
       "duration": "8s",
-      "wengine": { "p1": 0.7, "p2": 0.88, "p3": 1.05, "p4": 1.22, "p5": 1.4 },
+      "wengine": {
+        "p1": 0.7,
+        "p2": 0.88,
+        "p3": 1.05,
+        "p4": 1.22,
+        "p5": 1.4
+      },
       "note": "『通常攻撃』が敵に命中すると「茶味」を1重獲得。1重あたりの効果量。最大30重(重ごとに継続時間を独立カウント)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/355"
     },
@@ -102,9 +123,17 @@
       "name": "専用音動機「玉壺青氷」: チーム与ダメージ上昇",
       "stat": "dmg_pct",
       "target": "team",
-      "values": { "base": 0 },
+      "values": {
+        "base": 0
+      },
       "duration": "10s",
-      "wengine": { "p1": 20, "p2": 23, "p3": 26, "p4": 29, "p5": 32 },
+      "wengine": {
+        "p1": 20,
+        "p2": 23,
+        "p3": 26,
+        "p4": 29,
+        "p5": 32
+      },
       "note": "「茶味」を15重以上所持している状態でさらに「茶味」を獲得した時に発動。同一効果は重ね掛け不可",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/355"
     }

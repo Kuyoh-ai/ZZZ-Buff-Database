@@ -46,8 +46,11 @@
         "base": 0,
         "m2": 15
       },
-      "note": "コアパッシブ「狂咲」による追加状態異常ダメージ発生時、ターゲットの全属性ダメージ耐性を15%無視(同時に「狂咲」の倍率が130%になるがスキル倍率のため未収録)",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/626"
+      "note": "コアパッシブ「狂咲」による追加状態異常ダメージ発生時、ターゲットの全属性ダメージ耐性を15%無視(同時に「狂咲」の倍率が130%になるがスキル倍率のため未収録)。2026-10-19 ユーザー回答: 敵デバフだが「狂咲」ダメージ限定(modes: abloom)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/626",
+      "modes": [
+        "abloom"
+      ]
     },
     {
       "id": "vivian_m4_atk_pct",
@@ -94,14 +97,14 @@
     {
       "id": "vivian_wengine_anomaly_mastery",
       "name": "音動機「鳥は夢へと羽ばたいて」: 異常マスタリーアップ",
-      "stat": "anomaly_mastery",
+      "stat": "anomaly_proficiency",
       "target": "self",
       "values": {
         "base": 0
       },
       "maxStacks": 6,
       "duration": "5s",
-      "note": "装備者がエーテル属性ダメージを与えた時、1重につき異常マスタリーアップ(最大6重)。0.5秒に1回のみ発動可能、重複時継続時間更新",
+      "note": "装備者がエーテル属性ダメージを与えた時、1重につき異常マスタリーアップ(最大6重)。0.5秒に1回のみ発動可能、重複時継続時間更新。2026-10-19 監査: 原文「自身の異常マスタリー+20〜32Pt」のため stat を異常掌握 → 異常マスタリーに修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/705",
       "wengine": {
         "p1": 20,

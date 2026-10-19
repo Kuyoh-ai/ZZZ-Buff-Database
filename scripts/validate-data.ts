@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CharacterSchema, CharacterBuffsSchema } from "../src/data/schema";
 import { FACTION_LABEL, isFactionId } from "../src/data/labels";
+import { AgentStatsFileSchema, EnemiesFileSchema } from "../src/data/calcSchema";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const charsPath = path.join(root, "src/data/characters.json");
@@ -63,6 +64,31 @@ for (const f of files) {
     buffCount++;
   }
 }
+// ダメージ比較用データ: agent_stats.json(全キャラ分)と enemies.json
+{
+  const asPath = path.join(root, "src/data/agent_stats.json");
+  const r = AgentStatsFileSchema.safeParse(JSON.parse(fs.readFileSync(asPath, "utf8")));
+  if (!r.success) err(`agent_stats.json: ${r.error.issues.slice(0, 5).map((i) => `${i.path.join(".")} ${i.message}`).join("; ")}`);
+  else {
+    const noStats = [...ids].filter((id) => !(id in r.data));
+    if (noStats.length) err(`agent_stats.json: missing ${noStats.join(", ")}`);
+    const extra = Object.keys(r.data).filter((id) => !ids.has(id));
+    if (extra.length) err(`agent_stats.json: unknown characterId ${extra.join(", ")}`);
+    console.log(`agent stats: ${Object.keys(r.data).length}`);
+  }
+  const enPath = path.join(root, "src/data/enemies.json");
+  const e = EnemiesFileSchema.safeParse(JSON.parse(fs.readFileSync(enPath, "utf8")));
+  if (!e.success) err(`enemies.json: ${e.error.issues.slice(0, 5).map((i) => `${i.path.join(".")} ${i.message}`).join("; ")}`);
+  else {
+    const eids = new Set<string>();
+    for (const en of e.data.enemies) {
+      if (eids.has(en.id)) err(`enemies.json: duplicate id ${en.id}`);
+      eids.add(en.id);
+    }
+    console.log(`enemies: ${e.data.enemies.length}`);
+  }
+}
+
 const missing = [...ids].filter((id) => !files.includes(`${id}.json`));
 console.log(`buff files: ${files.length}, buffs: ${buffCount}`);
 if (missing.length) console.warn(`WARN: characters without buff file: ${missing.join(", ")}`);

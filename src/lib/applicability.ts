@@ -5,7 +5,7 @@ import type { Buff, Character, Role } from "../types";
  * 役割ごとに「効果が乗らない」ステータス。
  * - 命破(rupture): 攻撃力/貫通率/貫通値が無効
  * - 鋭御(armorer): 攻撃力/HP/会心ダメージが無効(防御力を基にダメージ計算し、会心ダメージの代わりに暴傷ダメージが適用される)
- * - 透徹力/透徹ダメージは命破のみ、暴傷ダメージは鋭御のみ有効
+ * - 透徹力/透徹ダメージは命破のみ、暴傷ダメージ/鋭撃ダメージは鋭御のみ有効
  */
 const ROLE_INAPPLICABLE_STATS: Partial<Record<Role, ReadonlySet<string>>> = {
   rupture: new Set(["atk_pct", "atk_flat", "pen_ratio", "pen_flat"]),
@@ -13,7 +13,7 @@ const ROLE_INAPPLICABLE_STATS: Partial<Record<Role, ReadonlySet<string>>> = {
 };
 const ROLE_ONLY_STATS: ReadonlyArray<[Role, ReadonlySet<string>]> = [
   ["rupture", new Set(["sheer_force_pct", "sheer_force_flat", "sheer_dmg_pct"])],
-  ["armorer", new Set(["sharp_crit_dmg"])],
+  ["armorer", new Set(["sharp_crit_dmg", "sharp_dmg_pct", "grievous_multiplier_pct"])],
 ];
 
 /** 受け手の役割に対してそのステータスが意味を持つか */
@@ -29,9 +29,15 @@ export function statAppliesToRole(stat: string, role: Role): boolean {
  * provider が持つ buff が attacker に適用されるか。
  * attacker が未指定(null)の場合は常に true(強調なし)。
  */
-export function appliesTo(buff: Buff, provider: Character, attacker: Character | null): boolean {
+export function appliesTo(
+  buff: Buff,
+  provider: Character,
+  attacker: Character | null,
+  /** 受け手の役割に対する stat の有効判定(既定は一覧用の statAppliesToRole。ダメージ比較では命破の攻撃力を透徹力に変換するため差し替える) */
+  statFilter: (stat: string, role: Role) => boolean = statAppliesToRole,
+): boolean {
   if (!attacker) return true;
-  if (!statAppliesToRole(buff.stat, attacker.role)) return false;
+  if (!statFilter(buff.stat, attacker.role)) return false;
   const isSelf = provider.id === attacker.id;
 
   switch (buff.target) {
@@ -39,8 +45,13 @@ export function appliesTo(buff: Buff, provider: Character, attacker: Character |
       if (!isSelf) return false;
       break;
     case "next_swap_in":
+    case "active":
+      // 次に登場する / 出場中のメンバー向け: 出し手自身には乗らない
       if (isSelf) return false;
       break;
+    case "bench":
+      // 控えのメンバー向け: アタッカーは出場中なので乗らない
+      return false;
     case "team":
     case "enemy":
       break;

@@ -87,6 +87,44 @@
       },
       "note": "M4「幼き日の誓い」。真斗の最大HP+8%。",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/908"
+    },
+    {
+      "id": "manato_wengine_fire_dmg",
+      "name": "音動機「燔火の朧夜」: 炎属性ダメージ",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "self",
+      "wengine": {
+        "p1": 15,
+        "p2": 17.25,
+        "p3": 19.5,
+        "p4": 21.75,
+        "p5": 24
+      },
+      "note": "装備時常時。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/936"
+    },
+    {
+      "id": "manato_wengine_crit_rate",
+      "name": "音動機「燔火の朧夜」: 会心率(HP ダウン時)",
+      "stat": "crit_rate",
+      "target": "self",
+      "wengine": {
+        "p1": 15,
+        "p2": 17.25,
+        "p3": 19.5,
+        "p4": 21.75,
+        "p5": 24
+      },
+      "duration": "5s",
+      "note": "装備者の HP がダウンした時。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/936"
     }
   ]
 }

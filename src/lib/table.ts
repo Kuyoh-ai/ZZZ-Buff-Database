@@ -1,5 +1,5 @@
-import type { Buff, Character, CharacterBuffs, CharSetting } from "../types";
-import { appliesTo } from "./applicability";
+import type { Buff, Character, CharacterBuffs, CharSetting, Role } from "../types";
+import { appliesTo, statAppliesToRole } from "./applicability";
 import { resolveBuffTotal, round } from "./resolve";
 
 export interface ResolvedBuff {
@@ -42,6 +42,8 @@ export function buildRow(
   attacker: Character | null,
   /** 自身のみが対象のバフ(target: self)を除外する */
   excludeSelfBuffs = false,
+  /** 受け手の役割に対する stat の有効判定(既定は一覧用) */
+  statFilter: (stat: string, role: Role) => boolean = statAppliesToRole,
 ): Row {
   const cells: Record<string, CellData> = {};
   let applicableCount = 0;
@@ -52,7 +54,7 @@ export function buildRow(
   for (const buff of buffs) {
     const total = resolveBuffTotal(buff, setting);
     const perStack = round(total / (buff.maxStacks ?? 1));
-    const applicable = appliesTo(buff, character, attacker);
+    const applicable = appliesTo(buff, character, attacker, statFilter);
     if (applicable) applicableCount++;
     const cell = (cells[buff.stat] ??= { total: 0, totalSelf: 0, totalAll: 0, buffs: [], applicableCount: 0 });
     cell.buffs.push({ buff, total, perStack, applicable });

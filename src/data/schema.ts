@@ -45,7 +45,8 @@ export const BuffSchema = z
     name: z.string().min(1),
     stat: z.string().refine((s) => STAT_KEYS.includes(s), { message: "unknown stat key" }),
     element: ElementSchema.optional(),
-    target: z.enum(["self", "team", "enemy", "next_swap_in"]),
+    target: z.enum(["self", "team", "enemy", "next_swap_in", "active", "bench"]),
+    modes: z.array(z.enum(["direct", "anomaly", "abloom", "disorder", "grievous"])).nonempty().optional(),
     condition: z
       .object({
         elements: z.array(ElementSchema).optional(),

@@ -13,6 +13,9 @@ import { AttackerPicker } from "./components/AttackerPicker";
 import { Filters, type FilterState } from "./components/Filters";
 import { BuffTable } from "./components/BuffTable";
 import { Splash } from "./components/Splash";
+import { CalcView } from "./components/CalcView";
+
+type View = "table" | "calc";
 
 const STORAGE_KEY = "zzz-buff-db:settings:v2";
 const LEGACY_KEY = "zzz-buff-db:settings:v1";
@@ -52,6 +55,7 @@ export default function App() {
   const [showEmptyCols, setShowEmptyCols] = useState(false);
   const [excludeSelfBuffs, setExcludeSelfBuffs] = useState(true);
   const [ready, setReady] = useState(false);
+  const [view, setView] = useState<View>("table");
 
   useEffect(() => {
     try {
@@ -167,20 +171,46 @@ export default function App() {
     return FACTIONS.filter((f) => present.has(f.id)).map((f) => f.id);
   }, []);
 
+  const settingsPanel = (
+    <SettingsPanel
+      global={settings.global}
+      overrideCount={Object.keys(settings.overrides).length}
+      onChange={setGlobal}
+      onClearOverrides={clearOverrides}
+      onSetARank={setARank}
+    />
+  );
+
   return (
     <>
       {!ready && <Splash onDone={() => setReady(true)} />}
       <div className={`app ${ready ? "app--ready" : ""}`}>
         <Header characterCount={CHARACTERS.length} buffCount={rows.reduce((n, r) => n + r.buffCount, 0)} />
+        <nav className="viewnav" aria-label="表示切替">
+          {(
+            [
+              ["table", "バフ一覧"],
+              ["calc", "ダメージ比較"],
+            ] as [View, string][]
+          ).map(([v, label]) => (
+            <button
+              key={v}
+              type="button"
+              className={`viewnav__btn ${view === v ? "viewnav__btn--on" : ""}`}
+              aria-pressed={view === v}
+              onClick={() => setView(v)}
+              data-testid={`view-${v}`}
+            >
+              {label}
+            </button>
+          ))}
+        </nav>
+        {view === "calc" ? (
+          <CalcView settings={settings} settingsPanel={settingsPanel} />
+        ) : (
         <main className="layout">
           <section className="panel panel--settings" style={{ "--delay": "0.05s" } as React.CSSProperties}>
-            <SettingsPanel
-              global={settings.global}
-              overrideCount={Object.keys(settings.overrides).length}
-              onChange={setGlobal}
-              onClearOverrides={clearOverrides}
-              onSetARank={setARank}
-            />
+            {settingsPanel}
           </section>
           <section className="panel panel--attacker" style={{ "--delay": "0.1s" } as React.CSSProperties}>
             <AttackerPicker characters={CHARACTERS} value={attackerId} onChange={selectAttacker} />
@@ -213,6 +243,7 @@ export default function App() {
             />
           </section>
         </main>
+        )}
         <footer className="footer">
           <p>
             データは HoYoWiki / Game8 / wikiwiki 等を参照して手動で整理したものです。誤りがあれば

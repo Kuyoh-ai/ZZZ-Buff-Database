@@ -6,9 +6,11 @@
       "name": "コアパッシブ: からくり箱(敵防御力ダウン)",
       "stat": "enemy_def_down_pct",
       "target": "enemy",
-      "values": { "base": 40 },
+      "values": {
+        "base": 40
+      },
       "duration": "3.5s",
-      "note": "強化特殊スキル・連携スキル・終結スキルによる力場が敵に命中した時、対象の防御力がダウン。コアスキル最大レベル(Lv.7)の値40%を記載(Lv.1は20%)",
+      "note": "強化特殊スキル・連携スキル・終結スキルによる力場が敵に命中した時、対象の防御力がダウン。コアスキル最大レベル(Lv.7)の値40%を記載(Lv.1は20%)。2026-10-19 監査: 原文では『特殊スキル』『強化特殊スキル』『連携スキル』『終結スキル』中のリロードで強化された弾または力場が命中した場合に付与(特殊スキルと強化弾も対象)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     },
     {
@@ -17,7 +19,9 @@
       "stat": "dmg_pct_element",
       "element": "ether",
       "target": "team",
-      "values": { "base": 25 },
+      "values": {
+        "base": 25
+      },
       "duration": "3.5s",
       "note": "『からくり箱』で防御力ダウンを付与した時、チーム全体のエーテル属性ダメージがアップ。発動条件はニコと同属性(エーテル)または同陣営のメンバーがチームにいること(OR条件のためcondition省略)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
@@ -27,7 +31,10 @@
       "name": "心象映画1: 加圧式強装弾(強化特殊スキルダメージアップ)",
       "stat": "ex_dmg_pct",
       "target": "self",
-      "values": { "base": 0, "m1": 16 },
+      "values": {
+        "base": 0,
+        "m1": 16
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     },
     {
@@ -35,7 +42,10 @@
       "name": "心象映画1: 加圧式強装弾(強化特殊スキル異常蓄積値アップ)",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 0, "m1": 16 },
+      "values": {
+        "base": 0,
+        "m1": 16
+      },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     },
     {
@@ -43,7 +53,10 @@
       "name": "心象映画2: エネルギー収集装置(自身エネルギー回復)",
       "stat": "energy_gain_flat",
       "target": "self",
-      "values": { "base": 0, "m2": 5 },
+      "values": {
+        "base": 0,
+        "m2": 5
+      },
       "note": "『コアパッシブ: からくり箱』のデバフ効果が発動した時、エネルギーを追加回復(15秒に1回のみ)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
     },
@@ -52,11 +65,52 @@
       "name": "心象映画6: 侵蝕力場(チーム会心率アップ)",
       "stat": "crit_rate",
       "target": "team",
-      "values": { "base": 0, "m6": 1.5 },
+      "values": {
+        "base": 0,
+        "m6": 1.5
+      },
       "maxStacks": 10,
       "duration": "12s",
       "note": "ニコの力場が敵にダメージを与えた時、該当ターゲットに対する全ユニットの会心率がアップ(1.5%刻み、最大10重で15%)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/20"
+    },
+    {
+      "id": "nicole_wengine_team_dmg",
+      "name": "音動機「ザ・ボールト」: 対象への全ユニット与ダメージ",
+      "stat": "dmg_pct",
+      "target": "team",
+      "wengine": {
+        "p1": 15,
+        "p2": 17.5,
+        "p3": 20,
+        "p4": 22,
+        "p5": 24
+      },
+      "duration": "2s",
+      "note": "『強化特殊スキル』『連携スキル』『終結スキル』がエーテル属性ダメージを与えた時、全ユニットがそのターゲットに与えるダメージアップ(重ね掛け不可)。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/71"
+    },
+    {
+      "id": "nicole_wengine_energy_regen",
+      "name": "音動機「ザ・ボールト」: エネルギー自動回復",
+      "stat": "energy_regen",
+      "target": "self",
+      "wengine": {
+        "p1": 0.5,
+        "p2": 0.58,
+        "p3": 0.65,
+        "p4": 0.72,
+        "p5": 0.8
+      },
+      "duration": "2s",
+      "note": "上記発動時、装備者のエネルギー自動回復アップ。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/71"
     }
   ]
 }

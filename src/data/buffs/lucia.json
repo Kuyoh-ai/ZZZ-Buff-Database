@@ -63,13 +63,13 @@
     {
       "id": "lucia_m1_decibel_gain",
       "name": "心象映画1: デシベル値獲得効率上昇",
-      "stat": "decibel_gain",
+      "stat": "decibel_gain_eff_pct",
       "target": "self",
       "values": {
         "base": 0,
         "m1": 5
       },
-      "note": "「秘密の友達」。「夢巡りの童謡」状態中、リュシア自身のデシベル値獲得効率アップ",
+      "note": "「秘密の友達」。「夢巡りの童謡」状態中、リュシア自身のデシベル値獲得効率アップ。2026-10-19 ユーザー回答: デシベル獲得効率(%)専用 stat に移動",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
     },
     {
@@ -150,6 +150,18 @@
       "duration": "45s",
       "note": "装備者が「エーテルベール」を発動/延長した時、メンバー全員のHP上限アップ。重複時継続時間更新、チーム内で1つのみ有効",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/935"
+    },
+    {
+      "id": "lucia_m2_ex_dmg",
+      "name": "心象映画2: 『合唱』の与ダメージアップ",
+      "stat": "ex_dmg_pct",
+      "values": {
+        "base": 0,
+        "m2": 15
+      },
+      "note": "「エーテルベール」の効果を受けている時、『合唱』(強化特殊スキル)の与ダメージ+15%。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/907"
     }
   ]
 }

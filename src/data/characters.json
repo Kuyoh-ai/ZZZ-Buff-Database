@@ -9,8 +9,8 @@
     "assist": "parry",
     "faction": "cunning_hares",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "デマラ式電池Ⅱ型",
+      "nameEn": "Demara Battery Mark II"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -35,8 +35,8 @@
     "assist": "evasive",
     "faction": "cunning_hares",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "なんちゃってスターライトエンジン",
+      "nameEn": "Starlight Engine Replica"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -88,8 +88,8 @@
     "assist": "parry",
     "faction": "cunning_hares",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "ザ・ボールト",
+      "nameEn": "The Vault"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -114,8 +114,8 @@
     "assist": "parry",
     "faction": "belobog_heavy_industries",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "ドリルリグ-レッドシャフト",
+      "nameEn": "Drill Rig - Red Axis"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -140,8 +140,8 @@
     "assist": "parry",
     "faction": "belobog_heavy_industries",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "ビガー・シリンダー",
+      "nameEn": "Big Cylinder"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -174,11 +174,14 @@
     "hasPotential": true,
     "additionalAbility": {
       "name": "技術支援チーム",
-      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動",
-      "conditionShort": "同属性 / 同陣営",
+      "condition": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動(ポテンシャル解放後は他の[異常]メンバーも対象)",
+      "conditionShort": "同属性 / 同陣営 / 他の[異常](T1)",
       "activation": {
         "sameElement": true,
-        "sameFaction": true
+        "sameFaction": true,
+        "potentialRoles": [
+          "anomaly"
+        ]
       },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/27"
     }
@@ -309,8 +312,8 @@
     "assist": "parry",
     "faction": "sons_of_calydon",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "喧嘩腰のボンバルダム",
+      "nameEn": "Kaboom the Cannon"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -338,8 +341,8 @@
     "assist": "parry",
     "faction": "sons_of_calydon",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "グロウル・マイ・カー",
+      "nameEn": "Roaring Ride"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -367,8 +370,8 @@
     "assist": "evasive",
     "faction": "sons_of_calydon",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "ペーパーカッター",
+      "nameEn": "Box Cutter"
     },
     "releaseVersion": "1.6",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -480,8 +483,8 @@
     "assist": "parry",
     "faction": "spook_shack",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "燔火の朧夜",
+      "nameEn": "Grill O'Wisp"
     },
     "releaseVersion": "2.3",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -705,8 +708,8 @@
     "assist": "parry",
     "faction": "victoria_housekeeping",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "ハウスキーパー",
+      "nameEn": "Housekeeper"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -842,8 +845,8 @@
     "assist": "parry",
     "faction": "neps_special_investigation",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "秩序の守り手・特化型",
+      "nameEn": "Peacekeeper - Specialized"
     },
     "releaseVersion": "1.1",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -982,8 +985,8 @@
     "assist": "parry",
     "faction": "hollow_special_operations",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "恥じらう悪面",
+      "nameEn": "Bashful Demon"
     },
     "releaseVersion": "1.0",
     "sourceUrl": "https://zenlessdb.com/character",
@@ -1203,8 +1206,8 @@
     "assist": "parry",
     "faction": "yunkui_summit",
     "wengine": {
-      "nameJa": "-",
-      "nameEn": "-"
+      "nameJa": "雷鳴が如き八卦",
+      "nameEn": "Tremor Trigram Vessel"
     },
     "releaseVersion": "2.0",
     "sourceUrl": "https://zenlessdb.com/character",

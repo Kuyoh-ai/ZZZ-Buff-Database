@@ -63,7 +63,12 @@ export type BuffTarget =
   | "self" // 自身のみ
   | "team" // チーム全員(自身含む。excludeSelfで除外)
   | "enemy" // 敵へのデバフ(全アタッカーに有効)
-  | "next_swap_in"; // 次に登場するキャラ(自身以外)
+  | "next_swap_in" // 次に登場するキャラ(自身以外)
+  | "active" // 出場中(操作中)のメンバー(出し手が控えにいる時に付与。自身以外)
+  | "bench"; // 控えのメンバー(アタッカー = 出場中には乗らない)
+
+/** ダメージ比較の計算モード(buff.modes で「狂咲のみ」「状態異常のみ」などに限定できる) */
+export type CalcMode = "direct" | "anomaly" | "abloom" | "disorder" | "grievous";
 
 export interface BuffCondition {
   /** 受け手の属性がいずれかに一致する必要がある */
@@ -114,6 +119,8 @@ export interface Buff {
   element?: Element;
   target: BuffTarget;
   condition?: BuffCondition;
+  /** この効果が乗る計算モード(未指定 = 全モード)。例: 狂咲ダメージ限定の耐性無視は ["abloom"]、強撃(物理異常)限定は ["anomaly"] */
+  modes?: CalcMode[];
   /** 1スタックあたりの値 */
   values: MindscapeValues;
   wengine?: WengineValues;

@@ -5,15 +5,20 @@
       "id": "cissia_core_def_ignore_electric",
       "name": "コアパッシブ:デッドリー・ムーンシャイン(電気属性防御力無視)",
       "stat": "enemy_def_down_pct",
-      "target": "self",
+      "target": "team",
       "values": {
         "base": 25,
         "m1": 35
       },
       "maxStacks": 1,
       "duration": "30s(毒素消費後も継続)",
-      "note": "チーム全体が敵に与える電気属性ダメージについて、ターゲットの防御力を無視。「毒素」所持時(尽きてから30秒間は継続)のみ有効。基礎3〜6%(コアスキルLv依存)+開幕エネルギー自動回復1.4超過分による加算、最大25%。M1で倍率140%となり最大35%。上限値を記載。",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039"
+      "note": "チーム全体が敵に与える電気属性ダメージについて、ターゲットの防御力を無視。「毒素」所持時(尽きてから30秒間は継続)のみ有効。基礎3〜6%(コアスキルLv依存)+開幕エネルギー自動回復1.4超過分による加算、最大25%。M1で倍率140%となり最大35%。上限値を記載。。2026-10-19 監査: 原文「チーム全体が敵に与える電気属性ダメージはターゲットの防御力を無視」のため target を self → team(受け手: 電気属性)に修正",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039",
+      "condition": {
+        "elements": [
+          "electric"
+        ]
+      }
     },
     {
       "id": "cissia_core_crit_dmg_team",
@@ -93,6 +98,18 @@
       "duration": "3s(重複時最大30秒まで延長、接敵時10秒)",
       "note": "装備者が一度に20ptエネルギーを消費するごとに発動、電気属性ダメージに対して防御力無視。数値は精錬Lv1〜5。 (自身の攻撃にのみ適用)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1078"
+    },
+    {
+      "id": "cissia_m2_basic_dmg",
+      "name": "心象映画2: 通常攻撃『ヘビのキッス』の与ダメージアップ",
+      "stat": "basic_dmg_pct",
+      "values": {
+        "base": 0,
+        "m2": 35
+      },
+      "note": "『通常攻撃：ヘビのキッス』が与えるダメージ+35%。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1039"
     }
   ]
 }

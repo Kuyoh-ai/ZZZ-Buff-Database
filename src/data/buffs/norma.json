@@ -24,14 +24,14 @@
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
-      "id": "norma_core_atk_pen_ratio",
-      "name": "コアパッシブ「精密誘導」貫通率依存攻撃力上昇",
+      "id": "norma_core_atk_from_sheer_force",
+      "name": "コアパッシブ「精密誘導」透徹力依存攻撃力上昇",
       "stat": "atk_flat",
       "target": "self",
       "values": {
         "base": 1200
       },
-      "note": "貫通率(透徹力)1Ptにつき攻撃力+1.25Pt、最大+1200Pt。valuesは理論最大値。",
+      "note": "透徹力1Ptにつき攻撃力+1.25Pt、最大+1200Pt。values は上限値。2026-10-19 監査: 「貫通率」→「透徹力」に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
@@ -49,24 +49,24 @@
     },
     {
       "id": "norma_nannana_self_atk",
-      "name": "「ンナンナ弾幕」中の自己攻撃力上昇",
+      "name": "追加能力: 数的優位性(「ンナンナ弾幕」中の自身攻撃力アップ)",
       "stat": "atk_flat",
       "target": "self",
       "values": {
         "base": 870
       },
-      "note": "追加能力「数的優位性」。「ンナンナ弾幕」状態中、ノルムー自身の攻撃力+44Pt(コアスキルLv1)、Lv上昇ごとに+14Pt、コアスキル最大Lvで+870Pt。valuesはコアスキル最大レベル時の値。",
+      "note": "追加能力「数的優位性」。「ンナンナ弾幕」状態中、ノルムー自身の攻撃力+44Pt、エージェントレベル上昇ごとに増加し最大+870Pt(上限値を収録)。2026-10-19 監査: name に「追加能力」を付与(トグル対象化)、「コアスキルLv依存」→「エージェントレベル依存」に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
       "id": "norma_nannana_team_dmg",
-      "name": "「ンナンナ弾幕」中のチーム与ダメージ上昇",
+      "name": "追加能力: 数的優位性(「ンナンナ弾幕」中のチーム与ダメージアップ)",
       "stat": "dmg_pct",
       "target": "team",
       "values": {
         "base": 20
       },
-      "note": "追加能力「数的優位性」。強化特殊スキル「ンナンナ弾幕」発動中、チーム全員の与ダメージ+20%。",
+      "note": "追加能力「数的優位性」。強化特殊スキル「ンナンナ弾幕」発動中、チーム全員の与ダメージ+20%。。2026-10-19 監査: name に「追加能力」を付与(トグル対象化)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
@@ -91,7 +91,7 @@
         "base": 0,
         "m2": 25
       },
-      "note": "M2「普遍的統合の公理」。ハットトリック(連携スキル)発動時、エネルギー25Pt回復(20秒に1回まで)。",
+      "note": "M2「普遍的統合の公理」。『通常攻撃：ハットトリック』を発動するとエネルギー25Pt回復(20秒に1回まで)。2026-10-19 監査: 原文に合わせ連携スキル → 通常攻撃に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {
@@ -103,7 +103,19 @@
         "base": 0,
         "m4": 200
       },
-      "note": "M4「優勢ボンプ学説」。プレヒートを消費して連携スキルを発動した際、ノルムーおよび対象メンバーのデシベル値+200Pt。",
+      "note": "M4「優勢ボンプ学説」。プレヒートを消費して連携スキルを発動した際、ノルムーおよび対象メンバーのデシベル値+200Pt。。2026-10-19 ユーザー回答: 原文「ノルムーと対応メンバー」のため、連携スキルを発動した相手メンバー向けの next_swap_in エントリを追加",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
+    },
+    {
+      "id": "norma_m4_decibel_gain_partner",
+      "name": "M4 デシベル値回復(連携スキルを発動した対応メンバー)",
+      "stat": "decibel_gain",
+      "target": "next_swap_in",
+      "values": {
+        "base": 0,
+        "m4": 200
+      },
+      "note": "M4「優勢ボンプ学説」。プレヒートを消費して連携スキルを発動した際、ノルムーおよび対象メンバーのデシベル値+200Pt。。2026-10-19 ユーザー回答: 原文「ノルムーと対応メンバー」のため、連携スキルを発動した相手メンバー向けの next_swap_in エントリを追加",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1085"
     },
     {

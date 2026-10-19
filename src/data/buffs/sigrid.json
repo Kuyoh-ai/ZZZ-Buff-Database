@@ -73,13 +73,14 @@
     {
       "id": "sigrid_m2_decibel_gain",
       "name": "心象映画2「伝説の第一幕」: デシベル値獲得効率アップ",
-      "stat": "decibel_gain",
+      "stat": "decibel_gain_eff_pct",
       "target": "self",
       "values": {
         "base": 0,
         "m2": 10
       },
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1113"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1113",
+      "note": "2026-10-19 ユーザー回答: デシベル獲得効率(%)専用 stat に移動"
     },
     {
       "id": "sigrid_m4_dmg_up",

@@ -15,12 +15,12 @@
     {
       "id": "promeia_core_team_abloom_dmg",
       "name": "コアパッシブ: 異常掌握超過によるチーム狂咲ダメージ上昇",
-      "stat": "anomaly_dmg_pct",
+      "stat": "abloom_dmg_pct",
       "target": "team",
       "values": {
         "base": 0.35
       },
-      "note": "開幕時の異常掌握が150Ptを超える場合、超過1Ptごとにチーム全体の「狂咲」(Abloom)ダメージ+0.35%(スケーリング値、上限なし。超過分×0.35%が実際の上昇量)",
+      "note": "開幕時の異常掌握が150Ptを超える場合、超過1Ptごとにチーム全体の「狂咲」(Abloom)ダメージ+0.35%(スケーリング値、上限なし。超過分×0.35%が実際の上昇量)。2026-10-19: 狂咲ダメージ専用 stat(abloom_dmg_pct)に再キー",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     },
     {
@@ -49,8 +49,11 @@
         "base": 40,
         "m1": 60
       },
-      "note": "チームに他の異常または支援メンバーがいる時に発動。敵が「咎は凍てつく」状態でメンバー全員が「狂咲」発動時、敵の防御力を40%無視(M1でさらに+20%、合計60%無視)。",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
+      "note": "チームに他の異常または支援メンバーがいる時に発動。敵が「咎は凍てつく」状態でメンバー全員が「狂咲」発動時、敵の防御力を40%無視(M1でさらに+20%、合計60%無視)。。2026-10-19 ユーザー回答: 狂咲ダメージ限定(modes: abloom)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072",
+      "modes": [
+        "abloom"
+      ]
     },
     {
       "id": "promeia_m2_anomaly_mastery",
@@ -68,12 +71,12 @@
       "id": "promeia_m6_enemy_res_down",
       "name": "心象映画6: 全属性耐性無視",
       "stat": "enemy_res_ignore_all_pct",
-      "target": "enemy",
+      "target": "self",
       "values": {
         "base": 0,
         "m6": 15
       },
-      "note": "M6「物語は続く」でプロメイアが与える状態異常ダメージと「混沌」ダメージについて、敵の全属性ダメージ耐性15%無視。",
+      "note": "M6「物語は続く」でプロメイアが与える状態異常ダメージと「混沌」ダメージについて、敵の全属性ダメージ耐性15%無視。。2026-10-19 監査: 原文「プロメイアが与える状態異常ダメージ、および「混沌」ダメージは、敵の全属性ダメージ耐性を15%無視する」は自身のダメージにのみ効くため target を self に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
     },
     {
@@ -100,7 +103,7 @@
     {
       "id": "promeia_wengine_frost_crescent_abloom_dmg",
       "name": "専用音動機フロスト・クレセント: 狂咲ダメージ上昇(2重時)",
-      "stat": "anomaly_dmg_pct",
+      "stat": "abloom_dmg_pct",
       "target": "self",
       "values": {
         "base": 0
@@ -112,7 +115,7 @@
         "p4": 45.5,
         "p5": 50
       },
-      "note": "2重所持時、自身の「狂咲」(Abloom)ダメージが追加で上昇",
+      "note": "2重所持時、自身の「狂咲」(Abloom)ダメージが追加で上昇。2026-10-19: 狂咲ダメージ専用 stat(abloom_dmg_pct)に再キー",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1087"
     }
   ]

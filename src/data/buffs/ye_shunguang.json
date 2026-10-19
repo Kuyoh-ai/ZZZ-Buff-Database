@@ -37,24 +37,25 @@
     {
       "id": "ye_shunguang_m1_pen",
       "name": "心象映画1: うたかたの夢(防御力無視)",
-      "stat": "pen_ratio",
+      "stat": "enemy_def_down_pct",
       "target": "self",
       "values": {
         "base": 0,
         "m1": 20
       },
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961",
+      "note": "2026-10-19 監査: 原文「防御力を無視」のため貫通率 → 敵防御力ダウン/無視(防御ダウンと同枠)に修正"
     },
     {
       "id": "ye_shunguang_m2_pen",
       "name": "心象映画2: 光と影(防御力無視追加)",
-      "stat": "pen_ratio",
+      "stat": "enemy_def_down_pct",
       "target": "self",
       "values": {
         "base": 0,
         "m2": 40
       },
-      "note": "『強化特殊スキル:澄心境・飛光』と『終結スキル:慧剣よ天を開け』の与ダメージのみターゲットの防御力を40%無視(M1の防御無視とは別枠)。",
+      "note": "『強化特殊スキル:澄心境・飛光』と『終結スキル:慧剣よ天を開け』の与ダメージのみターゲットの防御力を40%無視(M1の防御無視とは別枠)。。2026-10-19 監査: 原文「防御力を無視」のため貫通率 → 敵防御力ダウン/無視(防御ダウンと同枠)に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/961"
     },
     {

@@ -19,9 +19,9 @@
       "element": "fire",
       "target": "self",
       "values": {
-        "base": 10
+        "base": 32.5
       },
-      "note": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動(OR条件のためcondition省略)。ブレイク状態の敵を攻撃する時はさらに+22.5%(合計32.5%)",
+      "note": "チームに自身と同じ属性または同じ陣営のメンバーがいる時に発動(OR条件のためcondition省略)。ブレイク状態の敵を攻撃する時はさらに+22.5%(合計32.5%)。2026-10-19 監査: ブレイク状態の敵への +22.5% を含めた上限値 32.5 に修正(上限値の規約)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
     },
     {
@@ -61,7 +61,10 @@
       "stat": "enemy_res_down_pct",
       "element": "fire",
       "target": "self",
-      "values": { "base": 0, "m6": 25 },
+      "values": {
+        "base": 0,
+        "m6": 25
+      },
       "note": "『強化特殊/連携/終結スキル』発動でパワーを最大8重獲得。『火力鎮圧』発動時にパワーを1重消費してその攻撃の炎属性ダメージ耐性を無視(自身の攻撃にのみ適用のためtarget: self)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/22"
     },

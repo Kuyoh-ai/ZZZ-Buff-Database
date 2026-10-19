@@ -8,7 +8,7 @@ import { judgeAdditionalAbility } from "../lib/activation";
 import type { Character, CharSetting, Mindscape, Potential, Settings, WenginePhase } from "../types";
 import { ElementIcon } from "./Icons";
 
-const TARGET_LABEL = { self: "自身", team: "チーム", enemy: "敵デバフ", next_swap_in: "次の登場キャラ" } as const;
+const TARGET_LABEL = { self: "自身", team: "チーム", enemy: "敵デバフ", next_swap_in: "次の登場キャラ", active: "出場メンバー", bench: "控えメンバー" } as const;
 
 function fmt(v: number, unit: string) {
   const s = Number.isInteger(v) ? String(v) : v.toFixed(1).replace(/\.0$/, "");

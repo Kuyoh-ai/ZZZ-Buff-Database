@@ -6,7 +6,9 @@
       "name": "コアパッシブ: パワーチャージ(自身の物理属性状態異常蓄積効率アップ)",
       "stat": "anomaly_buildup_pct",
       "target": "self",
-      "values": { "base": 4 },
+      "values": {
+        "base": 4
+      },
       "maxStacks": 20,
       "duration": "12s",
       "note": "『強化特殊スキル:エンジンぶんぶん』または『終結スキル』の回転斬撃が敵に命中した時「動力」を1重獲得。「動力」1重につき物理属性の状態異常蓄積効率+4%(コアスキル最大レベル時、最大20重)",
@@ -17,7 +19,9 @@
       "name": "追加能力: 一緒に飛ばそうぜい(チーム与ダメージアップ)",
       "stat": "dmg_pct",
       "target": "team",
-      "values": { "base": 18 },
+      "values": {
+        "base": 18
+      },
       "note": "パイパーが「動力」を20重以上所持している時、メンバー全員の与ダメージ+18%。発動条件は「チームに自身と同じ属性のメンバー」「同じ陣営のメンバー」「[異常]特性メンバー」のいずれか(OR条件)がいること",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/126"
     },
@@ -26,9 +30,82 @@
       "name": "心象映画4: 熟練のドラテク(自身のエネルギー回復)",
       "stat": "energy_gain_flat",
       "target": "self",
-      "values": { "base": 0, "m4": 20 },
+      "values": {
+        "base": 0,
+        "m4": 20
+      },
       "note": "任意のメンバーが敵を状態異常にした時、パイパーのエネルギーが回復(30秒に1回のみ発動)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/126"
+    },
+    {
+      "id": "piper_m2_fall_physical_dmg",
+      "name": "心象映画2: 落下攻撃の物理ダメージアップ",
+      "stat": "dmg_pct_element",
+      "values": {
+        "base": 0,
+        "m2": 40
+      },
+      "note": "落下攻撃が敵に命中した時、スキルの与える物理属性ダメージ+10%、『動力』1重につき+1%(M1 で最大 30 重のため上限 40%)。落下攻撃限定だが専用 stat が無いため物理ダメージとして収録。2026-10-19 ユーザー回答: スキル限定の与ダメとして追加(攻撃種別セレクタで有効)",
+      "target": "self",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/126",
+      "element": "physical"
+    },
+    {
+      "id": "piper_wengine_atk",
+      "name": "音動機「グロウル・マイ・カー」: 攻撃力アップ",
+      "stat": "atk_pct",
+      "target": "self",
+      "wengine": {
+        "p1": 8,
+        "p2": 9.2,
+        "p3": 10.4,
+        "p4": 11.6,
+        "p5": 12.8
+      },
+      "duration": "5s",
+      "note": "『強化特殊スキル』命中時にいずれか 1 つが発動(異なる効果は併存可)。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/274"
+    },
+    {
+      "id": "piper_wengine_anomaly_proficiency",
+      "name": "音動機「グロウル・マイ・カー」: 異常マスタリー",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "wengine": {
+        "p1": 40,
+        "p2": 46,
+        "p3": 52,
+        "p4": 58,
+        "p5": 64
+      },
+      "duration": "5s",
+      "note": "同上。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/274"
+    },
+    {
+      "id": "piper_wengine_anomaly_buildup",
+      "name": "音動機「グロウル・マイ・カー」: 状態異常蓄積効率",
+      "stat": "anomaly_buildup_pct",
+      "target": "self",
+      "wengine": {
+        "p1": 25,
+        "p2": 28,
+        "p3": 32,
+        "p4": 36,
+        "p5": 40
+      },
+      "duration": "5s",
+      "note": "同上。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/274"
     }
   ]
 }

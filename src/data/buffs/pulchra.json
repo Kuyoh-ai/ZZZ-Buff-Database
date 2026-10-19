@@ -2,13 +2,15 @@
   "characterId": "pulchra",
   "buffs": [
     {
-      "id": "pulchra_additional_team_assist_dmg",
+      "id": "pulchra_additional_team_aftershock_dmg",
       "name": "追加能力: 味方追加攻撃ダメージアップ(ビジネスパートナー)",
-      "stat": "assist_dmg_pct",
+      "stat": "aftershock_dmg_pct",
       "target": "team",
-      "values": { "base": 30 },
+      "values": {
+        "base": 30
+      },
       "duration": "15s",
-      "note": "チームに強攻・命破または同陣営メンバーがいる場合発動(OR条件のためcondition省略)。特殊スキル/強化特殊スキル/支援突撃/連携スキル/終結スキルの命中で敵に「囚縛」付与し、味方全員の追加攻撃与ダメージがアップ。M6で「囚縛」効果が追加攻撃以外のスキルダメージにも適用に拡大(完凸ではなく心象映画6凸)",
+      "note": "チームに強攻・命破または同陣営メンバーがいる場合発動(OR条件のためcondition省略)。特殊スキル/強化特殊スキル/支援突撃/連携スキル/終結スキルの命中で敵に「囚縛」付与し、味方全員の追加攻撃与ダメージがアップ。M6で「囚縛」効果が追加攻撃以外のスキルダメージにも適用に拡大(完凸ではなく心象映画6凸)。2026-10-19 監査: 原文「全味方ユニットの『追加攻撃』の与ダメージ+30%」のため stat を支援攻撃 → 追加攻撃ダメージに修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619"
     },
     {
@@ -16,7 +18,10 @@
       "name": "心象映画1: 会心率アップ(エゴイスト)",
       "stat": "crit_rate",
       "target": "self",
-      "values": { "base": 0, "m1": 10 },
+      "values": {
+        "base": 0,
+        "m1": 10
+      },
       "note": "「囚縛」効果を付与された敵へダメージを与えた時、自身の会心率アップ",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619"
     },
@@ -25,9 +30,51 @@
       "name": "心象映画2: 攻撃力アップ(機を見るに敏)",
       "stat": "atk_pct",
       "target": "self",
-      "values": { "base": 0, "m2": 10 },
+      "values": {
+        "base": 0,
+        "m2": 10
+      },
       "note": "コアパッシブ「捕食者の本能」による「猟歩」状態時、自身の攻撃力アップ",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/619"
+    },
+    {
+      "id": "pulchra_wengine_physical_dmg",
+      "name": "音動機「ペーパーカッター」: 物理属性ダメージ",
+      "stat": "dmg_pct_element",
+      "element": "physical",
+      "target": "self",
+      "wengine": {
+        "p1": 15,
+        "p2": 17.3,
+        "p3": 19.5,
+        "p4": 21.8,
+        "p5": 24
+      },
+      "duration": "10s",
+      "note": "『追加攻撃』発動時。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/622"
+    },
+    {
+      "id": "pulchra_wengine_daze",
+      "name": "音動機「ペーパーカッター」: 与ブレイク値",
+      "stat": "daze_pct",
+      "target": "self",
+      "wengine": {
+        "p1": 10,
+        "p2": 11.5,
+        "p3": 13,
+        "p4": 14.5,
+        "p5": 16
+      },
+      "duration": "10s",
+      "note": "『追加攻撃』発動時。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/622"
     }
   ]
 }

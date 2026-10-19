@@ -37,8 +37,19 @@
         "t1": 30
       },
       "duration": "30s",
-      "note": "ポテンシャル解放後に追加される効果(通常装備では付与されない)。強化特殊スキル『人狼の刻』または支援突撃『復讐の反攻/復讐の反攻・氷のワルツ』が敵に命中した時、氷属性以外の被ダメージ+30%(氷属性耐性ダウンと同時付与)。解放段階の対応は本文から判別できないためT1扱いとして記載",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28"
+      "note": "ポテンシャル解放後に追加される効果(通常装備では付与されない)。強化特殊スキル『人狼の刻』または支援突撃『復讐の反攻/復讐の反攻・氷のワルツ』が敵に命中した時、氷属性以外の被ダメージ+30%(氷属性耐性ダウンと同時付与)。解放段階の対応は本文から判別できないためT1扱いとして記載。2026-10-19: 受け手が氷属性以外のときのみ適用されるよう condition.elements を追加",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/28",
+      "condition": {
+        "elements": [
+          "physical",
+          "fire",
+          "electric",
+          "ether",
+          "wind",
+          "auric_ink",
+          "lumiflux"
+        ]
+      }
     },
     {
       "id": "lycaon_ex_stun_dmg_multiplier",
@@ -56,7 +67,9 @@
       "name": "ポテンシャル覚醒: 氷迅(衝撃力アップ)",
       "stat": "impact_pct",
       "target": "self",
-      "values": { "base": 0 },
+      "values": {
+        "base": 0
+      },
       "potential": {
         "t2": 5,
         "t3": 7.5,
@@ -108,13 +121,13 @@
     {
       "id": "lycaon_wengine_restrained_dmg",
       "name": "音動機 拘縛されし者: 通常攻撃与ダメージアップ",
-      "stat": "dmg_pct",
+      "stat": "basic_dmg_pct",
       "target": "self",
       "values": {
         "base": 0
       },
       "maxStacks": 5,
-      "note": "攻撃が敵に命中した時、『通常攻撃』の与ダメージアップ(1回の攻撃で1回のみ発動、最大5重)",
+      "note": "攻撃が敵に命中した時、『通常攻撃』の与ダメージアップ(1回の攻撃で1回のみ発動、最大5重)。2026-10-19 監査: 原文「『通常攻撃』による与ダメージとブレイク値+6〜12%」のため与ダメージ → 通常攻撃ダメージに修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/83",
       "wengine": {
         "p1": 6.0,

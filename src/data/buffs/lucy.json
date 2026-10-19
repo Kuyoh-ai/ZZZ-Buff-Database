@@ -6,7 +6,9 @@
       "name": "強化特殊スキル: ホームラン!(かっとばせ!によるチーム攻撃力アップ)",
       "stat": "atk_flat",
       "target": "team",
-      "values": { "base": 600 },
+      "values": {
+        "base": 600
+      },
       "duration": "10s",
       "note": "『強化特殊スキル』発動後、親衛隊のイノシシが爆発を起こした時、メンバー全員・ボンプ・親衛隊のイノシシに「かっとばせ!」状態を付与し攻撃力アップ。実際の上昇量はルーシーの開幕攻撃力25.8%+104Pt相当(スキルLv最大時)で、上限600Ptでキャップ(上限値を収録)。ライナー10秒/フライ15秒",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/125"
@@ -16,9 +18,32 @@
       "name": "心象映画4: 無法試合(かっとばせ!状態の会心ダメージアップ)",
       "stat": "crit_dmg",
       "target": "team",
-      "values": { "base": 0, "m4": 10 },
+      "values": {
+        "base": 0,
+        "m4": 10
+      },
       "note": "「かっとばせ!」状態にある味方の会心ダメージが追加で+10%",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/125"
+    },
+    {
+      "id": "lucy_wengine_team_atk",
+      "name": "音動機「喧嘩腰のボンバルダム」: チーム攻撃力アップ",
+      "stat": "atk_pct",
+      "target": "team",
+      "maxStacks": 4,
+      "wengine": {
+        "p1": 2.5,
+        "p2": 2.8,
+        "p3": 3.2,
+        "p4": 3.6,
+        "p5": 4
+      },
+      "duration": "8s",
+      "note": "味方ユニットの攻撃が敵に命中した時、すべての味方ユニットの攻撃力アップ(味方 1 名につき 1 重、最大 4 重、重ね掛け不可)。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/273"
     }
   ]
 }

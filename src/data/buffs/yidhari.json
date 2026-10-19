@@ -97,7 +97,7 @@
     {
       "id": "yidhari_wengine_ice_sheer_dmg_stack",
       "name": "セイレーンクレードル(専用音動機)-氷属性透徹ダメージ上昇",
-      "stat": "dmg_pct_element",
+      "stat": "sheer_dmg_pct",
       "element": "ice",
       "target": "self",
       "values": {
@@ -112,7 +112,7 @@
       },
       "maxStacks": 3,
       "duration": "25s",
-      "note": "HP減少時に氷属性透徹ダメージ上昇(1重あたり)。最大3重まで重複。 装備者のHPが減少するたびに1重獲得。",
+      "note": "HP減少時に氷属性透徹ダメージ上昇(1重あたり)。最大3重まで重複。 装備者のHPが減少するたびに1重獲得。。2026-10-19 監査: 原文「与える氷属性の透徹ダメージ+6〜10%」のため stat を属性ダメージ → 透徹ダメージ(別枠乗算)に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/937"
     },
     {

@@ -16,12 +16,12 @@
     {
       "id": "alice_core_disorder_dmg_self",
       "name": "コアパッシブ: 混沌ダメージ倍率アップ(双虹の剣心)",
-      "stat": "disorder_dmg_pct",
+      "stat": "disorder_multiplier_pct",
       "target": "self",
       "values": {
         "base": 180
       },
-      "note": "物理属性状態異常の敵に対し「混沌」効果を発動させた時、状態異常の残り時間1秒につき混沌ダメージ倍率+18%(上限+180%=残り10秒以上)。ここでは上限値を記載",
+      "note": "物理属性状態異常の敵に対し「混沌」効果を発動させた時、状態異常の残り時間1秒につき混沌ダメージ倍率+18%(上限+180%=残り10秒以上)。ここでは上限値を記載。2026-10-19 ユーザー回答: 「混沌ダメージ倍率+」は混沌の基礎倍率(450%)への加算として専用 stat に移動(混沌ダメージ% とは別枠)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/838"
     },
     {
@@ -64,7 +64,7 @@
     },
     {
       "id": "alice_wengine_anomaly_mastery",
-      "name": "音動機「十面百錬の星」: 異常マスタリーアップ",
+      "name": "音動機「十面百錬の星」: 異常掌握アップ",
       "stat": "anomaly_mastery",
       "target": "self",
       "values": {

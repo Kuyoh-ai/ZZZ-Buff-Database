@@ -51,6 +51,45 @@
       },
       "note": "クイック支援/パリィ支援/連携スキル発動時、エネルギー7.2Pt回復。16秒に1回のみ発動可能",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/23"
+    },
+    {
+      "id": "corin_wengine_energy_regen",
+      "name": "音動機「ハウスキーパー」: 控え時のエネルギー自動回復",
+      "stat": "energy_regen",
+      "target": "self",
+      "wengine": {
+        "p1": 0.45,
+        "p2": 0.52,
+        "p3": 0.58,
+        "p4": 0.65,
+        "p5": 0.72
+      },
+      "note": "控えにいる時。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/72"
+    },
+    {
+      "id": "corin_wengine_physical_dmg",
+      "name": "音動機「ハウスキーパー」: 物理属性ダメージ(重ね掛け)",
+      "stat": "dmg_pct_element",
+      "element": "physical",
+      "target": "self",
+      "maxStacks": 15,
+      "wengine": {
+        "p1": 3,
+        "p2": 3.5,
+        "p3": 4,
+        "p4": 4.4,
+        "p5": 4.8
+      },
+      "duration": "1s",
+      "note": "『強化特殊スキル』が敵に命中するたび 1 重(最大 15 重)。2026-10-19 ユーザー回答: A 級モチーフ音動機を収録",
+      "values": {
+        "base": 0
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/72"
     }
   ]
 }

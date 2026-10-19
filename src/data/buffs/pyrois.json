@@ -16,13 +16,13 @@
     {
       "id": "pyrois_core_energy_regen",
       "name": "コアパッシブ: 終結スキル(下分岐)「増光」エネルギー獲得効率アップ",
-      "stat": "energy_regen",
+      "stat": "energy_gain_eff_pct",
       "target": "self",
       "values": {
         "base": 15
       },
       "duration": "200s",
-      "note": "終結スキル下分岐発動で「増光」状態獲得",
+      "note": "終結スキル下分岐発動で「増光」状態獲得。2026-10-19 ユーザー回答: エネルギー獲得効率(%)専用 stat に移動",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1082"
     },
     {
@@ -94,7 +94,7 @@
       "name": "音動機「太陽の抜け殻」: エーテル耐性ダウン(日蝕)",
       "stat": "enemy_res_down_pct",
       "element": "ether",
-      "target": "enemy",
+      "target": "self",
       "values": {
         "base": 0
       },
@@ -106,7 +106,7 @@
         "p5": 22
       },
       "duration": "45s",
-      "note": "ピュロイス装備時、終結スキル発動または接敵状態突入時に「日蝕」効果獲得。敵のエーテル属性ダメージ耐性を無視",
+      "note": "ピュロイス装備時、終結スキル発動または接敵状態突入時に「日蝕」効果獲得。敵のエーテル属性ダメージ耐性を無視。2026-10-19 監査: 原文「装備者が与えるダメージは敵のエーテル属性ダメージ耐性を無視する」は装備者のみのため target を self に修正",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1105"
     }
   ]
