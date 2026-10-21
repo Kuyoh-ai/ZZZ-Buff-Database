@@ -18,6 +18,7 @@ export const CharacterSchema = z.object({
   releaseVersion: z.string().regex(/^\d+\.\d+$/),
   hasPotential: z.boolean().optional(),
   abloomApScaling: z.boolean().optional(),
+  turbulence: z.boolean().optional(),
   additionalAbility: z
     .object({
       name: z.string(),

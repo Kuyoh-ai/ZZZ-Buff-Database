@@ -24,6 +24,21 @@
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
     },
     {
+      "id": "velina_core_permeation_direct_dmg",
+      "name": "コアパッシブ: 「浸透」(直接攻撃の被ダメージ増加)",
+      "stat": "enemy_dmg_taken_pct",
+      "target": "enemy",
+      "modes": [
+        "direct"
+      ],
+      "values": {
+        "base": 10
+      },
+      "duration": "30s",
+      "note": "「風化」状態の敵に初めて属性ダメージを与えた時、対応する属性の「浸透」が発動。浸透中、敵が受ける直接攻撃による風属性ダメージと対応属性ダメージ +10%(wikiwiki 状態異常「[浸透]直接攻撃ダメージ増加：10%」)。2026-10-21: 追加(直接攻撃モード限定)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1084"
+    },
+    {
       "id": "velina_core_tornado_daze",
       "name": "追加能力:竜巻のブレイク値上昇",
       "stat": "daze_pct",

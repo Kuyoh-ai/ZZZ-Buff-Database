@@ -5,7 +5,7 @@ import { judgeAdditionalAbility } from "./activation";
 import { statAppliesToRole } from "./applicability";
 import { effectiveSetting, round } from "./resolve";
 import { buildRow, type ResolvedBuff } from "./table";
-import { ATTACK_TYPE_STAT, SKILL_TYPE_STATS, combatAtk, computeDamage, type AttackerPanel, type AttackType, type BuffTotals, type DamageMode, type DamageResult, type EnemyState } from "./damage";
+import { ANOMALY_TOTAL_MULT, ATTACK_TYPE_STAT, SKILL_TYPE_STATS, TURBULENCE_MULT, combatAtk, computeDamage, type AttackerPanel, type AttackType, type BuffTotals, type DamageMode, type DamageResult, type EnemyState } from "./damage";
 
 /** アタッカーの常時パネルを agent_stats + ディスク + 上書きから作る(式は formula.md §6〜7) */
 export function buildPanel(c: Character, s: AgentStats, disc: DiscBuild, overrides: Partial<AttackerPanel> = {}): AttackerPanel {
@@ -235,6 +235,8 @@ export interface CompareRow {
   aaJudged: boolean | null;
   /** この候補を加えることで追加能力が発動するようになる基準メンバー(アタッカー / 3 枠目) */
   enablesAa: Character[];
+  /** 乱流換算で計算した行(乱流持ちがチームにいる状態異常モード) */
+  turbulence: boolean;
 }
 
 export interface CompareOutput {
@@ -242,7 +244,36 @@ export interface CompareOutput {
   baselineTotals: BuffTotals;
   /** 基準編成(アタッカー + 3 枠目)での各メンバーの追加能力の判定(null = データなし) */
   baselineAa: Record<string, boolean | null>;
+  /** 基準が乱流換算(3 枠目が乱流持ち)か */
+  baselineTurbulence: boolean;
   rows: CompareRow[];
+}
+
+/**
+ * 乱流換算(状態異常モード): チームに乱流持ち(ヴェリナ)がいると、アタッカーの状態異常の継続ダメージは発生せず、
+ * 代わりに乱流持ち自身のステータスで乱流ダメージ(炎/電気/エーテル 1900% 等)が発生する。
+ * 返り値は「状態異常 1 回あたりのチーム異常ダメージ」の相対値。乱流持ちがいない場合はアタッカーの異常ダメージ × 元の異常の総倍率。
+ * 発動頻度(蓄積側)はアタッカーの蓄積倍率を使う。
+ */
+export function teamAnomalyExpected(
+  input: Pick<CompareInput, "attacker" | "settings" | "panel" | "enemy" | "fixed" | "attackType" | "anomalyCrit" | "includeBuildup" | "panelOf" | "buffsOf">,
+  members: Character[],
+  attackerResult: DamageResult,
+): { expected: number; turbulence: boolean } {
+  const { attacker } = input;
+  const el = attacker.element;
+  const normal = ANOMALY_TOTAL_MULT[el];
+  const turb = TURBULENCE_MULT[el];
+  const holder = members.find((m) => m.turbulence && m.id !== attacker.id);
+  const holderPanel = holder ? input.panelOf?.(holder) : undefined;
+  if (!holder || !holderPanel || normal === undefined || turb === undefined) {
+    return { expected: attackerResult.expected * ((normal ?? 100) / 100), turbulence: false };
+  }
+  const providers = members.map((c) => ({ character: c, buffs: input.buffsOf(c.id) }));
+  const holderTotals = mergeTotals(collectBuffs(providers, holder, input.settings, { attackType: "generic", mode: "anomaly", panel: holderPanel, panelOf: input.panelOf }).totals, input.fixed);
+  const holderRes = computeDamage(holderPanel, input.enemy, holderTotals, { mode: "anomaly", anomalyCrit: input.anomalyCrit, includeBuildup: false, abloomApScaling: false });
+  const freq = input.includeBuildup ? attackerResult.parts.buildupMul : 1;
+  return { expected: holderRes.expected * (turb / 100) * freq, turbulence: true };
 }
 
 export function compareAll(input: CompareInput): CompareOutput {
@@ -257,6 +288,8 @@ export function compareAll(input: CompareInput): CompareOutput {
   const baselineTotals = mergeTotals(base.totals, fixed);
   const baseline = computeDamage(panel, enemy, baselineTotals, dmgOpts);
   const baseTeam = [attacker, third].filter((c): c is Character => !!c);
+  const useTurb = input.mode === "anomaly";
+  const baseTeamAnomaly = useTurb ? teamAnomalyExpected(input, baseTeam, baseline) : { expected: baseline.expected, turbulence: false };
   const baselineAa: Record<string, boolean | null> = {};
   for (const c of baseTeam) baselineAa[c.id] = judgeInTeam(c, baseTeam, c.hasPotential ? effectiveSetting(settings, c.id).potential : 0);
   const rows: CompareRow[] = [];
@@ -268,16 +301,18 @@ export function compareAll(input: CompareInput): CompareOutput {
     const team = [attacker, third, c].filter((x): x is Character => !!x);
     const s = effectiveSetting(settings, c.id);
     const enablesAa = baseTeam.filter((m) => baselineAa[m.id] === false && judgeInTeam(m, team, m.hasPotential ? effectiveSetting(settings, m.id).potential : 0) === true);
+    const teamAnomaly = useTurb ? teamAnomalyExpected(input, team, result) : { expected: result.expected, turbulence: false };
     rows.push({
       character: c,
-      ratio: baseline.expected > 0 ? result.expected / baseline.expected : 1,
+      ratio: baseTeamAnomaly.expected > 0 ? teamAnomaly.expected / baseTeamAnomaly.expected : 1,
       result,
       contributions: col.applied[c.id] ?? [],
       aaJudged: judgeInTeam(c, team, c.hasPotential ? s.potential : 0),
       enablesAa,
+      turbulence: teamAnomaly.turbulence,
     });
   }
-  return { baseline, baselineTotals, baselineAa, rows };
+  return { baseline, baselineTotals, baselineAa, baselineTurbulence: baseTeamAnomaly.turbulence, rows };
 }
 
 function round2(n: number): number {

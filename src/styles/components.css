@@ -1214,6 +1214,11 @@
   gap: 6px;
   padding: 6px 4px;
 }
+.tag--turb {
+  border-color: var(--el-wind);
+  color: var(--el-wind);
+  margin-right: 6px;
+}
 .tag--enable {
   border-color: var(--gold);
   color: var(--gold);

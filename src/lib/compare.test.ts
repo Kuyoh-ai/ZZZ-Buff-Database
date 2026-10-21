@@ -3,6 +3,7 @@ import type { Character, CharacterBuffs, Settings } from "../types";
 import type { AgentStats, Enemy } from "../data/calcSchema";
 import { DISC_PRESET_BY_ID } from "../data/disc_presets";
 import { buildPanel, collectBuffs, compareAll, enemyState, fixedTotals, judgeInTeam } from "./compare";
+import { computeDamage } from "./damage";
 
 const settings: Settings = { global: { mindscape: 0, wenginePhase: 0, potential: 0, additionalAbility: true }, overrides: {} };
 
@@ -152,6 +153,35 @@ describe("compare: バフ合算", () => {
     const t2 = collectBuffs([{ character: jane, buffs: bo2("jane") }, { character: ap, buffs: bo2("ap") }], jane, settings, { attackType: "generic", mode: "anomaly", panel: pnl }).totals;
     expect(t2.dmg_pct).toBeCloseTo(30, 6); // 394 × 0.1 = 39.4 → 上限 30
     expect(t2.atk_flat).toBeCloseTo((394 - 120) * 2, 6);
+  });
+  it("乱流換算: 乱流持ちが同席する状態異常モードではヴェリナ側の乱流ダメージ × 元の異常総倍率比で比率が決まる", () => {
+    const fire = mk("fireA", { element: "fire", role: "anomaly" });
+    const vel = mk("vel", { element: "wind", role: "anomaly", turbulence: true });
+    const velStats = { ...stats, base: { ...stats.base, atk: 700, anomaly_proficiency: 120 }, core: { atk: 75 } };
+    const panelOf = (c: Character) => buildPanel(c, c.id === "vel" ? velStats : stats, DISC_PRESET_BY_ID.anomaly.build);
+    const bo = (id: string): CharacterBuffs | undefined =>
+      id === "vel" ? { characterId: "vel", buffs: [{ id: "vel_res", name: "蓄積耐性", stat: "enemy_anomaly_buildup_res_down_pct", target: "enemy", values: { base: 14 }, sourceUrl: "https://example.com" }] } : undefined;
+    const panel = panelOf(fire);
+    const en = enemyState(enemy, fire, true, false);
+    const out = compareAll({ attacker: fire, third: null, candidates: [vel], buffsOf: bo, panelOf, settings, panel, enemy: en, fixed: {}, mode: "anomaly", attackType: "generic", anomalyCrit: false, includeBuildup: true });
+    const row = out.rows[0];
+    expect(row.turbulence).toBe(true);
+    // 期待値: ヴェリナの異常ダメージ(蓄積側なし) × 1900 × アタッカーの蓄積倍率(1.14) ÷ (アタッカーの異常ダメージ × 1000)
+    const velRes = computeDamage(panelOf(vel), en, {}, { mode: "anomaly", includeBuildup: false });
+    const expected = (velRes.expected * 19 * 1.14) / (out.baseline.expected * 10);
+    expect(row.ratio).toBeCloseTo(expected, 6);
+    // 直接攻撃モードでは換算しない
+    const direct = compareAll({ attacker: fire, third: null, candidates: [vel], buffsOf: bo, panelOf, settings, panel, enemy: en, fixed: {}, mode: "direct", attackType: "generic", anomalyCrit: false, includeBuildup: true });
+    expect(direct.rows[0].turbulence).toBe(false);
+    expect(direct.rows[0].ratio).toBeCloseTo(1, 6);
+    // 風属性アタッカーには換算しない
+    const windA = mk("windA", { element: "wind", role: "anomaly" });
+    const w = compareAll({ attacker: windA, third: null, candidates: [vel], buffsOf: bo, panelOf, settings, panel: panelOf(windA), enemy: enemyState(enemy, windA, true, false), fixed: {}, mode: "anomaly", attackType: "generic", anomalyCrit: false, includeBuildup: true });
+    expect(w.rows[0].turbulence).toBe(false);
+    // 3 枠目がヴェリナなら基準が乱流換算になる
+    const third = compareAll({ attacker: fire, third: vel, candidates: [supp], buffsOf: (id) => (id === "supp" ? buffsOf("supp") : bo(id)), panelOf, settings, panel, enemy: en, fixed: {}, mode: "anomaly", attackType: "generic", anomalyCrit: false, includeBuildup: true });
+    expect(third.baselineTurbulence).toBe(true);
+    expect(third.rows[0].turbulence).toBe(true);
   });
   it("追加能力はチームで条件を満たさないと入らない", () => {
     const t = collectBuffs(providers(third, supp), third, settings, { attackType: "generic", mode: "direct" }).totals;

@@ -14,7 +14,7 @@ import { ElementIcon } from "./Icons";
 
 const MODES: { id: DamageMode; label: string; hint: string; armorerOnly?: boolean }[] = [
   { id: "direct", label: "直接攻撃", hint: "スキルの直接ダメージ(会心あり)" },
-  { id: "anomaly", label: "状態異常", hint: "属性異常のダメージ(異常マスタリー基準、会心なし)。蓄積側も発動頻度として乗算" },
+  { id: "anomaly", label: "状態異常", hint: "属性異常のダメージ(異常マスタリー基準、会心なし)。蓄積側も発動頻度として乗算。乱流持ち(ヴェリナ)が同席する行は乱流換算" },
   { id: "abloom", label: "狂咲", hint: "状態異常中の敵への命中で発生する追加状態異常ダメージ(狂咲ダメ% が別枠)" },
   { id: "disorder", label: "混沌", hint: "混沌ダメージ(混沌ダメ% が別枠)。蓄積側も乗算" },
   { id: "grievous", label: "重傷", hint: "鋭御の「重傷」(鋭撃ダメージの単発ヒット)。防御力基準、暴傷の 2 段会心、鋭撃ダメ% と重傷倍率が別枠。攻撃種別限定バフは含めない", armorerOnly: true },
@@ -405,6 +405,7 @@ export function CalcView({ settings, settingsPanel }: { settings: Settings; sett
               </label>
               <span className="field__hint" data-testid="calc-aa-note">
                 常時発動・最大スタック・上限値の前提。追加能力は同席メンバーで発動条件を判定(一括/個別設定で OFF なら無効)。
+                {output.baselineTurbulence && "基準は乱流換算(3 枠目のヴェリナの乱流ダメージ)。"}
                 {attacker.additionalAbility &&
                   (output.baselineAa[attacker.id]
                     ? `${attacker.nameJa}の追加能力「${attacker.additionalAbility.name}」は基準で発動`
@@ -493,6 +494,11 @@ function ResultRow({ row, open, onToggle }: { row: CompareRow; open: boolean; on
         </td>
         <td className="td">{row.aaJudged === null ? "—" : row.aaJudged ? "発動" : "条件外"}</td>
         <td className="td td--contrib">
+          {row.turbulence && (
+            <span className="tag tag--xs tag--turb" title="乱流持ち(ヴェリナ)がチームにいるため、アタッカーの状態異常の継続ダメージの代わりにヴェリナ自身の乱流ダメージ(炎/電気/エーテル 1900% 等)で計算">
+              乱流換算
+            </span>
+          )}
           {row.enablesAa.map((m) => (
             <span key={m.id} className="tag tag--xs tag--enable" title={`${m.nameJa}の追加能力「${m.additionalAbility?.name ?? ""}」の発動条件を満たす`}>
               {m.nameJa}の追加能力を発動

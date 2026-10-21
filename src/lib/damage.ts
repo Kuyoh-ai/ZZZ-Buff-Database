@@ -9,6 +9,11 @@ import type { CalcMode, Role } from "../types";
 export type DamageMode = CalcMode;
 export const ANOMALY_MODES: ReadonlySet<DamageMode> = new Set(["anomaly", "abloom", "disorder"]);
 
+/** 各属性の状態異常 1 回分の総倍率%(wikiwiki 状態異常: 強撃 713 / 熱傷 50%×0.5s×10s / 砕氷 500 / 感電 125%×1s×10s / 侵蝕 62.5%×0.5s×10s)。乱流換算の分母 */
+export const ANOMALY_TOTAL_MULT: Partial<Record<string, number>> = { physical: 713, fire: 1000, ice: 500, electric: 1250, ether: 1250 };
+/** 乱流の倍率%(wikiwiki 状態異常: 物理 875+713、炎/電気/エーテル 1900、氷 1375+450) */
+export const TURBULENCE_MULT: Partial<Record<string, number>> = { physical: 1588, fire: 1900, ice: 1825, electric: 1900, ether: 1900 };
+
 /** 混沌の基礎ダメージ倍率%(wikiwiki 状態異常: 物理/炎/氷/電気/エーテルは 450% + 残秒数依存)。「混沌ダメージ倍率+X%」はこれへの加算として扱う */
 export const DISORDER_BASE_MULT = 450;
 /** 攻撃種別(汎用 = 種別限定バフを含めない) */
