@@ -1859,5 +1859,37 @@
       "advValue": 60.0,
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1209"
     }
+  },
+  "fionne": {
+    "nameJa": "フィオニー・レファエラ",
+    "entryId": "1201",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201",
+    "level": 60,
+    "base": {
+      "hp": 7368.0,
+      "atk": 788.0,
+      "def": 600.0,
+      "impact": 83.0,
+      "crit_rate": 5.0,
+      "crit_dmg": 50.0,
+      "anomaly_mastery": 118.0,
+      "anomaly_proficiency": 120.0,
+      "pen_ratio": 0.0,
+      "energy_regen": 1.2
+    },
+    "core": {
+      "atk": 75.0,
+      "anomaly_proficiency": 90.0
+    },
+    "wengine": {
+      "nameJa": "転生の炎翼",
+      "entryId": "1201",
+      "baseStat": "atk",
+      "baseValue": 713.0,
+      "advStat": "anomaly_mastery_pct",
+      "advValue": 30.0,
+      "advLabelNote": "仮置き: 基礎 HP/攻撃/防御/衝撃力/異常掌握/異常マスタリーはバーニス(entry 382)の値を流用、コア強化ステータスは異常キャラの一般的な構成(攻撃力+75 / 異常マスタリー+90)を仮定。音動機の基礎攻撃力 713 / 異常掌握 30% は先行体験動画の画像。音動機は HoYoWiki 未掲載のため entryId はエージェントの entry 1201 を仮置き。HoYoWiki 反映後に fetch-agent-stats.py で差し替えること(2026-10-20)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    }
   }
 }

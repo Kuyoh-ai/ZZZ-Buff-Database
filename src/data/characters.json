@@ -1679,5 +1679,33 @@
       },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1186"
     }
+  },
+  {
+    "id": "fionne",
+    "nameJa": "フィオニー",
+    "nameEn": "Phoenix Reffaella",
+    "rarity": "S",
+    "element": "fire",
+    "role": "anomaly",
+    "assist": "parry",
+    "faction": "krampus_compliance_authority",
+    "wengine": {
+      "nameJa": "転生の炎翼",
+      "nameEn": ""
+    },
+    "releaseVersion": "3.3",
+    "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201",
+    "additionalAbility": {
+      "name": "黒枝の「切り札」",
+      "condition": "チームに他の[異常]のメンバーまたは自身と同じ陣営のメンバーがいる時に発動",
+      "conditionShort": "他の[異常] / 同陣営",
+      "activation": {
+        "sameFaction": true,
+        "roles": [
+          "anomaly"
+        ]
+      },
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    }
   }
 ]

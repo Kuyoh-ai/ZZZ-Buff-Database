@@ -1,0 +1,144 @@
+{
+  "characterId": "fionne",
+  "buffs": [
+    {
+      "id": "fionne_core_anomaly_proficiency",
+      "name": "コアパッシブ: リンネ(自身異常マスタリーアップ)",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "values": {
+        "base": 85
+      },
+      "note": "フィオニーの異常マスタリー+85Pt(コア Lv7)。HoYoWiki(entry 1201)は本文未掲載のため、先行体験動画のゲーム内画面(創作体験ver、2026-10-20 読み取り)を根拠とする。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_core_anomaly_crit_rate",
+      "name": "コアパッシブ: リンネ(炎蝕状態の敵への状態異常会心率)",
+      "stat": "anomaly_crit_rate",
+      "target": "team",
+      "modes": ["anomaly", "abloom", "disorder"],
+      "values": {
+        "base": 100
+      },
+      "duration": "20s",
+      "note": "任意のメンバーが敵に状態異常ダメージを与えた時、その敵は「炎蝕」状態(20 秒、重複で更新)。「炎蝕」状態の敵が状態異常ダメージを受けた時に一定確率で会心が発生する。基礎会心率 30%、フィオニーの開幕異常掌握が 155Pt を上回る時、超過分 1Pt ごとに会心率+0.7%、255Pt で最大(30+100×0.7=100%)。上限値を記載。メンバー全員の状態異常ダメージが対象のため team。「状態異常ダメージ」には狂咲・混沌も含まれるとみなし modes に anomaly/abloom/disorder を指定(原文に除外記載なし)。ゲーム内画面(創作体験ver、2026-10-20 読み取り)を根拠とする。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_core_anomaly_crit_dmg",
+      "name": "コアパッシブ: リンネ(炎蝕状態の敵への状態異常会心ダメージ)",
+      "stat": "anomaly_crit_dmg",
+      "target": "team",
+      "modes": ["anomaly", "abloom", "disorder"],
+      "values": {
+        "base": 25
+      },
+      "duration": "20s",
+      "note": "「炎蝕」状態の敵が受ける状態異常ダメージが会心した時の会心ダメージ 25%(コア Lv7)。追加能力の+15%、M1 の+25% は別エントリ(合計 65%)。メンバー全員の状態異常ダメージが対象のため team。ゲーム内画面(創作体験ver、2026-10-20 読み取り)を根拠とする。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_add_ability_anomaly_crit_dmg",
+      "name": "追加能力: 黒枝の「切り札」(炎蝕状態の敵への状態異常会心ダメージアップ)",
+      "stat": "anomaly_crit_dmg",
+      "target": "team",
+      "modes": ["anomaly", "abloom", "disorder"],
+      "values": {
+        "base": 15
+      },
+      "duration": "20s",
+      "note": "「炎蝕」状態の敵が受ける状態異常ダメージの会心ダメージ+15%。発動条件はチームに他の[異常]または同じ陣営のメンバーがいること(OR 条件のため condition 省略)。画像では本文が字幕で隠れていたため、効果値はユーザー提供の原文(2026-10-20)を根拠とする。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_m1_anomaly_crit_dmg",
+      "name": "心象映画1: 炎蝕状態の敵への状態異常会心ダメージアップ",
+      "stat": "anomaly_crit_dmg",
+      "target": "team",
+      "modes": ["anomaly", "abloom", "disorder"],
+      "values": {
+        "base": 0,
+        "m1": 25
+      },
+      "duration": "20s",
+      "note": "「炎蝕」状態の敵が受ける状態異常ダメージの会心ダメージが追加で+25%。M1 の他の効果(フィールド入場時「昇焔」1Pt、『焦熱攻撃』の「業火」獲得効率+15%)は固有リソースのため未収録。心象映画名は画像に無いため未記載。ゲーム内画面(創作体験ver、2026-10-20 読み取り)を根拠とする。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_m2_dmg_pct",
+      "name": "心象映画2: 炎蝕状態の敵への与ダメージアップ",
+      "stat": "dmg_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m2": 30
+      },
+      "note": "フィオニーが「炎蝕」状態の敵に与えるダメージ+30%。M2 の「熱傷」継続時間+2 秒は時間延長のため未収録。心象映画名は画像に無いため未記載。ゲーム内画面(創作体験ver、2026-10-20 読み取り)を根拠とする。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_m6_res_ignore_all",
+      "name": "心象映画6: 全属性ダメージ耐性無視",
+      "stat": "enemy_res_ignore_all_pct",
+      "target": "self",
+      "values": {
+        "base": 0,
+        "m6": 15
+      },
+      "note": "フィオニーはターゲットの全属性ダメージ耐性を 15% 無視する。自身のダメージ限定のため target=self。心象映画名は画像に無いため未記載。ゲーム内画面(創作体験ver、2026-10-20 読み取り)を根拠とする。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_m6_abloom_def_ignore",
+      "name": "心象映画6: 狂咲の敵防御力無視",
+      "stat": "enemy_def_down_pct",
+      "target": "self",
+      "modes": ["abloom"],
+      "values": {
+        "base": 0,
+        "m6": 40
+      },
+      "note": "フィオニーが発動した「狂咲」効果は敵の防御力を 40% 無視する。自身の狂咲限定のため target=self、modes=abloom。M6 の『強化特殊スキル：灼焔』発動時の「昇焔」1Pt は固有リソースのため未収録。ゲーム内画面(創作体験ver、2026-10-20 読み取り)を根拠とする。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_wengine_anomaly_proficiency",
+      "name": "音動機 転生の炎翼: 異常マスタリーアップ",
+      "stat": "anomaly_proficiency",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 90,
+        "p2": 99,
+        "p3": 108,
+        "p4": 117,
+        "p5": 126
+      },
+      "note": "装備者の異常マスタリー+90Pt(P1)。音動機効果「新生の日」。画像には P1(90)と「次の段階」(126)のみ記載。1.4 倍は既存音動機の P1→P5 比率に相当するため、ユーザー指示(2026-10-20)により 126 を P5 とみなし P2〜P4 を線形補間(仮置き)。HoYoWiki 反映後に要確認。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    },
+    {
+      "id": "fionne_wengine_fire_dmg",
+      "name": "音動機 転生の炎翼: 炎属性ダメージアップ",
+      "stat": "dmg_pct_element",
+      "element": "fire",
+      "target": "self",
+      "values": {
+        "base": 0
+      },
+      "wengine": {
+        "p1": 40,
+        "p2": 44,
+        "p3": 48,
+        "p4": 52,
+        "p5": 56
+      },
+      "duration": "20s",
+      "note": "任意のメンバーが敵に与えた状態異常ダメージに会心が発生した時、装備者が与える炎属性ダメージ+40%(P1)、継続 20 秒、重複で更新。音動機効果「新生の日」。画像には P1(40)と「次の段階」(56)のみ記載。ユーザー指示(2026-10-20)により 56 を P5 とみなし P2〜P4 を線形補間(仮置き)。HoYoWiki 反映後に要確認。",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1201"
+    }
+  ]
+}
