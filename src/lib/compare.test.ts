@@ -125,6 +125,34 @@ describe("compare: バフ合算", () => {
     expect(collectBuffs(providers(attacker, supp), attacker, settings, { attackType: "basic", mode: "grievous" }).totals.basic_dmg_pct).toBeUndefined();
     expect(collectBuffs(providers(attacker, supp), attacker, settings, { attackType: "basic", mode: "grievous" }).totals.dmg_pct).toBe(20);
   });
+  it("scale 付きバフは出し手のステータスから実値を計算(from / cap)、パネルなしなら上限値", () => {
+    const jane = mk("jane", { element: "physical", role: "anomaly" });
+    const bo = (id: string): CharacterBuffs | undefined =>
+      id === "jane"
+        ? {
+            characterId: "jane",
+            buffs: [
+              { id: "j_dmg", name: "与ダメ", stat: "dmg_pct", target: "self", scale: { stat: "anomaly_proficiency", per: 0.1, cap: 30 }, values: { base: 30 }, sourceUrl: "https://example.com" },
+              { id: "j_atk", name: "攻撃", stat: "atk_flat", target: "self", scale: { stat: "anomaly_proficiency", per: 2, from: 120, cap: 600 }, values: { base: 600 }, sourceUrl: "https://example.com" },
+            ],
+          }
+        : undefined;
+    const prov = [{ character: jane, buffs: bo("jane") }];
+    const pnl = buildPanel(jane, { ...stats, base: { ...stats.base, anomaly_proficiency: 100 }, core: {} }, DISC_PRESET_BY_ID.anomaly.build); // AP = 100 + 194 = 294
+    const t = collectBuffs(prov, jane, settings, { attackType: "generic", mode: "anomaly", panel: pnl }).totals;
+    expect(t.dmg_pct).toBeCloseTo(29.4, 6);
+    expect(t.atk_flat).toBeCloseTo((294 - 120) * 2, 6);
+    const noPanel = collectBuffs(prov, jane, settings, { attackType: "generic", mode: "anomaly" }).totals;
+    expect(noPanel.dmg_pct).toBe(30);
+    expect(noPanel.atk_flat).toBe(600);
+    // 他メンバーの異常マスタリーバフで実値が伸びる(scale の参照先に固定バフを含む)
+    const ap = mk("ap", { element: "fire", role: "support" });
+    const bo2 = (id: string): CharacterBuffs | undefined =>
+      id === "ap" ? { characterId: "ap", buffs: [{ id: "ap_b", name: "AP", stat: "anomaly_proficiency", target: "team", values: { base: 100 }, sourceUrl: "https://example.com" }] } : bo(id);
+    const t2 = collectBuffs([{ character: jane, buffs: bo2("jane") }, { character: ap, buffs: bo2("ap") }], jane, settings, { attackType: "generic", mode: "anomaly", panel: pnl }).totals;
+    expect(t2.dmg_pct).toBeCloseTo(30, 6); // 394 × 0.1 = 39.4 → 上限 30
+    expect(t2.atk_flat).toBeCloseTo((394 - 120) * 2, 6);
+  });
   it("追加能力はチームで条件を満たさないと入らない", () => {
     const t = collectBuffs(providers(third, supp), third, settings, { attackType: "generic", mode: "direct" }).totals;
     expect(t.crit_rate).toBeUndefined();

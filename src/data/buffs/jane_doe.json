@@ -9,7 +9,7 @@
       "values": {
         "base": 40
       },
-      "note": "コアスキル最大レベル時。「噛み傷」状態(自身の攻撃命中で付与、10秒)の敵への「強撃」ダメージが確率で会心するようになる基礎会心率。異常マスタリーによる上乗せ(1Ptにつき+0.16%、上限記載なし)は上限が無いため収録しない。2026-10-19 ユーザー回答: 「強撃」(物理状態異常)の会心として状態異常会心率 stat に移動(modes: anomaly、物理限定)",
+      "note": "コアスキル最大レベル時。「噛み傷」状態(自身の攻撃命中で付与、10秒)の敵への「強撃」ダメージが確率で会心するようになる基礎会心率。異常マスタリーによる上乗せ(1Pt につき +0.16%)は janedoe_core_crit_rate_from_mastery に分離(2026-10-21)",
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368",
       "modes": [
         "anomaly"
@@ -38,6 +38,46 @@
           "physical"
         ]
       }
+    },
+    {
+      "id": "janedoe_core_crit_rate_from_mastery",
+      "name": "コアパッシブ: 洞察(異常マスタリーによる強撃会心率上乗せ)",
+      "stat": "anomaly_crit_rate",
+      "target": "self",
+      "modes": [
+        "anomaly"
+      ],
+      "condition": {
+        "elements": [
+          "physical"
+        ]
+      },
+      "scale": {
+        "stat": "anomaly_proficiency",
+        "per": 0.16
+      },
+      "values": {
+        "base": 60
+      },
+      "note": "コアスキル最大レベル時。異常マスタリー 1Pt につき「強撃」の会心率が追加で +0.16%(上限記載なし)。テーブルには基礎 40% と合わせて 100% になる 60 を上限として表示し、ダメージ比較では異常マスタリー × 0.16% で実値を計算(scale)。2026-10-21: 追加",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
+    },
+    {
+      "id": "janedoe_core_atk_from_mastery",
+      "name": "コアパッシブ: 洞察(異常マスタリーによる攻撃力アップ)",
+      "stat": "atk_flat",
+      "target": "self",
+      "scale": {
+        "stat": "anomaly_proficiency",
+        "per": 2,
+        "from": 120,
+        "cap": 600
+      },
+      "values": {
+        "base": 600
+      },
+      "note": "異常マスタリーが 120Pt を上回る場合、1Pt 上回るごとに自身の攻撃力 +2Pt、最大 +600Pt(上限値を表示。ダメージ比較では scale で実値を計算)。2026-10-21: 追加",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
     },
     {
       "id": "janedoe_ex_anomaly_buildup",
@@ -82,8 +122,13 @@
         "base": 0,
         "m1": 30
       },
-      "note": "「熱狂」状態中、異常マスタリー1Ptにつき与ダメージ+0.1%、上限+30%(上限値を収録)",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368"
+      "note": "「熱狂」状態中、異常マスタリー1Ptにつき与ダメージ+0.1%、上限+30%(上限値を収録)。2026-10-21: ダメージ比較では異常マスタリー × 0.1%(上限 30)で実値を計算(scale)",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/368",
+      "scale": {
+        "stat": "anomaly_proficiency",
+        "per": 0.1,
+        "cap": 30
+      }
     },
     {
       "id": "janedoe_m2_def_ignore",

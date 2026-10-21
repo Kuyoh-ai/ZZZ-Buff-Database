@@ -443,7 +443,8 @@
         ]
       },
       "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/626"
-    }
+    },
+    "abloomApScaling": true
   },
   {
     "id": "alice",

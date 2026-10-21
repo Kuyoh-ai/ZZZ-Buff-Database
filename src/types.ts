@@ -52,6 +52,8 @@ export interface Character {
   releaseVersion: string;
   /** ポテンシャル解放(6段階)が実装されているか */
   hasPotential?: boolean;
+  /** 「狂咲」のダメージが異常マスタリーに比例する(ビビアン: 異常マスタリー 10Pt につき元の状態異常ダメージの X%)。狂咲モードでは異常マスタリーが 2 回乗る */
+  abloomApScaling?: boolean;
   /** 追加能力の名称と発動条件(HoYoWiki 原文と短縮形)。トグルのラベルに使う */
   additionalAbility?: AdditionalAbility;
   /** キャラ一覧の参照元URL */
@@ -111,6 +113,18 @@ export interface WengineValues {
   p5: number;
 }
 
+/** 出し手のステータスに比例して値が決まる効果。実値 = min(cap, per × max(0, 出し手の stat − from))。values はテーブル表示用の上限値 */
+export interface BuffScale {
+  /** 参照する出し手のステータス */
+  stat: "anomaly_proficiency" | "anomaly_mastery" | "crit_rate" | "crit_dmg" | "atk" | "hp" | "def";
+  /** 1Pt あたりの効果量 */
+  per: number;
+  /** この値を超えた分だけ数える(既定 0) */
+  from?: number;
+  /** 効果量の上限(未指定なら上限なし) */
+  cap?: number;
+}
+
 export interface Buff {
   id: string;
   name: string;
@@ -121,6 +135,8 @@ export interface Buff {
   condition?: BuffCondition;
   /** この効果が乗る計算モード(未指定 = 全モード)。例: 狂咲ダメージ限定の耐性無視は ["abloom"]、強撃(物理異常)限定は ["anomaly"] */
   modes?: CalcMode[];
+  /** 出し手のステータス比例(ダメージ比較では実値を計算し、values は上限値の表示に使う) */
+  scale?: BuffScale;
   /** 1スタックあたりの値 */
   values: MindscapeValues;
   wengine?: WengineValues;

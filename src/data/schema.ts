@@ -17,6 +17,7 @@ export const CharacterSchema = z.object({
   wengine: z.object({ nameJa: z.string(), nameEn: z.string() }),
   releaseVersion: z.string().regex(/^\d+\.\d+$/),
   hasPotential: z.boolean().optional(),
+  abloomApScaling: z.boolean().optional(),
   additionalAbility: z
     .object({
       name: z.string(),
@@ -47,6 +48,14 @@ export const BuffSchema = z
     element: ElementSchema.optional(),
     target: z.enum(["self", "team", "enemy", "next_swap_in", "active", "bench"]),
     modes: z.array(z.enum(["direct", "anomaly", "abloom", "disorder", "grievous"])).nonempty().optional(),
+    scale: z
+      .object({
+        stat: z.enum(["anomaly_proficiency", "anomaly_mastery", "crit_rate", "crit_dmg", "atk", "hp", "def"]),
+        per: z.number().positive(),
+        from: z.number().nonnegative().optional(),
+        cap: z.number().positive().optional(),
+      })
+      .optional(),
     condition: z
       .object({
         elements: z.array(ElementSchema).optional(),

@@ -72,6 +72,8 @@ python scripts/fetch-agent-stats.py   # HoYoWiki API から agent_stats.json を
 
 - `stat`: `src/data/stats.ts` に登録されたキー。属性付きstat(`dmg_pct_element`, `enemy_res_down_pct`)は `element` が必須
 - `target`: `self`(自身のみ) / `team`(チーム全員) / `enemy`(敵へのデバフ) / `next_swap_in`(次に登場するキャラ) / `active`(出場中のメンバー。出し手が控えの時に付与、自身以外) / `bench`(控えのメンバー。アタッカーには乗らない)
+- `scale`: 出し手のステータス比例の効果(`stat` = anomaly_proficiency / anomaly_mastery / crit_rate / crit_dmg / atk / hp / def、`per` = 1Pt あたり、`from` = 超過分の起点、`cap` = 上限)。テーブルには `values` の上限値を表示し、ダメージ比較では出し手のパネル値から実値を計算する(例: ジェーンの異常マスタリー 1Pt につき与ダメ +0.1%)
+- `abloomApScaling`(`characters.json`): 狂咲のダメージが異常マスタリーに比例するキャラ(ビビアン)。狂咲モードでは異常マスタリーが 2 回乗る
 - `modes`: その効果が乗るダメージ比較の計算モード(`direct` / `anomaly` / `abloom` / `disorder` / `grievous`)。未指定は全モード。狂咲ダメージ限定の耐性無視は `["abloom"]`、強撃(物理異常)限定は `["anomaly"]` のように書く
 - `condition`: 受け手の条件。`elements` / `factions` / `roles`(いずれかに一致) / `excludeSelf`
 - `values`: 心象映画段階ごとの**実効値**。`base` が M0。`m1`〜`m6` は「その段階で値が変わる場合のみ」書く(書かない/`null` は前段階から変化なし)

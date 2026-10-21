@@ -188,6 +188,13 @@ describe("damage: 状態異常/狂咲/混沌", () => {
     const noBuild = computeDamage(panel, enemy, b, { mode: "anomaly", includeBuildup: false });
     expect(noBuild.parts.buildupMul).toBe(1);
   });
+  it("abloomApScaling(ビビアン)の狂咲は異常マスタリーが 2 回乗る", () => {
+    const plain = computeDamage(panel, enemy, { anomaly_proficiency: 100 }, { mode: "abloom" });
+    const sq = computeDamage(panel, enemy, { anomaly_proficiency: 100 }, { mode: "abloom", abloomApScaling: true });
+    expect(plain.parts.apMul).toBeCloseTo(2 * 2, 10);
+    expect(sq.parts.apMul).toBeCloseTo(2 * 2 * 2, 10);
+    expect(computeDamage(panel, enemy, {}, { mode: "anomaly", abloomApScaling: true }).parts.apMul).toBeCloseTo(2, 10);
+  });
   it("狂咲ダメ% と混沌ダメ% はそれぞれのモードでのみ乗る", () => {
     const b = { abloom_dmg_pct: 50, disorder_dmg_pct: 30 };
     expect(computeDamage(panel, enemy, b, { mode: "anomaly" }).parts.extraMul).toBeCloseTo(1, 10);

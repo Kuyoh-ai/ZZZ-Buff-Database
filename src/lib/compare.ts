@@ -3,9 +3,9 @@ import type { AgentStats, Enemy } from "../data/calcSchema";
 import type { DiscBuild } from "../data/disc_presets";
 import { judgeAdditionalAbility } from "./activation";
 import { statAppliesToRole } from "./applicability";
-import { effectiveSetting } from "./resolve";
+import { effectiveSetting, round } from "./resolve";
 import { buildRow, type ResolvedBuff } from "./table";
-import { ATTACK_TYPE_STAT, SKILL_TYPE_STATS, computeDamage, type AttackerPanel, type AttackType, type BuffTotals, type DamageMode, type DamageResult, type EnemyState } from "./damage";
+import { ATTACK_TYPE_STAT, SKILL_TYPE_STATS, combatAtk, computeDamage, type AttackerPanel, type AttackType, type BuffTotals, type DamageMode, type DamageResult, type EnemyState } from "./damage";
 
 /** アタッカーの常時パネルを agent_stats + ディスク + 上書きから作る(式は formula.md §6〜7) */
 export function buildPanel(c: Character, s: AgentStats, disc: DiscBuild, overrides: Partial<AttackerPanel> = {}): AttackerPanel {
@@ -100,6 +100,36 @@ export interface Provider {
 export interface CollectOptions {
   attackType: AttackType;
   mode: DamageMode;
+  /** アタッカーのパネル(scale 付きバフの実値計算に使う。未指定なら values の上限値をそのまま使う) */
+  panel?: AttackerPanel;
+  /** 出し手(アタッカー以外)のパネル。scale の参照先が出し手自身のステータスのため */
+  panelOf?: (c: Character) => AttackerPanel | undefined;
+}
+
+/** scale の参照ステータスをパネルから取る */
+export function panelStat(p: AttackerPanel, stat: NonNullable<Buff["scale"]>["stat"], totals: BuffTotals): number {
+  switch (stat) {
+    case "anomaly_proficiency":
+      return p.anomalyProficiency + (totals.anomaly_proficiency ?? 0);
+    case "anomaly_mastery":
+      return p.anomalyMastery + (totals.anomaly_mastery ?? 0);
+    case "crit_rate":
+      return p.critRate + (totals.crit_rate ?? 0);
+    case "crit_dmg":
+      return p.critDmg + (totals.crit_dmg ?? 0);
+    case "atk":
+      return combatAtk(p, totals);
+    case "hp":
+      return p.baseHp * (1 + (p.hpPct + (totals.hp_pct ?? 0)) / 100) + p.hpFlat + (totals.hp_flat ?? 0);
+    case "def":
+      return p.baseDef * (1 + (p.defPct + (totals.def_pct ?? 0)) / 100) + p.defFlat + (totals.def_flat ?? 0);
+  }
+}
+
+/** scale 付きバフの実値(1 スタック)。src は出し手のステータス値 */
+export function scaledValue(scale: NonNullable<Buff["scale"]>, src: number): number {
+  const v = scale.per * Math.max(0, src - (scale.from ?? 0));
+  return scale.cap !== undefined ? Math.min(scale.cap, v) : v;
 }
 
 /** 提供者の設定(個別/一括)に、チーム基準の追加能力判定を重ねる */
@@ -116,6 +146,8 @@ export function collectBuffs(providers: Provider[], attacker: Character, setting
   const totals: BuffTotals = {};
   const applied: Record<string, ResolvedBuff[]> = {};
   const typeStat = opts.attackType === "generic" ? null : ATTACK_TYPE_STAT[opts.attackType];
+  // 1 パス目: 固定値のバフを合算。scale 付きは 2 パス目で出し手のステータスから実値を決める
+  const scaled: { provider: Character; rb: ResolvedBuff }[] = [];
   for (const p of providers) {
     const setting = providerSetting(settings, p.character, team);
     const row = buildRow(p.character, p.buffs, setting, attacker, false, calcStatApplies);
@@ -124,11 +156,28 @@ export function collectBuffs(providers: Provider[], attacker: Character, setting
       for (const rb of cell.buffs) {
         if (!rb.applicable) continue;
         if (!statCounts(rb.buff, opts.mode, typeStat)) continue;
+        if (rb.buff.scale && opts.panel) {
+          scaled.push({ provider: p.character, rb });
+          continue;
+        }
         totals[rb.buff.stat] = (totals[rb.buff.stat] ?? 0) + rb.total;
         if (rb.total !== 0) list.push(rb);
       }
     }
     applied[p.character.id] = list;
+  }
+  if (opts.panel) {
+    const staticTotals = { ...totals };
+    for (const { provider, rb } of scaled) {
+      const scale = rb.buff.scale!;
+      const isAtk = provider.id === attacker.id;
+      const pnl = isAtk ? opts.panel : opts.panelOf?.(provider);
+      // 出し手のパネルが無い場合は values の上限値で代用
+      const per = pnl ? scaledValue(scale, panelStat(pnl, scale.stat, isAtk ? staticTotals : {})) : rb.perStack;
+      const total = round(per * (rb.buff.maxStacks ?? 1));
+      totals[rb.buff.stat] = (totals[rb.buff.stat] ?? 0) + total;
+      if (total !== 0) applied[provider.id].push({ ...rb, perStack: round(per), total });
+    }
   }
   return { totals, applied };
 }
@@ -163,6 +212,8 @@ export interface CompareInput {
   third: Character | null;
   candidates: Character[];
   buffsOf: (id: string) => CharacterBuffs | undefined;
+  /** 出し手(アタッカー以外)のパネル(scale 付きバフ用。未指定なら上限値で代用) */
+  panelOf?: (c: Character) => AttackerPanel | undefined;
   settings: Settings;
   panel: AttackerPanel;
   enemy: EnemyState;
@@ -196,11 +247,11 @@ export interface CompareOutput {
 
 export function compareAll(input: CompareInput): CompareOutput {
   const { attacker, third, settings, panel, enemy, fixed } = input;
-  const dmgOpts = { mode: input.mode, anomalyCrit: input.anomalyCrit, includeBuildup: input.includeBuildup };
+  const dmgOpts = { mode: input.mode, anomalyCrit: input.anomalyCrit, includeBuildup: input.includeBuildup, abloomApScaling: !!attacker.abloomApScaling };
   const collect = (extra: Character | null) => {
     const members = [attacker, third, extra].filter((c): c is Character => !!c);
     const providers = members.map((c) => ({ character: c, buffs: input.buffsOf(c.id) }));
-    return collectBuffs(providers, attacker, settings, { attackType: input.attackType, mode: input.mode });
+    return collectBuffs(providers, attacker, settings, { attackType: input.attackType, mode: input.mode, panel, panelOf: input.panelOf });
   };
   const base = collect(null);
   const baselineTotals = mergeTotals(base.totals, fixed);

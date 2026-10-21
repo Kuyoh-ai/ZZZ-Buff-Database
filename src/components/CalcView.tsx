@@ -110,6 +110,7 @@ export function CalcView({ settings, settingsPanel }: { settings: Settings; sett
       third,
       candidates: CHARACTERS,
       buffsOf: (id) => BUFFS_BY_CHARACTER[id],
+      panelOf: (c) => (AGENT_STATS[c.id] ? buildPanel(c, AGENT_STATS[c.id], DISC_PRESET_BY_ID[defaultDiscPresetFor(c.role)].build) : undefined),
       settings,
       panel,
       enemy: enemyState(enemy, attacker, broken && !miasma, miasma, stunCapOverride),

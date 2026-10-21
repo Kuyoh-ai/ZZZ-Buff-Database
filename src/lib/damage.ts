@@ -85,6 +85,8 @@ export interface DamageOptions {
   anomalyCrit?: boolean;
   /** 状態異常/混沌で蓄積側(異常掌握・蓄積効率・敵蓄積耐性ダウン)を発動頻度の近似として乗じる(既定 true) */
   includeBuildup?: boolean;
+  /** 狂咲のダメージが異常マスタリーに比例するアタッカー(ビビアン)。狂咲モードで AP/100 をもう一度乗じる */
+  abloomApScaling?: boolean;
 }
 
 export interface DamageParts {
@@ -189,7 +191,10 @@ export function computeDamage(p: AttackerPanel, e: EnemyState, b: BuffTotals, o:
     // 会心: 固有の状態異常会心(ジェーンの強撃、アリアの狂咲など anomaly_crit_*)は常に適用。
     // anomalyCrit(Ver.3.3 以降の受け口)が ON のときは通常の会心率/会心ダメージも合算する
     baseStat = atk;
-    apMul = ((p.anomalyProficiency + v(b, "anomaly_proficiency")) / 100) * anomalyLevelCoef(p.level);
+    const apTotal = p.anomalyProficiency + v(b, "anomaly_proficiency");
+    apMul = (apTotal / 100) * anomalyLevelCoef(p.level);
+    // ビビアンの狂咲は「異常マスタリー 10Pt につき元の状態異常ダメージの X%」なので AP がもう一度乗る(定数は比率で打ち消される)
+    if (mode === "abloom" && o.abloomApScaling) apMul *= apTotal / 100;
     const acr = v(b, "anomaly_crit_rate") + (o.anomalyCrit ? critRate : 0);
     const acd = v(b, "anomaly_crit_dmg") + (o.anomalyCrit ? critDmg : 0);
     critMul = acr > 0 ? critExpectation(acr, acd) : 1;

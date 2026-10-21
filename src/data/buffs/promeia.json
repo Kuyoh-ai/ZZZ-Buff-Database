@@ -7,10 +7,15 @@
       "stat": "anomaly_proficiency",
       "target": "self",
       "values": {
-        "base": 1.5
+        "base": 150
       },
-      "note": "開幕時の異常掌握が150Ptを超える場合、超過1Ptごとに自身の異常マスタリー+1.5Pt(スケーリング値、上限なし。超過分×1.5が実際の上昇量)",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
+      "note": "開幕時の異常掌握が 150Pt を超える場合、超過 1Pt ごとに自身の異常マスタリー +1.5Pt(上限なし)。テーブルは異常掌握 250 相当(+150)を表示し、ダメージ比較ではプロメイアの異常掌握から scale で実値を計算。2026-10-21: 係数表示から変更",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072",
+      "scale": {
+        "stat": "anomaly_mastery",
+        "per": 1.5,
+        "from": 150
+      }
     },
     {
       "id": "promeia_core_team_abloom_dmg",
@@ -18,10 +23,15 @@
       "stat": "abloom_dmg_pct",
       "target": "team",
       "values": {
-        "base": 0.35
+        "base": 35
       },
-      "note": "開幕時の異常掌握が150Ptを超える場合、超過1Ptごとにチーム全体の「狂咲」(Abloom)ダメージ+0.35%(スケーリング値、上限なし。超過分×0.35%が実際の上昇量)。2026-10-19: 狂咲ダメージ専用 stat(abloom_dmg_pct)に再キー",
-      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072"
+      "note": "開幕時の異常掌握が 150Pt を超える場合、超過 1Pt ごとにチーム全体の「狂咲」ダメージ +0.35%(上限なし)。テーブルは異常掌握 250 相当(+35%)を表示し、ダメージ比較ではプロメイアの異常掌握から scale で実値を計算。2026-10-21: 係数表示から変更",
+      "sourceUrl": "https://wiki.hoyolab.com/pc/zzz/entry/1072",
+      "scale": {
+        "stat": "anomaly_mastery",
+        "per": 0.35,
+        "from": 150
+      }
     },
     {
       "id": "promeia_extra_ice_anomaly_buildup",
